@@ -2,6 +2,7 @@
 import re
 import requests
 from string import punctuation
+import time
 import json
 
 
@@ -65,18 +66,83 @@ class Text:
 
 
 class Src:
+    def __init__(self):
+        pass
+
     class Twirpx:
         def __init__(self, query):
-            self.start = requests.post('http://twirpx.com/search', data = {'SearchQuery' : query}).text
+            self.pi = 0
+            self.query = query
+            self.sart = ''
+            self.session = requests.Session()
+            self.start = self.session.get('http://www.twirpx.com').text
+            self.request_pi()
+            self.pi_max = int(re.findall(r'(?<=data-page-index=")(\d+)', self.start)[-1])
+            self.metadata = self.parse_list()
+            self.get_next()
 
-        def analyze_file(url):
-            res = requests.get(url).text
+        def update_sart(self):
+            self.sart = re.search(r'__SART[^>]+value\s*=\s*"([^"]+)', self.start).group(1)
+
+        def request_pi(self):
+            self.update_sart()
+            self.start = self.session.post('http://www.twirpx.com/search/',
+                data={
+                    'SearchQuery': self.query,
+                    'SearchScope': 'site',
+                    'SearchUID': 0,
+                    'SearchCID': 0,
+                    'SearchECID': 0,
+                    'pi': self.pi,
+                    '__SART': self.sart
+                },
+                headers={
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) \
+                    Chrome/59.0.3071.115 Safari/537.36'
+                }
+            ).text
+            print(self.start)
+
+        def analyze_file(self, url):
+            res = self.session.get(url).text
             description = re.search(r'itemprop="description">\n*.+', res).group(0)
             description = re.sub(r'itemprop="description">|<[^>]*>', '', description)
             proc = Text(description)
+            title = re.search(r'<meta\sproperty="og:title"\scontent="([^"]+)"\s+\/>', res).group(0)
             if proc.is_good():
-                return proc.get_metadata()
+                return [title] + proc.get_metadata()
             else:
                 return False
 
-        def
+        def parse_list(self):
+            metadata = []
+            for file in re.finditer(r'<a\sclass=\"file-link\"\shref="([^"]+)"', self.start):
+                metadata.append(self.analyze_file(file.group(1)))
+            return metadata
+
+        def make_report(self, message):
+            print('Twirpx parser report: {}'.format(message))
+
+        def get_next(self):
+            if self.pi < self.pi_max:
+                self.request_pi()
+                self.metadata += self.parse_list()
+                self.pi += 1
+                time.sleep(0.3)
+                self.make_report(self.pi)
+                self.get_next()
+            else:
+                return False
+
+        def final_metadata(self):
+            return self.metadata
+
+
+for theme in ['манси']:
+    md = Src.Twirpx(theme)
+    from_ = json.loads(open('result.json').read())
+    from_ += md.final_metadata()
+    with open('result.json', 'a') as result:
+        result.write(from_)
+        result.close()
+
