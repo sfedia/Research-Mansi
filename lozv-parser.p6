@@ -1,5 +1,6 @@
 #!/usr/bin/perl6
 use v6;
+use Grammar::Tracer;
 
 sub make_log ($file_handler, Str $message, Int $line)
 {
@@ -27,7 +28,7 @@ grammar lozv_segment
 		[ \d+ [\. || \)] \s* || \s+ ] ?
 		[\s+ || <meaning>]
 	}
-	regex meaning { <-[\;\,] - [А..Я]> + }
+	regex meaning { <[\x[0430] .. \x[044F]] + [Ёё] + [\s] + punct - [\;\,] - [А..Я]> + }
 	regex example_wrap
 	{
 		<example_group> + % [ [\; || \? || \.] \s*]*
@@ -35,80 +36,14 @@ grammar lozv_segment
 	regex example_group
 	{
 		<example_mans>
-		\s+ "–" \s+
+		\s* [  [ ["." || "?"] [\s* "–"] ? ]  || "–"  ] \s+
 		<example_rus> ["." || "?"] ?
 	}
-	regex example_mans { [ <[А..Я] + [Ё]> || <-[\s\h\(\)\d\;\,\.ё]-[а..я]> ] <-[–]>* }
-	regex example_rus { <[А..Я] + [Ё]> <-[–\.\;\?]>* }
+	regex example_mans { [ <[А..Я] + [Ё]> || <-[\s\h\(\)\d\;\,\.ё]> ] <-[–\.\?]>* }
+	regex example_rus { <[А..Я] + [а..я] + [Ёё]> <-[–\.\;\?]>* }
 }
 
 
 my $lozv_plain = open '/home/sivan/prodotiscus/mansi-project/lozv.txt';
 my $lozv_log = open '/home/sivan/prodotiscus/mansi-project/lozv-log.txt', :a;
-my @lozv_data = $lozv_plain.lines();
-
-say @lozv_data.elems;
-
-my Int $line_number = 0;
-for @lozv_data -> $iter is copy
-{
-	say $line_number;
-
-	$iter = $iter.trim;
-
-	say $iter;
-
-	if ( $iter eq '' )
-	{
-		++ $line_number;
-		next;
-	}
-	my $parsed = lozv_segment.parse($iter);
-	if ( !$parsed )
-	{
-		make_log($lozv_log, "Parsing failed", $line_number);
-		++ $line_number;
-		next;
-	}
-	my Int $part = -1;
-	if ( $parsed<number> )
-	{
-		given ( $parsed<number>.Str )
-		{
-			when "I" { $part = 1; }
-			when "II" { $part = 2; }
-			when "III" { $part = 3; }
-			when "IV" { $part = 4; }
-			when "V" { $part = 5; }
-			when "VI" { $part = 6; }
-			default { $part = 0; }
-		}
-	}
-	my Str $title = $parsed<title_wrap><title>.Str;
-	my Str $pos_tag = $parsed<title_wrap><pos_tag>.Str;
-	my $meanings = [];
-	my $examples = [];
-	for $parsed<meaning_wrap><meaning_group>
-	{
-		if ($_<meaning>)
-		{
-			$meanings.push: $_<meaning>.Str;
-		}
-	}
-	for $parsed<example_wrap><example_group>
-	{
-		$examples.push: (
-			$_<example_mans>.Str,
-			$_<example_rus>.Str
-		);
-	}
-
-	$lozv_log.say: $title;
-	$lozv_log.say: $part;
-	$lozv_log.say: $pos_tag;
-	$lozv_log.say: $meanings;
-	$lozv_log.say: $examples;
-	$lozv_log.say: "--";
-	
-	++ $line_number;
-}
+lozv_segment.parse("вощлах сущ. ил; слякоть; Вр тӯр втат враяӈкв – Дно ручья с илом.");
