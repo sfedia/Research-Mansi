@@ -24,13 +24,13 @@ grammar lozv_segment
 	regex meaning_wrap { <meaning_group> + % [ <[\;\,]> \s* ] * }
 	regex meaning_group
 	{
-		[ \d+\.\s* || \s+ ] ?
+		[ \d+ [\. || \)] \s* || \s+ ] ?
 		[\s+ || <meaning>]
 	}
 	regex meaning { <-[\;\,] - [А..Я]> + }
 	regex example_wrap
 	{
-		<example_group> + % [ [\; || \?] \s*]*
+		<example_group> + % [ [\; || \? || \.] \s*]*
 	}
 	regex example_group
 	{
@@ -38,7 +38,7 @@ grammar lozv_segment
 		\s+ "–" \s+
 		<example_rus> ["." || "?"] ?
 	}
-	regex example_mans { <[А..Я] + [Ё]> <-[–]>* }
+	regex example_mans { [ <[А..Я] + [Ё]> || <-[\s\h\(\)\d\;\,\.ё]-[а..я]> ] <-[–]>* }
 	regex example_rus { <[А..Я] + [Ё]> <-[–\.\;\?]>* }
 }
 
