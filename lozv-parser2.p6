@@ -1,5 +1,7 @@
 #!/usr/bin/perl6
 use v6;
+use DBIish;
+use JSON::Tiny;
 
 sub make_log ($file_handler, Str $message, Int $line)
 {
@@ -46,69 +48,64 @@ grammar lozv_segment
 my $lozv_plain = open '/home/sivan/prodotiscus/mansi-project/lozv.txt';
 my $lozv_log = open '/home/sivan/prodotiscus/mansi-project/lozv-log.txt', :a;
 my @lozv_data = $lozv_plain.lines();
+my $lozv_data_length  = @lozv_data.elems;
+constant lp_timeout = 3;
+my @lp_list = [];
 
-say @lozv_data.elems;
+my $dbh = DBIish.connect("SQLite", :database</home/sivan/prodotiscus/mansi-project/lozv.sqlite3>);
+my $sth = $dbh.prepare(q:to/STATEMENT/);
+    INSERT INTO dictionary (title, part, pos, meanings, examples)
+    VALUES ( ?, ?, ?, ?, ? )
+    STATEMENT
 
-my Int $line_number = 0;
-for @lozv_data -> $iter is copy
+
+for 0..$lozv_data_length -> $index
 {
-	say $line_number;
+	@lp_list[$index] = start {
+		my $iter = @lozv_data[$index].trim;
 
-	$iter = $iter.trim;
-
-	say $iter;
-
-	if ( $iter eq '' )
-	{
-		++ $line_number;
-		next;
-	}
-	my $parsed = lozv_segment.parse($iter);
-	if ( !$parsed )
-	{
-		make_log($lozv_log, "Parsing failed", $line_number);
-		++ $line_number;
-		next;
-	}
-	my Int $part = -1;
-	if ( $parsed<number> )
-	{
-		given ( $parsed<number>.Str )
+		my $parsed = lozv_segment.parse($iter);
+		if ( $parsed )
 		{
-			when "I" { $part = 1; }
-			when "II" { $part = 2; }
-			when "III" { $part = 3; }
-			when "IV" { $part = 4; }
-			when "V" { $part = 5; }
-			when "VI" { $part = 6; }
-			default { $part = 0; }
+			my Int $part = -1;
+			if ( $parsed<number> )
+			{
+				given ( $parsed<number>.Str )
+				{
+					when "I" { $part = 1; }
+					when "II" { $part = 2; }
+					when "III" { $part = 3; }
+					when "IV" { $part = 4; }
+					when "V" { $part = 5; }
+					when "VI" { $part = 6; }
+					default { $part = 0; }
+				}
+			}
+			my Str $title = $parsed<title_wrap><title>.Str;
+			my Str $pos_tag = $parsed<title_wrap><pos_tag>.Str;
+			my $meanings = [];
+			my $examples = [];
+			for $parsed<meaning_wrap><meaning_group>
+			{
+				if ($_<meaning>)
+				{
+					$meanings.push: $_<meaning>.Str;
+				}
+			}
+			for $parsed<example_wrap><example_group>
+			{
+				$examples.push: (
+					$_<example_mans>.Str,
+					$_<example_rus>.Str
+				);
+			}
+			$sth.execute($title, $part, $pos_tag, to-json($meanings), to-json($examples));
+			say "$index/2100";
 		}
 	}
-	my Str $title = $parsed<title_wrap><title>.Str;
-	my Str $pos_tag = $parsed<title_wrap><pos_tag>.Str;
-	my $meanings = [];
-	my $examples = [];
-	for $parsed<meaning_wrap><meaning_group>
-	{
-		if ($_<meaning>)
-		{
-			$meanings.push: $_<meaning>.Str;
-		}
-	}
-	for $parsed<example_wrap><example_group>
-	{
-		$examples.push: (
-			$_<example_mans>.Str,
-			$_<example_rus>.Str
-		);
-	}
-
-	$lozv_log.say: $title;
-	$lozv_log.say: $part;
-	$lozv_log.say: $pos_tag;
-	$lozv_log.say: $meanings;
-	$lozv_log.say: $examples;
-	$lozv_log.say: "--";
-	
-	++ $line_number;
+	await Promise.anyof(@lp_list[$index], Promise.in(lp_timeout));
 }
+
+$sth.finish;
+
+$dbh.dispose;
