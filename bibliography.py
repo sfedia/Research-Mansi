@@ -3,35 +3,63 @@ import re
 import requests
 from string import punctuation
 import time
-import json
 
 
 class Text:
     def __init__(self, data):
         self.text = data
-    langPrefix = [r'манси.*', r'.*лозьв.*', r'vogul*', r'mansi*']
+    langPrefix = [r'(?<!-)манси.*', r'.*лозьв.*', r'vogul*', r'mansi*']
+    fiction = [r'повест[ьяеи]', 'роман', 'бестселлер']
+    industry = [r'нефт', 'газ', 'металл', 'промышл', 'производств', '(эко|био)лог', 'строит']
     isGoodKeywords = [
-        langPrefix + [r'речь', r'миф|(рас)?сказ([ыовами]{,3}|ан|к)|предани.+|песн.+', r'яз(ык)?'],
-        langPrefix + [r'перев[ое]д'],
-        langPrefix + [r'памятник'],
-        [langPrefix[0]],
-        [langPrefix[1]]
+        [
+            langPrefix + [r'речь', r'миф|(рас)?сказ([ыовами]{,3}|ан|к)|предани.+|песн.+', r'^яз(ык)?'],
+            [fiction, industry]
+        ],
+        [
+            langPrefix + [r'фолькл*', 'культур'],
+            [fiction, industry]
+        ],
+        [
+            langPrefix + [r'перев[ое]д', 'учебн'],
+            [fiction, industry]
+        ],
+        [
+            langPrefix + [r'памятник'],
+            [fiction, industry]
+        ]
     ]
 
     def is_good(self):
         sequence = []
         for line in self.text.splitlines():
-            sequence += [x.strip(punctuation) for x in line.lower()]
+            sequence.append(' '.join([x.strip(punctuation) for x in line.lower().split()]))
 
         gk_len = len(self.isGoodKeywords)
         tests = [0 for _ in range(gk_len)]
-        for token in sequence:
-            for i in range(gk_len):
-                for x in self.isGoodKeywords[i]:
-                    if not re.search(x, token) is None:
-                        tests[i] += 1
-                    if tests[i] == 2:
-                        break
+        f_used = {}
+
+        for sub_sequence in sequence:
+            for token in sub_sequence.split():
+                for i in range(gk_len):
+                    if not i in f_used:
+                        f_used[i] = []
+                    for x in self.isGoodKeywords[i][0]:
+                        if x in f_used[i]:
+                            continue
+                        if not re.search(x, token) is None:
+                            tests[i] += 1
+                            f_used[i].append(x)
+                            print("+", x)
+                        if tests[i] == 2:
+                            break
+                    for l in self.isGoodKeywords[i][1]:
+                        for x in l:
+                            if not re.search(x, token) is None:
+                                tests[i] = 0
+                                print("!", x)
+
+        print("...", tests)
 
         for i in range(gk_len):
             if len(self.isGoodKeywords[i]) == 1 and tests[i] > 0:
@@ -49,7 +77,7 @@ class Text:
 
         pub_and_year_s = re.search(pub_and_year, self.text)
         if pub_and_year_s:
-            return pub_and_year_s.group(0)
+            return [pub_and_year_s.group(0)]
         else:
             stack = []
             published_by_s = re.search(published_by, self.text)
@@ -70,16 +98,17 @@ class Src:
         pass
 
     class Twirpx:
-        def __init__(self, query):
-            self.pi = 0
-            self.query = query
-            self.sart = ''
+        def __init__(self, query, soft_start = False):
             self.session = requests.Session()
-            self.start = self.session.get('http://www.twirpx.com').text
-            self.request_pi()
-            self.pi_max = int(re.findall(r'(?<=data-page-index=")(\d+)', self.start)[-1])
-            self.metadata = self.parse_list()
-            self.get_next()
+            if not soft_start:
+                self.pi = 0
+                self.query = query
+                self.sart = ''
+                self.start = self.session.get('http://www.twirpx.com').text
+                self.request_pi()
+                self.pi_max = int(re.findall(r'(?<=data-page-index=")(\d+)', self.start)[-1])
+                self.metadata = self.parse_list()
+                self.get_next()
 
         def update_sart(self):
             self.sart = re.search(r'__SART[^>]+value\s*=\s*"([^"]+)', self.start).group(1)
@@ -101,23 +130,33 @@ class Src:
                     Chrome/59.0.3071.115 Safari/537.36'
                 }
             ).text
-            print(self.start)
 
         def analyze_file(self, url):
             res = self.session.get(url).text
-            description = re.search(r'itemprop="description">\n*.+', res).group(0)
-            description = re.sub(r'itemprop="description">|<[^>]*>', '', description)
-            proc = Text(description)
-            title = re.search(r'<meta\sproperty="og:title"\scontent="([^"]+)"\s+\/>', res).group(0)
+            description = re.findall(r'itemprop="description">[^\$]+', res, re.MULTILINE)[0]
+            description = re.split(r'<\/div>[\s\n\t]*<\/div>[\s\n\t]*<\/div>', description)[0]
+            description = re.sub(r'itemprop="description">', '', description).strip()
+            dspl = description.split('<div class="bb-sep"></div>')
+            if len(dspl) > 1:
+                metadata = re.split(r'<\/*br[^>]*>', dspl[0].strip())[0]
+            else:
+                metadata = ''
+            description = re.sub(r'<[^>]*>', '', description).strip()
+            title = re.search(r'<meta\sproperty="og:title"\scontent="([^"]+)"\s+\/>', res).group(1).strip()
+            proc = Text(title + ' ' + description)
             if proc.is_good():
-                return [title] + proc.get_metadata()
+                #return [title] + proc.get_metadata()
+                print(metadata)
+                metadata = description.splitlines()[0]
+                return [title] + [metadata]
             else:
                 return False
 
         def parse_list(self):
             metadata = []
             for file in re.finditer(r'<a\sclass=\"file-link\"\shref="([^"]+)"', self.start):
-                metadata.append(self.analyze_file(file.group(1)))
+                metadata.append(self.analyze_file('http://twirpx.com' + file.group(1)))
+                time.sleep(0.3)
             return metadata
 
         def make_report(self, message):
@@ -136,13 +175,4 @@ class Src:
 
         def final_metadata(self):
             return self.metadata
-
-
-for theme in ['манси']:
-    md = Src.Twirpx(theme)
-    from_ = json.loads(open('result.json').read())
-    from_ += md.final_metadata()
-    with open('result.json', 'a') as result:
-        result.write(from_)
-        result.close()
 
