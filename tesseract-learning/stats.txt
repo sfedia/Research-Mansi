@@ -1,0 +1,3 @@
+1 : semic-small, v-big, zhe-big, f-big, sh'-small, ya-big, f-small, zhe-small, tse-big, tse-small, sh'-big, b-big, d-big, g-big, ze-small, sh-small, r-big, h-big, ze-big, a-big, d-small, che-big, 'e-big, b-small
+
+11 : m-small
