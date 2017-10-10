@@ -45,9 +45,12 @@ rombandeeva.get_system('universal:morpheme').subclasses_order(
 	)
 )
 
+#
+is_noun = '# & universal:entity=(word) & mansi:basic_pos=(noun) '
+
 rombandeeva.add_element('universal:morpheme', '^г', 'g_suffix').applied(
 	[
-		grammar.LinkSentence('# & universal:entity=(word) & [ universal:end=(а) | universal:end=(е) | universal:end=(я) ]'),
+		grammar.LinkSentence(is_noun + '& [ universal:end=(а) | universal:end=(е) | universal:end=(я) ]'),
 		[grammar.Action('gram:number:set_dual')]
 	]
 )
@@ -56,7 +59,7 @@ rombandeeva.add_element('universal:morpheme', '^г', 'g_suffix').applied(
 
 rombandeeva.add_element('universal:morpheme', '^ыг', 'yg_suffix').applied(
 	[
-		grammar.LinkSentence('# & universal:entity=(word) & [ ТВЁРДЫЕ СОГЛАСНЫЕ ]'),
+		grammar.LinkSentence(is_noun + '& [ ТВЁРДЫЕ СОГЛАСНЫЕ ]'),
 		[grammar.Action('gram:number:set_dual')]
 	]
 )
@@ -65,7 +68,7 @@ rombandeeva.add_element('universal:morpheme', '^ыг', 'yg_suffix').applied(
 
 rombandeeva.add_element('universal:morpheme', '^яг', 'yag_suffix').applied(
 	[
-		grammar.LinkSentence('# & universal:entity=(word) & [ МЯГКИЕ СОГЛАСНЫЕ | universal:end=(и)]'),
+		grammar.LinkSentence(is_noun + '& [ МЯГКИЕ СОГЛАСНЫЕ | universal:end=(и)]'),
 		[grammar.Action('gram:number:set_dual')]
 	]
 )
@@ -83,19 +86,19 @@ lps_matrix = [
 ]
 
 for number, person, suffix, id in lps_matrix:
-	rombandeeva.add_element('universal:morpheme', '^' + suffix, id + '_suffix').applied(
+	rombandeeva.add_element('universal:morpheme', '^' + suffix, id + '_suffix').add_class('lps').applied(
 		[
 			grammar.LinkSentence(
-				'# & universal:entity=(word) & gram:possessor:number=({0}) & gram:possessor:person=({0})'.format(number, person)
+				is_noun + '& gram:possessor:number=({0}) & gram:possessor:person=({0})'.format(number, person)
 			),
 			[gramar.Action('mansi:make_lp > {0} > {1}'.format(number, person))]
 		]
 	)
 
-rombandeeva.add_element('universal:morpheme', '^' + suffix, 'yn_suffix').applied(
+rombandeeva.add_element('universal:morpheme', '^' + suffix, 'yn_suffix').add_class('lps').applied(
 	[
 		grammar.LinkSentence(
-			'# & universal:entity=(word) & gram:possessor:number=({0}) & gram:possessor:person=({0})'.format(number, person)
+			is_noun + '& gram:possessor:number=({0}) & gram:possessor:person=({0})'.format(number, person)
 		),
 		[
 			grammar.Action('mansi:make_lp > sing > 2'),
@@ -104,4 +107,62 @@ rombandeeva.add_element('universal:morpheme', '^' + suffix, 'yn_suffix').applied
 	]
 )	
 
-# page 59
+rombandeeva.add_element('universal:morpheme', '^н', 'n_suffix').applied(
+	[
+		grammar.LinkSentence(is_noun + '& [ universal:end=(а) | universal:end=(е) | universal:end=(э) ]'),
+		[grammar.Action('gram:number:set_plur')]
+	]
+).add_class('number_suffix')
+
+# твёрдые согласные?
+
+rombandeeva.add_element('universal:morpheme', '^ан', 'an_suffix').applied(
+	[
+		grammar.LinkSentence(is_noun + '& [ ТВЁРДЫЕ СОГЛАСНЫЕ ]'),
+		[grammar.Action('gram:number:set_plur')]
+	]
+).add_class('number_suffix')
+
+# мягкие согласные?
+
+rombandeeva.add_element('universal:morpheme', '^ян', 'yan_suffix').applied(
+	[
+		grammar.LinkSentence(is_noun + '& [ МЯГКИЕ СОГЛАСНЫЕ | universal:end=(и)]'),
+		[grammar.Action('gram:number:set_plur')]
+	]
+).add_class('number_suffix')
+
+rombandeeva.add_element('universal:morpheme', '^', 'null_suffix_main_case').applied(
+	[
+		grammar.LinkSentence(is_noun + '& mansi:is_lemma=()'),
+		[grammar.Action('gram:case:set_main')]
+	]
+).add_class('case_suffix')
+
+rombandeeva.add_element('universal:morpheme', '^н', 'n_case_suffix').applied(
+	[
+		grammar.LinkSentence(is_noun + '& {universal:before:rx_check > [ГЛАСНЫЙ | ГЛАСНЫЙ СОГЛАСНЫЙ]$}=()',
+		[gramar.Action('gram:case:set_napr')]
+	]
+).add_class('case_suffix')
+
+rombandeeva.add_element('universal:morpheme', '^ын', 'yn_case_suffix').applied(
+	[
+		grammar.LinkSentence(is_noun + '& {universal:before:rx_check > [СОГЛАСНЫЙ]{2}$}=()',
+		[grammar.Action('gram:case:set_napr')]
+	]
+).add_class('case_suffix')
+
+rombandeeva.add_element('universal:morpheme', '^т', 't_case_suffix').applied(
+	[
+		grammar.LinkSentence(is_noun + '& {universal:before:rx_check > [ГЛАСНЫЙ | ГЛАСНЫЙ СОГЛАСНЫЙ]$}=()'),
+		[grammar.Action('gram:case:set_loc')]
+	]
+).add_class('case_suffix')
+
+rombandeeva.add_element('universal:morpheme', '^ыт', 'yt_case_suffix').applied(
+	[
+		grammar.LinkSentence(is_noun + '& {universal:before:rx_check > [СОГЛАСНЫЙ]{2}$}=()'),
+		[grammar.Action('gram:case:set_loc')]
+	]
+).add_class('case_suffix')
