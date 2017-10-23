@@ -141,14 +141,14 @@ rombandeeva.add_element('universal:morpheme', '^', 'null_suffix_main_case').appl
 
 rombandeeva.add_element('universal:morpheme', '^н', 'n_case_suffix').applied(
 	[
-		grammar.LinkSentence(is_noun + '& {universal:before:rx_check > [ГЛАСНЫЙ | ГЛАСНЫЙ СОГЛАСНЫЙ]$}=()',
-		[gramar.Action('gram:case:set_napr')]
+		grammar.LinkSentence(is_noun + '& {universal:before:rx_check > [ГЛАСНЫЙ | ГЛАСНЫЙ СОГЛАСНЫЙ]$}=()'),
+		[grammar.Action('gram:case:set_napr')]
 	]
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^ын', 'yn_case_suffix').applied(
 	[
-		grammar.LinkSentence(is_noun + '& {universal:before:rx_check > [СОГЛАСНЫЙ]{2}$}=()',
+		grammar.LinkSentence(is_noun + '& {universal:before:rx_check > [СОГЛАСНЫЙ]{2}$}=()'),
 		[grammar.Action('gram:case:set_napr')]
 	]
 ).add_class('case_suffix')
