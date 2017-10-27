@@ -3,6 +3,16 @@ import grammar
 # ...
 rombandeeva = grammar.Container()
 
+container.need_form_parameter(
+  'russian:basic_pos',
+  ['noun']
+  [('russian:basic_pos', 'noun')],
+  [
+    grammar.Temp.stepIter('gram:number:set_plur', 'gram:number:set_sing'),
+    'grammar:case:set_main'
+  ]
+)
+
 rombandeeva.add_element('universal:morpheme', '^та!л', 'tal_suffix').applied(
     [
         grammar.LinkSentence('# & universal:entity=(word) & mansi:simple_pos=(adj)'),
@@ -24,7 +34,7 @@ for element in rombandeeva.get_by_class_name('caus_suffixes'):
 	)
 
 rombandeeva.get_system('universal:morpheme').subclasses_order(
-   '.number_suffix >> .lps >> .case_suffix',
+   '.number_suffix <<>> .lps >> .case_suffix',
    # the next argument is optional
    parent_filter = grammar.LinkSentence(
       'universal:entity=(word) & mansi:simple_pos=(noun)',
@@ -48,12 +58,19 @@ rombandeeva.get_system('universal:morpheme').subclasses_order(
 #
 is_noun = '# & universal:entity=(word) & mansi:basic_pos=(noun) '
 
+rombandeeva.add_element('universal:morpheme', grammar.Temp.null(), 'number_noun_null_suffix').applied(
+    [
+        grammar.LinkSentence(is_noun),
+        [grammar.Action('gram:number:set_sing')]
+    ]    
+)
+
 rombandeeva.add_element('universal:morpheme', '^г', 'g_suffix').applied(
 	[
 		grammar.LinkSentence(is_noun + '& [ universal:end=(а) | universal:end=(е) | universal:end=(я) ]'),
 		[grammar.Action('gram:number:set_dual')]
 	]
-)
+).add_class('number_suffix')
 
 # твёрдые согласные?
 
@@ -62,7 +79,7 @@ rombandeeva.add_element('universal:morpheme', '^ыг', 'yg_suffix').applied(
 		grammar.LinkSentence(is_noun + '& [ ТВЁРДЫЕ СОГЛАСНЫЕ ]'),
 		[grammar.Action('gram:number:set_dual')]
 	]
-)
+).add_class('number_suffix')
 
 # мягкие согласные?
 
@@ -71,7 +88,7 @@ rombandeeva.add_element('universal:morpheme', '^яг', 'yag_suffix').applied(
 		grammar.LinkSentence(is_noun + '& [ МЯГКИЕ СОГЛАСНЫЕ | universal:end=(и)]'),
 		[grammar.Action('gram:number:set_dual')]
 	]
-)
+).add_class('number_suffix')
 
 lps_matrix = [
 	['sing', '1', 'ум', 'um'],
@@ -132,9 +149,9 @@ rombandeeva.add_element('universal:morpheme', '^ян', 'yan_suffix').applied(
 	]
 ).add_class('number_suffix')
 
-rombandeeva.add_element('universal:morpheme', '^', 'null_suffix_main_case').applied(
+rombandeeva.add_element('universal:morpheme', grammar.Temp.null(), 'null_suffix_main_case').applied(
 	[
-		grammar.LinkSentence(is_noun + '& mansi:is_lemma=()'),
+		grammar.LinkSentence(is_noun),
 		[grammar.Action('gram:case:set_main')]
 	]
 ).add_class('case_suffix')
@@ -296,5 +313,10 @@ def ss_set_mutation_link(element):
         [grammar.LinkSentence('# & universal:entity=(word) & mansi:basic_pos=(verb)')]
     )
 
+rombandeeva.add_element('universal:morpheme', '^т', 't_wb_suffix').applied(
+    [
+        grammar.LinkSentence('# & universal:entity=(word) & mansi:basic_pos=')
+    ]    
+)
 
 ### RUN seq:correction:mansi* mutation
