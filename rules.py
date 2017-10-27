@@ -166,3 +166,78 @@ rombandeeva.add_element('universal:morpheme', '^ыт', 'yt_case_suffix').applied
 		[grammar.Action('gram:case:set_loc')]
 	]
 ).add_class('case_suffix')
+
+rombandeeva.add_element('universal:morpheme', '^ныл', 'nyl_case_suffix').applied(
+    [
+        grammar.LinkSentence(is_noun),
+        [grammar.Action('gram:case:set_ish')]
+    ]    
+).add_class('case_suffix')
+
+rombandeeva.add_element('universal:morpheme', '^л', 'l_case_suffix').applied(
+    [grammar.LinkSentence(is_noun + '& {universal:before:rx_check > [ГЛАСНЫЙ]$}=()'),
+        [grammar.Action('gram:case:set_instr')]
+    ]    
+)
+
+rombandeeva.add_element('universal:morpheme', '^ыл', 'l_case_suffix').applied(
+    [grammar.LinkSentence(is_noun + '& {universal:before:rx_check > [ТВЁРДЫЙ СОГЛАСНЫЙ]$}=()'),
+        [grammar.Action('gram:case:set_instr')]
+    ]    
+)
+
+rombandeeva.add_element('universal:morpheme', '^л', 'l_case_suffix').applied(
+    [grammar.LinkSentence(is_noun + '& {universal:before:rx_check > [МЯГКИЙ СОГЛАСНЫЙ]$}=()'),
+        [grammar.Action('gram:case:set_instr')]
+    ]    
+)
+
+rombandeeva.add_element('universal:morpheme', '^г', 'g_case_suffix').applied(
+    [grammar.LinkSentence(is_noun + '& [ universal:end=(а) | universal:end=(е) | universal:end=(э) ]'),
+        [grammar.Action('gram:case:set_transf')]
+    ]    
+)
+
+rombandeeva.add_element('universal:morpheme', '^ыг', 'yg_case_suffix').applied(
+    [grammar.LinkSentence(is_noun + '& {universal:before:rx_check > [ТВЁРДЫЙ СОГЛАСНЫЙ]$}=()'),
+        [grammar.Action('gram:case:set_transf')]
+    ]    
+)
+
+rombandeeva.add_element('universal:morpheme', '^иг', 'yg_case_suffix').applied(
+    [grammar.LinkSentence(is_noun + '& [{universal:before:rx_check > [МЯГКИЙ СОГЛАСНЫЙ]$}=() | universal:end=(и)]'),
+        [grammar.Action('gram:case:set_transf')]
+    ]    
+)
+
+# page 70
+
+is_verb = '# & universal:entity=(word) & mansi:basic_pos=(verb) '
+
+# warning: mutation strategy may be applied wrong to these elements <= is_verb is too broad for that
+
+rombandeeva.add_element('universal:morpheme', '^п', 'p_wb_suffix').applied(
+    [
+        grammar.LinkSentence(is_verb),
+        [grammar.Action('mansi:substantivate')]
+    ]    
+).add_class('word_building_suffix').add_class('infinitive_excl_suff')
+
+rombandeeva.get_class('infinitive_excl_suff').added_behaviour('!override')
+
+# infinitive!
+
+rombandeeva.add_element('universal:morpheme', '^ун!кве', 'u_infinitive_suffix').applied(
+    [
+        grammar.LinkSentence(is_verb),
+        [grammar.Action('gram:verb:set_infinitive')]
+    ]    
+)
+
+rombandeeva.add_element('universal:morpheme', '^н!кве', 'E_infinitive_suffix').applied(
+    [
+        grammar.LinkSentence(is_verb),
+        [grammar.Action('gram:verb:set_infinitive')]
+    ]    
+)
+
