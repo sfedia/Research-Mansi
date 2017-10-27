@@ -214,6 +214,25 @@ rombandeeva.add_element('universal:morpheme', '^иг', 'yg_case_suffix').applied
 
 is_verb = '# & universal:entity=(word) & mansi:basic_pos=(verb) '
 
+## AN IMPORTANT RULE
+
+rombandeeva.add_element('universal:char_regex', '([ГЛАСНЫЙ])с([ГЛАСНЫЙ])', 'XsX_sequence').applied(
+    [
+        grammar.LinkSentence('#'),
+        []
+    ]    
+).add_class('XsX_pair')
+
+rombandeeva.add_element('universal:char_regex:responsive', 'c\g<2>', 'XsX_sequence').applied(
+    [
+        grammar.LinkSentence('#'),
+        [grammar.Action('seq:correction:mansi:XsX')]
+    ]    
+).add_class('XsX_pair')
+
+rombandeeva.get_class('XsX_pair').added_behaviour('!override')
+## /
+
 ## warning: mutation strategy may be applied wrong to these elements <= is_verb is too broad for that
 
 rombandeeva.get_class('infinitive_excl_suff').added_behaviour('!override')
@@ -276,3 +295,6 @@ def ss_set_mutation_link(element):
     element.provide_mutation_link(
         [grammar.LinkSentence('# & universal:entity=(word) & mansi:basic_pos=(verb)')]
     )
+
+
+### RUN seq:correction:mansi* mutation
