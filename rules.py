@@ -214,14 +214,7 @@ rombandeeva.add_element('universal:morpheme', '^иг', 'yg_case_suffix').applied
 
 is_verb = '# & universal:entity=(word) & mansi:basic_pos=(verb) '
 
-# warning: mutation strategy may be applied wrong to these elements <= is_verb is too broad for that
-
-rombandeeva.add_element('universal:morpheme', '^п', 'p_wb_suffix').applied(
-    [
-        grammar.LinkSentence(is_verb),
-        [grammar.Action('mansi:substantivate')]
-    ]    
-).add_class('word_building_suffix').add_class('infinitive_excl_suff')
+## warning: mutation strategy may be applied wrong to these elements <= is_verb is too broad for that
 
 rombandeeva.get_class('infinitive_excl_suff').added_behaviour('!override')
 
@@ -232,12 +225,54 @@ rombandeeva.add_element('universal:morpheme', '^ун!кве', 'u_infinitive_suff
         grammar.LinkSentence(is_verb),
         [grammar.Action('gram:verb:set_infinitive')]
     ]    
-)
+).add_class('infinitive_excl_suff')
 
 rombandeeva.add_element('universal:morpheme', '^н!кве', 'E_infinitive_suffix').applied(
     [
         grammar.LinkSentence(is_verb),
         [grammar.Action('gram:verb:set_infinitive')]
     ]    
-)
+).add_class('infinitive_excl_suff')
 
+# уп, ап, па, пи, п
+
+rombandeeva.add_element('universal:morpheme', '^уп', 'up_wb_suffix').applied(
+    [
+        grammar.LinkSentence(is_noun),
+        [grammar.Action('mansi:verb_to_noun')]
+    ]
+).add_class('infinitive_excl_suff').add_class('word_building_suffix').add_class('subst_suffix')
+
+rombandeeva.add_element('universal:morpheme', '^ап', 'ap_wb_suffix').applied(
+    [
+        grammar.LinkSentence(is_noun),
+        [grammar.Action('mansi:verb_to_noun')]
+    ]
+).add_class('infinitive_excl_suff').add_class('word_building_suffix').add_class('subst_suffix')
+
+rombandeeva.add_element('universal:morpheme', '^па', 'pa_wb_suffix').applied(
+    [
+        grammar.LinkSentence(is_noun),
+        [grammar.Action('mansi:verb_to_noun')]
+    ]
+).add_class('infinitive_excl_suff').add_class('word_building_suffix').add_class('subst_suffix')
+
+rombandeeva.add_element('universal:morpheme', '^пи', 'pi_wb_suffix').applied(
+    [
+        grammar.LinkSentence(is_noun),
+        [grammar.Action('mansi:verb_to_noun')]
+    ]
+).add_class('infinitive_excl_suff').add_class('word_building_suffix').add_class('subst_suffix')
+
+rombandeeva.add_element('universal:morpheme', '^п', 'p_wb_suffix').applied(
+    [
+        grammar.LinkSentence(is_noun),
+        [grammar.Action('mansi:verb_to_noun')]
+    ]
+).add_class('infinitive_excl_suff').add_class('word_building_suffix').add_class('subst_suffix')
+
+@foreach_in_class('subst_suffix')
+def ss_set_mutation_link(element):
+    element.provide_mutation_link(
+        [grammar.LinkSentence('# & universal:entity=(word) & mansi:basic_pos=(verb)')]
+    )
