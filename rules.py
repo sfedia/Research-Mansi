@@ -355,6 +355,6 @@ def atn_set_mutation_link(element):
 # page 73, mutation scheme is complicated
 
 rombandeeva.get_class('adj_ending_excl').added_behaviour('override')
-# Need some universal:char_regex there??
+# Need some universal:char_regex AS adj_ending_excl there??
 
 ### RUN seq:correction:mansi* mutation
