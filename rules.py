@@ -351,6 +351,6 @@ def atn_set_mutation_link(element):
         [grammar.LinkSentence('# & universal:entity=(word) & mansi:basic_pos=(adj)')]
     )
 
-
+rombandeeva.get_class('adj_ending_excl').added_behaviour('override')
 
 ### RUN seq:correction:mansi* mutation
