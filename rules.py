@@ -36,7 +36,7 @@ for element in rombandeeva.get_by_class_name('caus_suffixes'):
 rombandeeva.get_system('universal:morpheme').subclasses_order(
    '? < .number_suffix <<>> .lps >> .case_suffix >> ?',
    # the next argument is optional
-   parent_filter = grammar.LinkSentence(
+   parent_filter=grammar.LinkSentence(
       'universal:entity=(word) & mansi:simple_pos=(noun)',
       rombandeeva
    )
