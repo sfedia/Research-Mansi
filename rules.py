@@ -3,7 +3,7 @@ import grammar
 # ...
 rombandeeva = grammar.Container()
 
-container.need_form_parameter(
+rombandeeva.need_form_parameter(
   'russian:basic_pos',
   ['noun']
   [('russian:basic_pos', 'noun')],
