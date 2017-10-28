@@ -351,6 +351,10 @@ def atn_set_mutation_link(element):
         [grammar.LinkSentence('# & universal:entity=(word) & mansi:basic_pos=(adj)')]
     )
 
+
+# page 73, mutation scheme is complicated
+
 rombandeeva.get_class('adj_ending_excl').added_behaviour('override')
+# Need some universal:char_regex there??
 
 ### RUN seq:correction:mansi* mutation
