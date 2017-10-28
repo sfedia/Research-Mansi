@@ -255,12 +255,12 @@ rombandeeva.add_element('universal:char_regex:responsive', 'c\g<2>', 'XsX_sequen
     ]    
 ).add_class('XsX_pair')
 
-rombandeeva.get_class('XsX_pair').added_behaviour('!override')
+rombandeeva.get_class('XsX_pair').added_behaviour('override')
 ## /
 
 ## warning: mutation strategy may be applied wrong to these elements <= is_verb is too broad for that
 
-rombandeeva.get_class('infinitive_excl_suff').added_behaviour('!override')
+rombandeeva.get_class('infinitive_excl_suff').added_behaviour('override')
 
 # infinitive!
 
