@@ -34,7 +34,7 @@ for element in rombandeeva.get_by_class_name('caus_suffixes'):
     )
 
 rombandeeva.get_system('universal:morpheme').subclasses_order(
-   '.number_suffix <<>> .lps >> .case_suffix',
+   '? < .number_suffix <<>> .lps >> .case_suffix >> ?',
    # the next argument is optional
    parent_filter = grammar.LinkSentence(
       'universal:entity=(word) & mansi:simple_pos=(noun)',
@@ -49,14 +49,17 @@ rombandeeva.get_system('universal:morpheme').subclasses_order(
         .word_building_suffix & APPLIED~=(pos:(verb)) >>+
         .word_inflection_suffix & APPLIED~=(pos:(verb))
     ''',
-    parent_filter = grammar.LinkSentence(
+    parent_filter=grammar.LinkSentence(
         'universal:entity=(word) & mansi:simple_pos=(verb)',
         rombandeeva
     )
 )
 
 rombandeeva.get_system('universal:morpheme').subclasses_order(
-    '? << :root'
+    '? << :root >> ? >> .word_building_suffix >> .case_suffix >> ?',
+    parent_filter=grammar.LinkSentence(
+        'universal:entity=(word) & mansi:simple_pos=(noun)'
+    )
 )
 
 
