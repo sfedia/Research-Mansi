@@ -3,6 +3,7 @@ import grammar
 # ...
 # first we should check if the whole token exists in dictionaries
 # parent layer switching due to [time limits] like universal:token < [universal:input -> mansi:SH_MOD] (like сь -> щ)
+# analytic forms: free morphemes like {A B}
 #
 rombandeeva = grammar.Container()
 
