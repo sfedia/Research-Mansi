@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 import grammar
 # ...
+# first we should check if the whole token exists in dictionaries
+#
 rombandeeva = grammar.Container()
 
 rombandeeva.need_form_parameter(
