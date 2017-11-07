@@ -2,7 +2,7 @@
 import grammar
 # ...
 # first we should check if the whole token exists in dictionaries
-# parent layer switching due to [time limits] like universal:token < [universal:input -> mansi:SH_MOD]
+# parent layer switching due to [time limits] like universal:token < [universal:input -> mansi:SH_MOD] (like сь -> щ)
 #
 rombandeeva = grammar.Container()
 
