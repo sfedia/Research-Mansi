@@ -283,35 +283,50 @@ rombandeeva.add_element('universal:morpheme', '^н!кве', 'E_infinitive_suffix
 rombandeeva.add_element('universal:morpheme', '^уп', 'up_wb_suffix').applied(
     [
         grammar.LinkSentence(is_noun),
-        [grammar.Action('mansi:verb_to_noun')]
+        [
+            grammar.Action('mansi:verb_to_noun'),
+            grammar.Action('mansi:sem:tool-or-action')
+        ]
     ]
 ).add_class('infinitive_excl_suff').add_class('word_building_suffix').add_class('verb_to_noun_suff')
 
 rombandeeva.add_element('universal:morpheme', '^ап', 'ap_wb_suffix').applied(
     [
         grammar.LinkSentence(is_noun),
-        [grammar.Action('mansi:verb_to_noun')]
+        [
+            grammar.Action('mansi:verb_to_noun'),
+            grammar.Action('mansi:sem:tool-or-action')
+        ]
     ]
 ).add_class('infinitive_excl_suff').add_class('word_building_suffix').add_class('verb_to_noun_suff')
 
 rombandeeva.add_element('universal:morpheme', '^па', 'pa_wb_suffix').applied(
     [
         grammar.LinkSentence(is_noun),
-        [grammar.Action('mansi:verb_to_noun')]
+[
+            grammar.Action('mansi:verb_to_noun'),
+            grammar.Action('mansi:sem:tool-or-action')
+        ]
     ]
 ).add_class('infinitive_excl_suff').add_class('word_building_suffix').add_class('verb_to_noun_suff')
 
 rombandeeva.add_element('universal:morpheme', '^пи', 'pi_wb_suffix').applied(
     [
         grammar.LinkSentence(is_noun),
-        [grammar.Action('mansi:verb_to_noun')]
+        [
+            grammar.Action('mansi:verb_to_noun'),
+            grammar.Action('mansi:sem:tool-or-action')
+        ]
     ]
 ).add_class('infinitive_excl_suff').add_class('word_building_suffix').add_class('verb_to_noun_suff')
 
 rombandeeva.add_element('universal:morpheme', '^п', 'p_wb_suffix').applied(
     [
         grammar.LinkSentence(is_noun),
-        [grammar.Action('mansi:verb_to_noun')]
+        [
+            grammar.Action('mansi:verb_to_noun'),
+            grammar.Action('mansi:sem:tool-or-action')
+        ]
     ]
 ).add_class('infinitive_excl_suff').add_class('word_building_suffix').add_class('verb_to_noun_suff')
 
@@ -326,21 +341,30 @@ def ss_set_mutation_link(element):
 rombandeeva.add_element('universal:morpheme', '^т', 't_wb_from_noun_suffix').applied(
     [
         grammar.LinkSentence(is_noun),
-        [grammar.Action('mansi:adj_to_noun')]
+        [
+            grammar.Action('mansi:adj_to_noun'),
+            grammar.Action('mansi:sem:obj-size')
+        ]
     ]
 ).add_class('adj_ending_excl').add_class('word_building_suffix').add_class('adj_to_noun_suff')
 
 rombandeeva.add_element('universal:morpheme', '^ит', 'it_wb_from_noun_suffix').applied(
     [
         grammar.LinkSentence(is_noun),
-        [grammar.Action('mansi:adj_to_noun')]
+        [
+            grammar.Action('mansi:adj_to_noun'),
+            grammar.Action('mansi:sem:obj-size')
+        ]
     ]
 ).add_class('adj_ending_excl').add_class('word_building_suffix').add_class('adj_to_noun_suff')
 
 rombandeeva.add_element('universal:morpheme', '^та', 'ta_wb_from_noun_suffix').applied(
     [
         grammar.LinkSentence(is_noun),
-        [grammar.Action('mansi:adj_to_noun')]
+        [
+            grammar.Action('mansi:adj_to_noun'),
+            grammar.Action('mansi:sem:obj-size')
+        ]
     ]
 ).add_class('adj_ending_excl').add_class('word_building_suffix').add_class('adj_to_noun_suff')
 
@@ -357,4 +381,56 @@ def atn_set_mutation_link(element):
 rombandeeva.get_class('adj_ending_excl').added_behaviour('override')
 # Need some universal:char_regex AS adj_ending_excl there??
 
+rombandeeva.add_element('mansi:morphemeYU', '^т', 't_wb_from_verb_suffix').applied(
+    [
+        grammar.LinkSentence(is_noun),
+        [
+            grammar.Action('mansi:verb_to_noun'),
+            grammar.Action('mansi:sem:UNKNOWN_MEANING')
+        ]
+    ]
+).add_class('verb_to_noun').add_class('yu.verb_ending_excl').add_class('verb_to_noun_suff')
+
+rombandeeva.add_element('mansi:morphemeYU', '^ит', 'it_wb_from_verb_suffix').applied(
+    [
+        grammar.LinkSentence(is_noun),
+        [
+            grammar.Action('mansi:verb_to_noun'),
+            grammar.Action('mansi:sem:UNKNOWN_MEANING')
+        ]
+    ]
+).add_class('verb_to_noun').add_class('yu.verb_ending_excl').add_class('verb_to_noun_suff')
+
+rombandeeva.add_element('mansi:morphemeYU', '^та', 'ta_wb_from_verb_suffix').applied(
+    [
+        grammar.LinkSentence(is_noun),
+        [
+            grammar.Action('mansi:verb_to_noun'),
+            grammar.Action('mansi:sem:UNKNOWN_MEANING')
+        ]
+    ]
+).add_class('verb_to_noun').add_class('yu.verb_ending_excl').add_class('verb_to_noun_suff')
+
+
+@rombandeeva.foreach_in_class('verb_to_noun_suff')
+def vtn_set_mutation_link(element):
+    element.provide_mutation_link(
+        [grammar.LinkSentence('# & universal:entity=(word) & mansi:basic_pos=(verb)')]
+    )
+
+## mansi:morphemeYU ^ункве < universal:morpheme ^ункве
+
+rombandeeva.get_class('yu.verb_ending_excl').added_behaviour('override mutate>MUTATION')
+
+rombandeeva.add_element('universal:char_regex', 'ololo', 'random2728').applied(
+    grammar.LinkSentence('something'),
+    [
+        grammar.Action('MUTATION')
+    ]
+)
+
+# LOTS OF WORD BUILDING SUFFIXES
+
+
 ### RUN seq:correction:mansi* mutation
+### create mansi:morphemeYU
