@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 import grammar
 # ...
+# first we should check if the whole token exists in dictionaries
+# parent layer switching due to [time limits] like universal:token < [universal:input -> mansi:SH_MOD] (like сь -> щ)
+# analytic forms: free morphemes like {A B}
+#
 rombandeeva = grammar.Container()
 
 rombandeeva.need_form_parameter(
@@ -103,10 +107,8 @@ lps_matrix = [
     ['sing', '2', 'ын', 'yn'],
     ['sing', '3', 'е', 'e'],
     ['dual', '1', 'ме!н', 'men'],
-    ['dual', '2', 'ы!н', 'yn'],
     ['dual', '3', 'е!н', 'en'],
     ['plur', '1', 'ув', 'uv'],
-    ['plur', '2', 'ы!н', 'yn'],
     ['plur', '3', 'а!ныл', 'anyl'],
 ]
 
@@ -120,7 +122,7 @@ for number, person, suffix, id in lps_matrix:
         ]
     )
 
-rombandeeva.add_element('universal:morpheme', '^' + suffix, 'yn_suffix').add_class('lps').applied(
+rombandeeva.add_element('universal:morpheme', '^ы!н', 'yn_suffix').add_class('lps').applied(
     [
         grammar.LinkSentence(
             is_noun + '& gram:possessor:number=({0}) & gram:possessor:person=({0})'.format(number, person)
