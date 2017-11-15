@@ -1,0 +1,287 @@
+\documentclass[b5paper,notitlepage]{article}
+
+\usepackage{polyglossia}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{expex}
+\usepackage{natbib}
+\usepackage{fixltx2e}
+
+\makeatletter
+\def\blfootnote{\gdef\@thefnmark{}\@footnotetext}
+\makeatother
+
+\setmainfont[Mapping=tex-text]{Linux Libertine O}
+\setmainlanguage{english}
+\setotherlanguages{finnish,russian}
+
+% Please keep this false for submission version, true for camera-ready
+\newif\ifcameraready
+%\camerareadyfalse
+\camerareadytrue
+
+\begin{document}
+
+\ifcameraready
+\pagestyle{empty}
+\fi
+
+\title{Towards automatic morphological annotation of Mansi dialectal texts
+}
+
+\ifcameraready
+\author{
+    Fyodor Sizov\textsuperscript{1},
+    Daria Zhornik\textsuperscript{2},
+    Sophie Pokrovskaya\textsuperscript{2},
+    Vladimir Plungian\textsuperscript{1}\\
+    \textsuperscript{1}
+    Institute of Linguistics, Russian Academy of Sciences\\
+    \url{f.sizov@yandex.ru}, \url{plungian@iling-ran.ru}\\
+    \textsuperscript{2}
+    Lomonosov Moscow State University\\
+    \url{daria.zhornik@yandex.ru}, \url{sofie.v.pokrovskaya@gmail.com}
+}
+\fi
+
+\date{}
+
+\maketitle
+\ifcameraready
+\thispagestyle{empty}
+\fi
+
+\begin{abstract}
+   This paper presents the universal morphological parser AmpEngine and the module for supporting  Mansi dialects. This toolkit allows us to create a multidialectal corpus of the Mansi language covering old texts in extinct Mansi dialects, as well as modern fieldwork material from the Upper Lozva dialect, which still remains, exceptionally, the language of everyday communication. 
+   The paper discusses the results of testing, as well as problematic points revealed in the process of parser development (for example, ambiguity of morpheme segmentation and widespread homonymy).
+\end{abstract}
+
+{
+\selectlanguage{finnish}
+\begin{abstract}
+    Artikkelissamme esittelemme AmpEngine - universaalisen morfologisen jäsentimen ja sen mansin kielen moduulin. Sen avulla luodaan mansin kielen monimurteellinen korpus, johon kuuluvat vanhat hävinneiden murteiden materiaalit sekä nykyaikaisen elävän Lozvan yläjuoksun aluen murteen tekstit. Näiden materiaalien avulla voidaan kuvata mansin kielen variaation rajat myös diakronisesta näkökulmasta. Artikkelissamme keskustellaan testauksen tuloksista sekä vaikeuksista, joita on esiintynyt parserin kehittämisen aikana, kuten morfeemien ilmaisemisen epäselvyys ja lajaa homonymia.
+
+\end{abstract}
+}
+
+\section{Introduction}
+
+This work presents a universal automatic phonetic and morphological analyser AmpEngine and discusses how it can be used for the annotation of Mansi dialectal texts. The analyser has been developed as part of the work of the project on documentation and description of the Mansi language. 
+
+One of the main tasks of the project is the creation of a multimedia corpus covering the dialectal diversity of the Mansi language, namely, of the Southern, Eastern, Western, Northern Sosva and Lozva dialects (see \cite{My}). The standard Mansi language (based on the Sosva dialect as it was around a century ago) is involved as well. Standard Mansi (more precisely, the collection of articles published in the newspaper “Lūima Sēripos”) is the main target in the recent project FinUgRevita \url{http://www.ieas-szeged.hu/finugrevita/project.html} at the University of Szeged (see \cite{LOXI}). These data may be useful in comparison with the language recorded in its current state.
+
+It is a well known fact that the massive use of large electronic corpora has incurred a kind of revolution in linguistic theory and has enabled new methods of research based on large amounts of linguistic data (see, for example, \cite{Plungian 2008} for a more detailed discussion). The fieldwork data included in the corpus will allow us to trace the diachronic development of the Mansi language up until now due to the material from the endangered Upper Lozva dialect. This is the only Mansi dialect that is still fully used in everyday communication, and a large part of the project’s resources are targeted at the documentation of this unique language variety. Because of the low accessibility of the region where it is spoken, the Upper Lozva language remains largely underdescribed. The Upper Lozva data are almost completely absent from all existing Mansi descriptions. The only modern recordings of this dialect have been made by Gábor Székely during his work for the ELAR SOAS project around 2005. The data are available online \url{https://elar.soas.ac.uk/Collection/MPI931196} and mostly consist of short wordlists. However, there are no text collections of Upper Lozva variety. 
+
+The audio materials used is the corpus were recorded by the project’s participants during their fieldwork in the Upper Lozva region in summer 2017. The written texts for the future corpus were extracted from different sources, such as books and newspaper articles in standard Mansi, as well as fieldwork data from various Mansi dialects recorded in the 19th and 20th centuries by Arturi Kannisto, Antal Reguly, Béla Munkácsi, Nikolai Chernetsov and other researchers.
+
+Morphological annotation in the corpus requires an automatic analyzer, which would exhibit high accuracy and running speed and also take into account the individual features of texts belonging to different subcorpora, as well as high level of linguistic variation (which is in general one of the core problems for the automatic annotation of texts in minor languages that lack a well-established standard variety).
+
+Corpus linguistics in Russia has a long-standing tradition, beginning with the creation of the Russian National Corpus \url{http://www.ruscorpora.ru/}, see the description of the latest developments in \cite{Plungian 2009}) and followed by several projects targeting minority languages of Russia (most of them are represented on the website \url{http://www.web-corpora.net}). Of special importance for us is a project of Beserman Udmurt corpus, which consists of fieldwork material from a non-written variety of Northern Udmurt (\url{http://beserman.ru/}) and uses the universal platform UniParser developed by Timofey Arkhangelskiy (cf. \cite{timofei}). Our work draws heavily upon Arkhangelskiy’s proposal: for example, the architecture of the morpheme layer of AmpEngine is partially based on UniParser models. 
+
+The structure of the present paper is as follows: first, we will introduce the architecture of the universal parser AmpEngine and the structure of the Mansi analyser. Afterwards, we will present the testing results, as well as a few examples of annotation performed by the parser. In the remainder of the article, we will discuss the special features of the parser, summarize its relevant characteristics and suggest perspectives for its further application. 
+
+
+
+\section{Structure of the parser}
+
+The automatic phonological and morphological parser for Mansi dialectal texts is based on the universal AmpEngine tool, which has been developed by F. Sizov within the project on documentation of the Mansi language. AmpEngine supports various inflection and word formation patterns.
+
+AmpEngine uses the input interface to receive the data for parsing as well as the metadata to adjust a better efficiency of text processing. There is a specially designed data structure in AmpEngine to process the morphological rules (AE-container). AE-container can be used to hold, process and connect fixed elements, which are representation forms of language entities.
+During the string processing, input layers are extracted from the string. AmpEngine uses input layers to set the hierarchy of fixed elements (in other words, language entities), e. g., sentences, tokens, token-without-clitic layer, morphemes, symbols, IPA-phonemes. Input layers can limit the search domains of fixed elements in the string and speed up the string processing.
+
+In some instances, customizing of default input layer extraction algorithms is required, i. e., the token-without-clitic layer can be only extracted if AmpEngine has a list of clitics. There is a special interface which allows to create custom layers and to selectively deactivate default layers.
+
+The fixed element content should be provided in the format which is used to search the element in the relevant input layer. For further search domain limiting, the fixed element can use filters which restrict scanning the segments of a relevant layer if they are not matched by filter rules, i. e., AmpEngine may be instructed to only scan nouns in the token layer.
+
+A fixed element has a list of procedures affecting the segments of a layer, which are matched by the filters. Procedures have access to segment parameters and can modify, add or remove them. E. g., procedures of morpheme elements can be used to collect values of the morphological markers of a token (segment of the token layer) to its parameter list.
+
+AmpEngine tries to find every fixed element of the AE-container in the input layer and labels the matched segments when performing the primary analysis. The parser uses concurrent representations for layers which have more than one segmentation possibility. When performing morphological tagging of text, the concurrent representations of tokens are explained as homonyms.
+
+However, in some cases, it would is to sort the homonymic variants by relevance. One of the methods used is filter analysis. AmpEngine filters of fixed elements can rate parameters and related input layer list of a token. E. g., for collocation-layer-related tokens, the parser would mark as the most relevant those representations where all collocation-layer-related tokens are connected semantically.
+
+In cases of absence of necessary corpus data, AmpEngine can use compounds found in the dictionary data and combine them with formal analytic word formation models (e. g., a lot of models are exposed in \cite{Rombandeeva vogul}), which describe the necessary properties of the tokens inside a collocation.
+
+Based on the primary analysis results, AmpEngine creates an annotation for all supported layers. This annotation can be exported via the output API, which can be used directly as well as via templates, i. e., Leipzig Glossing Rules formatting template.
+
+Based on the primary analysis, AmpEngine may also modify the input layer segments. This allows us not only to define the morphological markers of tokens but also to change them depending on a request.
+
+
+\section{Structure of the Mansi language analyzer}
+
+To add Mansi AmpEngine as a supported language, a new AE-container has been developed  based on the grammar of Evdokiya Rombandeeva \cite{Rombandeeva vogul}. It describes inflection and word formation models of the standard Mansi language. Based on this  AE-container, Mansi dialectal containers will be developed. The container using the grammar of the Eastern Mansi \cite{Kulonen} will be created as soon as enough texts in this dialect are collected.
+To provide better support of this dialect, AmpEngine can be updated via addition of new fixed elements and restriction of the existing rules. In conflict situations uring two-in-one container (basic and attached) merging, AmpEngine will be able to suppress either the basic or the attached container troubled element. The data from other Mansi dialects can likewise be merged and supported.
+
+We have created databases using the plain-text version of the Upper-Lozva dictionary created by our colleague and Mansi language consultant, Tatiana Bakhtiyarova \cite{tanya}, as well as scanned versions of the dictionaries \cite{chernetsov}, \cite{balandin}, \cite{Rombandeeva-Kuzakova}, \cite{Munkacsi} \cite{Rombandeeva}, \cite{Kannisto}. The scanned versions were recognized and converted to the plain-text format with the specifically developed and trained Tesseract OCR Engine Mansi language module. It may be used to recognize paper-based literature written in Mansi at different times. It allows us to easily expand the corpus with every accessible Mansi texts, irrespective of dialect or time period. 
+
+It should be emphasized that both dialectal and standard recordings use different writing systems, as each editor or author employs their own strategy of language encoding. Accordingly, there is no one-to-one correspondence between them, which is obviously problematic for text processing tools. 
+
+This problem has already been noticed by some researchers working with languages exhibiting a high level of dialectal variation, see, for example, a recent work on Palestinian Arabic processing \cite{Araby}. The authors of this paper suggest using CODA (Conventional Orthography for Dialectal Arabic) as a single format for recording texts in different Arabic dialects. All original texts are to some extent unified in order to correspond this writing system, although it allows some degree of dialectal variation. However, we do not find this solution fully appropriate for our purposes, as it does not fully reflect the individual characteristics of various Mansi dialects. Therefore, we propose to solve the problem by developing a converting scheme, which would enable free switching of various systems.
+However, in some cases, the orthographic system of standard Mansi seeks to achieve uniformity in language representation and emits specific features of dialectal pronunciation, in contrast to other transcription systems.
+
+In that case, the rules of system-switching should be based on statistical methods. The layer for symbol conversion for the parsed text may be designed to include all known transcription systems. If the original transcription is more detailed than the writing system to which we would like to switch (e.g. IPA transcription of spoken dialectal speech to standard orthography), several original symbols merge into one during the conversion process. To perform the process backwards and to establish, which symbol was originally there, probability ratio is used. 
+Writing system conversion in the symbol converting layer makes it easier for AmpEngine-based Mansi language analyzer to interact with external sources (for example, dictionaries).
+
+However, the text recordings of the Upper Lozva dialect should be added to the corpus in the same system that is used during fieldwork, as this system was specially designed for this dialect and reflects its special features more in a precise way. In that case, we propose using a back-converting action applied to the results of the primary analysis.
+
+The problem of uniting different orthographic and transcription systems has not been solved in corpora of minor Uralic languages. AmpEngine architecture allows us to maintain stable performance and efficiency of parsing when using various input data types.  
+
+\section{Testing of the parser}
+
+The testing of the morphological parser for the Mansi language has been executed based on the newspaper “Lūima Sēripos”, which is openly accessible on the website \url{http://www.khanty-yasang.ru/luima-seripos}. The results of parsing have been compared with the previously performed manual annotation. The testing involved 7 newspaper articles, containing in total 2317 wordforms. The latest version of the analyzer reached 96 percent accuracy. The words, for which the parser was unable to provide correct analysis, are all either toponymes, Russian calques or neologisms. These types of words are almost never found in dictionaries.
+
+Below we present examples of sentences in standard Mansi as processed by the analyzer AmpEngine (all examples are taken from the “Lūima Sēripos” newspaper). For the sake of clarity, we have manually added English translations of each sentence. The examples are provided in the Cyrillic alphabet, as the original standard Mansi texts use Cyrillic orthography.
+
+\pex[interpartskip=3ex]
+\a
+\begingl
+\gla Тāн пуссын аквхурип тāрвитыӈ вāрмаль ōньщ-ēг-ыт//
+\glb they.{\sc pl} all the.same difficult task have-{\sc PRS.IND}-{\sc 3PL} //
+\glc sinew//
+\glft ‘they all had the same difficult task’//
+\endgl
+\a
+\begingl[aboveglftskip=2ex]
+\gla Тув-ыл юв Восыӈтӯр пāвыл-н та ёхт-ыс-ум, сāв тāл тот рӯпит-ас-ум//
+\glb summer-{\sc INSTR} back Vosyntur village-{\sc LAT} and come-{\sc PST.IND}-{\sc 1SG} many year there work-{\sc PST.IND}-{\sc 1SG} //
+\glc {} {} {} {} that {} laziness fathom {} {} //
+\glft ‘in summer I came back to the Vosyntur village, I’ve worked there for many years’ //
+\endgl
+\a
+\begingl[aboveglftskip=0pt]
+\gla Ты нэ̄пак тāрат-ан	мāгсыл олн тāн тāн-ки сэ̄л-э̄г-ыт //
+\glb this paper let.out-{\sc PTCP.PRS} for money they.{\sc PL} they.{\sc PL}-{\sc EMPH} earn-{\sc PRS.IND}-{\sc 3PL}//
+\glc {} {} {} {} {} sinew {} {} //
+\glft ‘This newspaper is published with the money they earn themselves’//
+\endgl
+\xe
+
+The glosses presented above contain the following lines: tokens segmented into morphemes, stem translation & morphological glosses and English translations of the sentences.
+The translations shown below the second line are concurrent token representations which have been ranked as less relevant by the analyzer (they surface in case of homonymy). Some tokens in the processed sentences contain more homonymes than listed in the examples. However, because of format restrictions, we had to omit them. 
+
+In the last example, the parser returns two concurrent representations “тāн” - a pronoun (they) and a noun (sinew). Given that, the rules of homonym gradation indicate the pronoun as the most likely candidate. At the same time, despite the availability of concurrent representations for  “тāн”, it is only marked as a pronoun if followed by the morpheme “ки”, as the emphatic pronoun marker can only be attached to a pronoun, as stated by the filter conditions.  
+
+\section{Discussion}
+The AmpEngine analyzer supports various morphological phenomena such as agglutination, vowel harmony, incorporation, fusion, reduplication and analytical word-formation. The grammar of standard Mansi \cite{Rombandeeva vogul}, which provided the basis for the AE container, uses only a restricted number of functions supported by the analyzer. 
+The creation of an automatic morphological analyzer is conditioned by the needs of the project on documentation of the Mansi language, the main focus of which is on dialectal variation. Consequently, specification of new morphological rules in the process of container creation is required for proper functioning of the parser in dialectal subcorpora. Such rules in some cases use more resources provided by the universal analyzer. 
+
+In contrast with the traditional approach (for example, the work on Hindi NLP \cite{Hindi}), which uses POS-tagging based on multiple generalizations and disregards a significant amount of less frequent affixes and morphonological rules, AmpEngine provides an in-depth morphological analysis for each wordform.  
+The standard approach uses only a stemming algorithm searching the ‘best’, i.e. the most likely stem for POS-tagging. After the stemming, AE instead searches those elements in the container that are relevant to the given filter conditions. This method deepens the morphological analysis and provides better opportunities for studying the meaning, usage and distribution of various affixes. The content of the container is continuously updated and specified. 
+
+Due to the multimedia nature of our corpus, one of the layers will be purely phonetic. It will be linked to the corresponding audio file in case of recorded fieldwork material. This makes our corpus suitable for deep linguistic analysis, which considers phonetic details and individual variation.
+Moreover, the multidialectal content of our corpus will enable linguists specializing in areal studies use Mansi data in their research. Speakers of Mansi dialects have been in contact with different neighbouring ethnic groups, which might explain their phonetic, lexical and even grammatical variation. 
+Thus, the tool presented in this article will make a large set of well-organized linguistic data accessible to all linguistics, regardless of their preferred field of research. The data of previously under-described Mansi dialects will finally be available for a wide research community.  
+
+\ifcameraready
+
+\section*{Acknowledgements}
+
+We would like to express our endless gratitude to all our Mansi language consultants, especially to Tatiana Bakhtiyarova and Valeriy Anyamov, who have provided great aid in the organization of our field trips to the Upper Lozva dialect. Пӯмащӣпа!
+
+\section*{List of glosses}
+
+\fi 1 - first person, 3 - third person, \textsc{emph} - emphatic pronoun, \textsc{ind} - indicative mood, \textsc{instr} - instrumental case, \textsc{lat} - lative case, \textsc{pl} - plural number, \textsc{prs} - present tense, \textsc{pst} - past tense, \textsc{ptcp} - participle
+
+\medskip
+ 
+\begin{thebibliography}{9}
+\bibitem{timofei} 
+Arkhangelskiy T., Belyaev O., Vydrin A. 
+\textit{The creation of large-scaled annotated corpora of minority languages using UniParser and the EANC platform}. 
+Proceedings of COLING 2012: Posters. Mumbai: The COLING 2012 Organizing Committee, 2012. Ch. 9. P. 83–91.
+
+\bibitem{tanya} 
+Baxtijarova T., Dinislamova S. 
+\textit{Mansijsko-russkij slovar’ (verxneloz’vinskij dialekt)}. (Russian) 
+OOO «Format», Tjumen’, 2016.
+
+\bibitem{balandin} 
+Balandin A., Vaxruševa M.
+\textit{Mansijsko-russkij slovar’}. (Russian) 
+Učpedgiz, Leningrad, 1958.
+
+\bibitem{chernetsov} 
+Černecov V., Černecova А.
+\textit{Kratkij mansijsko-russkij slovar’}. (Russian) 
+Učpedgiz, Moscow, 1936.
+
+\bibitem{LOXI} 
+Horváth C., Szilágyi N., Vincze V., Nagy A.
+\textit{Language technology resources and tools for Mansi: an overview}. (Russian) 
+Proceedings of the Third International Workshop on Computational Linguistics for Uralic Languages, Saint-Petersburg, 2017.
+
+\bibitem{Araby} 
+Jarrar M., Habash N., Akra D., Zalmout N. 
+\textit{Building a Corpus for Palestinian Arabic: a Preliminary Study}.
+Proceedings of the EMNLP 2014 Workshop on Arabic Natural Langauge Processing (ANLP), Doha, Qatar, 2014. 
+
+\bibitem{Hindi} 
+Joshi N., Darbari H., Mathur I. 
+\textit{HMM Based POS Tagger for Hindi}.
+International Conference on Artificial Intelligence, Soft Computing, 2013
+
+\bibitem{Kannisto} 
+Kannisto A. 
+\textit{Wogulisches Wörterbuch}.
+Société finno-ougrienne, Helsinki, 2014.
+
+\bibitem{Kulonen} 
+Kulonen U.-M. 
+\textit{Itämansin kielioppi ja tekstejä}.
+Société finno-ougrienne, Helsinki, 2007.
+
+\bibitem{Munkacsi} 
+Munkácsi B., Kálmán B. 
+\textit{Wogulisches Wörterbuch}.
+Akadémiai Kiadó, Budapest, 1986.
+
+\bibitem{Murphy} 
+Murphy L. W.  
+\textit{Sosva Vogul Grammar}.
+Indiana University, Ph.D., 1968.
+
+\bibitem{Plungian 2009} 
+Plungian V. A. 
+\textit{Nacional’nyj korpus russkogo jazyka: 2006—2008. / Novye rezul’taty i perspektivy}.
+Nestor-Istorija, Saint-Petersburg, 2009, 502 p.
+
+\bibitem{Plungian 2008} 
+Plungian V. A. 
+\textit{Korpus kak instrument i kak ideologija: o nekotoryx urokax sovremennoj korpusnoj lingvistiki}.
+Russkij jazyk v naučnom osveščenii, 2008, 16 (2), 7-20.
+
+\bibitem{Riese} 
+Riese T. 
+\textit{Vogul}.
+Lincom Europa, 2001.
+
+\bibitem{Rombandeeva-Kuzakova} 
+Romandeeva A., Kuzakova E. A. 
+\textit{Slovar’ mansijsko-russkij i russko-mansijskij}.
+Prosveščenie, Leningrad, 1982.
+
+\bibitem{Rombandeeva vogul} 
+Romandeeva A.
+\textit{Mansijskij (vogul’skij) jazyk}.
+Nauka, Moscow, 1973.
+
+\bibitem{Rombandeeva} 
+Romandeeva A.
+\textit{Russko-mansijskij slovar’}.
+Mirall, Saint-Petersburg, 2005.
+
+\bibitem{Vengr} 
+Székely G.
+\textit{Upper-Lozva Mansi Words and Texts}.
+Endangered Languages Archive at SOAS, University of London, 2015.
+
+\bibitem{My} 
+Zhornik D., Pokrovskaja S. 
+\textit{Dokumentacija verxneloz’vinskogo dialekta mansijskogo jazyka}.
+Paper presented at the conference “Malye jazyki v bol’šoj lingvistike”, Moscow, MSU, 2-3 november 2017.
+
+\end{thebibliography}
+\end{document}
+
