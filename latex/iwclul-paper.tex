@@ -100,7 +100,7 @@ A fixed element has a list of procedures affecting the segments of a layer, whic
 
 AmpEngine tries to find every fixed element of the AE-container in the input layer and labels the matched segments when performing the primary analysis. The parser uses concurrent representations for layers which have more than one segmentation possibility. When performing morphological tagging of text, the concurrent representations of tokens are explained as homonyms.
 
-However, in some cases, it would is to sort the homonymic variants by relevance. One of the methods used is filter analysis. AmpEngine filters of fixed elements can rate parameters and related input layer list of a token. E. g., for collocation-layer-related tokens, the parser would mark as the most relevant those representations where all collocation-layer-related tokens are connected semantically.
+However, in some cases, it is desirable to sort the homonymic variants by relevance. One of the methods used is filter analysis. AmpEngine filters of fixed elements can rate parameters and related input layer list of a token. E. g., for collocation-layer-related tokens, the parser would mark as the most relevant those representations where all collocation-layer-related tokens are connected semantically.
 
 In cases of absence of necessary corpus data, AmpEngine can use compounds found in the dictionary data and combine them with formal analytic word formation models (e. g., a lot of models are exposed in \cite{Rombandeeva vogul}), which describe the necessary properties of the tokens inside a collocation.
 
@@ -111,8 +111,8 @@ Based on the primary analysis, AmpEngine may also modify the input layer segment
 
 \section{Structure of the Mansi language analyzer}
 
-To add Mansi AmpEngine as a supported language, a new AE-container has been developed  based on the grammar of Evdokiya Rombandeeva \cite{Rombandeeva vogul}. It describes inflection and word formation models of the standard Mansi language. Based on this  AE-container, Mansi dialectal containers will be developed. The container using the grammar of the Eastern Mansi \cite{Kulonen} will be created as soon as enough texts in this dialect are collected.
-To provide better support of this dialect, AmpEngine can be updated via addition of new fixed elements and restriction of the existing rules. In conflict situations uring two-in-one container (basic and attached) merging, AmpEngine will be able to suppress either the basic or the attached container troubled element. The data from other Mansi dialects can likewise be merged and supported.
+To add Mansi to AmpEngine as a supported language, a new AE-container has been developed  based on the grammar of Evdokiya Rombandeeva \cite{Rombandeeva vogul}. It describes inflection and word formation models of the standard Mansi language. Based on this  AE-container, Mansi dialectal containers will be developed. The container using the grammar of the Eastern Mansi \cite{Kulonen} will be created as soon as enough texts in this dialect are collected.
+To provide better support of this dialect, AmpEngine can be updated via addition of new fixed elements and restriction of the existing rules. In conflict situations during two-in-one container (basic and attached) merging, AmpEngine will be able to suppress either the basic or the attached container troubled element. The data from other Mansi dialects can likewise be merged and supported.
 
 We have created databases using the plain-text version of the Upper-Lozva dictionary created by our colleague and Mansi language consultant, Tatiana Bakhtiyarova \cite{tanya}, as well as scanned versions of the dictionaries \cite{chernetsov}, \cite{balandin}, \cite{Rombandeeva-Kuzakova}, \cite{Munkacsi} \cite{Rombandeeva}, \cite{Kannisto}. The scanned versions were recognized and converted to the plain-text format with the specifically developed and trained Tesseract OCR Engine Mansi language module. It may be used to recognize paper-based literature written in Mansi at different times. It allows us to easily expand the corpus with every accessible Mansi texts, irrespective of dialect or time period. 
 
@@ -158,7 +158,7 @@ Below we present examples of sentences in standard Mansi as processed by the ana
 \endgl
 \xe
 
-The glosses presented above contain the following lines: tokens segmented into morphemes, stem translation & morphological glosses and English translations of the sentences.
+The glosses presented above contain the following lines: tokens segmented into morphemes, stem translation \& morphological glosses and English translations of the sentences.
 The translations shown below the second line are concurrent token representations which have been ranked as less relevant by the analyzer (they surface in case of homonymy). Some tokens in the processed sentences contain more homonymes than listed in the examples. However, because of format restrictions, we had to omit them. 
 
 In the last example, the parser returns two concurrent representations “тāн” - a pronoun (they) and a noun (sinew). Given that, the rules of homonym gradation indicate the pronoun as the most likely candidate. At the same time, despite the availability of concurrent representations for  “тāн”, it is only marked as a pronoun if followed by the morpheme “ки”, as the emphatic pronoun marker can only be attached to a pronoun, as stated by the filter conditions.  
