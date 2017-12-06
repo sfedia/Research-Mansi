@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import re
+import pymorphy2
 
 bal_vakhr = open('balandin_vakhr.txt', encoding='utf-8')
 
@@ -7,9 +8,16 @@ alphabet_sequence = [x for x in 'аӓбвгдеёжзийклмнӈоӧөпрс�
 l_as = len(alphabet_sequence)
 
 
-def is_russian(x):
-    return True
+class isRussian:
+    def __init__(self):
+        self.morph = pymorphy2.MorphAnalyzer()
 
+    def check(self, x):
+        str_parse = str(self.morph.parse(x))
+        return 'DictionaryAnalyzer' in str_parse and not 'Unknown' in str_parse
+
+
+is_russian = isRussian()
 
 for i, line in enumerate(bal_vakhr):
     if len(line) == 1:
@@ -23,14 +31,14 @@ for i, line in enumerate(bal_vakhr):
     title = line_sp[0]
     line_sp_det = []
     for lsp in line_sp:
-        line_sp_det.append([lsp, 'russian' if is_russian(lsp) else 'mansi'])
+        line_sp_det.append([lsp, 'russian' if is_russian.check(lsp) else 'mansi'])
 
     len_line_sp_det = len(line_sp_det)
     margins = []
     for j, token in enumerate(line_sp_det):
         if j == len_line_sp_det:
             break
-        if not is_russian(token) and is_russian(line_sp_det[j + 1]):
+        if not is_russian.check(token) and is_russian.check(line_sp_det[j + 1]):
             margins.append([j, j + 1])
     margins_confirmed = []
     for marg in margins:
