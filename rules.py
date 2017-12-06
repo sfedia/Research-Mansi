@@ -118,7 +118,7 @@ for number, person, suffix, id in lps_matrix:
             grammar.LinkSentence(
                 is_noun + '& gram:possessor:number=({0}) & gram:possessor:person=({0})'.format(number, person)
             ),
-            [gramar.Action('mansi:make_lp > {0} > {1}'.format(number, person))]
+            [grammar.Action('mansi:make_lp > {0} > {1}'.format(number, person))]
         ]
     )
 
@@ -620,8 +620,228 @@ rombandeeva.add_element('universal:experimental:reduplication', 'яныг', 'yan
 # ??? -ит -> -ит | -ыт ; page 87
 
 rombandeeva.add_element('universal:morpheme', '^ит', 'it_suffix').applied(
-    grammar.LinkSentence('# & universal:entity=(word) & mansi:basic_pos=(numeral)')
+    grammar.LinkSentence('# & universal:entity=(word) & mansi:basic_pos=(numeral)'),
+    [
+        grammar.Action('gram:numeral:card_to_ord')
+    ]
 )
+
+rombandeeva.add_element('universal:morpheme', '^ыт', 'yt_suffix_for_nums').applied(
+    grammar.LinkSentence('# & universal:entity=(word) & mansi:basic_pos=(numeral)'),
+    [
+        grammar.Action('gram:numeral:card_to_ord')
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '^г', 'g_suffix_for_nums').applied(
+    grammar.LinkSentence('# & universal:entity=(word) & mansi:basic_pos=(numeral)'),
+    [
+        grammar.Action('gram:numeral:card_to_div')
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '^ыг', 'yg_suffix_for_nums').applied(
+    grammar.LinkSentence('# & universal:entity=(word) & mansi:basic_pos=(numeral)'),
+    [
+        grammar.Action('gram:numeral:card_to_div')
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '^л', 'l_suffix_for_nums').applied(
+    grammar.LinkSentence('# & universal:entity=(word) & mansi:basic_pos=(numeral)'),
+    [
+        grammar.Action('gram:numeral:card_to_distr')
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '^ыл', 'yl_suffix_for_nums').applied(
+    grammar.LinkSentence('# & universal:entity=(word) & mansi:basic_pos=(numeral)'),
+    [
+        grammar.Action('gram:numeral:card_to_distr')
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '^иттыг', 'ittyg_suffix').applied(
+    grammar.LinkSentence('# & universal:entity=(word) & mansi:basic_pos=(numeral)'),
+    [
+        grammar.Action('gram:numeral:card_to_repet')
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '^ынтыг', 'yntyg_suffix').applied(
+    grammar.LinkSentence('# & universal:entity=(word) & mansi:basic_pos=(numeral)'),
+    [
+        grammar.Action('gram:numeral:card_to_repet')
+    ]
+)
+
+rombandeeva.add_element('universal:collocation', '''
+    <[mansi:basic_pos=(numeral) & [gram:numeral_cat=(cardinal) | gram:numeral_cat=(ordinal)]]>
+    *1 <[universal:content=(сёс)]>
+''', 'repet_numeral_colloc').applied(
+    grammar.LinkSentence('# & universal:entity=(input)'),
+    [
+        grammar.Action('gram:numeral:co_to_repet_colloc')
+    ]
+)
+
+# page 91 !!
+
+rombandeeva.add_element('universal:morpheme', '^кем', 'kem_suffix').applied(
+    grammar.LinkSentence('''# & universal:entity=(word) & mansi:basic_pos=(numeral)
+    & gram:numeral_cat=(cardinal)'''),
+    [
+        grammar.Action('gram:numeral:cardinal_to_round')
+    ]
+).add_class('kem_abstraction')
+
+rombandeeva.get_class('kem_abstraction').added_behaviour('''
+    prepend <universal:morpheme> ( (^ах) | (^ман) ) -> (0.5|0.5)
+''')
+
+rombandeeva.add_element('universal:collocation', '''
+    <[mansi:basic_pos=(numeral)]> *1 <[universal:content=(суп) | universal:content=(па!л)]>
+''', 'num_partial_colloc').applied(
+    grammar.LinkSentence('# & universal:entity=(input)'),
+    [
+        grammar.Action('mansi:numeral:partial_colloc')
+    ]
+)
+
+personal_pronouns = {
+    '1SG': {
+        'nom': 'ам',
+        'acc': 'а!нум',
+        'dat': 'а!нумн',
+        'ish': 'а!нумныл',
+        'instr': 'а!нумтыл',
+    },
+    '2SG': {
+        'nom': 'нан!',
+        'acc': 'нан!ын',
+        'dat': 'нан!ынн',
+        'ish': 'нан!ынныл',
+        'instr': 'нан!ынтыл',
+    },
+    '3SG': {
+        'nom': 'тав',
+        'acc': 'таве',
+        'dat': 'таве!н',
+        'ish': 'таве!ныл',
+        'instr': 'таветыл',
+    },
+    '1DUAL': {
+        'nom': 'ме!н',
+        'acc': 'ме!нме!н',
+        'dat': 'ме!нме!нн',
+        'ish': 'ме!нме!нныл',
+        'instr': 'ме!нме!нтыл',
+    },
+    '2DUAL': {
+        'nom': 'нэ!н',
+        'acc': 'нэ!нан',
+        'dat': 'нэ!нанн',
+        'ish': 'нэ!нанныл',
+        'instr': 'нэ!нантыл',
+    },
+    '3DUAL': {
+        'nom': 'тэ!н',
+        'acc': 'тэ!нтэ!н',
+        'dat': 'тэ!нтэ!нн',
+        'ish': 'тэ!нтэ!нныл',
+        'instr': 'тэ!нтэ!нтыл',
+    },
+    '1PL': {
+        'nom': 'ма!н',
+        'acc': 'ма!нав',
+        'dat': 'ма!навн',
+        'ish': 'ма!навныл',
+        'instr': 'ма!навтыл'
+    },
+    '2PL': {
+        'nom': 'на!н',
+        'acc': 'на!нан',
+        'dat': 'нананн',
+        'ish': 'на!нанныл',
+        'instr': 'на!нантыл'
+    },
+    '3PL': {
+        'nom': 'та!н',
+        'acc': 'та!наныл',
+        'dat': 'та!нанылн',
+        'ish': 'та!нанылныл',
+        'instr': 'та!нанылтыл'
+    }
+}
+
+for person_number, cases in personal_pronouns:
+    for case, value in cases:
+        rombandeeva.add_element(
+            'universal:token', value, 'pers_pron_{}.{}'.format(person_number, case)
+        ).applied(
+            grammar.LinkSentence('# & universal:entity=(input)'),
+            [
+                grammar.Action('mansi:pronoun:personal:' + person_number)
+                grammar.Action('gram:case:' + case)
+            ]
+        )
+
+rombandeeva.add_element('universal:morpheme', '^ки', 'ki_pronoun_suff').applied(
+    grammar.LinkSentence('# & universal:entity=(word) & mansi:pronoun:is_personal=()'),
+    [
+        grammar.Action('mansi:pronoun:lich_ukaz')
+    ]
+).add_class('lich_ukaz')
+
+rombandeeva.add_element('universal:morpheme', '^кке', 'kke_suffix').applied(
+    grammar.LinkSentence('# & universal:entity=(word) & mansi:pronoun:is_personal=()'),
+    [
+        grammar.Action('mansi:pronoun:restriction')
+    ]
+).add_class('kke_suff')
+
+rombandeeva.get_system('universal:morpheme').subclasses_order(
+   '? <>> .kke_suff > .lps',
+   parent_filter=grammar.LinkSentence(
+      'universal:entity=(word) & mansi:simple_pos=(pronoun) & mansi:pronoun:is_personal=()',
+      rombandeeva
+   )
+)
+
+rombandeeva.add_element('universal:morpheme', '^на!', 'na_pr_suffix').applied(
+    grammar.LinkSentence('# & mansi:simple_pos=(pronoun) & mansi:pronoun:is_personal=()'),
+    [
+        grammar.Action('mansi:pronoun:lich_vozvr')
+    ]
+).add_class('na_suff')
+
+rombandeeva.get_system('universal:morpheme').subclasses_order(
+    '? > .lich_ukaz > .na_suff > .lps',
+parent_filter=grammar.LinkSentence(
+      'universal:entity=(word) & mansi:simple_pos=(pronoun) & mansi:pronoun:is_personal=()',
+      rombandeeva
+   )
+)
+
+lps_matrix_2 = [
+    ['sing', '1', '^м'],
+    ['sing', '2', '^н'], # ggegger 222
+    ['sing', '3', '^тэ'],
+    ['dual', '1', '^ме!н'],
+    ['dual', '3', '^тэ!н'],
+    ['plur', '1', '^в'],
+    ['plur', '3', '^ныл']
+]
+
+for number, person, suffix in lps_matrix_2:
+    rombandeeva.add_element(
+        'universal:morpheme',
+        suffix,
+        '2a_{}_{}_suff_lps'.format(number, person)
+    ).applied(
+        grammar.LinkSentence('# & ')
+    )
+
 
 ### RUN seq:correction:mansi* mutation
 ### create mansi:morphemeYU
