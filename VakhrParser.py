@@ -13,8 +13,12 @@ class isRussian:
         self.morph = pymorphy2.MorphAnalyzer()
 
     def check(self, x):
-        str_parse = str(self.morph.parse(x))
-        return 'DictionaryAnalyzer' in str_parse and not 'Unknown' in str_parse
+        x = re.sub(r'\/.*', '', x).strip('«»')
+        for xx in (x, x.lower(), x.strip('-'), x.lower().strip('-')):
+            str_parse = str(self.morph.parse(xx))
+            if 'DictionaryAnalyzer' in str_parse and not 'Unknown' in str_parse:
+                return True
+        return False
 
 
 is_russian = isRussian()
@@ -27,18 +31,36 @@ for i, line in enumerate(bal_vakhr):
             if line.istitle():
                 continue
 
-    line_sp = line.split()
+    line_sp_proto = line.split()
+    line_sp = []
+    removed_elements = []
+    sp_index = 0
+    for j, el in enumerate(line_sp_proto):
+        try:
+            void = int(el[0])
+            removed_elements.append([sp_index, j])
+            continue
+        except ValueError:
+            line_sp.append(el.strip('!?():;')) # . and , remain
+
+    if len(line_sp) == 0:
+        continue
+
     title = line_sp[0]
+
     line_sp_det = []
     for lsp in line_sp:
         line_sp_det.append([lsp, 'russian' if is_russian.check(lsp) else 'mansi'])
 
     len_line_sp_det = len(line_sp_det)
+    if len_line_sp_det == 1:
+        # DO NOT SPLIT IT ANYWAY
+        continue
     margins = []
     for j, token in enumerate(line_sp_det):
-        if j == len_line_sp_det:
+        if j == len_line_sp_det - 1:
             break
-        if not is_russian.check(token) and is_russian.check(line_sp_det[j + 1]):
+        if token[1] == 'mansi' and line_sp_det[j + 1][1] == 'russian':
             margins.append([j, j + 1])
     margins_confirmed = []
     for marg in margins:
@@ -47,16 +69,18 @@ for i, line in enumerate(bal_vakhr):
         rus_i = marg[1]
         if start_i == 2:
             continue
-        while back_i > 0 and line_sp_det[back_i][0] == 'mansi':
+        while back_i > 0 and line_sp_det[back_i][1] == 'mansi':
             triple_list = [line_sp[back_i + 1], line_sp[back_i], line_sp[0]]
             triple_list.sort()
             st_i_new = triple_list.index(line_sp[back_i + 1])
             if triple_list.index(title) > 0:
                 break
-            al_i = alphabet_sequence.index(title[0])
+            al_i = alphabet_sequence.index(title[0].lower())
             next_sym = alphabet_sequence[al_i + 1] if al_i < l_as - 1 else None
             if st_i_new == 1 and (line_sp[back_i + 1][0] == title[0] or (next_sym is not None and line_sp[back_i + 1][0] == next_sym)):
                 margins_confirmed.append([back_i + 1, marg[1]])
                 break
             back_i -= 1
 
+    print(line)
+    print(margins_confirmed)
