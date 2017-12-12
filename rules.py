@@ -841,6 +841,106 @@ for number, person, suffix in lps_matrix_2:
     ).applied(
         grammar.LinkSentence('# & ')
     )
+for number, person, suffix in lps_matrix_2:
+    rombandeeva.add_element(
+        'universal:morpheme',
+        suffix,
+        '2a_{}_{}_suff_lps'.format(number, person)
+    ).applied(
+        grammar.LinkSentence(
+            '# & universal:entity=(word) & mansi:basic_pos=(pronoun) & mansi:pronoun:is_personal=()'),
+        [
+            grammar.Action('mansi:make_lp', arguments=[number, person])
+        ]
+    )
+# page 98-99!
+
+interrog_pronoun = [
+    ['хотъют', 'хотъютыг', 'хотъютыт', 'hotyut'],
+    ['хо!н!ха', 'хо!н!хаг', 'хо!н!хат', 'honha'],
+    ['ма!ныр', 'ма!нарыг', 'ма!нарыт', 'manyr']
+]
+
+for sing, dual, plur, id_word in interrog_pronoun:
+    rombandeeva.add_element('universal:token', sing, '{}_sing'.format(id_word)).applied(
+        grammar.LinkSentence('# & universal:entity=(input)'),
+        [
+            grammar.Action('gram:set_number:sing')
+        ]
+    ).add_class('interrog_pronoun')
+    rombandeeva.add_element('universal:token', dual, '{}_dual'.format(id_word)).applied(
+        grammar.LinkSentence('# & universal:entity=(input)'),
+        [
+            grammar.Action('gram:set_number:dual')
+        ]
+    ).add_class('interrog_pronoun')
+    rombandeeva.add_element('universal:token', sing, '{}_sing'.format(id_word)).applied(
+        grammar.LinkSentence('# & universal:entity=(input)'),
+        [
+            grammar.Action('gram:set_number:dual')
+        ]
+    ).add_class('interrog_pronoun')
+
+
+@rombandeeva.foreach_in_class('interrog_pronoun')
+def interrog_pronouns_as_nouns(element):
+    element.intrusion(
+        grammar.LinkSentence('universal:entity=(noun)'),
+        whitelist={
+            'classes': ['case_suffixes']
+        }
+    )
+    element.bw_list(exclude={'mutations': ['gram:case:set_loc']})
+
+demonstr_pronoun_matrix = [
+    [['ты', 'та'], ['тыиг', 'таиг'], ['тыит', 'таит']],
+    [['тыи', 'таи'], ['тыиг', 'таиг'], ['тыит', 'таит']],
+    [['тыин', 'таин'], ['тыигн', 'таигн'], ['тыитн', 'таитн']],
+    [['тыиныл', 'таиныл'], ['тыигныл', 'таигныл'], ['тыитныл', 'таитныл']],
+    [['тыил', 'таил'], ['тыигыл', 'таигыл'], ['тыитыл', 'таитыл']],
+    [['тыиг', 'таиг'], [], []]
+]
+
+cases = ['nom', 'acc', 'dat', 'ish', 'instr', 'transf']
+num = ['sing', 'dual', 'plur']
+for j, group in enumerate(demonstr_pronoun_matrix):
+    for e, number in enumerate(group):
+        rombandeeva.add_element(
+            'universal:token', number[0], 'pd.ty_{}_{}'.format(j, e)
+        ).applied(
+            grammar.LinkSentence('# & universal:entity=(input)'),
+            [
+                grammar.Action('gram:case:set_{}'.format(cases[j])),
+                grammar.Action('gram:number:set_{}'.format(num[e])),
+                grammar.Action('mansi:pronoun:demonstrative')
+            ]
+        )
+        rombandeeva.add_element(
+            'universal:token', number[0], 'pd.ta_{}_{}'.format(j, e)
+        ).applied(
+            grammar.LinkSentence('# & universal:entity=(input)'),
+            [
+                grammar.Action('gram:case:set_{}'.format(cases[j])),
+                grammar.Action('gram:number:set_{}'.format(num[e])),
+                grammar.Action('mansi:pronoun:indefinite')
+            ]
+        )
+
+## page 104 !!
+
+hotpa = ['хо!тпа', 'хо!тпаг', 'хо!тпат']
+matyr = ['матыр', 'матарыг', 'матарыт']
+
+for j in range(3):
+    for s in ('hotpa', 'matyr'):
+        rombandeeva.add_element(
+            'universal:token', eval(s)[j], 'pi_{}_{}'.format(s, num[j])
+        ).applied(
+            grammar.LinkSentence('# & universal:entity=(input)'),
+            [
+                grammar.Action('gram:number:set_{}'.format(num[j]))
+            ]
+        )
 
 
 ### RUN seq:correction:mansi* mutation
