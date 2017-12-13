@@ -19,12 +19,15 @@ for e, line in enumerate(bibliography_file):
 for key in dict_bibliography:
     dict_bibliography[key] = ' '.join(dict_bibliography[key])
 
+ref_regex = r'(([A-Z]\.|ван|дер|van|der|de|[А-ЯЁ][а-яё\-]+|[A-Z][a-zöäüàáèéòó\-]+|др\.)(\s*[&и,]\s*|\s)?)+(\s*et\s*al'
+ref_regex += r'\.?)?\s*(\([^\)]+\))?\s*(\d+[a-z]?(\s*[,и]\s*(?=\d))?)+(:\s*\d+-\d+)?|(«[^»]+»(\s*[и,]\s*)?)+'
+ref_regex += r'\s*\(([^\)]+)\)'
 m = pymorphy2.MorphAnalyzer()
 for key in dict_bibliography:
     LES_START = False
-    sentences = re.split(r'(?<!с[мр]|ed|ds|ед|al|др|.[A-ZА-ЯЁ])\s*\.\s*', dict_bibliography[key])
+    sentences = re.split(r'(?<!с[мр]|ed|ds|ед|al|гл|Гл|гг|\sг|др|ol|.[A-ZА-ЯЁ])\s*\.\s*', dict_bibliography[key])
+    keywords_cache = {}
     for e, sentence in enumerate(sentences):
-        print(sentence)
         keywords = []
         stripped = re.sub(r'[«»\(\)]', '', sentence)
         for token in stripped.split():
@@ -51,4 +54,21 @@ for key in dict_bibliography:
                 keywords.append(lemma)
                 if re.search('[ыи]й$', lemma):
                     keywords.append(lemma[:-2] + 'ость')
-        print(keywords)
+        if not keywords:
+            i = e
+            while i > 0:
+                if i in keywords_cache and keywords_cache[i]:
+                    keywords = keywords_cache[i]
+                    break
+        if 'ЛЭС' in sentence:
+            LES_START = True
+
+        references = re.finditer(ref_regex, sentence)
+        ref_filtered = []
+        for reference in references:
+            ref = reference.group(0)
+            if ('«' in ref or '»' in ref) and not LES_START:
+                print(7)
+                continue
+            ref_filtered.append(ref)
+        print(ref_filtered)
