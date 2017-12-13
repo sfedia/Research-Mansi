@@ -108,6 +108,8 @@ for key in dict_bibliography:
                         authors_formatted.append([author])
                 obj['authors'] = authors_formatted
                 obj['tags'] = keywords
+                obj['tags'].append(key)
+                obj['tags'] = list(set(obj['tags']))
                 for year in obj['years']:
                     m_obj = obj
                     m_obj['years'] = year
@@ -132,6 +134,8 @@ for key in dict_bibliography:
                     obj['authors'] = authors_formatted
                     obj['name'] = article
                     obj['tags'] = keywords
+                    obj['tags'].append(key)
+                    obj['tags'] = list(set(obj['tags']))
                     extracted_objects.append(obj)
 
 for obj in extracted_objects:
@@ -142,10 +146,13 @@ for obj in extracted_objects:
         code += 'RT Book, Section\n'
     elif obj['type'] == 'article,les':
         code += 'RT Book, Section\n'
-    for e, author in enumerate(obj['authors']):
-        code += 'A' + str(e + 1) + ' ' + ', '.join(author) + '\n'
+    for author in obj['authors']:
+        code += 'A1' + ' ' + ', '.join(author) + '\n'
     if 'name' in obj:
         code += 'T1' + ' ' + obj['name'] + '\n'
+    else:
+        code += 'T1' + ' [' + ','.join([x[0] for x in obj['authors']]) + ((',' + obj['years']) if 'years' in obj else '')
+        code += ']' + '\n'
     if obj['type'] == 'article,les':
         code += '\n'.join([
             'T2 Лингвистический энциклопедический словарь',
