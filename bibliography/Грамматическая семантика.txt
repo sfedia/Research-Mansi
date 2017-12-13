@@ -1,0 +1,4730 @@
+RT Book, Whole
+A1 Бондарко
+FD 1976
+YR 1976
+K1 значение
+
+RT Book, Whole
+A1 Булыгина
+FD 1980
+YR 1980
+K1 значение
+
+RT Book, Whole
+A1 Bybee
+FD 1985
+YR 1985
+K1 значение
+
+RT Book, Whole
+A1 Anderson, S.
+FD 1985a
+YR 1985a
+K1 значение
+
+RT Book, Whole
+A1 Corbett
+FD 1999
+YR 1999
+K1 значение
+
+RT Book, Whole
+A1 Stump
+FD 2005
+YR 2005
+K1 значение
+
+RT Book, Whole
+A1 Якобсон
+FD 1959
+YR 1959
+K1 обязательность
+
+RT Book, Whole
+A1 Гринберг
+FD 1960
+YR 1960
+K1 обязательность
+
+RT Book, Whole
+A1 Зализняк
+FD 1967
+YR 1967
+K1 обязательность
+
+RT Book, Whole
+A1 Маслова
+FD 1994
+YR 1994
+K1 обязательность
+
+RT Book, Whole
+A1 Перцов
+FD 2001
+YR 2001
+K1 обязательность
+
+RT Book, Whole
+A1 Сумбатова
+FD 2002
+YR 2002
+K1 обязательность
+
+RT Book, Whole
+A1 Князев
+FD 2007
+YR 2007
+K1 обязательность
+
+RT Book, Whole
+A1 Bickel
+A2 Nichols
+FD 2007
+YR 2007
+K1 обязательность
+
+RT Book, Whole
+A1 Зализняк
+FD 1967
+YR 1967
+K1 парадигма
+
+RT Book, Whole
+A1 Matthews
+FD 1972
+YR 1972
+K1 парадигма
+
+RT Book, Whole
+A1 Ревзин
+FD 1973
+YR 1973
+K1 парадигма
+
+RT Book, Whole
+A1 Кубрякова
+FD 1974
+YR 1974
+K1 парадигма
+
+RT Book, Whole
+A1 Wurzel
+FD 1984
+YR 1984
+K1 парадигма
+
+RT Book, Whole
+A1 Bybee
+FD 1985
+YR 1985
+K1 парадигма
+
+RT Book, Whole
+A1 Dressler et al.
+FD 1987
+YR 1987
+K1 парадигма
+
+RT Book, Whole
+A1 Plank
+FD 1991
+YR 1991
+K1 парадигма
+
+RT Book, Whole
+A1 Anderson, S.
+FD 1992
+YR 1992
+K1 парадигма
+
+RT Book, Whole
+A1 Aronoff
+FD 1994
+YR 1994
+K1 парадигма
+
+RT Book, Whole
+A1 Beard
+FD 1995
+YR 1995
+K1 парадигма
+
+RT Book, Whole
+A1 Lemaréchal
+FD 1998
+YR 1998
+K1 парадигма
+
+RT Book, Whole
+A1 Stump
+FD 2001
+YR 2001
+K1 парадигма
+
+RT Book, Whole
+A1 Blevins
+FD 2004
+YR 2004
+K1 парадигма
+
+RT Book, Whole
+A1 Bybee
+FD 1985
+YR 1985
+K1 оппозиция
+K1 значение
+
+RT Book, Whole
+A1 Dahl
+FD 1985
+YR 1985
+K1 оппозиция
+K1 значение
+
+RT Book, Whole
+A1 Живов
+A2 Тимберлейк
+FD 1997
+YR 1997
+K1 оппозиция
+K1 значение
+
+RT Book, Whole
+A1 Taylor
+FD 2003
+YR 2003
+K1 оппозиция
+K1 значение
+
+RT Book, Whole
+A1 Апресян
+FD 2004
+YR 2004
+K1 оппозиция
+K1 значение
+
+RT Book, Whole
+A1 Жирмунский
+A2 Суник
+FD 1965
+YR 1965
+K1 форма
+K1 грамматика
+
+RT Book, Whole
+A1 Арутюнова
+FD 1965
+YR 1965
+K1 форма
+K1 грамматика
+
+RT Book, Whole
+A1 Храковский
+FD 1965
+YR 1965
+K1 форма
+K1 грамматика
+
+RT Book, Whole
+A1 Tauli
+FD 1958
+YR 1958
+K1 форма
+K1 грамматика
+
+RT Book, Whole
+A1 Schwegler
+FD 1990
+YR 1990
+K1 число
+K1 категория
+
+RT Book, Whole
+A1 Squartini
+FD 1998
+YR 1998
+K1 число
+K1 категория
+
+RT Book, Whole
+A1 Павлов
+FD 1998
+YR 1998
+K1 число
+K1 категория
+
+RT Book, Whole
+A1 Калинина
+FD 2004
+YR 2004
+K1 число
+K1 категория
+
+RT Book, Whole
+A1 Сумбатова
+FD 2004
+YR 2004
+K1 число
+K1 категория
+
+RT Book, Section
+A1 Булыгина, Т. В.
+A2 Крылов, С. А.
+T1 Категория
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 категория
+K1 лексема
+K1 флексия
+K1 словоформа
+K1 парадигма
+
+RT Book, Section
+A1 Булыгина, Т. В.
+A2 Крылов, С. А.
+T1 Лексема
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 категория
+K1 лексема
+K1 флексия
+K1 словоформа
+K1 парадигма
+
+RT Book, Section
+A1 Булыгина, Т. В.
+A2 Крылов, С. А.
+T1 Флексия
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 категория
+K1 лексема
+K1 флексия
+K1 словоформа
+K1 парадигма
+
+RT Book, Section
+A1 Зализняк, А. А.
+T1 Словоизменение
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 категория
+K1 лексема
+K1 флексия
+K1 словоформа
+K1 парадигма
+
+RT Book, Section
+A1 Зализняк, А. А.
+T1 Словоформа
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 категория
+K1 лексема
+K1 флексия
+K1 словоформа
+K1 парадигма
+
+RT Book, Section
+A1 Кубрякова, Е. С.
+T1 Парадигма
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 категория
+K1 лексема
+K1 флексия
+K1 словоформа
+K1 парадигма
+
+RT Book, Section
+A1 Кубрякова, Е. С.
+T1 Словообразование
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 категория
+K1 лексема
+K1 флексия
+K1 словоформа
+K1 парадигма
+
+RT Book, Section
+A1 см. список литературы sub ЛЭС
+T1 Языкознание: Большой энциклопедический словарь
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+
+RT Book, Whole
+A1 Brown
+A2 Miller
+FD 1999
+YR 1999
+
+RT Book, Whole
+A1 Brown, K.
+FD 2006
+YR 2006
+
+RT Book, Whole
+A1 Апресян и
+FD 2004
+YR 2004
+
+RT Book, Whole
+A1 Dahl
+FD 1985
+YR 1985
+
+RT Book, Whole
+A1 Wierzbicka
+FD 1988
+YR 1988
+
+RT Book, Whole
+A1 Поливанова
+FD 1983
+YR 1983
+
+RT Book, Whole
+A1 Heine et al.
+FD 1991
+YR 1991
+K1 аспект
+K1 семантика
+
+RT Book, Whole
+A1 Bybee et al.
+FD 1994
+YR 1994
+K1 аспект
+K1 семантика
+
+RT Book, Whole
+A1 Dahl
+FD 2004
+YR 2004
+K1 аспект
+K1 семантика
+
+RT Book, Whole
+A1 Якобсон
+FD 1936
+YR 1936
+K1 инвариант
+K1 граммема
+
+RT Book, Whole
+A1 Курилович
+FD 1955
+YR 1955
+K1 инвариант
+K1 граммема
+
+RT Book, Whole
+A1 Janda
+FD 1993
+YR 1993
+K1 инвариант
+K1 граммема
+
+RT Book, Whole
+A1 Падучева
+FD 1996
+YR 1996
+K1 инвариант
+K1 граммема
+
+RT Book, Whole
+A1 Перцов
+FD 2001
+YR 2001
+K1 инвариант
+K1 граммема
+
+RT Book, Whole
+A1 Бондарко
+FD 2003
+YR 2003
+K1 инвариант
+K1 граммема
+
+RT Book, Whole
+A1 Dahl
+FD 1985
+YR 1985
+
+RT Book, Whole
+A1 Bybee
+A2 Dahl
+FD 1989
+YR 1989
+
+RT Book, Whole
+A1 Comrie
+FD 1989
+YR 1989
+
+RT Book, Whole
+A1 Bybee et al.
+FD 1994
+YR 1994
+
+RT Book, Whole
+A1 Чвани
+FD 1998
+YR 1998
+
+RT Book, Whole
+A1 Ramat
+FD 1999
+YR 1999
+
+RT Book, Whole
+A1 Haspelmath
+FD 2007
+YR 2007
+
+RT Book, Whole
+A1 Hopper
+A2 Thompson
+FD 1984
+YR 1984
+K1 отношение
+
+RT Book, Whole
+A1 Langacker
+FD 1987b
+YR 1987b
+K1 отношение
+
+RT Book, Whole
+A1 Алпатов
+FD 1990
+YR 1990
+
+RT Book, Whole
+A1 Ревзина
+A2 Ревзин
+FD 1975
+YR 1975
+
+RT Book, Whole
+A1 Степанов
+FD 1981
+YR 1981
+
+RT Book, Whole
+A1 Тестелец
+FD 1990
+YR 1990
+K1 глагол
+
+RT Book, Whole
+A1 Sasse
+FD 1993a
+YR 1993a
+K1 глагол
+
+RT Book, Whole
+A1 Курилович
+FD 1936
+YR 1936
+
+RT Book, Whole
+A1 Lemaréchal
+FD 1989
+YR 1989
+
+RT Book, Whole
+A1 Croft
+FD 1991
+YR 1991
+
+RT Book, Whole
+A1 Hengeveld
+FD 1992
+YR 1992
+
+RT Book, Whole
+A1 Schachter
+FD 1985
+YR 1985
+
+RT Book, Whole
+A1 Sasse
+FD 1993b
+YR 1993b
+
+RT Book, Whole
+A1 Dixon
+FD 1977a
+YR 1977a
+K1 прилагательное
+K1 прилагательное
+K1 прилагательное
+K1 глагол
+
+RT Book, Whole
+A1 Dixon
+FD 1994a
+YR 1994a
+K1 прилагательное
+K1 прилагательное
+K1 прилагательное
+K1 глагол
+
+RT Book, Whole
+A1 Dixon
+A2 Aikhenvald
+FD 2004
+YR 2004
+K1 прилагательное
+K1 прилагательное
+K1 прилагательное
+K1 глагол
+
+RT Book, Whole
+A1 Thompson
+FD 1988
+YR 1988
+K1 прилагательное
+K1 прилагательное
+K1 прилагательное
+K1 глагол
+
+RT Book, Whole
+A1 Bhat
+FD 1996
+YR 1996
+K1 прилагательное
+K1 прилагательное
+K1 прилагательное
+K1 глагол
+
+RT Book, Whole
+A1 Wetzer
+FD 1996
+YR 1996
+K1 прилагательное
+K1 прилагательное
+K1 прилагательное
+K1 глагол
+
+RT Book, Whole
+A1 Beck
+FD 2002
+YR 2002
+K1 прилагательное
+K1 прилагательное
+K1 прилагательное
+K1 глагол
+
+RT Book, Whole
+A1 Вольф
+FD 1978
+YR 1978
+
+RT Book, Whole
+A1 Bolinger
+FD 1967
+YR 1967
+K1 семантика
+K1 прилагательное
+
+RT Book, Whole
+A1 Вежбицкая
+FD 1999
+YR 1999
+K1 семантика
+
+RT Book, Whole
+A1 Wierzbicka
+FD 1988
+YR 1988
+K1 семантика
+
+RT Book, Whole
+A1 Ramat
+A2 Ricca
+FD 1994
+YR 1994
+K1 семантика
+
+RT Book, Whole
+A1 Филипенко
+FD 2003
+YR 2003
+K1 семантика
+
+RT Book, Whole
+A1 Пеньковский
+FD 2004
+YR 2004
+K1 семантика
+
+RT Book, Whole
+A1 Hagège
+FD 1975
+YR 1975
+K1 семантика
+K1 грамматикализация
+
+RT Book, Whole
+A1 Luraghi
+FD 2003
+YR 2003
+K1 семантика
+K1 грамматикализация
+
+RT Book, Whole
+A1 Дурново
+FD 1922
+YR 1922
+
+RT Book, Whole
+A1 Щерба
+FD 1928
+YR 1928
+
+RT Book, Whole
+A1 Пешковский
+FD 1956
+YR 1956
+
+RT Book, Whole
+A1 Виноградов
+FD 1947
+YR 1947
+
+RT Book, Whole
+A1 Аванесов
+A2 Сидоров
+FD 1945
+YR 1945
+
+RT Book, Whole
+A1 Панов
+FD 1960
+YR 1960
+
+RT Book, Whole
+A1 Зализняк
+FD 1967
+YR 1967
+
+RT Book, Whole
+A1 Garde
+FD 1981
+YR 1981
+
+RT Book, Whole
+A1 Исаченко
+FD 1955
+YR 1955
+K1 категория
+K1 предикатив
+
+RT Book, Whole
+A1 Маслов
+FD 1948
+YR 1948
+K1 предикат
+
+RT Book, Whole
+A1 Vendler
+FD 1957
+YR 1957
+K1 предикат
+
+RT Book, Whole
+A1 Булыгина
+FD 1982
+YR 1982
+
+RT Book, Section
+A1 Падучева
+FD 1985
+YR 1985
+SP 221
+OP 224
+
+RT Book, Whole
+A1 Татевосов
+FD 2005
+YR 2005
+
+RT Book, Whole
+A1 Смит
+FD 1998
+YR 1998
+
+RT Book, Whole
+A1 Sasse
+FD 1991
+YR 1991
+
+RT Book, Whole
+A1 Breu
+FD 1994
+YR 1994
+
+RT Book, Whole
+A1 Johanson
+FD 2000
+YR 2000
+
+RT Book, Whole
+A1 Bertinetto
+A2 Delfitto
+FD 2000
+YR 2000
+
+RT Book, Whole
+A1 Dahl
+FD 1981
+YR 1981
+K1 глагол
+
+RT Book, Whole
+A1 Declerck
+FD 1979
+YR 1979
+K1 глагол
+
+RT Book, Whole
+A1 Verkuyl
+FD 1993
+YR 1993
+K1 глагол
+
+RT Book, Whole
+A1 Гловинская
+FD 2001
+YR 2001
+K1 глагол
+
+RT Book, Section
+A1 Булыгина, Т. В.
+A2 Крылов, С. А.
+T1 Понятийные категории
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 категория
+K1 существительное
+K1 глагол
+
+RT Book, Section
+A1 Живов, В. М.
+T1 Части речи
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 категория
+K1 существительное
+K1 глагол
+
+RT Book, Section
+A1 Живов, В. М.
+T1 Существительное
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 категория
+K1 существительное
+K1 глагол
+
+RT Book, Section
+A1 Степанов, Ю. С.
+T1 Имя
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 категория
+K1 существительное
+K1 глагол
+
+RT Book, Section
+A1 Маслов, Ю. С.
+T1 Глагол
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 категория
+K1 существительное
+K1 глагол
+
+RT Book, Section
+A1 Вольф, Е. М.
+T1 Прилагательное
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 категория
+K1 существительное
+K1 глагол
+
+RT Book, Section
+A1 Васильева, Н. В.
+T1 Наречие
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 категория
+K1 существительное
+K1 глагол
+
+RT Book, Section
+A1 Васильева, Н. В.
+T1 Служебные слова
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 категория
+K1 существительное
+K1 глагол
+
+RT Book, Whole
+A1 Зализняк
+FD 1967
+YR 1967
+K1 согласование
+K1 согласование
+K1 управление
+
+RT Book, Whole
+A1 Кибрик
+FD 1977a
+YR 1977a
+K1 согласование
+K1 согласование
+K1 управление
+
+RT Book, Whole
+A1 Barlow
+A2 Ferguson
+FD 1988
+YR 1988
+K1 согласование
+K1 согласование
+K1 управление
+
+RT Book, Whole
+A1 Мельчук
+FD 1993
+YR 1993
+K1 согласование
+K1 согласование
+K1 управление
+
+RT Book, Whole
+A1 Corbett
+FD 2006
+YR 2006
+K1 согласование
+K1 согласование
+K1 управление
+
+RT Book, Section
+A1 Тестелец
+FD 2001
+YR 2001
+SP 360
+OP 410
+K1 согласование
+K1 согласование
+K1 управление
+
+RT Book, Whole
+A1 Ельмслев
+FD 1956
+YR 1956
+
+RT Book, Whole
+A1 Seiler et al.
+FD 1982
+YR 1982
+
+RT Book, Whole
+A1 Corbett
+FD 1990
+YR 1990
+
+RT Book, Whole
+A1 Корбет
+FD 1992
+YR 1992
+
+RT Book, Whole
+A1 Corbett
+FD 2007
+YR 2007
+
+RT Book, Whole
+A1 Senft
+FD 2000
+YR 2000
+
+RT Book, Whole
+A1 Dixon
+FD 1968
+YR 1968
+
+RT Book, Whole
+A1 Ревзина
+FD 1973
+YR 1973
+
+RT Book, Whole
+A1 Serzisko
+FD 1982
+YR 1982
+
+RT Book, Whole
+A1 Aikhenvald
+FD 2004a
+YR 2004a
+
+RT Book, Whole
+A1 Serzisko
+FD 1982
+YR 1982
+K1 классификатор
+
+RT Book, Whole
+A1 Allan
+FD 1977
+YR 1977
+K1 классификатор
+
+RT Book, Whole
+A1 Aikhenvald
+FD 2000
+YR 2000
+K1 классификатор
+
+RT Book, Whole
+A1 Lakoff
+FD 1987
+YR 1987
+K1 доминанта
+K1 категория
+
+RT Book, Whole
+A1 Craig
+FD 1986
+YR 1986
+K1 доминанта
+K1 категория
+
+RT Book, Whole
+A1 Unterbeck
+A2 Rissanen
+FD 1999
+YR 1999
+K1 доминанта
+K1 категория
+
+RT Book, Whole
+A1 Журинский
+FD 1987
+YR 1987
+K1 доминанта
+K1 категория
+
+RT Book, Whole
+A1 Köpcke
+A2 Zubin
+FD 1995
+YR 1995
+K1 доминанта
+K1 категория
+
+RT Book, Whole
+A1 Corbett
+A2 Fraser
+FD 2000
+YR 2000
+K1 доминанта
+K1 категория
+
+RT Book, Whole
+A1 Nesset
+FD 2006
+YR 2006
+K1 доминанта
+K1 категория
+
+RT Book, Whole
+A1 Dahl
+A2 Fraurud
+FD 1996
+YR 1996
+K1 доминанта
+K1 категория
+
+RT Book, Whole
+A1 Dahl
+FD 1999
+YR 1999
+K1 доминанта
+K1 категория
+
+RT Book, Whole
+A1 Heine
+FD 1982
+YR 1982
+
+RT Book, Whole
+A1 Охотина
+FD 1985
+YR 1985
+
+RT Book, Whole
+A1 Охотина
+FD 1987
+YR 1987
+
+RT Book, Whole
+A1 Виноградов
+FD 1997
+YR 1997
+
+RT Book, Whole
+A1 Creissels
+FD 2001b
+YR 2001b
+
+RT Book, Whole
+A1 Хайдаков
+FD 1980
+YR 1980
+
+RT Book, Whole
+A1 Алексеев
+FD 2003
+YR 2003
+
+RT Book, Whole
+A1 Sands
+FD 1995
+YR 1995
+
+RT Book, Whole
+A1 Greenberg
+FD 1978
+YR 1978
+K1 аспект
+
+RT Book, Whole
+A1 Claudi
+FD 1985
+YR 1985
+K1 аспект
+
+RT Book, Whole
+A1 Зализняк
+FD 1973
+YR 1973
+K1 падеж
+
+RT Book, Whole
+A1 Мельчук
+FD 1998
+YR 1998
+K1 падеж
+
+RT Book, Whole
+A1 Blake
+FD 1994
+YR 1994
+K1 падеж
+
+RT Book, Whole
+A1 Spencer
+FD 2009
+YR 2009
+K1 падеж
+
+RT Book, Whole
+A1 Serbat
+FD 1981
+YR 1981
+K1 падеж
+K1 падеж
+
+RT Book, Whole
+A1 Dirven
+A2 Radden
+FD 1987
+YR 1987
+K1 падеж
+K1 падеж
+
+RT Book, Whole
+A1 Janda
+FD 1993
+YR 1993
+K1 падеж
+K1 категория
+K1 падеж
+K1 семантика
+
+RT Book, Whole
+A1 Malchukov
+A2 Spencer
+FD 2009
+YR 2009
+
+RT Book, Whole
+A1 Blake
+FD 2009
+YR 2009
+
+RT Book, Whole
+A1 Butt
+FD 2009
+YR 2009
+
+RT Book, Whole
+A1 Lazard
+FD 1994
+YR 1994
+K1 аспект
+K1 падеж
+K1 значение
+K1 отношение
+
+RT Book, Whole
+A1 Aikhenvald
+A2 Dixon
+A3 Onishi
+FD 2001
+YR 2001
+K1 аспект
+K1 падеж
+K1 значение
+K1 отношение
+
+RT Book, Whole
+A1 Kulikov
+A2 Malchukov
+A3 de Swart
+FD 2006
+YR 2006
+K1 аспект
+K1 падеж
+K1 значение
+K1 отношение
+
+RT Book, Whole
+A1 Климов
+FD 1973
+YR 1973
+
+RT Book, Whole
+A1 Comrie
+FD 1978
+YR 1978
+
+RT Book, Whole
+A1 Plank
+FD 1979
+YR 1979
+
+RT Book, Whole
+A1 Dixon
+FD 1994b
+YR 1994b
+
+RT Book, Whole
+A1 Lazard
+FD 1994
+YR 1994
+
+RT Book, Whole
+A1 Primus
+FD 1999
+YR 1999
+
+RT Book, Whole
+A1 Johns et al.
+FD 2006
+YR 2006
+
+RT Book, Whole
+A1 Bossong
+FD 1985
+YR 1985
+K1 маркирование
+K1 значение
+K1 падеж
+
+RT Book, Whole
+A1 Lazard
+FD 1982
+YR 1982
+K1 маркирование
+K1 значение
+K1 падеж
+
+RT Book, Whole
+A1 Lazard
+FD 1994
+YR 1994
+K1 маркирование
+K1 значение
+K1 падеж
+
+RT Book, Whole
+A1 Plank
+FD 1984
+YR 1984
+K1 маркирование
+K1 значение
+K1 падеж
+
+RT Book, Whole
+A1 Comrie
+FD 1989
+YR 1989
+K1 маркирование
+K1 значение
+K1 падеж
+
+RT Book, Whole
+A1 Jones
+FD 1995
+YR 1995
+K1 маркирование
+K1 значение
+K1 падеж
+
+RT Book, Whole
+A1 Bossong
+FD 1998
+YR 1998
+K1 маркирование
+K1 значение
+K1 падеж
+
+RT Book, Whole
+A1 Aissen
+FD 2003
+YR 2003
+K1 маркирование
+K1 значение
+K1 падеж
+
+RT Book, Whole
+A1 Malchukov
+A2 de Swart
+FD 2009
+YR 2009
+K1 маркирование
+K1 значение
+K1 падеж
+
+RT Book, Whole
+A1 Hjelmslev
+FD 1937
+YR 1937
+K1 маркирование
+K1 значение
+K1 падеж
+
+RT Book, Whole
+A1 Курилович
+FD 1949
+YR 1949
+K1 маркирование
+K1 значение
+K1 падеж
+
+RT Book, Whole
+A1 Blake
+FD 1994
+YR 1994
+K1 падеж
+
+RT Book, Whole
+A1 Kulikov
+FD 2006
+YR 2006
+K1 падеж
+
+RT Book, Whole
+A1 Malchukov
+A2 Spencer
+FD 2009
+YR 2009
+K1 падеж
+
+RT Book, Whole
+A1 Van Belle
+A2 Van Langendonck
+FD 1996
+YR 1996
+K1 падеж
+
+RT Book, Whole
+A1 Van Langendonck
+A2 Van Belle
+FD 1998
+YR 1998
+K1 падеж
+
+RT Book, Whole
+A1 Davidse
+A2 Lamiroy
+FD 2002
+YR 2002
+K1 падеж
+
+RT Book, Whole
+A1 Campe
+FD 1994
+YR 1994
+K1 падеж
+
+RT Book, Whole
+A1 Кибрик
+FD 1970
+YR 1970
+K1 значение
+K1 категория
+K1 локализация
+
+RT Book, Whole
+A1 Comrie
+A2 Polinsky
+FD 1998
+YR 1998
+K1 значение
+K1 категория
+K1 локализация
+
+RT Book, Whole
+A1 Comrie
+FD 1999
+YR 1999
+K1 значение
+K1 категория
+K1 локализация
+
+RT Book, Whole
+A1 Haspelmath
+FD 1997b
+YR 1997b
+K1 значение
+K1 категория
+K1 локализация
+
+RT Book, Whole
+A1 Плунгян
+FD 2002
+YR 2002
+K1 значение
+K1 категория
+K1 локализация
+
+RT Book, Whole
+A1 Невская
+FD 2005
+YR 2005
+K1 значение
+K1 категория
+K1 локализация
+
+RT Book, Whole
+A1 Creissels
+FD 2009
+YR 2009
+K1 значение
+K1 категория
+K1 локализация
+
+RT Book, Whole
+A1 Муравьёва
+FD 1994a
+YR 1994a
+K1 значение
+K1 категория
+K1 локализация
+
+RT Book, Whole
+A1 Ганенков
+FD 2005
+YR 2005
+K1 значение
+K1 категория
+K1 локализация
+
+RT Book, Whole
+A1 Топоров
+FD 1961
+YR 1961
+K1 падеж
+K1 значение
+
+RT Book, Whole
+A1 Blake
+FD 1977
+YR 1977
+
+RT Book, Whole
+A1 Bennett
+FD 1974
+YR 1974
+
+RT Book, Whole
+A1 Sasse
+FD 1984
+YR 1984
+
+RT Book, Whole
+A1 Кибрик
+A2 Кодзасов
+FD 1990
+YR 1990
+
+RT Book, Whole
+A1 Daniel
+A2 Ganenkov
+FD 2009
+YR 2009
+
+RT Book, Whole
+A1 Stilo
+FD 2009
+YR 2009
+
+RT Book, Whole
+A1 Malchukov
+A2 Spencer
+FD 2009
+YR 2009
+
+RT Book, Whole
+A1 Алексеев
+FD 2003
+YR 2003
+
+RT Book, Whole
+A1 Plank
+FD 1994
+YR 1994
+K1 существительное
+
+RT Book, Whole
+A1 Якобсон
+FD 1936
+YR 1936
+
+RT Book, Whole
+A1 Якобсон
+FD 1958
+YR 1958
+
+RT Book, Whole
+A1 Бенвенист
+FD 1961
+YR 1961
+
+RT Book, Whole
+A1 Janda
+FD 1993
+YR 1993
+
+RT Book, Whole
+A1 Nichols
+FD 1986
+YR 1986
+K1 маркирование
+
+RT Book, Whole
+A1 Майзель
+FD 1957
+YR 1957
+K1 показатель
+K1 изафет
+K1 изафет
+
+RT Book, Section
+A1 Расторгуева
+FD 1975
+YR 1975
+SP 167
+OP 176
+K1 показатель
+K1 изафет
+K1 изафет
+
+RT Book, Whole
+A1 Есперсен
+FD 1924
+YR 1924
+
+RT Book, Whole
+A1 Реформатский
+FD 1960
+YR 1960
+
+RT Book, Whole
+A1 Исаченко
+FD 1961
+YR 1961
+
+RT Book, Section
+A1 Зализняк
+FD 1967
+YR 1967
+SP 55
+OP 62
+
+RT Book, Whole
+A1 Ревзин
+FD 1969
+YR 1969
+
+RT Book, Whole
+A1 Зализняк
+A2 Падучева
+FD 1974
+YR 1974
+
+RT Book, Whole
+A1 Булатова
+FD 1983
+YR 1983
+
+RT Book, Whole
+A1 Мельчук
+FD 1985
+YR 1985
+
+RT Book, Whole
+A1 Поливанова
+FD 1983
+YR 1983
+
+RT Book, Whole
+A1 Wierzbicka
+FD 1988
+YR 1988
+
+RT Book, Whole
+A1 Фрумкина
+FD 1990
+YR 1990
+
+RT Book, Whole
+A1 Ляшевская
+FD 2004
+YR 2004
+K1 семантика
+K1 категория
+K1 число
+
+RT Book, Whole
+A1 Меновщиков
+FD 1970
+YR 1970
+K1 число
+K1 собирательность
+K1 показатель
+K1 число
+
+RT Book, Whole
+A1 Гузев
+A2 Насилов
+FD 1975
+YR 1975
+K1 число
+K1 собирательность
+K1 показатель
+K1 число
+
+RT Book, Whole
+A1 Смирнова
+FD 1981
+YR 1981
+K1 число
+K1 собирательность
+K1 показатель
+K1 число
+
+RT Book, Whole
+A1 Гак
+A2 Кузнецов
+FD 1985
+YR 1985
+K1 число
+K1 собирательность
+K1 показатель
+K1 число
+
+RT Book, Whole
+A1 Кибрик
+FD 1985
+YR 1985
+K1 число
+K1 собирательность
+K1 показатель
+K1 число
+
+RT Book, Whole
+A1 Dryer
+FD 1989
+YR 1989
+K1 число
+K1 собирательность
+K1 показатель
+K1 число
+
+RT Book, Whole
+A1 Kinkade
+FD 1981
+YR 1981
+K1 множественность
+K1 аргумент
+K1 глагол
+K1 грамматикализация
+K1 показатель
+K1 множественность
+
+RT Book, Whole
+A1 Lichtenberk
+FD 1985
+YR 1985
+K1 множественность
+K1 аргумент
+K1 глагол
+K1 грамматикализация
+K1 показатель
+K1 множественность
+
+RT Book, Whole
+A1 Durie
+FD 1986
+YR 1986
+K1 множественность
+K1 аргумент
+K1 глагол
+K1 грамматикализация
+K1 показатель
+K1 множественность
+
+RT Book, Whole
+A1 Newman, P.
+FD 1990
+YR 1990
+K1 множественность
+K1 аргумент
+K1 глагол
+K1 грамматикализация
+K1 показатель
+K1 множественность
+
+RT Book, Whole
+A1 Gil
+FD 1993
+YR 1993
+K1 множественность
+K1 аргумент
+K1 глагол
+K1 грамматикализация
+K1 показатель
+K1 множественность
+
+RT Book, Whole
+A1 Kemmer
+FD 1993b
+YR 1993b
+K1 множественность
+K1 аргумент
+K1 глагол
+K1 грамматикализация
+K1 показатель
+K1 множественность
+
+RT Book, Whole
+A1 Frajzyngier
+FD 1997
+YR 1997
+K1 множественность
+K1 аргумент
+K1 глагол
+K1 грамматикализация
+K1 показатель
+K1 множественность
+
+RT Book, Whole
+A1 Храковский
+FD 1989
+YR 1989
+K1 множественность
+
+RT Book, Whole
+A1 Dressler
+FD 1968
+YR 1968
+K1 множественность
+
+RT Book, Whole
+A1 Bonomi
+FD 1995
+YR 1995
+K1 множественность
+
+RT Book, Whole
+A1 Шлуинский
+FD 2006
+YR 2006
+K1 множественность
+
+RT Book, Whole
+A1 Corbett
+FD 2000
+YR 2000
+K1 число
+K1 множественность
+
+RT Book, Whole
+A1 Бюлер
+FD 1934
+YR 1934
+K1 детерминация
+K1 семантика
+K1 детерминация
+
+RT Book, Whole
+A1 Guillaume
+FD 1919
+YR 1919
+K1 детерминация
+K1 семантика
+K1 детерминация
+
+RT Book, Whole
+A1 Скрелина
+FD 1971
+YR 1971
+K1 детерминация
+K1 семантика
+K1 детерминация
+
+RT Book, Whole
+A1 Реферовская
+FD 1997
+YR 1997
+K1 детерминация
+K1 семантика
+K1 детерминация
+
+RT Book, Whole
+A1 Hawkins
+FD 1978
+YR 1978
+
+RT Book, Section
+A1 Sperber
+A2 Wilson
+FD 1986
+YR 1986
+SP 202
+OP 217
+
+RT Book, Whole
+A1 Heim
+FD 1988
+YR 1988
+
+RT Book, Whole
+A1 Lyons
+FD 1999
+YR 1999
+
+RT Book, Whole
+A1 van der Auwera
+FD 1980
+YR 1980
+
+RT Book, Whole
+A1 Stark et al.
+FD 2007
+YR 2007
+
+RT Book, Whole
+A1 Christophersen
+FD 1939
+YR 1939
+K1 детерминация
+
+RT Book, Section
+A1 Jespersen
+FD 1949
+YR 1949
+SP 403
+OP 543
+K1 детерминация
+
+RT Book, Whole
+A1 Chesterman
+FD 1991
+YR 1991
+K1 детерминация
+
+RT Book, Whole
+A1 Крылов
+FD 1984
+YR 1984
+
+RT Book, Whole
+A1 Николаева
+FD 1979
+YR 1979
+
+RT Book, Whole
+A1 Иванов
+FD 1979
+YR 1979
+
+RT Book, Whole
+A1 Ревзина
+FD 1979
+YR 1979
+
+RT Book, Whole
+A1 Chvany
+FD 1983
+YR 1983
+
+RT Book, Whole
+A1 Friedman
+FD 2003a
+YR 2003a
+
+RT Book, Whole
+A1 Weiss
+FD 2004
+YR 2004
+
+RT Book, Whole
+A1 Breu
+FD 2008
+YR 2008
+
+RT Book, Whole
+A1 Mayer
+FD 1988
+YR 1988
+
+RT Book, Whole
+A1 Mladenova
+FD 2007
+YR 2007
+
+RT Book, Section
+A1 Падучева
+FD 1985
+YR 1985
+SP 79
+OP 107
+K1 детерминация
+K1 семантика
+
+RT Book, Whole
+A1 Гладров
+FD 1992
+YR 1992
+K1 детерминация
+K1 семантика
+
+RT Book, Whole
+A1 Левин
+FD 1973
+YR 1973
+K1 семантика
+K1 местоимение
+K1 местоимение
+K1 аспект
+
+RT Book, Whole
+A1 Селиверстова
+FD 1988
+YR 1988
+K1 семантика
+K1 местоимение
+K1 местоимение
+K1 аспект
+
+RT Book, Whole
+A1 Кузьмина
+FD 1989
+YR 1989
+K1 семантика
+K1 местоимение
+K1 местоимение
+K1 аспект
+
+RT Book, Whole
+A1 Haspelmath
+FD 1997a
+YR 1997a
+K1 семантика
+K1 местоимение
+K1 местоимение
+K1 аспект
+
+RT Book, Whole
+A1 Татевосов
+FD 2002
+YR 2002
+K1 семантика
+K1 местоимение
+K1 местоимение
+K1 аспект
+
+RT Book, Whole
+A1 Джусти
+FD 1982
+YR 1982
+K1 нереферентность
+
+RT Book, Whole
+A1 Аксёнова
+FD 1987
+YR 1987
+K1 нереферентность
+
+RT Book, Whole
+A1 Johanson
+FD 2006
+YR 2006
+K1 нереферентность
+
+RT Book, Whole
+A1 Vogeleer
+A2 Tasmowski
+FD 2006
+YR 2006
+K1 нереферентность
+
+RT Book, Whole
+A1 Кронгауз
+FD 1984
+YR 1984
+
+RT Book, Section
+A1 Падучева
+FD 1985
+YR 1985
+SP 79
+OP 107
+
+RT Book, Whole
+A1 Bunt
+FD 1985
+YR 1985
+
+RT Book, Whole
+A1 Krifka
+FD 1989
+YR 1989
+
+RT Book, Whole
+A1 Булыгина
+A2 Шмелёв
+FD 1988
+YR 1988
+
+RT Book, Whole
+A1 Bach et al.
+FD 1995
+YR 1995
+
+RT Book, Whole
+A1 Татевосов
+FD 2002
+YR 2002
+
+RT Book, Whole
+A1 Plank
+FD 2003
+YR 2003
+
+RT Book, Whole
+A1 Vogeleer
+A2 Tasmowski
+FD 2006
+YR 2006
+
+RT Book, Whole
+A1 Ярцева
+FD 1977
+YR 1977
+K1 семантика
+K1 отношение
+K1 отношение
+K1 семантика
+
+RT Book, Whole
+A1 Ultan
+FD 1978b
+YR 1978b
+K1 семантика
+K1 отношение
+K1 отношение
+K1 семантика
+
+RT Book, Whole
+A1 Seiler
+FD 1983
+YR 1983
+K1 семантика
+K1 отношение
+K1 отношение
+K1 семантика
+
+RT Book, Whole
+A1 Топоров
+FD 1986
+YR 1986
+K1 семантика
+K1 отношение
+K1 отношение
+K1 семантика
+
+RT Book, Whole
+A1 Чинчлей
+FD 1990
+YR 1990
+K1 семантика
+K1 отношение
+K1 отношение
+K1 семантика
+
+RT Book, Whole
+A1 Бондарко
+FD 1996
+YR 1996
+K1 семантика
+K1 отношение
+K1 отношение
+K1 семантика
+
+RT Book, Whole
+A1 Langacker
+FD 1995
+YR 1995
+K1 семантика
+K1 отношение
+K1 отношение
+K1 семантика
+
+RT Book, Whole
+A1 Taylor
+FD 1996
+YR 1996
+K1 семантика
+K1 отношение
+K1 отношение
+K1 семантика
+
+RT Book, Whole
+A1 Heine
+FD 1997
+YR 1997
+K1 семантика
+K1 отношение
+K1 отношение
+K1 семантика
+
+RT Book, Whole
+A1 Koptjevskaja-Tamm
+FD 2002
+YR 2002
+K1 семантика
+K1 отношение
+K1 отношение
+K1 семантика
+
+RT Book, Whole
+A1 Baron et al.
+FD 2001
+YR 2001
+K1 семантика
+K1 отношение
+K1 отношение
+K1 семантика
+
+RT Book, Whole
+A1 Herslund
+A2 Baron
+FD 2001
+YR 2001
+K1 семантика
+K1 отношение
+K1 отношение
+K1 семантика
+
+RT Book, Whole
+A1 Seiler
+FD 2001
+YR 2001
+K1 семантика
+K1 отношение
+K1 отношение
+K1 семантика
+
+RT Book, Whole
+A1 Kim et al.
+FD 2004
+YR 2004
+K1 семантика
+K1 число
+
+RT Book, Whole
+A1 Chappell
+A2 McGregor
+FD 1996
+YR 1996
+K1 семантика
+K1 принадлежность
+
+RT Book, Whole
+A1 Dahl
+A2 Koptjevskaja-Tamm
+FD 2001
+YR 2001
+K1 семантика
+K1 принадлежность
+
+RT Book, Whole
+A1 Mithun
+FD 2001
+YR 2001
+K1 семантика
+K1 принадлежность
+
+RT Book, Whole
+A1 Stolz et al.
+FD 2008
+YR 2008
+K1 семантика
+K1 принадлежность
+
+RT Book, Whole
+A1 Иванов
+FD 1989
+YR 1989
+K1 посессивность
+
+RT Book, Whole
+A1 Журинская
+FD 1978
+YR 1978
+K1 посессивность
+K1 посессивность
+K1 посессивность
+
+RT Book, Whole
+A1 Wilson, W.
+FD 1982
+YR 1982
+K1 посессивность
+K1 посессивность
+K1 посессивность
+
+RT Book, Whole
+A1 Fischer
+FD 2000
+YR 2000
+K1 посессивность
+K1 посессивность
+K1 посессивность
+
+RT Book, Whole
+A1 Velázquez-Castillo
+FD 1996
+YR 1996
+K1 посессивность
+K1 посессивность
+K1 посессивность
+
+RT Book, Whole
+A1 Lehmann
+FD 1998
+YR 1998
+K1 посессивность
+K1 посессивность
+K1 посессивность
+
+RT Book, Whole
+A1 Haspelmath
+FD 1999
+YR 1999
+K1 посессивность
+K1 детерминация
+
+RT Book, Whole
+A1 Fraurud
+FD 2001
+YR 2001
+K1 посессивность
+K1 детерминация
+
+RT Book, Whole
+A1 Kim et al.
+FD 2004
+YR 2004
+K1 посессивность
+K1 детерминация
+
+RT Book, Section
+A1 Виноградов, В. А.
+T1 Число
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 число
+K1 собирательность
+K1 местоимение
+K1 посессивность
+
+RT Book, Section
+A1 Виноградов, В. А.
+T1 Собирательность
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 число
+K1 собирательность
+K1 местоимение
+K1 посессивность
+
+RT Book, Section
+A1 Арутюнова, Н. Д.
+T1 Референция
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 число
+K1 собирательность
+K1 местоимение
+K1 посессивность
+
+RT Book, Section
+A1 Крылов, С. А.
+A2 Падучева, Е. В.
+T1 Местоимения
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 число
+K1 собирательность
+K1 местоимение
+K1 посессивность
+
+RT Book, Section
+A1 Николаева, Т. М.
+T1 Определенность
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 число
+K1 собирательность
+K1 местоимение
+K1 посессивность
+
+RT Book, Section
+A1 Виноградов, В. А.
+T1 Артикль
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 число
+K1 собирательность
+K1 местоимение
+K1 посессивность
+
+RT Book, Section
+A1 Журинская, М. А.
+T1 Посессивность
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 число
+K1 собирательность
+K1 местоимение
+K1 посессивность
+
+RT Book, Whole
+A1 Мельчук
+A2 Холодович
+FD 1970
+YR 1970
+K1 определение
+K1 залог
+
+RT Book, Whole
+A1 Холодович
+FD 1979
+YR 1979
+K1 определение
+K1 залог
+
+RT Book, Section
+A1 Мельчук
+FD 1998
+YR 1998
+SP 163
+OP 195
+K1 определение
+K1 залог
+
+RT Book, Whole
+A1 Мельчук
+FD 2004
+YR 2004
+K1 определение
+K1 залог
+
+RT Book, Whole
+A1 Успенский
+FD 1977
+YR 1977
+K1 предложение
+K1 период
+K1 успенский
+K1 успенскость
+
+RT Book, Whole
+A1 Падучева
+FD 1974
+YR 1974
+K1 предложение
+K1 период
+K1 успенский
+K1 успенскость
+
+RT Book, Whole
+A1 Храковский
+FD 1991
+YR 1991
+
+RT Book, Whole
+A1 Comrie
+FD 1977
+YR 1977
+K1 грамматика
+K1 аспект
+K1 залог
+K1 имперсонал
+K1 разновидность
+K1 пассив
+
+RT Book, Whole
+A1 Frajzyngier
+FD 1982
+YR 1982
+K1 грамматика
+K1 аспект
+K1 залог
+K1 имперсонал
+K1 разновидность
+K1 пассив
+
+RT Book, Whole
+A1 Кибрик
+FD 1982
+YR 1982
+K1 грамматика
+
+RT Book, Section
+A1 Тестелец
+FD 2001
+YR 2001
+SP 358
+OP 359
+K1 грамматика
+
+RT Book, Whole
+A1 Siewierska
+FD 1984
+YR 1984
+K1 семантика
+
+RT Book, Whole
+A1 Abraham
+A2 Leisiö
+FD 2006
+YR 2006
+K1 семантика
+
+RT Book, Whole
+A1 Wiemer
+FD 2004
+YR 2004
+K1 семантика
+
+RT Book, Whole
+A1 Givón
+FD 1990
+YR 1990
+K1 залог
+K1 залог
+
+RT Book, Whole
+A1 Shibatani
+FD 1985
+YR 1985
+K1 залог
+K1 пассив
+K1 агенс
+K1 пассив
+
+RT Book, Whole
+A1 Shibatani
+FD 1988
+YR 1988
+K1 залог
+K1 имперсонал
+K1 антипассив
+K1 залог
+
+RT Book, Whole
+A1 Fox
+A2 Hopper
+FD 1994
+YR 1994
+K1 залог
+K1 имперсонал
+K1 антипассив
+K1 залог
+
+RT Book, Whole
+A1 Tsunoda
+A2 Kageyama
+FD 2006
+YR 2006
+K1 залог
+K1 имперсонал
+K1 антипассив
+K1 залог
+
+RT Book, Whole
+A1 Barber
+FD 1975
+YR 1975
+
+RT Book, Whole
+A1 Kemmer
+FD 1993a
+YR 1993a
+
+RT Book, Whole
+A1 Fox
+A2 Hopper
+FD 1994
+YR 1994
+
+RT Book, Whole
+A1 Givón
+FD 1994
+YR 1994
+
+RT Book, Whole
+A1 Klaiman
+FD 1991
+YR 1991
+K1 залог
+
+RT Book, Whole
+A1 Dixon
+A2 Aikhenvald
+FD 1997
+YR 1997
+K1 глагол
+K1 деривация
+
+RT Book, Whole
+A1 Dixon
+A2 Aikhenvald
+FD 2000
+YR 2000
+K1 глагол
+K1 деривация
+
+RT Book, Whole
+A1 Kemmer
+FD 1993a
+YR 1993a
+K1 аспект
+K1 показатель
+
+RT Book, Whole
+A1 Haspelmath
+FD 1990
+YR 1990
+K1 аспект
+K1 показатель
+
+RT Book, Whole
+A1 Creissels
+FD 2001a
+YR 2001a
+K1 аспект
+K1 показатель
+
+RT Book, Whole
+A1 Холодович
+FD 1969
+YR 1969
+K1 деривация
+K1 каузатив
+K1 значение
+
+RT Book, Whole
+A1 Shibatani
+FD 1976
+YR 1976
+K1 деривация
+K1 каузатив
+K1 значение
+
+RT Book, Whole
+A1 Холодович
+FD 1974
+YR 1974
+K1 деривация
+K1 рефлексива
+K1 реципрок
+K1 рефлексива
+
+RT Book, Whole
+A1 Генюшене
+A2 Недялков
+FD 1991
+YR 1991
+K1 деривация
+K1 рефлексива
+K1 реципрок
+K1 рефлексива
+
+RT Book, Whole
+A1 Долинина
+FD 1989
+YR 1989
+
+RT Book, Section
+A1 Аксёнова
+FD 1990
+YR 1990
+SP 157
+OP 197
+
+RT Book, Whole
+A1 Аксёнова
+FD 1972
+YR 1972
+
+RT Book, Whole
+A1 Maslova
+FD 2007
+YR 2007
+
+RT Book, Whole
+A1 Холодович
+FD 1978
+YR 1978
+K1 реципрок
+
+RT Book, Whole
+A1 Nedjalkov et al.
+FD 2007
+YR 2007
+K1 реципрок
+
+RT Book, Whole
+A1 Nedjalkov
+FD 2007a
+YR 2007a
+K1 реципрок
+
+RT Book, Section
+A1 Князев
+FD 2007
+YR 2007
+SP 258
+OP 368
+K1 рефлексива
+K1 реципрок
+
+RT Book, Whole
+A1 Babby
+A2 Brecht
+FD 1975
+YR 1975
+
+RT Book, Whole
+A1 Babby
+FD 1983
+YR 1983
+
+RT Book, Whole
+A1 Baker
+FD 1988
+YR 1988
+K1 деривация
+
+RT Book, Whole
+A1 Comrie
+FD 1985a
+YR 1985a
+
+RT Book, Whole
+A1 Коваль
+A2 Нялибули
+FD 1997
+YR 1997
+
+RT Book, Whole
+A1 Comrie et al.
+FD 1993
+YR 1993
+K1 каузатив
+K1 деривация
+
+RT Book, Whole
+A1 Shibatani
+FD 2002
+YR 2002
+K1 каузатив
+K1 деривация
+
+RT Book, Whole
+A1 Dixon
+FD 2000
+YR 2000
+K1 каузатив
+K1 деривация
+
+RT Book, Whole
+A1 Kulikov
+FD 2001
+YR 2001
+K1 каузатив
+K1 деривация
+
+RT Book, Whole
+A1 Shibatani
+FD 1996
+YR 1996
+K1 каузатив
+K1 деривация
+
+RT Book, Whole
+A1 Haspelmath
+FD 1993b
+YR 1993b
+K1 каузатив
+K1 декаузатив
+
+RT Book, Whole
+A1 Падучева
+FD 2001
+YR 2001
+K1 каузатив
+K1 декаузатив
+
+RT Book, Whole
+A1 Томмола
+FD 1998
+YR 1998
+K1 форма
+K1 глагол
+
+RT Book, Whole
+A1 Lichtenberk
+FD 1985
+YR 1985
+K1 значение
+K1 деривация
+K1 полисемия
+K1 показатель
+K1 реципрок
+K1 ассоциатив
+K1 рефлексива
+K1 полисемия
+K1 показатель
+K1 деривация
+
+RT Book, Whole
+A1 Nedjalkov
+FD 2007c
+YR 2007c
+K1 полисемия
+K1 показатель
+K1 реципрок
+
+RT Book, Whole
+A1 Якобсон
+FD 1957
+YR 1957
+K1 акт
+K1 семантика
+K1 аспект
+K1 акт
+
+RT Book, Whole
+A1 Бенвенист и
+FD 1958
+YR 1958
+K1 акт
+K1 семантика
+K1 аспект
+K1 акт
+
+RT Book, Whole
+A1 Hagège
+FD 1993
+YR 1993
+K1 эгоцентричность
+
+RT Book, Whole
+A1 Падучева
+FD 1985
+YR 1985
+K1 семантика
+
+RT Book, Whole
+A1 Арутюнова
+A2 Падучева
+FD 1985
+YR 1985
+K1 семантика
+
+RT Book, Whole
+A1 Бюлер
+FD 1934
+YR 1934
+
+RT Book, Whole
+A1 Крылов
+A2 Падучева
+FD 1992
+YR 1992
+
+RT Book, Whole
+A1 Апресян
+FD 1986
+YR 1986
+
+RT Book, Section
+A1 Падучева
+FD 1996
+YR 1996
+SP 266
+OP 271
+
+RT Book, Whole
+A1 Майтинская
+FD 1969
+YR 1969
+K1 семантика
+K1 местоимение
+K1 аспект
+K1 аспект
+K1 категория
+K1 местоимение
+
+RT Book, Whole
+A1 Селиверстова
+FD 1988
+YR 1988
+K1 семантика
+K1 местоимение
+K1 аспект
+K1 аспект
+K1 категория
+K1 местоимение
+
+RT Book, Whole
+A1 Cysouw
+FD 2003
+YR 2003
+K1 семантика
+K1 местоимение
+K1 аспект
+K1 аспект
+K1 категория
+K1 местоимение
+
+RT Book, Whole
+A1 Siewierska
+FD 2004
+YR 2004
+K1 семантика
+K1 местоимение
+K1 аспект
+K1 аспект
+K1 категория
+K1 местоимение
+
+RT Book, Section
+A1 Бондарко
+FD 1991
+YR 1991
+SP 5
+OP 124
+K1 семантика
+K1 местоимение
+K1 аспект
+K1 аспект
+K1 категория
+K1 местоимение
+
+RT Book, Whole
+A1 Greenberg
+FD 1988
+YR 1988
+K1 семантика
+K1 местоимение
+K1 аспект
+K1 аспект
+K1 категория
+K1 местоимение
+
+RT Book, Whole
+A1 Filimonova
+FD 2005
+YR 2005
+K1 семантика
+K1 местоимение
+K1 аспект
+K1 аспект
+K1 категория
+K1 местоимение
+
+RT Book, Whole
+A1 Соколовская
+FD 1980
+YR 1980
+K1 местоимение
+K1 значение
+K1 настоящее
+
+RT Book, Whole
+A1 Hagège
+FD 1974
+YR 1974
+K1 семантика
+K1 местоимение
+
+RT Book, Whole
+A1 Stirling
+FD 1988
+YR 1988
+K1 семантика
+K1 местоимение
+
+RT Book, Whole
+A1 Culy
+FD 1997
+YR 1997
+K1 семантика
+K1 местоимение
+
+RT Book, Whole
+A1 Güldemann
+FD 2003
+YR 2003
+K1 семантика
+K1 местоимение
+
+RT Book, Whole
+A1 Jelinek
+FD 1984
+YR 1984
+K1 категория
+K1 субъект
+
+RT Book, Whole
+A1 Baker
+FD 1996
+YR 1996
+K1 словоформа
+K1 категория
+K1 аргумент
+
+RT Book, Section
+A1 Lyons, J.
+FD 1977
+YR 1977
+SP 636
+OP 724
+K1 категория
+
+RT Book, Whole
+A1 Weissenborn
+A2 Klein
+FD 1982
+YR 1982
+K1 категория
+
+RT Book, Whole
+A1 Jarvella
+A2 Klein
+FD 1982
+YR 1982
+K1 категория
+
+RT Book, Whole
+A1 Rauh
+FD 1983
+YR 1983
+K1 категория
+
+RT Book, Whole
+A1 Pick
+A2 Acredolo
+FD 1983
+YR 1983
+K1 категория
+
+RT Book, Whole
+A1 Lenz
+FD 2003
+YR 2003
+K1 категория
+
+RT Book, Whole
+A1 Dixon
+FD 2003
+YR 2003
+K1 категория
+
+RT Book, Whole
+A1 Diessel
+FD 1999
+YR 1999
+K1 категория
+
+RT Book, Whole
+A1 Diessel
+FD 2006
+YR 2006
+K1 категория
+
+RT Book, Whole
+A1 Anderson, S.
+A2 Keenan
+FD 1985
+YR 1985
+K1 категория
+
+RT Book, Whole
+A1 Ростовцев-Попель
+FD 2009
+YR 2009
+
+RT Book, Whole
+A1 Плунгян
+FD 2002a
+YR 2002a
+K1 категория
+
+RT Book, Whole
+A1 Talmy и
+FD 1985
+YR 1985
+K1 глагол
+K1 число
+K1 значение
+K1 глагол
+
+RT Book, Whole
+A1 Talmy
+FD 2000
+YR 2000
+K1 глагол
+K1 число
+K1 значение
+K1 глагол
+
+RT Book, Whole
+A1 Sinha
+A2 Kuteva
+FD 1995
+YR 1995
+
+RT Book, Whole
+A1 Schaefer
+A2 Gaines
+FD 1997
+YR 1997
+
+RT Book, Whole
+A1 Рожанский
+FD 2000
+YR 2000
+
+RT Book, Whole
+A1 Slobin
+FD 2003
+YR 2003
+
+RT Book, Whole
+A1 Zlatev
+FD 1997
+YR 1997
+K1 число
+
+RT Book, Whole
+A1 Levinson
+FD 2003
+YR 2003
+K1 число
+
+RT Book, Whole
+A1 Leer
+FD 1989
+YR 1989
+K1 число
+
+RT Book, Whole
+A1 Levinson
+A2 Haviland
+FD 1994
+YR 1994
+K1 число
+
+RT Book, Whole
+A1 Senft
+FD 1997
+YR 1997
+K1 число
+
+RT Book, Whole
+A1 Wälchli
+FD 2001a
+YR 2001a
+K1 число
+
+RT Book, Whole
+A1 Bennardo
+FD 2002
+YR 2002
+K1 число
+
+RT Book, Whole
+A1 Невская
+FD 2005
+YR 2005
+K1 число
+
+RT Book, Whole
+A1 Кронгауз
+FD 1998
+YR 1998
+
+RT Book, Whole
+A1 Rousseau
+FD 1995
+YR 1995
+
+RT Book, Whole
+A1 Кронгауз
+FD 2001
+YR 2001
+
+RT Book, Whole
+A1 Агранат
+FD 1989
+YR 1989
+
+RT Book, Whole
+A1 Татевосов
+FD 2000
+YR 2000
+
+RT Book, Whole
+A1 Wälchli
+FD 2001b
+YR 2001b
+
+RT Book, Whole
+A1 Майсак
+A2 Мерданова
+FD 2002
+YR 2002
+
+RT Book, Whole
+A1 Сизова
+FD 2007
+YR 2007
+
+RT Book, Whole
+A1 Reichenbach
+FD 1947
+YR 1947
+
+RT Book, Whole
+A1 Comrie
+FD 1985b
+YR 1985b
+
+RT Book, Whole
+A1 Coseriu
+FD 1976
+YR 1976
+K1 прошедшее
+K1 оппозиция
+K1 таксис
+
+RT Book, Whole
+A1 Lyons, J.
+FD 1977
+YR 1977
+K1 прошедшее
+K1 оппозиция
+K1 таксис
+
+RT Book, Whole
+A1 Thieroff
+A2 Ballweg
+FD 1994
+YR 1994
+K1 категория
+K1 дистанция
+K1 граммема
+
+RT Book, Whole
+A1 Thieroff
+FD 1994
+YR 1994
+K1 категория
+K1 дистанция
+K1 граммема
+
+RT Book, Whole
+A1 Thieroff
+FD 1995
+YR 1995
+K1 категория
+K1 дистанция
+K1 граммема
+
+RT Book, Whole
+A1 Declerck
+FD 1991
+YR 1991
+K1 категория
+
+RT Book, Whole
+A1 Klein
+FD 1994
+YR 1994
+K1 категория
+
+RT Book, Whole
+A1 Comrie
+FD 1985b
+YR 1985b
+
+RT Book, Whole
+A1 Dahl
+FD 2000
+YR 2000
+
+RT Book, Whole
+A1 Ultan
+FD 1978a
+YR 1978a
+K1 будущее
+
+RT Book, Whole
+A1 Bybee et al.
+FD 1994
+YR 1994
+K1 будущее
+K1 прошедшее
+
+RT Book, Whole
+A1 Bybee
+A2 Dahl
+FD 1989
+YR 1989
+K1 будущее
+K1 прошедшее
+
+RT Book, Whole
+A1 Dahl
+FD 2000
+YR 2000
+K1 будущее
+K1 форма
+K1 будущее
+
+RT Book, Whole
+A1 Майсак
+A2 Мерданова
+FD 2003
+YR 2003
+K1 будущее
+K1 форма
+K1 будущее
+
+RT Book, Whole
+A1 Fici Giusti
+FD 1997
+YR 1997
+K1 будущее
+
+RT Book, Whole
+A1 Плунгян
+FD 2001
+YR 2001
+K1 сверхпрошлое
+K1 значение
+K1 отсутствие
+K1 результат
+K1 значение
+
+RT Book, Whole
+A1 Plungian
+A2 van der Auwera
+FD 2006
+YR 2006
+K1 сверхпрошлое
+K1 значение
+K1 отсутствие
+K1 результат
+K1 значение
+
+RT Book, Whole
+A1 Dahl
+FD 1985
+YR 1985
+K1 сверхпрошлое
+K1 значение
+K1 отсутствие
+K1 результат
+K1 значение
+
+RT Book, Whole
+A1 Squartini
+FD 1999
+YR 1999
+K1 сверхпрошлое
+K1 значение
+K1 отсутствие
+K1 результат
+K1 значение
+
+RT Book, Whole
+A1 Dahl
+FD 1983
+YR 1983
+K1 категория
+K1 дистанция
+
+RT Book, Section
+A1 Dahl
+FD 1985
+YR 1985
+SP 120
+OP 128
+K1 категория
+K1 дистанция
+
+RT Book, Whole
+A1 Fleischman
+FD 1989
+YR 1989
+K1 значение
+K1 граммема
+K1 дистанция
+K1 граммема
+K1 граммема
+K1 модальность
+
+RT Book, Section
+A1 Аксёнова
+FD 1997
+YR 1997
+SP 119
+OP 158
+K1 дистанция
+
+RT Book, Section
+A1 Nurse
+FD 2008
+YR 2008
+SP 88
+OP 114
+K1 дистанция
+
+RT Book, Whole
+A1 Якобсон
+FD 1957
+YR 1957
+K1 таксис
+K1 таксис
+K1 аспект
+
+RT Book, Whole
+A1 Маслов
+FD 1978
+YR 1978
+K1 таксис
+K1 таксис
+K1 аспект
+
+RT Book, Section
+A1 Бондарко
+FD 1987
+YR 1987
+SP 234
+OP 319
+K1 таксис
+K1 таксис
+K1 аспект
+
+RT Book, Whole
+A1 Недялков
+FD 2003
+YR 2003
+K1 таксис
+K1 таксис
+K1 аспект
+
+RT Book, Whole
+A1 Храковский
+FD 2003
+YR 2003
+K1 таксис
+K1 таксис
+K1 аспект
+
+RT Book, Whole
+A1 Храковский
+FD 2009
+YR 2009
+K1 таксис
+K1 таксис
+K1 аспект
+
+RT Book, Whole
+A1 Johanson
+FD 2004
+YR 2004
+K1 показатель
+K1 таксис
+
+RT Book, Whole
+A1 Недялков
+FD 1990
+YR 1990
+K1 средство
+K1 таксис
+K1 средство
+K1 отношение
+
+RT Book, Whole
+A1 Haspelmath
+A2 König
+FD 1995
+YR 1995
+K1 средство
+K1 таксис
+K1 средство
+K1 отношение
+
+RT Book, Whole
+A1 Козинцева
+FD 2003
+YR 2003
+K1 средство
+K1 таксис
+K1 средство
+K1 отношение
+
+RT Book, Whole
+A1 Вимер
+FD 2004
+YR 2004
+K1 средство
+K1 таксис
+K1 средство
+K1 отношение
+
+RT Book, Section
+A1 Арутюнова, Н. Д.
+T1 Прагматика
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 местоимение
+K1 дейксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 прошедшее
+K1 таксис
+
+RT Book, Section
+A1 Володин, А. П.
+T1 Лицо
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 местоимение
+K1 дейксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 прошедшее
+K1 таксис
+
+RT Book, Section
+A1 Виноградов, В. А.
+T1 Инклюзив
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 местоимение
+K1 дейксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 прошедшее
+K1 таксис
+
+RT Book, Section
+A1 Виноградов, В. А.
+T1 Эксклюзив
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 местоимение
+K1 дейксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 прошедшее
+K1 таксис
+
+RT Book, Section
+A1 Крылов, С. А.
+A2 Падучева, Е. В.
+T1 Местоимения
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 местоимение
+K1 дейксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 прошедшее
+K1 таксис
+
+RT Book, Section
+A1 Крылов, С. А.
+A2 Падучева, Е. В.
+T1 Местоименные слова
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 местоимение
+K1 дейксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 прошедшее
+K1 таксис
+
+RT Book, Section
+A1 Виноградов, В. А.
+T1 Дейксис
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 местоимение
+K1 дейксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 прошедшее
+K1 таксис
+
+RT Book, Section
+A1 Падучева, Е. В.
+T1 Анафорическое отношение
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 местоимение
+K1 дейксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 прошедшее
+K1 таксис
+
+RT Book, Section
+A1 Маслов, Ю. С.
+T1 Время
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 местоимение
+K1 дейксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 прошедшее
+K1 таксис
+
+RT Book, Section
+A1 Маслов, Ю. С.
+T1 Будущее время
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 местоимение
+K1 дейксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 прошедшее
+K1 таксис
+
+RT Book, Section
+A1 Маслов, Ю. С.
+T1 Настоящее время
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 местоимение
+K1 дейксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 прошедшее
+K1 таксис
+
+RT Book, Section
+A1 Маслов, Ю. С.
+T1 Прошедшее время
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 местоимение
+K1 дейксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 прошедшее
+K1 таксис
+
+RT Book, Section
+A1 Бондарко, А. В.
+T1 Таксис
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 местоимение
+K1 дейксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 прошедшее
+K1 таксис
+
+RT Book, Whole
+A1 Friedrich
+FD 1974
+YR 1974
+
+RT Book, Whole
+A1 Comrie
+FD 1976
+YR 1976
+K1 аспектология
+K1 аспектология
+
+RT Book, Whole
+A1 Tedeschi
+A2 Zaenen
+FD 1981
+YR 1981
+
+RT Book, Whole
+A1 De Groot
+A2 Tommola
+FD 1984
+YR 1984
+
+RT Book, Whole
+A1 Bache et al.
+FD 1994
+YR 1994
+
+RT Book, Whole
+A1 Vet
+A2 Vetters
+FD 1994
+YR 1994
+
+RT Book, Whole
+A1 Маслов
+FD 1984b
+YR 1984b
+K1 число
+
+RT Book, Whole
+A1 Маслов
+FD 2004
+YR 2004
+K1 аспектология
+K1 перфект
+K1 имперфект
+
+RT Book, Whole
+A1 Bybee
+FD 1985
+YR 1985
+K1 аспектология
+
+RT Book, Whole
+A1 Dahl
+FD 1985
+YR 1985
+K1 аспектология
+
+RT Book, Whole
+A1 Bybee
+A2 Dahl
+FD 1989
+YR 1989
+K1 семантика
+K1 глагол
+K1 число
+
+RT Book, Whole
+A1 Bybee et al.
+FD 1994
+YR 1994
+K1 семантика
+K1 глагол
+K1 число
+
+RT Book, Whole
+A1 Dahl
+FD 2000
+YR 2000
+K1 семантика
+K1 глагол
+K1 число
+
+RT Book, Whole
+A1 Черткова
+FD 1998
+YR 1998
+
+RT Book, Whole
+A1 Книга Cohen
+FD 1989
+YR 1989
+K1 значение
+
+RT Book, Whole
+A1 Lazard
+FD 2001
+YR 2001
+K1 значение
+
+RT Book, Whole
+A1 Tournadre
+FD 2004
+YR 2004
+K1 значение
+
+RT Book, Whole
+A1 Smith
+FD 1992
+YR 1992
+K1 оппозиция
+K1 аспект
+K1 предикат
+K1 категория
+K1 перфектив
+K1 имперфектив
+
+RT Book, Whole
+A1 Hopper
+FD 1979
+YR 1979
+K1 аспект
+
+RT Book, Whole
+A1 Hopper
+FD 1982
+YR 1982
+K1 аспект
+
+RT Book, Whole
+A1 Thelin
+FD 1990
+YR 1990
+K1 аспект
+
+RT Book, Whole
+A1 Weinrich
+FD 1964
+YR 1964
+K1 форма
+
+RT Book, Whole
+A1 Smith
+FD 1996
+YR 1996
+
+RT Book, Whole
+A1 Смит
+FD 1998
+YR 1998
+
+RT Book, Whole
+A1 Wierzbicka
+FD 1967
+YR 1967
+K1 семантика
+K1 аспектология
+
+RT Book, Whole
+A1 Бондарко
+FD 1971
+YR 1971
+K1 семантика
+K1 аспектология
+
+RT Book, Whole
+A1 Гловинская
+FD 1982
+YR 1982
+K1 семантика
+K1 аспектология
+
+RT Book, Whole
+A1 Шелякин
+FD 1983
+YR 1983
+K1 семантика
+K1 аспектология
+
+RT Book, Whole
+A1 Падучева
+FD 1996
+YR 1996
+K1 семантика
+K1 аспектология
+
+RT Book, Whole
+A1 Шатуновский
+FD 1996
+YR 1996
+K1 семантика
+K1 аспектология
+
+RT Book, Whole
+A1 Зализняк
+A2 Шмелёв
+FD 2000
+YR 2000
+K1 семантика
+K1 аспектология
+
+RT Book, Whole
+A1 Stunová
+FD 1993
+YR 1993
+
+RT Book, Whole
+A1 Dickey
+FD 2000
+YR 2000
+
+RT Book, Whole
+A1 Петрухина
+FD 2000
+YR 2000
+
+RT Book, Whole
+A1 Sawicki
+FD 2000
+YR 2000
+
+RT Book, Whole
+A1 Wälchli
+FD 2001b
+YR 2001b
+
+RT Book, Whole
+A1 Bennett
+A2 Partee
+FD 1978
+YR 1978
+K1 аспектология
+
+RT Book, Whole
+A1 Palmer
+FD 1988
+YR 1988
+K1 аспектология
+
+RT Book, Whole
+A1 Brinton
+FD 1988
+YR 1988
+K1 аспектология
+
+RT Book, Whole
+A1 Binnick
+FD 1991
+YR 1991
+K1 аспектология
+
+RT Book, Whole
+A1 Bull
+FD 1960
+YR 1960
+K1 аспектология
+
+RT Book, Whole
+A1 Bertinetto
+FD 1986
+YR 1986
+K1 аспектология
+
+RT Book, Whole
+A1 Franckel
+FD 1989
+YR 1989
+K1 аспектология
+
+RT Book, Whole
+A1 Gosselin
+FD 1996
+YR 1996
+K1 аспектология
+
+RT Book, Whole
+A1 Squartini
+FD 1998
+YR 1998
+K1 аспектология
+
+RT Book, Whole
+A1 McCoard
+FD 1978
+YR 1978
+K1 перфект
+K1 семантика
+K1 форма
+K1 перфект
+K1 результатив
+K1 значение
+
+RT Book, Whole
+A1 Anderson, L.
+FD 1982
+YR 1982
+K1 перфект
+K1 семантика
+K1 форма
+K1 перфект
+K1 результатив
+K1 значение
+
+RT Book, Whole
+A1 Dahl
+FD 1985
+YR 1985
+K1 перфект
+K1 семантика
+K1 форма
+K1 перфект
+K1 результатив
+K1 значение
+
+RT Book, Whole
+A1 Кашкин
+FD 1991
+YR 1991
+K1 перфект
+K1 семантика
+K1 форма
+K1 перфект
+K1 результатив
+K1 значение
+
+RT Book, Whole
+A1 Klein
+A2 Vater
+FD 1998
+YR 1998
+K1 перфект
+K1 семантика
+K1 форма
+K1 перфект
+K1 результатив
+K1 значение
+
+RT Book, Whole
+A1 Schwenter
+FD 1994
+YR 1994
+K1 перфект
+K1 семантика
+K1 форма
+K1 перфект
+K1 результатив
+K1 значение
+
+RT Book, Whole
+A1 Fici Giusti
+FD 1995
+YR 1995
+K1 перфект
+K1 семантика
+K1 форма
+K1 перфект
+K1 результатив
+K1 значение
+
+RT Book, Whole
+A1 Bybee et al.
+FD 1996
+YR 1996
+K1 перфект
+K1 семантика
+K1 форма
+K1 перфект
+K1 результатив
+K1 значение
+
+RT Book, Whole
+A1 Michaelis
+FD 1998
+YR 1998
+K1 перфект
+K1 семантика
+K1 форма
+K1 перфект
+K1 результатив
+K1 значение
+
+RT Book, Whole
+A1 Lindstedt
+FD 2000
+YR 2000
+K1 перфект
+K1 семантика
+K1 форма
+K1 перфект
+K1 результатив
+K1 значение
+
+RT Book, Whole
+A1 Dahl
+A2 Hedin
+FD 2000
+YR 2000
+K1 перфект
+K1 семантика
+K1 форма
+K1 перфект
+K1 результатив
+K1 значение
+
+RT Book, Whole
+A1 Недялков
+FD 1983
+YR 1983
+K1 перфект
+K1 семантика
+K1 форма
+K1 перфект
+K1 результатив
+K1 значение
+
+RT Book, Whole
+A1 Nedjalkov
+FD 1988
+YR 1988
+K1 перфект
+K1 семантика
+K1 форма
+K1 перфект
+K1 результатив
+K1 значение
+
+RT Book, Whole
+A1 Iturrioz Leza
+FD 1992
+YR 1992
+K1 перфект
+K1 семантика
+K1 форма
+K1 перфект
+K1 результатив
+K1 значение
+
+RT Book, Whole
+A1 Wiemer
+A2 Giger
+FD 2005
+YR 2005
+K1 перфект
+K1 семантика
+K1 форма
+K1 перфект
+K1 результатив
+K1 значение
+
+RT Book, Whole
+A1 Недялков
+FD 1987
+YR 1987
+K1 перфект
+K1 семантика
+K1 форма
+K1 перфект
+K1 результатив
+K1 значение
+
+RT Book, Whole
+A1 Brinton
+FD 1988
+YR 1988
+K1 перфект
+K1 семантика
+K1 форма
+K1 перфект
+K1 результатив
+K1 значение
+
+RT Book, Whole
+A1 Dik
+FD 1994
+YR 1994
+K1 перфект
+K1 семантика
+K1 форма
+K1 перфект
+K1 результатив
+K1 значение
+
+RT Book, Whole
+A1 Балли
+FD 1932
+YR 1932
+K1 модальность
+K1 модальность
+
+RT Book, Whole
+A1 Булыгина
+A2 Шмелёв
+FD 1990
+YR 1990
+K1 модальность
+
+RT Book, Whole
+A1 Бондарко
+FD 1990
+YR 1990
+K1 модальность
+
+RT Book, Section
+A1 Шатуновский
+FD 1996
+YR 1996
+SP 172
+OP 308
+K1 модальность
+
+RT Book, Whole
+A1 Palmer
+FD 1986
+YR 1986
+K1 модальность
+
+RT Book, Whole
+A1 Palmer
+FD 2001
+YR 2001
+K1 модальность
+
+RT Book, Whole
+A1 Bybee
+FD 1985
+YR 1985
+K1 модальность
+
+RT Book, Whole
+A1 Bybee et al.
+FD 1994
+YR 1994
+K1 модальность
+
+RT Book, Whole
+A1 van der Auwera
+A2 Plungian
+FD 1998
+YR 1998
+K1 модальность
+
+RT Book, Whole
+A1 Bybee
+A2 Fleischman
+FD 1995
+YR 1995
+
+RT Book, Whole
+A1 Frawley et al.
+FD 2006
+YR 2006
+
+RT Book, Whole
+A1 Dik
+FD 1989
+YR 1989
+K1 модальность
+
+RT Book, Whole
+A1 van der Auwera
+A2 Dendale
+FD 2000
+YR 2000
+K1 модальность
+
+RT Book, Whole
+A1 Dressler
+FD 1968
+YR 1968
+K1 семантика
+K1 интенсивность
+K1 семантика
+K1 оценка
+K1 семантика
+K1 оптатив
+K1 императив
+K1 императив
+
+RT Book, Whole
+A1 Dressler
+A2 Merlini Barbaresi
+FD 1994
+YR 1994
+K1 семантика
+K1 интенсивность
+K1 семантика
+K1 оценка
+K1 семантика
+K1 оптатив
+K1 императив
+K1 императив
+
+RT Book, Whole
+A1 Вольф
+FD 1985
+YR 1985
+K1 семантика
+K1 интенсивность
+K1 семантика
+K1 оценка
+K1 семантика
+K1 оптатив
+K1 императив
+K1 императив
+
+RT Book, Whole
+A1 Арутюнова
+FD 1999
+YR 1999
+K1 семантика
+K1 интенсивность
+K1 семантика
+K1 оценка
+K1 семантика
+K1 оптатив
+K1 императив
+K1 императив
+
+RT Book, Whole
+A1 Сепир
+FD 1944
+YR 1944
+K1 семантика
+K1 интенсивность
+K1 семантика
+K1 оценка
+K1 семантика
+K1 оптатив
+K1 императив
+K1 императив
+
+RT Book, Whole
+A1 Stassen
+FD 1985
+YR 1985
+K1 семантика
+K1 интенсивность
+K1 семантика
+K1 оценка
+K1 семантика
+K1 оптатив
+K1 императив
+K1 императив
+
+RT Book, Whole
+A1 Traugott
+FD 1986
+YR 1986
+K1 семантика
+K1 интенсивность
+K1 семантика
+K1 оценка
+K1 семантика
+K1 оптатив
+K1 императив
+K1 императив
+
+RT Book, Whole
+A1 Nikiforidou
+FD 1990
+YR 1990
+K1 семантика
+K1 интенсивность
+K1 семантика
+K1 оценка
+K1 семантика
+K1 оптатив
+K1 императив
+K1 императив
+
+RT Book, Whole
+A1 Athanasiadou
+A2 Dirven
+FD 1997
+YR 1997
+K1 семантика
+K1 интенсивность
+K1 семантика
+K1 оценка
+K1 семантика
+K1 оптатив
+K1 императив
+K1 императив
+
+RT Book, Whole
+A1 Храковский
+FD 1996b
+YR 1996b
+K1 семантика
+K1 интенсивность
+K1 семантика
+K1 оценка
+K1 семантика
+K1 оптатив
+K1 императив
+K1 императив
+
+RT Book, Whole
+A1 Declerck
+A2 Reed
+FD 2001
+YR 2001
+K1 семантика
+K1 интенсивность
+K1 семантика
+K1 оценка
+K1 семантика
+K1 оптатив
+K1 императив
+K1 императив
+
+RT Book, Whole
+A1 Dancygier
+A2 Sweetser
+FD 2005
+YR 2005
+K1 семантика
+K1 интенсивность
+K1 семантика
+K1 оценка
+K1 семантика
+K1 оптатив
+K1 императив
+K1 императив
+
+RT Book, Whole
+A1 Храковский
+A2 Володин
+FD 1986
+YR 1986
+K1 семантика
+K1 интенсивность
+K1 семантика
+K1 оценка
+K1 семантика
+K1 оптатив
+K1 императив
+K1 императив
+
+RT Book, Whole
+A1 Храковский
+FD 1992
+YR 1992
+K1 семантика
+K1 интенсивность
+K1 семантика
+K1 оценка
+K1 семантика
+K1 оптатив
+K1 императив
+K1 императив
+
+RT Book, Whole
+A1 ван дер Аувера
+A2 Гусев
+A3 Добрушина
+FD 2004
+YR 2004
+K1 семантика
+K1 интенсивность
+K1 семантика
+K1 оценка
+K1 семантика
+K1 оптатив
+K1 императив
+K1 императив
+
+RT Book, Whole
+A1 Фортейн
+FD 2008
+YR 2008
+K1 семантика
+K1 интенсивность
+K1 семантика
+K1 оценка
+K1 семантика
+K1 оптатив
+K1 императив
+K1 императив
+
+RT Book, Whole
+A1 Bybee
+A2 Fleischman
+FD 1995
+YR 1995
+K1 ирреалиса
+
+RT Book, Whole
+A1 Roberts
+FD 1990
+YR 1990
+K1 ирреалиса
+
+RT Book, Whole
+A1 Givón
+FD 1994
+YR 1994
+K1 ирреалиса
+
+RT Book, Whole
+A1 Bybee
+FD 1998
+YR 1998
+K1 ирреалиса
+
+RT Book, Whole
+A1 Elliott
+FD 2000
+YR 2000
+K1 ирреалиса
+
+RT Book, Whole
+A1 Ландер
+A2 др.
+FD 2004
+YR 2004
+K1 ирреалиса
+
+RT Book, Whole
+A1 Урманчиева
+FD 2004
+YR 2004
+K1 ирреалиса
+
+RT Book, Whole
+A1 Plungian
+FD 2005
+YR 2005
+K1 ирреалиса
+
+RT Book, Whole
+A1 Haarmann
+FD 1970
+YR 1970
+K1 эвиденциальность
+
+RT Book, Whole
+A1 Givón
+FD 1982
+YR 1982
+K1 эвиденциальность
+
+RT Book, Whole
+A1 Slobin
+A2 Aksu
+FD 1982
+YR 1982
+K1 эвиденциальность
+
+RT Book, Whole
+A1 Chafe
+A2 Nichols
+FD 1986
+YR 1986
+K1 эвиденциальность
+K1 отношение
+K1 медиативность
+K1 эвиденциальность
+K1 категория
+
+RT Book, Whole
+A1 Willett
+FD 1988
+YR 1988
+K1 эвиденциальность
+K1 отношение
+K1 медиативность
+K1 эвиденциальность
+K1 категория
+
+RT Book, Whole
+A1 Guentchéva
+FD 1996
+YR 1996
+K1 эвиденциальность
+K1 отношение
+K1 медиативность
+K1 эвиденциальность
+K1 категория
+
+RT Book, Whole
+A1 Guentchéva
+A2 Landaburu
+FD 2007
+YR 2007
+K1 эвиденциальность
+K1 отношение
+K1 медиативность
+K1 эвиденциальность
+K1 категория
+
+RT Book, Whole
+A1 Johanson
+A2 Utas
+FD 2000
+YR 2000
+K1 эвиденциальность
+K1 отношение
+K1 медиативность
+K1 эвиденциальность
+K1 категория
+
+RT Book, Whole
+A1 Dendale
+A2 Tasmowski
+FD 2001
+YR 2001
+K1 эвиденциальность
+K1 отношение
+K1 медиативность
+K1 эвиденциальность
+K1 категория
+
+RT Book, Whole
+A1 Aikhenvald
+A2 Dixon
+FD 2003
+YR 2003
+K1 эвиденциальность
+K1 отношение
+K1 медиативность
+K1 эвиденциальность
+K1 категория
+
+RT Book, Whole
+A1 Squartini
+FD 2007
+YR 2007
+K1 эвиденциальность
+K1 отношение
+K1 медиативность
+K1 эвиденциальность
+K1 категория
+
+RT Book, Whole
+A1 Козинцева
+FD 1994
+YR 1994
+
+RT Book, Whole
+A1 Храковский
+FD 2007
+YR 2007
+
+RT Book, Whole
+A1 Aikhenvald
+FD 2004b
+YR 2004b
+K1 эвиденциальность
+K1 настоящее
+
+RT Book, Whole
+A1 Lazard
+FD 1999
+YR 1999
+K1 семантика
+K1 миративность
+
+RT Book, Whole
+A1 Friedman
+FD 2005
+YR 2005
+K1 семантика
+K1 миративность
+
