@@ -8,7 +8,7 @@ grammar gramsem {
     [ <title-journal> || <title-simple> ]
   }
   token red {
-    "(ред.)"
+    "(ред.)" | \(<[eé]>d\.?\)
   }
   token spl {
     <[\.\s]>
@@ -20,19 +20,21 @@ grammar gramsem {
     <surname> \s* ["," \s*]? <capitals>
   }
   token surname {
-    <[A..Z] + [А..Я] + [Ё]> <[a..z] + [а..я] + [ё]>+
+    <[A..Z] + [А..Я] + [Ё]> <[a..z] + [öäüàáèéòó] + [а..я] + [ё]>+
   }
   token capitals {
     [
-      [ <[A..Z] + [А..Я] + [Ё]> "." | <surname>]
-    ] ** ^3  % [ \s* ]
+      [ <[A..Z] + [А..Я] + [Ё]> "." ] ** ^3  % [ \s* ]
+      |
+      <surname> \s+ [ <[A..Z] + [А..Я] + [Ё]> "." ] ** ^3  % [ \s* ]
+    ]
   }
   token year {
     <digit>+
   }
   token small-dot {
-    <[A..Z] + [А..Я] + [a..z] + [а..я] + [\s]>
-    <[\.] + [а..я] + [a..z] + [\s]>+
+    <[A..Z] + [А..Я] + [öäüàáèéòó] + [a..z] + [а..я] + [\s]>
+    <[\.] + [а..я] + [öäüàáèéòó] + [a..z] + [\s]>+
   }
   token title-simple {
     [ <name-simple> | <name-simple-ext> ]
@@ -47,16 +49,18 @@ grammar gramsem {
   }
   token ext-construction {
     [
-      <[А..Я] + [A..Z]><[а..я] + [a..z]>+
+      <[А..Я] + [A..Z]><[а..я] + [a..z] + [öäüàáèéòó]>+
       [
-        \s+ [<[А..Я] + [A..Z] + [а..я] + [a..z]>+]+ % [\s+]
+        \s+ [<[А..Я] + [A..Z] + [öäüàáèéòó] + [а..я] + [a..z]>+]+ % [\s+]
       ]?
       \s*\.\s+
     ] +
   }
   token ext-construction-small {
     [
-      [<[А..Я] + [A..Z] + [а..я] + [a..z] + [-] + :digit>+]+ % [\s+]
+      [
+        <[А..Я] + [A..Z] + [а..я] + [öäüàáèéòó] + [a..z] + [-] + :digit>+
+      ] + % [\s+]
       \s*\.\s+
     ] +
   }
@@ -82,25 +86,34 @@ grammar gramsem {
       <place> ":" <spl>* <publisher>
       |
       ":" <spl>* <series>
-    ]
-    <time-pages>? <spl>*
+    ]?
+    <spl>* <time-pages>? <spl>*
   }
   token journal-name {
     [
       <-[\.\:]>+ ":" <spl>* <ext-construction-small>
       |
       [
-        <-[\.\:/]>+? <spl>* "," <spl>* <metadata>
+        <-[\.\:/]>+? <spl>* "," <spl>* <metadata-wrap>
         |
         <-[\.\:/]>+
       ]
     ]
   }
+  token metadata-wrap {
+    [ <section-wrap> | <metadata> ] + % [\s* "," \s*]
+  }
   token metadata {
-    ["вып." | "сер."] <spl>* [ <digit>+ | <[IVX]>+ ]
+    ["вып." | "сер." | "vol"\.?] <spl>* [ <digit>+ | <[IVX]>+ ]
+  }
+  token section-wrap {
+    "sec." \s* <section>
+  }
+  token section {
+    <digit>+ "." <digit>+
   }
   token time-pages {
-    "," \s* [ <pages> | <time> ] [ \s* "," \s* <pages> ] ?
+    "," \s* [ <pages> | <time>]+ % [ \s* "," \s* ]
   }
   token time {
     [ <digit> || "/" ] +
@@ -136,4 +149,4 @@ grammar gramsem {
   }
 }
 
-say gramsem.parse('Гринберг, Дж. 1960. Квантитативный подход к морфологической типологии языков / Пер. с англ. // Новое в лингвистике, вып. 3. М.: ИЛ, 1963, 60-94.');
+say gramsem.parse('Goldberg, A. 2003. Constructions: A new theoretical approach to language // Trends in Cognitive Sciences, sec. 7.5, 219-224.');
