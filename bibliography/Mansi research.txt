@@ -1,0 +1,104 @@
+RT Book, Whole
+T1 Мансийский (вогульский) язык.
+A1 Ромбандеева, Е. И.
+PP М.
+FD 1973
+YR 1973
+SP 206
+LA русский
+PB Наука
+ST Ромбандеева 1973
+K1 грамматика
+
+
+RT Conference Proceedings
+T1 Language technology resources and tools for Mansi: an overview
+A1 Horváth, Csilla
+A1 Szilágyi, Norbert
+A1 Vincze, Veronika
+A1 Nagy, Ágoston
+T2 The 3rd International Workshop for Computational Linguistics of Uralic Languages
+U1 St. Petersburg
+FD 2017, Jan 23-24
+YR 2017
+SP 56
+OP 65
+LA English
+PB Association of Computational Linguistics
+SN 978-973-0-20728-6
+ST Horváth et al. 2017
+K1 дигитализация
+K1 корпус
+K1 парсер
+
+
+RT Conference Proceedings
+T1 Where Bears Have the Eyes of Currant: Towards a Mansi WordNet
+A1 Horváth, Csilla
+A1 Nagy, Ágoston
+A1 Szilágyi, Norbert
+A1 Vincze, Veronika
+T2 The Eighth Global WordNet Conference
+U1 Bucharest
+FD 2016, Jan 27-30
+YR 2016
+LA English
+PB Verginica Barbu Mititelu, Corina Forăscu, Christiane Fellbaum, Piek Vossen
+SN 978-973-0-20728-6
+ST Horváth et al. 2016
+K1 дигитализация
+K1 тезаурус
+K1 wordnet
+
+
+RT Book, Section
+T1 Поездка к ивдельским манси
+A1 Новикова, Н. И.
+T2 Вып. VII: Обские угры (ханты и манси)
+T3 Народы и культуры
+PP М.
+FD 1991
+YR 1991
+SP 132
+OP 143
+LA русский
+K1 верхняя лозьва
+K1 нет оригинала
+
+
+RT Book, Whole
+T1 Мāнь мōщнэ ос мāнь мōщхум - Молодая мощнэ и молодой мощхум. Мансийская народная сказка
+A1 Слинкина, Т.Д.
+PP Тюмень
+FD 2016
+YR 2016
+SP 24
+LA манси
+PB Формат
+UL http://www.twirpx.com/file/2147738/
+K1 тексты манси
+K1 литературный манси
+
+
+RT Book, Whole
+T1 Сказки, песни, загадки народа манси
+PP Ханты-Мансийск
+FD 2010
+YR 2010
+PB Обско-угорский институт прикладных исследований и разработок
+SN 978-5-9611-0055-6
+NO <p>The following values have no corresponding Zotero field:<br />DS http://www.twirpx.com/file/2147429/</p>
+
+
+RT Book, Whole
+T1 Сказки, песни, загадки народа манси
+PP Ханты-Мансийск
+FD 2010
+YR 2010
+SP 74
+PB Обско-угорский институт прикладных исследований и разработок
+SN 978-5-9611-0055-6
+UL http://www.twirpx.com/file/2147429/
+NO <p>The following values have no corresponding Zotero field:<br />DS http://www.twirpx.com/file/2147429/</p>
+
+
