@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/perl6
 
 use Grammar::Tracer;
 
