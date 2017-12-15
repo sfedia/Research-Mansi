@@ -30,7 +30,7 @@ grammar gramsem {
     ]
   }
   token year {
-    <digit>+
+    <digit>+ <[a..z]>?
   }
   token small-dot {
     <[A..Z] + [А..Я] + [öäüàáèéòó] + [a..z] + [а..я] + [\s]>
@@ -68,7 +68,8 @@ grammar gramsem {
     <small-dot>
   }
   token editors {
-    <editor>+ % [ ["," | \s | "&" | " и "]+ ]
+    <editor> + % [ ["," | \s | "&" | " и "]+ ]
+    \s* "и"? \s* "др"?\.? \s* <red>?
   }
   token editor {
     <capitals> \s+ <surname> <spl>* <red>?
@@ -149,4 +150,4 @@ grammar gramsem {
   }
 }
 
-say gramsem.parse('Goldberg, A. 2003. Constructions: A new theoretical approach to language // Trends in Cognitive Sciences, sec. 7.5, 219-224.');
+say gramsem.parse('Сичинава, Д. В. 2008b. Связь между формой и семантикой перфекта: одна неизученная закономерность // А. В. Бондарко и др. (ред.). Динамические модели: Слово. Предложение. Текст. Сб. статей в честь Е. В. Падучевой. М.: Языки славянских культур.');
