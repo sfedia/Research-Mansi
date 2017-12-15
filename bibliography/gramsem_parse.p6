@@ -167,7 +167,7 @@ grammar gramsem {
   }
 }
 
-my $parsed = gramsem.parse('Мартине, А. 1963. Основы общей лингвистики. / Пер. с франц. // Новое в лингвистике, вып.3. М.: ИЛ, 366-566.');
+my $parsed = gramsem.parse('Маслов, Ю. С. 1984a. Типология славянских видо-временных систем и функционирование форм «претерита» в эпическом повествовании // А. В. Бондарко (ред.). Теория грамматического значения и аспектологические исследования. Л.: Наука, 22-42.');
 say $parsed;
 my $output = '';
 my $author_range = "A1 ";
@@ -252,17 +252,19 @@ elsif ($parsed<title-journal>) {
   }
   my @metadata-buffer;
   my $journal-name = $parsed<title-journal><journal-name>.Str;
-  for ($parsed<title-journal><journal-name><metadata-wrap><metadata>) {
-    if $_.Str ~~ /^([вып|vol])\.\s*(.+)/ {
-      my $this = $_.Str;
-      my $keyw = $0 eq 'вып' ?? 'Вып.' !! 'Vol.';
-      @metadata-buffer.push: "$keyw $1";
-      $journal-name ~~ s/\,\s*$this//;
-    }
-    elsif $_.Str ~~ /^(сер)\.\s*(.+)/ {
-      my $this = $_.Str;
-      @metadata-buffer.push: "Сер. $1";
-      $journal-name ~~ s/\,\s*$this//;
+  if ($parsed<title-journal><journal-name><metadata-wrap><metadata>) {
+    for ($parsed<title-journal><journal-name><metadata-wrap><metadata>) {
+      if $_.Str ~~ /^([вып|vol])\.\s*(.+)/ {
+        my $this = $_.Str;
+        my $keyw = $0 eq 'вып' ?? 'Вып.' !! 'Vol.';
+        @metadata-buffer.push: "$keyw $1";
+        $journal-name ~~ s/\,\s*$this//;
+      }
+      elsif $_.Str ~~ /^(сер)\.\s*(.+)/ {
+        my $this = $_.Str;
+        @metadata-buffer.push: "Сер. $1";
+        $journal-name ~~ s/\,\s*$this//;
+      }
     }
   }
   $output ~= "T3 $journal-name\n";
@@ -289,6 +291,9 @@ elsif ($parsed<title-journal>) {
     my $pages = $parsed<title-journal><time-pages><pages>[0];
     $output ~= "SP {$pages<from-page>}\n";
     $output ~= "OP {$pages<to-page>}\n";
+  }
+  if ($parsed<title-journal><comment>) {
+    $output ~= "NO {$parsed<title-journal><comment>.Str}\n";
   }
 }
 
