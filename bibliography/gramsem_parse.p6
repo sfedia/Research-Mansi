@@ -41,7 +41,7 @@ grammar gramsem {
     [<spl>* <part>]?
     [<spl>* "/" <spl>* <comment>]?
     <spl>*
-    <place> ":" <spl>* <publisher>
+    <place> ":" <spl>* <publisher> <spl>*
     <time-pages>? <spl>*
   }
   token name-simple-ext {
@@ -134,6 +134,12 @@ grammar gramsem {
   token name-simple {
     <-[\./]>+
   }
+  token notes-wrap {
+    "(" <notes> ")"
+  }
+  token notes {
+    <-[\)]>+
+  }
   token part {
     [
       "Часть"
@@ -142,12 +148,15 @@ grammar gramsem {
     ]
     <-[\./]>+
   }
+  token publisher-name {
+    <-[,\(\)]>+
+  }
   token publisher {
-    <-[,]>+
+    <publisher-name> <spl>* <notes-wrap>?
   }
   token series {
     <-[,]>+
   }
 }
 
-say gramsem.parse('Сичинава, Д. В. 2008b. Связь между формой и семантикой перфекта: одна неизученная закономерность // А. В. Бондарко и др. (ред.). Динамические модели: Слово. Предложение. Текст. Сб. статей в честь Е. В. Падучевой. М.: Языки славянских культур.');
+say gramsem.parse('Зализняк, А. А. 1977. Грамматический словарь русского языка: Словоизменение. М.: Русский язык (4 изд., испр. и доп.: М.: Русские словари, 2003).');
