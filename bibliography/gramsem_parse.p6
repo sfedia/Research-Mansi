@@ -167,7 +167,7 @@ grammar gramsem {
   }
 }
 
-my $parsed = gramsem.parse('Даниэль, М. А. & Плунгян, В. А. 1996. Обязательность и контекстная вытеснимость (к описанию грамматической периферии) // Известия РАН, вып. 3, сер. 6, 61-66.');
+my $parsed = gramsem.parse('Мартине, А. 1963. Основы общей лингвистики. / Пер. с франц. // Новое в лингвистике, вып.3. М.: ИЛ, 366-566.');
 say $parsed;
 my $output = '';
 my $author_range = "A1 ";
@@ -251,15 +251,21 @@ elsif ($parsed<title-journal>) {
     $output ~= "T2 Sec. $section\n";
   }
   my @metadata-buffer;
+  my $journal-name = $parsed<title-journal><journal-name>.Str;
   for ($parsed<title-journal><journal-name><metadata-wrap><metadata>) {
-    if $_.Str ~~ /^([вып|vol])\.\s+(.+)/ {
+    if $_.Str ~~ /^([вып|vol])\.\s*(.+)/ {
+      my $this = $_.Str;
       my $keyw = $0 eq 'вып' ?? 'Вып.' !! 'Vol.';
       @metadata-buffer.push: "$keyw $1";
+      $journal-name ~~ s/\,\s*$this//;
     }
-    elsif $_.Str ~~ /^(сер)\.\s+(.+)/ {
+    elsif $_.Str ~~ /^(сер)\.\s*(.+)/ {
+      my $this = $_.Str;
       @metadata-buffer.push: "Сер. $1";
+      $journal-name ~~ s/\,\s*$this//;
     }
   }
+  $output ~= "T3 $journal-name\n";
   if @metadata-buffer.elems > 0 {
     $output ~= "T2 {@metadata-buffer.join(', ')}\n";
   }
