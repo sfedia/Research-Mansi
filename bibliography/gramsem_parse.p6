@@ -182,7 +182,7 @@ for 'bibl_samples'.IO.lines -> $line {
       if ($parsed<authors><author>.elems == 1) {
         if ($parsed<authors><et-al>) {
           $author_range = 'A1 ';
-          $output ~= "A2 .\n"
+          $output ~= "A2 .\n";
         }
         else {
           $author_range = 'A2 ';
