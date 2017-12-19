@@ -1,2 +1,2 @@
 # mansi-project
-Mansi project files
+Mansi project files + bibliography
