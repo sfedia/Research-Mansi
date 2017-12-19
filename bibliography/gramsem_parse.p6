@@ -20,11 +20,15 @@ grammar gramsem {
     <surname> \s* ["," \s*]? <capitals>
   }
   token surname {
-    <[A..Z] + [А..Я] + [Ё]> <[a..z] + [ÖÜÄöäüàáèéòó] + [а..я] + [ё]>+
+    "Mc"?
+    [
+      <[A..Z] + [А..Я] + [Ё]>
+      <[a..z] + [ÖÜÄöäüàáčèéòó] + [а..я] + [ё]>+
+    ]+ % [\-]
   }
   token capitals {
     [
-      [ <[A..Z] + [А..Я] + [ЁÖÜÄ]> "." ] ** ^3  % [ \s* ]
+      [ "-"? <[A..Z] + [А..Я] + [ЁÖÜÄ]> "." ] ** ^3  % [ \s* ]
       |
       <surname> \s+ [ <[A..Z] + [А..Я] + [ЁÖÜÄ]> "." ] ** ^3  % [ \s* ]
     ]
@@ -33,8 +37,8 @@ grammar gramsem {
     <digit>+ <[a..z]>?
   }
   token small-dot {
-    <[A..Z] + [А..Я] + [ÖÜÄöäüàáèéòó] + [a..z] + [а..я] + [\s]>
-    <[\.] + [а..я] + [ÖÜÄöäüàáèéòó] + [a..z] + [\s]>+
+    <[A..Z] + [А..Я] + [ÖÜÄöčäüàáèéòó] + [a..z] + [а..я] + [\s]>
+    <[\.] + [а..я] + [ÖÜÄöäčüàáèéòó] + [a..z] + [\s]>+
   }
   token title-simple {
     [ <name-simple> | <name-simple-ext> ]
@@ -49,9 +53,9 @@ grammar gramsem {
   }
   token ext-construction {
     [
-      <[А..Я] + [A..Z]><[а..я] + [a..z] + [ÖÜÄöäüàáèéòó]>+
+      <[А..Я] + [A..Z]><[а..я] + [a..z] + [ÖÜÄöäüàáèéčòó]>+
       [
-        \s+ [<[А..Я] + [A..Z] + [ÖÜÄöäüàáèéòó] + [а..я] + [a..z]>+]+ % [\s+]
+        \s+ [<[А..Я] + [A..Z] + [ÖÜÄöäüàáèčéòó] + [а..я] + [a..z]>+]+ % [\s+]
       ]?
       \s*\.\s+
     ] +
@@ -59,7 +63,7 @@ grammar gramsem {
   token ext-construction-small {
     [
       [
-        <[А..Я] + [A..Z] + [а..я] + [ÖÜÄöäüàáèéòó] + [a..z] + [-] + :digit>+
+        <[А..Я] + [A..Z] + [а..я] + [ÖÜÄöäüàáčèéòó] + [a..z] + [-] + :digit>+
       ] + % [\s+]
       \s*\.\s+
     ] +
@@ -83,7 +87,7 @@ grammar gramsem {
     [<spl>* "/" <spl>* <comment>]?
     <spl>*
     <spl>* "//" <spl>*
-    <editors>? <spl>*
+    [<editors> <spl>+]?
     <journal-name>
     <spl>*
     [
@@ -91,7 +95,7 @@ grammar gramsem {
       |
       ":" <spl>* <series>
     ]?
-    <spl>* <time-pages>? <spl>*
+    [ [<spl> || ","]* <metadata-wrap> ]? <spl>* <time-pages>? <spl>*
   }
   token journal-name {
     [
@@ -120,7 +124,7 @@ grammar gramsem {
     "," \s* [<time> | <pages>]+ % [ \s* "," \s* ]
   }
   token time {
-    [ <digit> | "/" ] +
+    ["18" || "19" || "20"] <digit> ** 2 [ <spl>* "/" <digit>+ ] ?
   }
   token pages {
     <from-page> "-" <to-page>
@@ -247,13 +251,13 @@ for 'bibl_samples'.IO.lines -> $line {
   elsif ($parsed<title-journal>) {
     my $name = $parsed<title-journal><name-simple>;
     if ($parsed<title-journal><journal-name><metadata-wrap><section-wrap>) {
-      my $sec-wrap = $parsed<title-journal><journal-name><metadata-wrap><section-wrap>.Str;
-      $name ~~ s/\,\s*$sec-wrap//;
       my $section = $parsed<title-journal><journal-name><metadata-wrap><section-wrap>[0]<section>;
       $output ~= "T2 Sec. $section\n";
     }
     my @metadata-buffer;
     my $journal-name = $parsed<title-journal><journal-name>.Str;
+    my $sec-wrap = $parsed<title-journal><journal-name><metadata-wrap><section-wrap>.Str;
+    $journal-name ~~ s/\,\s*$sec-wrap//;
     if ($parsed<title-journal><journal-name><metadata-wrap><metadata>) {
       for ($parsed<title-journal><journal-name><metadata-wrap><metadata>) {
         if $_.Str ~~ /^([вып|vol])\.\s*(.+)/ {
