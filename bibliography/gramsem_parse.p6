@@ -83,9 +83,9 @@ grammar gramsem {
   token editor {
     [
       <capitals> \s+ <surname>
-      |
+      ||
       <surname> \s+ <capitals>
-      |
+      ||
       <surname>
     ]
     <spl>* <red>?
@@ -104,7 +104,7 @@ grammar gramsem {
     ]
     <spl>*
     [
-      ["," <spl>*]? <place> ":" <spl>* <publisher>
+      ["," <spl>*]? [<place> ":"]? <spl>* <publisher>
       |
       ":" <spl>* <series>
     ]?
