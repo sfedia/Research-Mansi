@@ -20,7 +20,7 @@ grammar gramsem {
     <surname> \s* ["," \s*]? <capitals>
   }
   token surname {
-    "Mc"?
+    ["de" \s* | "Mc"]?
     [
       <[A..Z] + [А..Я] + [Ё]>
       <[a..z] + [ÖÜÄöäüàáčèéòó] + [а..я] + [ё]>+
@@ -34,7 +34,7 @@ grammar gramsem {
     ]
   }
   token year {
-    <digit>+ <[a..z]>?
+    [ <digit>+ <[a..z]>? ] + % [\-]
   }
   token small-dot {
     <[A..Z] + [А..Я] + [ÖÜÄöčäüàáèéòó] + [a..z] + [а..я] + [\s]>
@@ -45,7 +45,7 @@ grammar gramsem {
     [<spl>* <part>]?
     [<spl>* "/" <spl>* <comment>]?
     <spl>*
-    <place> ":" <spl>* <publisher> <spl>*
+    ["," <spl>*]? <place> ":" <spl>* <publisher> <spl>*
     <time-pages>? <spl>*
   }
   token name-simple-ext {
@@ -55,7 +55,9 @@ grammar gramsem {
     [
       <[А..Я] + [A..Z]><[а..я] + [a..z] + [ÖÜÄöäüàáèéčòó]>+
       [
-        \s+ [<[А..Я] + [A..Z] + [ÖÜÄöäüàáèčéòó] + [а..я] + [a..z]>+]+ % [\s+]
+        \s+ [
+          <[А..Я] + [A..Z] + [ÖÜÄöäüàáèčéòó] + [а..я] + [a..z]>+ ","?
+        ]+ % [\s+]
       ]?
       \s*\.\s+
     ] +
@@ -79,7 +81,14 @@ grammar gramsem {
     "и"? \s* "др"\.? | "et"? \s* "al"\.?
   }
   token editor {
-    <capitals> \s+ <surname> <spl>* <red>?
+    [
+      <capitals> \s+ <surname>
+      |
+      <surname> \s+ <capitals>
+      |
+      <surname>
+    ]
+    <spl>* <red>?
   }
   token title-journal {
     [ <name-simple> | <name-simple-ext> ]
@@ -87,11 +96,15 @@ grammar gramsem {
     [<spl>* "/" <spl>* <comment>]?
     <spl>*
     <spl>* "//" <spl>*
-    [<editors> <spl>+]?
-    <journal-name>
+    [
+      [<editors> <spl>+]?
+      <journal-name>
+      |
+      <editors>
+    ]
     <spl>*
     [
-      <place> ":" <spl>* <publisher>
+      ["," <spl>*]? <place> ":" <spl>* <publisher>
       |
       ":" <spl>* <series>
     ]?
@@ -127,7 +140,7 @@ grammar gramsem {
     ["18" || "19" || "20"] <digit> ** 2 [ <spl>* "/" <digit>+ ] ?
   }
   token pages {
-    <from-page> "-" <to-page>
+    <from-page> ["-" | "–"] <to-page>
   }
   token from-page {
     <digit>+
@@ -232,7 +245,13 @@ for 'bibl_samples'.IO.lines -> $line {
     $output ~= "YR $year\n";
   }
   if ($parsed<title-simple>) {
-    my $name = $parsed<title-simple><name-simple>;
+    my $name = '';
+    if $parsed<title-simple><name-simple> {
+      $name = $parsed<title-simple><name-simple>;
+    }
+    elsif $parsed<title-simple><name-simple-ext> {
+      $name  = $parsed<title-simple><name-simple-ext>;
+    }
     my $vol = '';
     if ($parsed<title-simple><name-simple><vol>) {
       $vol = $parsed<title-simple><name-simple><vol>.Str;
@@ -249,7 +268,13 @@ for 'bibl_samples'.IO.lines -> $line {
     $output ~= "PB $publisher\n";
   }
   elsif ($parsed<title-journal>) {
-    my $name = $parsed<title-journal><name-simple>;
+    my $name = '';
+    if $parsed<title-simple><name-simple> {
+      $name = $parsed<title-simple><name-simple>;
+    }
+    elsif $parsed<title-simple><name-simple-ext> {
+      $name  = $parsed<title-simple><name-simple-ext>;
+    }
     if ($parsed<title-journal><journal-name><metadata-wrap><section-wrap>) {
       my $section = $parsed<title-journal><journal-name><metadata-wrap><section-wrap>[0]<section>;
       $output ~= "T2 Sec. $section\n";
