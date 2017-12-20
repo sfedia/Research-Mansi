@@ -23,22 +23,22 @@ grammar gramsem {
     ["de" \s* | "Mc"]?
     [
       <[A..Z] + [А..Я] + [Ё]>
-      <[a..z] + [ÖÜÄöäüàáčèéòó] + [а..я] + [ё]>+
+      <[a..z] + [ \x[00C0] .. \x[02AF] ] + [а..я] + [ё]>+
     ]+ % [\-]
   }
   token capitals {
     [
-      [ "-"? <[A..Z] + [А..Я] + [ЁÖÜÄ]> "." ] ** ^3  % [ \s* ]
+      [ "-"? <[A..Z] + [А..Я] + [\x[00C0] .. \x[02AF]]> "." ] ** ^3  % [ \s* ]
       |
-      <surname> \s+ [ <[A..Z] + [А..Я] + [ЁÖÜÄ]> "." ] ** ^3  % [ \s* ]
+      <surname> \s+ [ <[A..Z] + [А..Я] + [\x[00C0] .. \x[02AF]]> "." ] ** ^3  % [ \s* ]
     ]
   }
   token year {
     [ <digit>+ <[a..z]>? ] + % [\-]
   }
   token small-dot {
-    <[A..Z] + [А..Я] + [ÖÜÄöčäüàáèéòó] + [a..z] + [а..я] + [\s]>
-    <[\.] + [а..я] + [ÖÜÄöäčüàáèéòó] + [a..z] + [\s]>+
+    <[A..Z] + [А..Я] + [ \x[00C0] .. \x[02AF] ] + [a..z] + [а..я] + [\s]>
+    <[\.] + [а..я] + [ \x[00C0] .. \x[02AF] ] + [a..z] + [\s]>+
   }
   token title-simple {
     [ <name-simple> | <name-simple-ext> ]
@@ -53,10 +53,10 @@ grammar gramsem {
   }
   token ext-construction {
     [
-      <[А..Я] + [A..Z]><[а..я] + [a..z] + [ÖÜÄöäüàáèéčòó]>+
+      <[А..Я] + [A..Z]><[а..я] + [a..z] + [ \x[00C0] .. \x[02AF] ]>+
       [
         \s+ [
-          <[А..Я] + [A..Z] + [ÖÜÄöäüàáèčéòó] + [а..я] + [a..z]>+ ","?
+          <[А..Я] + [A..Z] + [ \x[00C0] .. \x[02AF] ] + [а..я] + [a..z]>+ ","?
         ]+ % [\s+]
       ]?
       \s*\.\s+
@@ -65,7 +65,7 @@ grammar gramsem {
   token ext-construction-small {
     [
       [
-        <[А..Я] + [A..Z] + [а..я] + [ÖÜÄöäüàáčèéòó] + [a..z] + [-] + :digit>+
+        <[А..Я] + [A..Z] + [а..я] + [ \x[00C0] .. \x[02AF] ] + [a..z] + [-] + :digit>+
       ] + % [\s+]
       \s*\.\s+
     ] +
@@ -108,7 +108,7 @@ grammar gramsem {
       |
       ":" <spl>* <series>
     ]?
-    [ [<spl> || ","]* <metadata-wrap> ]? <spl>* <time-pages>? <spl>*
+    [ [<spl> || ","]* <metadata-wrap> ]? <spl>* [[<place> ":"]? <spl>* <publisher>]? <spl>* <time-pages>? <spl>*
   }
   token journal-name {
     [
@@ -123,6 +123,10 @@ grammar gramsem {
   }
   token metadata-wrap {
     [ <section-wrap> | <metadata> ] + % [\s* "," \s*]
+    [ <spl>* ":" <spl>* <md-name> ] ?
+  }
+  token md-name {
+    <-[\.]>+
   }
   token metadata {
     ["вып." | "сер." | "vol"\.?] <spl>* [ <:digit + [-]>+ | <[IVX-]>+ ]
