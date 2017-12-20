@@ -505,7 +505,7 @@ Aikhenvald, A. Y. & Dixon, R. M. W. (eds.). 2003. Studies in evidentiality. Amst
 Aikhenvald, A. Y. & Dixon, R. M. W. (eds.). 2005. Serial verb constructions: A cross-linguistic typology. Oxford: Oxford U. Press.
 Aikhenvald, A. Y.; Dixon, R. M. W. & Onishi, M. (eds.). 2001. Non-canonically marked subjects and objects. Amsterdam: Benjamins.
 Aissen, J. L. 1994. Tzotzil auxiliaries // Linguistics, sec. 32.3/4, 657-690.
-Aissen, J. L. 2003. Differential object marking: Iconicity vs. economy // Natural language and linguistic theory, sec. 21.3, 435-483.
+Aissen, J. L. 2003. Differential object marking: Iconicity vs economy // Natural language and linguistic theory, sec. 21.3, 435-483.
 Allan, K. 1977. Classifiers // Language, sec. 53.2, 285-311.
 Altenberg, B. 2007. Expressing past habit in English and Swedish: A corpus-based contrastive study // Ch. S. Butler et al. (eds.). Functional perspectives on grammar and discourse: In honour of Angela Downing. Amsterdam: Benjamins, 97–128.
 Amiridze, N. & Leuschner, T. 2002. Body-part nouns as a source of reflexives: towards a grammaticalization account of Georgian tav- head // Sprachtypologie und Universalienforschung, sec. 55.3, 259-276.
@@ -529,7 +529,7 @@ Arkadiev, P. 2009. Poor (two-term) case systems: limits of neutralization // A. 
 Ashton, E. O. 1959. Swahili grammar (including intonation). L.: Longman.
 Athanasiadou, A. & Dirven, R. (eds.). 1997. On conditionals again. Amsterdam: Benjamins.
 Babby, L. H. 1980. Existential sentences and negation in Russian. Ann Arbor: Karoma.
-Babby, L. H. 1983. The relation between causative and voice: Russian vs. Turkish // Wiener slavistischer Almanach, sec. 11, 61-88.
+Babby, L. H. 1983. The relation between causative and voice: Russian vs Turkish // Wiener slavistischer Almanach, sec. 11, 61-88.
 Babby, L. H. 2001. The genitive of negation: a unified analysis // S. Franks et al. (eds.). Annual Workshop on Formal Approaches to Slavic Linguistics: The Bloomington Meeting 2000 (FASL 9). Ann Arbor: Michigan Slavic Publications, 39-55.
 Babby, L. H.; Brecht, R. 1975. The syntax of voice in Russian // Language, sec. 51.2, 342-367.
 Babyonyshev, Maria. 1997. The possessive construction in Russian: a crosslinguistic perspective // Journal of Slavic Linguistics, sec. 5.2, 193-230.
@@ -540,8 +540,8 @@ Baker, Mark C. 1996. The polysynthesis parameter. N.Y.: Oxford U. Press.
 Ball, M. J.; Müller, N. 1992. Mutation in Welsh. L.: Routledge.
 Banfield, Ann. 1982. Unspeakable sentences: Narration and representation in the language of fiction. Boston: Routledge & Kegan Paul.
 Barber, E. J. W. 1975. Voice – beyond the passive // Berkeley Linguistics Society: proceedings of the annual meeting, sec. 1, 16-24.
-Barðdal, J. 2011. Lexical vs. structural case: a false dichotomy // Morphology, sec. 21.3, 619-654.
-Barðdal, J. 2009. Lexical vs. structural case: a false dichotomy // C. Donohue & J. Barðdal (eds.). Empirical approaches to morphological case. To appear.
+Barðdal, J. 2011. Lexical vs structural case: a false dichotomy // Morphology, sec. 21.3, 619-654.
+Barðdal, J. 2009. Lexical vs structural case: a false dichotomy // C. Donohue & J. Barðdal (eds.). Empirical approaches to morphological case. To appear.
 Barentsen, A. 1986. The use of the particle было in Modern Russian // Dutch studies in Russian linguistics. Amsterdam: Rodopi, 1-68.
 Barlow, M. & Ferguson, Ch. (eds.). 1988. Agreement in natural languages. Stanford: CSLI publications.
 Barnes, J. 1984. Evidentials in the Tuyuca Verb. – International Journal of American Linguistics (Chicago, IL), sec. 50, 255-271.
@@ -554,11 +554,11 @@ Bennett, M.; Partee, B. H. 1978. Toward the logic of tense and aspect in English
 Bennett, P. R. 1974. Tone and the Nilotic case system // Bulletin of the School of Oriental and African studies, sec. 37.1.
 Bertinetto, P. M. 1986. Tempo, aspetto e azione nel verbo italiano: Il sistema dellindicativo. Firenze: Accademia della Crusca.
 Bertinetto, P. M. 2000. The progressive in Romance, as compared with English // Ö. Dahl (ed.). Tense and aspect in the languages of Europe. B.: Mouton de Gruyter, 559-604.
-Bertinetto, P. M. & Delfitto, D. 2000. Aspect vs. Actionality: Why they should be kept apart // Ö. Dahl (ed.). Tense and aspect in the languages of Europe. B.: Mouton de Gruyter, 189-225.
+Bertinetto, P. M. & Delfitto, D. 2000. Aspect vs Actionality: Why they should be kept apart // Ö. Dahl (ed.). Tense and aspect in the languages of Europe. B.: Mouton de Gruyter, 189-225.
 Bhat, D.N.S. 1991. Grammatical relations: The evidence against their necessity and universality. L.: Routledge.
 Bhat, D.N.S. 1996. The adjectival category: Criteria for differentiation and identification. Amsterdam: Benjamins.
 Bhat, D.N.S. 1999. The prominence of tense, aspect and mood. Amsterdam: Benjamins.
-Bickel, B.; Bisang, W.; Yādava, Y. P. 1999. Face vs. empathy: the social foundation of Maithili verb agreement // Linguistics, sec. 37.3, 481-518.
+Bickel, B.; Bisang, W.; Yādava, Y. P. 1999. Face vs empathy: the social foundation of Maithili verb agreement // Linguistics, sec. 37.3, 481-518.
 Bickel, B. & Nichols, J. 2007. Inflectional morphology // T. Shopen (ed.). Language typology and syntactic description, vol. III: Grammatical categories and the lexicon. Cambridge: Cambridge U. Press, 169-240.
 Bickel, B. & Nichols, J. 2009. Case marking and alignment // A. Malchukov & A. Spencer (eds.). The Oxford handbook of case. Oxford: Oxford U. Press, 304-321.
 Binnick, R. I. 1991. Time and the verb: A guide to tense and aspect. Oxford: Blackwell.
@@ -647,8 +647,8 @@ Corbett, G. G.; Mithun, M. 1996. Associative forms in a typology of number syste
 Coseriu, E. 1976. Das romanische Verbalsystem / Hrsg. und bearb. von H. Bertsch. Tübingen: Narr.
 Coseriu, E. 1980. Aspect verbal ou aspects verbaux? // J. David & R. Martin (eds.). La notion daspect. P.: Klincksieck, 13-26.
 Craig, C. (ed.). 1986. Noun classes and categorization. Amsterdam: Benjamins.
-Creissels, D. 2001a. Remarques sur la notion de passif et lorigine des constructions passives. LINX (Paris), sec. 45.2, 71-82.
-Creissels, D. 2001b. Les systèmes de classes nominales des langues Niger-Congo: prototype et variation. LINX (Paris), sec. 45.2, 157-166.
+Creissels, D. 2001a. Remarques sur la notion de passif et lorigine des constructions passives. Paris: LINX, sec. 45.2, 71-82.
+Creissels, D. 2001b. Les systèmes de classes nominales des langues Niger-Congo: prototype et variation. Paris: LINX, sec. 45.2, 157-166.
 Creissels, D. 2006. Syntaxe générale: une introduction typologique. P.: Lavoisier, v. 1-2.
 Creissels, D. 2009. Spatial cases // A. Malchukov & A. Spencer (eds.). The Oxford handbook of case. Oxford: Oxford U. Press, 609-625.
 Croft, W. 1990. Typology and universals. Cambridge: Cambridge U. Press (2 изд. 2003).
@@ -778,7 +778,7 @@ Givón, T. 1981. Typology and functional domains // Studies in language, sec. 5.
 Givón, T. 1982. Evidentiality and epistemic space // Studies in language, sec. 6.1, 23-49.
 Givón, T. 1984. Syntax: a functional-typological introduction, vol. I. Amsterdam: Benjamins (2nd ed. 2001).
 Givón, T. 1990. Syntax: a functional-typological introduction, vol. II. Amsterdam: Benjamins (2nd ed. 2001).
-Givón, T. 1991. Serial verbs and the mental reality of event: grammatical vs. cognitive packaging // E. C. Traugott & B. Heine (eds.). Approaches to grammaticalization, vol. 1. Amsterdam: Benjamins, 81-127.
+Givón, T. 1991. Serial verbs and the mental reality of event: grammatical vs cognitive packaging // E. C. Traugott & B. Heine (eds.). Approaches to grammaticalization, vol. 1. Amsterdam: Benjamins, 81-127.
 Givón, T. 1994a. The pragmatics of de-transitive voice: functional and typological aspects of inversion // T. Givón (ed.). Voice and inversion. Amsterdam: Benjamins, 3-44.
 Givón T. 1994b. Irrealis and the subjunctive // Studies in language, sec. 18.2, 265-337.
 Givón, T. 1995. Functionalism and grammar. Amsterdam: Benjamins.
@@ -829,7 +829,7 @@ Haspelmath, M. 2002. Understanding morphology. London: Arnold.
 Haspelmath, M. 2003. The geometry of grammatical meaning: Semantic maps and cross-linguistic comparison // M. Tomasello (ed.). The new psychology of language, vol. 2. Mahwah (NJ): Lawrence Erlbaum, 211-242.
 Haspelmath, M. 2006. Against markedness (and what to replace it with) // Journal of linguistics, sec. 42.1, 25-70.
 Haspelmath, M. 2007. Pre-established categories dont exist: consequences for language description and typology // Linguistic typology, sec. 11.1, 119-132.
-Haspelmath, M. 2008. Frequency vs. iconicity in explaining grammatical asymmetries // Cognitive linguistics, sec. 19.1, 1-33.
+Haspelmath, M. 2008. Frequency vs iconicity in explaining grammatical asymmetries // Cognitive linguistics, sec. 19.1, 1-33.
 Haspelmath, M. 2009. Terminology of case // A. Malchukov & A. Spencer (eds.). The Oxford handbook of case. Oxford: Oxford U. Press, 505-517.
 Haspelmath, M. (ed.). 2004. Coordinating constructions. Amsterdam: Benjamins.
 Haspelmath, M. & König, E. (eds.). 1995. Converbs in cross-linguistic perspective. B.: Mouton de Gruyter.
@@ -891,8 +891,8 @@ Kemmer, S. 1993b. Verbal and nominal collectives // Faits de langues, 2: Le nomb
 Kibrik, A. E. 2002. Nominal inflection galore: Daghestanian, with side glances at Europe and the world // F. Plank (ed.). Noun phrase structure in the languages of Europe. B.: Mouton de Gruyter, 37-112.
 Kim, Ji-yung; Lander, Y. A.; Partee, B. H. (eds.). 2004. Possessives and beyond: Semantics and syntax. Amherst (MA): GLSA.
 King, L. D. 1992. The semantic structure of Spanish. Amsterdam: Benjamins.
-Kinkade, M. Dale. 1981. Singular vs. plural roots in Salish // Anthropological linguistics, sec. 23.6, 262-269.
-Kinkade, M. Dale. 1995. A plethora of plurals: inflection for number in Upper Chehalis // Anthropological linguistics, sec. 37.3, 347-365.
+Kinkade, M.; Dale. 1981. Singular vs plural roots in Salish // Anthropological linguistics, sec. 23.6, 262-269.
+Kinkade, M.; Dale. 1995. A plethora of plurals: inflection for number in Upper Chehalis // Anthropological linguistics, sec. 37.3, 347-365.
 Klaiman, M. H. 1991. Grammatical voice. Cambridge: Cambridge U. Press.
 Klein, W. 1992. The present perfect puzzle // Language, sec. 68, 525-552.
 Klein, W. 1994. Time in language. L.: Routledge.
@@ -1037,7 +1037,7 @@ Pagliuca, W. (ed.). 1994. Perspectives on grammaticalization. Amsterdam: Benjami
 Palmer, F. R. 1988. The English verb. London: Longman (2nd ed.).
 Palmer, F. R. 2001. Mood and modality. Cambridge: Cambridge U. Press (2nd ed.).
 Paul, I.; Travis, L. 2006. Ergativity in Austronesian languages: what it can do, what it cant, but not why // A. Johns et al. (eds.). Ergativity: emerging issues. Dordrecht: Springer, 315-335.
-Paykin, K.; Van Peteghem, M. 2003. External vs. internal possessor structures and inalienability in Russian // Russian Linguistics, sec. 27.3, 329-48.
+Paykin, K.; Van Peteghem, M. 2003. External vs internal possessor structures and inalienability in Russian // Russian Linguistics, sec. 27.3, 329-48.
 Payne, Th. 1997. Describing morphosyntax. Cambridge: Cambridge U. Press.
 Payne, D. L. & Barshi, I. (eds.). 1999. External possession. Amsterdam: Benjamins.
 Perlmutter, D. 1978. Impersonal passives and the unaccusative hypothesis // Berkeley Linguistics Society: proceedings of the annual meeting, sec. 4, 157-189.
@@ -1132,7 +1132,7 @@ Spencer, A. 2009. Case as a morphological phenomenon // A. Malchukov & A. Spence
 Sperber, D.; Wilson, D. 1986. Relevance: communication and cognition. Oxford: Blackwell (2 изд. 1995).
 Squartini, M. 1998. Verbal periphrases in Romance: Aspect, actionality, and grammaticalization. B.: Mouton de Gruyter.
 Squartini, M. 1999. On the semantics of the Pluperfect: evidence from Germanic and Romance // Linguistic typology, sec. 3.1, 51-89.
-Squartini, M. 2008. Lexical vs. grammatical evidentiality in French and Italian // Linguistics, sec. 46.5, 917-947.
+Squartini, M. 2008. Lexical vs grammatical evidentiality in French and Italian // Linguistics, sec. 46.5, 917-947.
 Squartini, M. & Bertinetto, P. M. 2000. The Simple and Compound Past in Romance languages // Ö. Dahl (ed.). Tense and aspect in the languages of Europe. B.: Mouton de Gruyter, 403-439.
 Squartini, M. (ed.). 2007. Evidentiality between lexicon and grammar (= Italian Journal of Linguistics, sec. 19.1).
 Stark, E.; Leiss, E.; Abraham, W. (eds.). 2007. Nominal determination: Typology, context constraints, and historical emergence. Amsterdam: Benjamins.
