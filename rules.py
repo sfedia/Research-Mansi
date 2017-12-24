@@ -273,16 +273,16 @@ rombandeeva.add_element('universal:morpheme', '^ун!кве', 'u+_infinitive_suf
         ),
         [grammar.Action('gram:verb:set_infinitive')]
     ]    
-).add_class('infinitive_excl_suff')
+).add_class('infinitive_excl_suff').add_class('inf_suff')
 
 rombandeeva.add_element('universal:morpheme', '^юн!кве', 'yu+_infinitive_suffix').applied(
     [
         grammar.LinkSentence(
-            is_verb + '& universal:reg_match=([СОГЛАСНЫЙ_МЯГК]$){excl=()} & universal:syl_count:odd=(){excl=()}'
+            is_verb + '& universal:reg_match=(([СОГЛАСНЫЙ_МЯГК]|й)$){excl=()} & universal:syl_count:odd=(){excl=()}'
         ),
         [grammar.Action('gram:verb:set_infinitive')]
-    ]    
-).add_class('infinitive_excl_suff')
+    ]
+).add_class('infinitive_excl_suff').add_class('inf_suff')
 
 rombandeeva.add_element('universal:morpheme', '^ан!кве', 'a+_infinitive_suffix').applied(
     [
@@ -291,14 +291,14 @@ rombandeeva.add_element('universal:morpheme', '^ан!кве', 'a+_infinitive_suf
         ),
         [grammar.Action('gram:verb:set_infinitive')]
     ]
-).add_class('infinitive_excl_suff')
+).add_class('infinitive_excl_suff').add_class('inf_suff')
 
 rombandeeva.add_element('universal:morpheme', '^н!кве', 'null+_infinitive_suffix').applied(
     [
         grammar.LinkSentence(is_verb + '& universal:reg_match=([ГЛАСНЫЙ]$) & universal:syl_count=(1)'),
         [grammar.Action('gram:verb:set_infinitive')]
     ]    
-).add_class('infinitive_excl_suff')
+).add_class('infinitive_excl_suff').add_class('inf_suff')
 
 # уп, ап, па, пи, п
 
@@ -1041,13 +1041,13 @@ rombandeeva.add_element('universal:morpheme', '^ахт', 'aht_suffix').applied(
     [
         grammar.Action('gram:make_intransitive')
     ]
-)
+).add_class('trans_suffs')
 rombandeeva.add_element('universal:morpheme', '^хат', 'hat_suffix').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
     [
         grammar.Action('gram:make_intransitive')
     ]
-)
+).add_class('trans_suffs')
 
 transitive_suffs = [('lt', 'лт'), ('pt', 'пт'), ('ltt', 'лтт'), ('tt', 'тт')]
 rombandeeva.add_element('universal:morpheme', '^лт', 'lt_suffix').applied(
@@ -1057,6 +1057,19 @@ rombandeeva.add_element('universal:morpheme', '^лт', 'lt_suffix').applied(
     [
         grammar.Action('gram:make_transitive')
     ]
+).add_class('trans_suffs')
+
+rombandeeva.add_element('mansi:morphemeYU', '^ыгл', 'ygl_suffix').applied(
+    grammar.LinkSentence(
+        '# & unniversal:entity=(token) & mansi:basic_pos=(verb) &'
+    )
+).add_class('trans_suffs')
+
+rombandeeva.add_element('universal:morpheme', grammar.Temp.null(), )
+
+rombandeeva.get_system('universal:morpheme').subclasses_order(
+    '? < .trans_suffs >> .inf_suff',
+    parent_filter=grammar.LinkSentence('universal:entity=(word) & mansi:basic_pos=(verb)')
 )
 
 
