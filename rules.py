@@ -1078,9 +1078,18 @@ rombandeeva.add_element('universal:morpheme', grammar.Temp.null(), 'null_for_tra
 ).add_class('trans_suffs')
 
 rombandeeva.get_system('universal:morpheme').subclasses_order(
-    '? < .trans_suffs >> .inf_suff',
+    '? < .a_trans_binding << .trans_suffs >> .inf_suff',
     parent_filter=grammar.LinkSentence('universal:entity=(word) & mansi:basic_pos=(verb)')
 )
+
+rombandeeva.add_element('universal:char', 'а', 'a_trans_binding1').applied(
+    grammar.LinkSentence(
+        '# & universal:entity=(token) & mansi:basic_pos=(verb) & gram:transitive=()'
+    ),
+    [
+        grammar.Action('universal:char_binding')
+    ]
+).add_class('a_trans_binding')
 
 
 
