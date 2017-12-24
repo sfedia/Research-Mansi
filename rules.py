@@ -1061,11 +1061,21 @@ rombandeeva.add_element('universal:morpheme', '^лт', 'lt_suffix').applied(
 
 rombandeeva.add_element('mansi:morphemeYU', '^ыгл', 'ygl_suffix').applied(
     grammar.LinkSentence(
-        '# & unniversal:entity=(token) & mansi:basic_pos=(verb) &'
-    )
+        '# & universal:entity=(token) & mansi:basic_pos=(verb) & gram:intransitive=()'
+    ),
+    [
+        grammar.Action('gram:make_transitive')
+    ]
 ).add_class('trans_suffs')
 
-rombandeeva.add_element('universal:morpheme', grammar.Temp.null(), )
+rombandeeva.add_element('universal:morpheme', grammar.Temp.null(), 'null_for_trans').applied(
+    grammar.LinkSentence(
+        '# & universal:entity=(token) & mansi:basic_pos=(verb)'
+    ),
+    [
+        grammar.Action('gram:make_intransitive')
+    ]
+).add_class('trans_suffs')
 
 rombandeeva.get_system('universal:morpheme').subclasses_order(
     '? < .trans_suffs >> .inf_suff',
