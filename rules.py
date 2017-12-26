@@ -25,6 +25,7 @@ rombandeeva.need_form_parameter(
     ],
     parent_filter=grammar.LinkSentence('mansi:basic_pos=(verb)')
 )
+# - universal:syl_count:* for VERBS, PRONOUNS etc.
 
 # and other need-forms for other POS
 
@@ -282,7 +283,7 @@ rombandeeva.get_class('infinitive_excl_suff').added_behaviour('override')
 rombandeeva.add_element('universal:morpheme', '^ун!кве', 'u+_infinitive_suffix').applied(
     [
         grammar.LinkSentence(
-            is_verb + '& universal:reg_match=([СОГЛАСНЫЙ_ТВЁРД]$){excl=()} & universal:syl_count:odd=(){excl=()}'
+            is_verb + '& universal:reg_match=([СОГЛАСНЫЙ_ТВЁРД]$){pre=()} & universal:syl_count:odd=(){pre=()}'
         ),
         [grammar.Action('gram:verb:set_infinitive')]
     ]    
@@ -291,7 +292,7 @@ rombandeeva.add_element('universal:morpheme', '^ун!кве', 'u+_infinitive_suf
 rombandeeva.add_element('universal:morpheme', '^юн!кве', 'yu+_infinitive_suffix').applied(
     [
         grammar.LinkSentence(
-            is_verb + '& universal:reg_match=(([СОГЛАСНЫЙ_МЯГК]|й)$){excl=()} & universal:syl_count:odd=(){excl=()}'
+            is_verb + '& universal:reg_match=(([СОГЛАСНЫЙ_МЯГК]|й)$){pre=()} & universal:syl_count:odd=(){pre=()}'
         ),
         [grammar.Action('gram:verb:set_infinitive')]
     ]
@@ -300,7 +301,7 @@ rombandeeva.add_element('universal:morpheme', '^юн!кве', 'yu+_infinitive_su
 rombandeeva.add_element('universal:morpheme', '^ан!кве', 'a+_infinitive_suffix').applied(
     [
         grammar.LinkSentence(
-            is_verb + '& universal:reg_match=([СОГЛАСНЫЙ]$){excl=()} & universal:syl_count:even=(){excl=()}'
+            is_verb + '& universal:reg_match=([СОГЛАСНЫЙ]$){pre=()} & universal:syl_count:even=(){pre=()}'
         ),
         [grammar.Action('gram:verb:set_infinitive')]
     ]
@@ -308,7 +309,7 @@ rombandeeva.add_element('universal:morpheme', '^ан!кве', 'a+_infinitive_suf
 
 rombandeeva.add_element('universal:morpheme', '^н!кве', 'null+_infinitive_suffix').applied(
     [
-        grammar.LinkSentence(is_verb + '& universal:reg_match=([ГЛАСНЫЙ]$) & universal:syl_count=(1)'),
+        grammar.LinkSentence(is_verb + '& universal:reg_match=([ГЛАСНЫЙ]$){pre=()} & universal:syl_count=(1)'),
         [grammar.Action('gram:verb:set_infinitive')]
     ]    
 ).add_class('infinitive_excl_suff').add_class('inf_suff')
@@ -1056,6 +1057,7 @@ rombandeeva.add_element('universal:morpheme', '^ахт', 'aht_suffix').applied(
         grammar.Action('gram:make_intransitive')
     ]
 ).add_class('trans_suffs')
+
 rombandeeva.add_element('universal:morpheme', '^хат', 'hat_suffix').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
     [
@@ -1064,7 +1066,19 @@ rombandeeva.add_element('universal:morpheme', '^хат', 'hat_suffix').applied(
 ).add_class('trans_suffs')
 
 transitive_suffs = [('lt', 'лт'), ('pt', 'пт'), ('ltt', 'лтт'), ('tt', 'тт')]
-rombandeeva.add_element('universal:morpheme', '^лт', 'lt_suffix').applied(
+for code, suff in transitive_suffs:
+    rombandeeva.add_element('universal:morpheme', '^' + suff, code + '_suffix').applied(
+        grammar.LinkSentence(
+            '# & universal:entity=(token) & mansi:basic_pos=(verb) & gram:intransitive=()'
+        ),
+        [
+            grammar.Action('gram:make_transitive')
+        ]
+    ).add_class('trans_suffs')
+
+rombandeeva.get_by_id('lt_suffix').add_class('lt_suff')
+
+rombandeeva.add_element('mansi:morphemeYU', '^ыгл', 'ygl_suffix').applied(
     grammar.LinkSentence(
         '# & universal:entity=(token) & mansi:basic_pos=(verb) & gram:intransitive=()'
     ),
@@ -1073,7 +1087,7 @@ rombandeeva.add_element('universal:morpheme', '^лт', 'lt_suffix').applied(
     ]
 ).add_class('trans_suffs')
 
-rombandeeva.add_element('mansi:morphemeYU', '^ыгл', 'ygl_suffix').applied(
+rombandeeva.add_element('mansi:morphemeYU', '^гл', 'gl_suffix').applied(
     grammar.LinkSentence(
         '# & universal:entity=(token) & mansi:basic_pos=(verb) & gram:intransitive=()'
     ),
@@ -1092,10 +1106,21 @@ rombandeeva.add_element('universal:morpheme', grammar.Temp.null(), 'null_for_tra
 ).add_class('trans_suffs')
 
 rombandeeva.get_system('universal:morpheme').subclasses_order(
-    '? < .a_trans_binding << .trans_suffs >> .inf_suff',
+    '''? {universal:reg_match=([СОГЛАСНЫЙ]$){pre=()}} < .a_trans_binding < .lt_suff >> .inf_suff''',
     parent_filter=grammar.LinkSentence('universal:entity=(word) & mansi:basic_pos=(verb)')
 )
 
+rombandeeva.get_system('universal:morpheme').subclasses_order(
+    '''? {universal:reg_match=([СОГЛАСНЫЙ]$){pre=()}} < .y_trans_binding < .lt_suff >> .inf_suff''',
+    parent_filter=grammar.LinkSentence('universal:entity=(word) & mansi:basic_pos=(verb)')
+)
+
+rombandeeva.get_system('universal:morpheme').subclasses_order(
+    '''? {universal:reg_match=([ГЛАСНЫЙ]$){pre=()}} < .lt_suff >> .inf_suff''',
+    parent_filter=grammar.LinkSentence('universal:entity=(word) & mansi:basic_pos=(verb)')
+)
+
+# a_trans_binding1 is for derivatives only!
 rombandeeva.add_element('universal:char', 'а', 'a_trans_binding1').applied(
     grammar.LinkSentence(
         '# & universal:entity=(token) & mansi:basic_pos=(verb) & gram:transitive=()'
@@ -1105,6 +1130,16 @@ rombandeeva.add_element('universal:char', 'а', 'a_trans_binding1').applied(
     ]
 ).add_class('a_trans_binding')
 
+# y_trans_binding1 is for non-derivatives!
+rombandeeva.add_element('universal:char', 'ы', 'y_trans_binding1').applied(
+    grammar.LinkSentence(
+        '# & universal:entity=(token) & mansi:basic_pos=(verb) & gram:transitive=()'
+    ),
+    [
+        grammar.Action('universal:char_binding')
+    ]
+).add_class('y_trans_binding')
+
 rombandeeva.add_element('universal:morpheme', '^хат', 'hat_suffix').applied(
     grammar.LinkSentence(
         '# & universal:entity=(token) & mansi:basic_pos=(verb) & mansi:base_length=(1)'
@@ -1114,17 +1149,85 @@ rombandeeva.add_element('universal:morpheme', '^хат', 'hat_suffix').applied(
     ]
 )
 
-rombandeeva.add_element('universal:morpheme', '^хат', 'hat_suffix').applied(
+rombandeeva.add_element('universal:morpheme', '^ахт', 'aht_suffix').applied(
     grammar.LinkSentence(
-        '# & universal:entity=(token) & mansi:basic_pos=(verb) & mansi:base_length=(1)'
+        '# & universal:entity=(token) & mansi:basic_pos=(verb) & mansi:base_length>(1)'
     ),
     [
         grammar.Action('gram:make_reflexive')
     ]
 )
 
+# reflexive не могут иметь при себе прямого дополнения
 
+# page 112, побудительные глаголы - повторение предыдущего
 
+# page 113, типы спряжения глагола
+
+present_s_consonant_suffs = [('ye!g', 'е!г'), ('i', 'и'), ('ye', 'е'), ('ye!', 'е!')]
+for code, suff in present_s_consonant_suffs:
+    rombandeeva.add_element(
+        'universal:morpheme',
+        '^' + suff,
+        '{}_present_suff'.format(code)
+    ).applied(
+        grammar.LinkSentence(
+            '# & universal:entity=(token) & mansi:basic_pos=(verb) & universal:reg_match=([СОГЛАСНЫЙ_МЯГК]$){pre=()}'
+        ),
+        [
+            grammar.Action('gram:tense:set_present')
+        ]
+    )
+
+present_h_consonant_suffs = [('eg', 'эг'), ('e!g', 'э!г'), ('y', 'ы'), ('e', 'э'), ('e!', 'э!')]
+for code, suff in present_h_consonant_suffs:
+    rombandeeva.add_element(
+        'universal:morpheme',
+        '^' + suff,
+        '{}_present_suff'.format(code)
+    ).applied(
+        grammar.LinkSentence(
+            '# & universal:entity=(token) & mansi:basic_pos=(verb) & universal:reg_match=([СОГЛАСНЫЙ_ТВЁРД]$){pre=()}'
+        ),
+        [
+            grammar.Action('gram:tense:set_present')
+        ]
+    )
+
+rombandeeva.add_element('universal:morpheme', '^с', 's_past_suffix').applied(
+    grammar.LinkSentence(
+        '# & universal:entity=(token) & mansi:basic_pos=(verb) & universal:reg_match([ГЛАСНЫЙ]$){pre=()}'
+    ),
+    [
+        grammar.Action('gram:tense:set_past')
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '^ыс', 'ys_past_suffix').applied(
+    grammar.LinkSentence(
+        '''# & universal:entity=(token)
+            & mansi:basic_pos=(verb)
+            & universal:syl_count=(1)
+            & universal:reg_match([СОГЛАСНЫЙ]{1,2}$){pre=()}'''
+    ),
+    [
+        grammar.Action('gram:tense:set_past')
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '^ас', 'as_past_suffix').applied(
+    grammar.LinkSentence(
+        '''# & universal:entity=(token)
+            & mansi:basic_pos=(verb)
+            & universal:syl_count>(1)
+            & universal:reg_match([СОГЛАСНЫЙ]{1,2}$){pre=()}'''
+    ),
+    [
+        grammar.Action('gram:tense:set_past')
+    ]
+)
+
+# page 115
 
 ### RUN seq:correction:mansi* mutation
 ### create mansi:morphemeYU
