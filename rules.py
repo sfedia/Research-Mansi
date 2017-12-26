@@ -8,14 +8,27 @@ import grammar
 rombandeeva = grammar.Container()
 
 rombandeeva.need_form_parameter(
-  'russian:basic_pos',
+  'mansi:basic_pos',
   ['noun']
-  [('russian:basic_pos', 'noun')],
+  [('mansi:basic_pos', 'noun')],
   [
     grammar.Temp.stepIter('gram:number:set_plur', 'gram:number:set_sing'),
     'grammar:case:set_main'
   ]
 )
+
+rombandeeva.need_form_parameter(
+    'mansi:base_length',
+    [('mansi:base_length', grammar.substComparisonValue('mansi:base_length'))],
+    [
+        grammar.Temp.remove_by_class('inf_suff')
+    ],
+    parent_filter=grammar.LinkSentence('mansi:basic_pos=(verb)')
+)
+
+# and other need-forms for other POS
+
+#####
 
 rombandeeva.add_element('universal:morpheme', '^та!л', 'tal_suffix').applied(
     [
@@ -1036,6 +1049,7 @@ for case, h_paradigm, m_paradigm in matyr_hotpa_matrix:
 # pronouns need further description
 
 # page 107, VERB
+# `not a derivative` parameter
 rombandeeva.add_element('universal:morpheme', '^ахт', 'aht_suffix').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
     [
@@ -1090,6 +1104,24 @@ rombandeeva.add_element('universal:char', 'а', 'a_trans_binding1').applied(
         grammar.Action('universal:char_binding')
     ]
 ).add_class('a_trans_binding')
+
+rombandeeva.add_element('universal:morpheme', '^хат', 'hat_suffix').applied(
+    grammar.LinkSentence(
+        '# & universal:entity=(token) & mansi:basic_pos=(verb) & mansi:base_length=(1)'
+    ),
+    [
+        grammar.Action('gram:make_reflexive')
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '^хат', 'hat_suffix').applied(
+    grammar.LinkSentence(
+        '# & universal:entity=(token) & mansi:basic_pos=(verb) & mansi:base_length=(1)'
+    ),
+    [
+        grammar.Action('gram:make_reflexive')
+    ]
+)
 
 
 
