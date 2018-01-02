@@ -1216,7 +1216,10 @@ for code, suff in present_s_consonant_suffs:
         '{}_present_suff'.format(code)
     ).applied(
         grammar.LinkSentence(
-            '# & universal:entity=(token) & mansi:basic_pos=(verb) & universal:reg_match=([СОГЛАСНЫЙ_МЯГК]$){pre=()}'
+            '''# & universal:entity=(token)
+            & mansi:basic_pos=(verb)
+            & universal:reg_match=([СОГЛАСНЫЙ_МЯГК]$){pre=()}
+            '''
         ),
         [
             grammar.Action('gram:tense:set_present')
@@ -1231,7 +1234,10 @@ for code, suff in present_h_consonant_suffs:
         '{}_present_suff'.format(code)
     ).applied(
         grammar.LinkSentence(
-            '# & universal:entity=(token) & mansi:basic_pos=(verb) & universal:reg_match=([СОГЛАСНЫЙ_ТВЁРД]$){pre=()}'
+            '''# & universal:entity=(token)
+            & mansi:basic_pos=(verb)
+            & mansi:conj=(objectless)
+            & universal:reg_match=([СОГЛАСНЫЙ_ТВЁРД]$){pre=()}'''
         ),
         [
             grammar.Action('gram:tense:set_present')
@@ -1248,7 +1254,7 @@ rombandeeva.add_element('universal:morpheme', '^ыс', 'ys_past_suffix').applied
     [
         grammar.Action('gram:tense:set_past')
     ]
-)
+).add_class('past_suffixes')
 
 rombandeeva.add_element('universal:morpheme', '^ас', 'as_past_suffix').applied(
     grammar.LinkSentence(
@@ -1260,7 +1266,7 @@ rombandeeva.add_element('universal:morpheme', '^ас', 'as_past_suffix').applied
     [
         grammar.Action('gram:tense:set_past')
     ]
-)
+).add_class('past_suffixes')
 
 # page 115
 
@@ -1274,7 +1280,7 @@ rombandeeva.add_element('universal:morpheme', '^с', 's_past_suffix').applied(
     [
         grammar.Action('gram:tense:set_past')
     ]
-)
+).add_class('past_suffixes')
 
 rombandeeva.add_element('universal:morpheme', '^м', 'm_unob_suffix').applied(
     grammar.LinkSentence(
@@ -1353,8 +1359,211 @@ rombandeeva.add_element('mansi:morpheme_soft', '^ыма', 'yma_unob_suffix').app
 )
 
 # page 116
+# INDICATIVE
 
 
+rombandeeva.add_element('universal:morpheme', '^ум', 'um_1sing_ind_objless').applied(
+    grammar.LinkSentence(
+        '''#
+        & universal:entity=(token)
+        & mansi:basic_pos=(verb)
+        & mansi:conj=(objectless)'''
+    ),
+    [
+        grammar.Action('mansi:verb:set_person', arguments=['1']),
+        grammar.Action('mansi:verb:set_number', arguments=['sing']),
+    ]
+).add_class('objectless_conj_suffixes')
+
+rombandeeva.add_element('universal:morpheme', '^н', 'n_2sing_ind_objless').applied(
+    grammar.LinkSentence(
+        '''#
+        & universal:entity=(token)
+        & mansi:basic_pos=(verb)
+        & mansi:conj=(objectless)'''
+    ),
+    [
+        grammar.Action('mansi:verb:set_person', arguments=['2']),
+        grammar.Action('mansi:verb:set_number', arguments=['sing'])
+    ]
+).add_class('objectless_conj_suffixes')
+
+rombandeeva.add_element('universal:morpheme', '^ын', 'yn_2sing_ind_objless').applied(
+    grammar.LinkSentence(
+        '''#
+        & universal:entity=(token)
+        & mansi:basic_pos=(verb)
+        & mansi:conj=(objectless)'''
+    ),
+    [
+        grammar.Action('mansi:verb:set_person', arguments=['2']),
+        grammar.Action('mansi:verb:set_number', arguments=['sing'])
+    ]
+).add_class('objectless_conj_suffixes')
+
+rombandeeva.add_element(
+    'universal:morpheme',
+    grammar.Temp.null(),
+    'null_3sing_ind_objless'
+).applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb) & mansi:conj=(objectless)'),
+    [
+        grammar.Action('mansi:verb:set_person', arguments=['3']),
+        grammar.Action('mansi:verb:set_number', arguments=['sing'])
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '^ме!н', 'men_1dual_ind_objless').applied(
+    grammar.LinkSentence(
+        '''#
+        & universal:entity=(token)
+        & mansi:basic_pos=(verb)
+        & mansi:conj=(objectless)'''
+    ),
+    [
+        grammar.Action('mansi:verb:set_person', arguments=['1']),
+        grammar.Action('mansi:verb:set_number', arguments=['dual'])
+    ]
+).add_class('objectless_conj_suffixes')
+
+rombandeeva.add_element('universal:morpheme', '^ы!н', 'yn_2_dual/plur_ind_objless').applied(
+    grammar.LinkSentence(
+        '''#
+        & universal:entity=(token)
+        & mansi:basic_pos=(verb)
+        & mansi:conj=(objectless)'''
+    ),
+    [
+        grammar.Action('mansi:verb:set_person', arguments=['2']),
+        grammar.Action('mansi:verb:set_number', arguments=['dual'], branching=True),
+        grammar.Action('mansi:verb:set_number', arguments=['plur'], branching=True)
+    ]
+).add_class('objectless_conj_suffixes')
+
+rombandeeva.add_element('universal:morpheme', '^ыг', 'yg_3dual_ind_objless').applied(
+    grammar.LinkSentence(
+        '''#
+        & universal:entity=(token)
+        & mansi:basic_pos=(verb)
+        & mansi:conj=(objectless)'''
+    ),
+    [
+        grammar.Action('mansi:verb:set_person', arguments=['3']),
+        grammar.Action('mansi:verb:set_number', arguments=['dual'])
+    ]
+).add_class('objectless_conj_suffixes')
+
+rombandeeva.add_element('universal:morpheme', '^г', 'g_3dual_ind_objless').applied(
+    grammar.LinkSentence(
+        '''#
+        & universal:entity=(token)
+        & mansi:basic_pos=(verb)
+        & mansi:conj=(objectless)'''
+    ),
+    [
+        grammar.Action('mansi:verb:set_person', arguments=['3']),
+        grammar.Action('mansi:verb:set_number', arguments=['dual'])
+    ]
+).add_class('objectless_conj_suffixes')
+
+rombandeeva.add_element('universal:morpheme', '^ув', 'uv_1plur_ind_objless').applied(
+    grammar.LinkSentence(
+        '''#
+        & universal:entity=(token)
+        & mansi:basic_pos=(verb)
+        & mansi:conj=(objectless)'''
+    ),
+    [
+        grammar.Action('mansi:verb:set_person', arguments=['1']),
+        grammar.Action('mansi:verb:set_number', arguments=['plur'])
+    ]
+).add_class('objectless_conj_suffixes')
+
+rombandeeva.add_element('universal:morpheme', '^в', 'v_1plur_ind_objless').applied(
+    grammar.LinkSentence(
+        '''#
+        & universal:entity=(token)
+        & mansi:basic_pos=(verb)
+        & mansi:conj=(objectless)'''
+    ),
+    [
+        grammar.Action('mansi:verb:set_person', arguments=['1']),
+        grammar.Action('mansi:verb:set_number', arguments=['plur'])
+    ]
+).add_class('objectless_conj_suffixes')
+
+rombandeeva.add_element('universal:morpheme', '^э!в', 'ev_1plur_ind_objless').applied(
+    grammar.LinkSentence(
+        '''#
+        & universal:entity=(token)
+        & mansi:basic_pos=(verb)
+        & mansi:conj=(objectless)'''
+    ),
+    [
+        grammar.Action('mansi:verb:set_person', arguments=['1']),
+        grammar.Action('mansi:verb:set_number', arguments=['plur'])
+    ]
+).add_class('objectless_conj_suffixes')
+
+rombandeeva.add_element('universal:morpheme', '^ыт', 'yt_3plur_ind_objless').applied(
+    grammar.LinkSentence(
+        '''#
+        & universal:entity=(token)
+        & mansi:basic_pos=(verb)
+        & mansi:conj=(objectless)'''
+    ),
+    [
+        grammar.Action('mansi:verb:set_person', arguments=['3']),
+        grammar.Action('mansi:verb:set_number', arguments=['plur']),
+    ]
+).add_class('objectless_conj_suffixes')
+
+rombandeeva.get_system('universal:morpheme').subclasses_order(
+    '? >> .past_suffixes > .objectless_conj_suffixes',
+    parent_filter=grammar.LinkSentence(
+        'universal:entity=(token) & mansi:basic_pos=(verb) & mansi:conj=(objectless)'
+    )
+)
+
+rombandeeva.add_element('universal:collocation', '''
+    <[mansi:conj=(objectless)] :contains[.objectless_conj_suffixes]> *1
+    тах''', 'analytic_future').applied(
+    grammar.LinkSentence('# & universal:entity=(input)'),
+    [
+        grammar.Action('gram:tense:set_future')
+    ]
+)
+
+rombandeeva.add_element(
+    'universal:collocation',
+    '<[gram:verb:infinitive=()]> *1 <[mansi:lemma=(патун!кве)]>',
+    'future_patunkwe'
+).applied(
+    grammar.LinkSentence('# & universal:entity=(input)'),
+    [
+        grammar.Action('gram:tense:set_future')
+    ]
+)
+
+# page 121
+
+rombandeeva.add_element('universal:morpheme', '^и', 'i_suffix_present').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:conj=(obj)'),
+    [
+        grammar.Action('gram:tense:set_present')
+    ]
+).add_class('obj_conj_tense')
+
+rombandeeva.add_element('universal:morpheme', '^л', 'l_suffix_object_sing').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:conj=(obj)'),
+    [
+        grammar.Action('mansi:object_number:set_sing')
+    ]
+).add_class('obj_conj_object_number')
+
+rombandeeva.get_system('universal:morpheme').subclasses_order(
+    '.obj_conj_tense > .obj_conj_object_number'
+)
 
 ### RUN seq:correction:mansi* mutation
 ### create mansi:morphemeYU
