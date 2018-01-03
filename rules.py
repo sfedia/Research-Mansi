@@ -1571,6 +1571,11 @@ rombandeeva.get_system('universal:morpheme').subclasses_order(
     parent_filter=grammar.LinkSentence('universal:entity=(token) & mansi:conj=(obj)')
 )
 
+rombandeeva.get_system('universal:morpheme').subclasses_order(
+    '#i_suffix_present > .l_non_friendly',
+    parent_filter=grammar.LinkSentence('universal:entity=(token) & mansi:conj=(obj)')
+)
+
 rombandeeva.add_element('universal:morpheme', '^ум', 'um_obj_conj').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:conj=(obj)'),
     [
@@ -1591,6 +1596,55 @@ rombandeeva.add_element('universal:char', 'а', 'a_ocl_binding').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:conj=(obj)'),
     [
         grammar.Action('universal:char_binding')
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '^тэ', 'te_obj_conj').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:conj=(obj)'),
+    [
+        grammar.Action('mansi:verb:set_person', arguments=['3']),
+        grammar.Action('gram:number:set_sing')
+    ]
+).add_class('l_non_friendly')
+
+rombandeeva.add_element('universal:morpheme', '^ме!н', 'men_obj_conj').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:conj=(obj)'),
+    [
+        grammar.Action('mansi:verb:set_person', arguments=['1']),
+        grammar.Action('gram:number:set_dual')
+    ]
+).add_class('l_friendly')
+
+rombandeeva.add_element('universal:morpheme', '^ы!н', 'yyn_obj_conj').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:conj=(obj)'),
+    [
+        grammar.Action('mansi:verb:set_person', arguments=['2']),
+        grammar.Action('gram:number:set_dual', branching=True),
+        grammar.Action('gram:number:set_plur', branching=True)
+    ]
+).add_class('l_friendly')
+
+rombandeeva.add_element('universal:morpheme', '^тэ!н', 'teen_obj_conj').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:conj=(obj)'),
+    [
+        grammar.Action('mansi:verb:set_person', arguments=['3']),
+        grammar.Action('gram:number:set_dual')
+    ]
+).add_class('l_non_friendly')
+
+rombandeeva.add_element('universal:morpheme', '^ув', 'uv_obj_conj').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:conj=(obj)'),
+    [
+        grammar.Action('mansi:verb:set_person', arguments=['1']),
+        grammar.Action('gram:number:set_plur')
+    ]
+).add_class('l_friendly')
+
+rombandeeva.add_element('universal:morpheme', '^я!ныл', 'jaanyl_obj_conj').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:conj=(obj)'),
+    [
+        grammar.Action('mansi:verb:set_person', arguments=['3']),
+        grammar.Action('gram:number:set_plur')
     ]
 )
 
