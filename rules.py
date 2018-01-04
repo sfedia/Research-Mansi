@@ -1659,7 +1659,7 @@ rombandeeva.get_system('universal:morpheme').subclasses_order(
     )
 )
 
-rombandeeva.add_element('universal:morpheme', '^м', 'm_suffix_subj_pass').applied(
+rombandeeva.add_element('mansi:VowMorpheme', '^м', 'm_suffix_subj_pass').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:conj=(subj_pass)'),
     [
         grammar.Action('mansi:verb:set_person', arguments=['1']),
@@ -1667,7 +1667,7 @@ rombandeeva.add_element('universal:morpheme', '^м', 'm_suffix_subj_pass').appli
     ]
 ).add_class('subj_pass_suffixes')
 
-rombandeeva.add_element('universal:morpheme', '^н', 'n_suffix_subj_pass').applied(
+rombandeeva.add_element('mansi:VowMorpheme', '^н', 'n_suffix_subj_pass').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:conj=(subj_pass)'),
     [
         grammar.Action('mansi:verb:set_person', arguments=['2']),
@@ -1685,7 +1685,7 @@ rombandeeva.add_element('universal:morpheme', grammar.Temp.null(), 'null_suffix_
     ]
 ).add_class('subj_pass_suffixes')
 
-rombandeeva.add_element('universal:morpheme', '^ме!н', 'men_suffix_subj_pass').applied(
+rombandeeva.add_element('mansi:VowMorpheme', '^ме!н', 'men_suffix_subj_pass').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:conj=(subj_pass)'),
     [
         grammar.Action('mansi:verb:set_person', arguments=['1']),
@@ -1693,7 +1693,7 @@ rombandeeva.add_element('universal:morpheme', '^ме!н', 'men_suffix_subj_pass'
     ]
 ).add_class('subj_pass_suffixes')
 
-rombandeeva.add_element('universal:morpheme', '^е!г', 'eg_suffix_subj_pass').applied(
+rombandeeva.add_element('mansi:VowMorpheme', '^г', 'g_suffix_subj_pass').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:conj=(subj_pass)'),
     [
         grammar.Action('mansi:verb:set_person', arguments=['3']),
@@ -1701,7 +1701,7 @@ rombandeeva.add_element('universal:morpheme', '^е!г', 'eg_suffix_subj_pass').a
     ]
 ).add_class('subj_pass_suffixes')
 
-rombandeeva.add_element('universal:morpheme', '^е!в', 'ev_suffix_subj_pass').applied(
+rombandeeva.add_element('mansi:VowMorpheme', '^в', 'v_suffix_subj_pass').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:conj=(subj_pass)'),
     [
         grammar.Action('mansi:verb:set_person', arguments=['1']),
@@ -1709,7 +1709,7 @@ rombandeeva.add_element('universal:morpheme', '^е!в', 'ev_suffix_subj_pass').a
     ]
 ).add_class('subj_pass_suffixes')
 
-rombandeeva.add_element('universal:morpheme', '^ет', 'et_suffix_subj_pass').applied(
+rombandeeva.add_element('mansi:VowMorpheme', '^т', 't_suffix_subj_pass').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:conj=(subj_pass)'),
     [
         grammar.Action('mansi:verb:set_person', arguments=['3']),
