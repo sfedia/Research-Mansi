@@ -1748,7 +1748,7 @@ rombandeeva.add_element('universal:morpheme', '^е', 'ye_suffix_imperative_prese
 ).add_class('imperative_present_2sg')
 
 rombandeeva.get_system('universal:morpheme').subclasses_order(
-    '.imperative_present_2sg > #n_suffix_imperative',
+    '| .BASE > .imperative_present_2sg  >> .obj_conj_object_number > #n_suffix_imperative |',
     parent_filter=grammar.LinkSentence('universal:entity=(token) & mansi:basic_pos=(verb)'),
     select_into={
         'id': 'imperative_group_2sg',
@@ -1762,7 +1762,7 @@ rombandeeva.get_system('universal:morpheme').subclasses_order(
     strict=True
 )
 
-rombandeeva.add_element('universal:morpheme', '^н', 'n_suffix_imperative').applied(
+rombandeeva.add_element('mansi:VowMorpheme', '^н', 'n_suffix_imperative').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
     [
         grammar.Action('gram:mood:set_imperative')
@@ -1783,8 +1783,10 @@ rombandeeva.add_element('universal:morpheme', '^е!', 'yee_suffix_imperative_pre
     ]
 ).add_class('imperative_present_2du_pl')
 
+# NEEDS IMPROVEMENT TO SUPPORT MUTATION STRATEGY
+
 rombandeeva.get_system('universal:morpheme').subclasses_order(
-    '.imperative_present_2du_pl > #n_suffix_imperative',
+    '| .BASE > .imperative_present_2du_pl >> .obj_conj_object_number > #n_suffix_imperative |',
     parent_filter=grammar.LinkSentence('universal:entity=(token) & mansi:basic_pos=(verb)'),
     select_into={
         'id': 'imperative_group_2du_pl',
@@ -1809,13 +1811,28 @@ rombandeeva.add_element('universal:morpheme', grammar.Temp.null(), 'null_for_moo
 
 # page 127
 
-rombandeeva.add_element('universal:collocation', 'вос *1 <[gram:mood=(indicative)> *1', 'imperative_3pers').applied(
+rombandeeva.add_element('universal:collocation', 'вос *1 <[gram:mood=(indicative)>', 'imperative_3pers').applied(
     grammar.LinkSentence('# & universal:entity=(input)'),
     [
         grammar.Action('gram:mood:set_imperative'),
         grammar.Action('mansi:verb:set_person', arguments=['3'])
     ]
 )
+
+rombandeeva.add_element(
+    'universal:collocation',
+    'вос *1 <[mansi:conj=(subj_pass)]>',
+    'analyt_imper_for_subj_pass_conj'
+).applied(
+    grammar.LinkSentence('# & universal:entity=(input)'),
+    [
+        grammar.Action('gram:mood:set_imperative')
+    ]
+)
+
+# page 128
+
+
 
 ### RUN seq:correction:mansi* mutation
 ### create mansi:morphemeYU
