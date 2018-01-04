@@ -4,6 +4,7 @@ import grammar
 # first we should check if the whole token exists in dictionaries
 # parent layer switching due to [time limits] like universal:token < [universal:input -> mansi:SH_MOD] (like сь -> щ)
 # analytic forms: free morphemes like {A B}
+# mansi:VowMorpheme info see in prodotiscus/Research-Mansi
 #
 rombandeeva = grammar.Container()
 
@@ -25,6 +26,9 @@ rombandeeva.need_form_parameter(
     ],
     parent_filter=grammar.LinkSentence('mansi:basic_pos=(verb)')
 )
+
+# universal:syl_count OR mansi:syl_count ???
+# should `syl_count` be used together with pre=() or it is set by default
 # - universal:syl_count:* for VERBS, PRONOUNS etc.
 
 # and other need-forms for other POS
@@ -1832,6 +1836,19 @@ rombandeeva.add_element(
 
 # page 128
 
+rombandeeva.add_element('mansi:VowMorpheme', '^$[ы]нув').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & [mansi:syl_count=(1) | mansi:syl_count=(3)]'),
+    [
+        grammar.Action('gram:mood:set_conjunctive')
+    ]
+)
+
+rombandeeva.add_element('mansi:VowMorpheme', '^$[а]нув').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & [mansi:syl_count=(2)]'),
+    [
+        grammar.Action('gram:mood:set_conjunctive')
+    ]
+)
 
 
 ### RUN seq:correction:mansi* mutation
