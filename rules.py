@@ -1894,6 +1894,21 @@ for number, person, suffix, id_name in vcp_ext_matrix:
     ).add_class('verb_conj_personal')
 ###
 
+# page 130, optative
+
+rombandeeva.add_element(
+    'universal:collocation',
+    '<[mansi:basic_pos=(verb)]> *1 ке',
+    'analytic_optative'
+).applied(
+    grammar.LinkSentence('# & universal:entity=(input)'),
+    [
+        grammar.Action('gram:mood:set_optative')
+    ]
+)
+
+
+
 
 
 ### RUN seq:correction:mansi* mutation
