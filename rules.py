@@ -139,7 +139,7 @@ for number, person, suffix, id in lps_matrix:
 rombandeeva.add_element('universal:morpheme', '^ы!н', 'yn_suffix').add_class('lps').applied(
     [
         grammar.LinkSentence(
-            is_noun + '& gram:possessor:number=({0}) & gram:possessor:person=({0})'.format(number, person)
+            is_noun + '& gram:possessor:number!=(sing) & gram:possessor:person=(2)'
         ),
         [
             grammar.Action('mansi:make_lp > sing > 2'),
@@ -1718,11 +1718,86 @@ rombandeeva.add_element('mansi:VowMorpheme', '^т', 't_suffix_subj_pass').applie
 ).add_class('subj_pass_suffixes')
 
 rombandeeva.get_system('universal:morpheme').subclasses_order(
-    '.past_suffixes >> .> .subj_pass_suffixes',
+    '.past_suffixes > .subj_pass_suffixes',
     parent_filter=grammar.LinkSentence('universal:entity=(token) & mansi:conj=(subj_pass)')
 )
 
+rombandeeva.add_element('universal:collocation', '''
+    <[mansi:conj=(subj_pass)]> *1
+    тах''', 'analytic_future_for_subj_pass_conj').applied(
+    grammar.LinkSentence('# & universal:entity=(input)'),
+    [
+        grammar.Action('gram:tense:set_future')
+    ]
+)
 
+# page 126
+
+rombandeeva.add_element('universal:morpheme', '^э', 'e_suffix_imperative_present').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('gram:tense:set_present')
+    ]
+).add_class('imperative_present_2sg')
+
+rombandeeva.add_element('universal:morpheme', '^е', 'ye_suffix_imperative_present').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('gram:tense:set_present')
+    ]
+).add_class('imperative_present_2sg')
+
+rombandeeva.get_system('universal:morpheme').subclasses_order(
+    '.imperative_present_2sg > #n_suffix_imperative',
+    parent_filter=grammar.LinkSentence('universal:entity=(token) & mansi:basic_pos=(verb)'),
+    select_into={
+        'id': 'imperative_group_2sg',
+        'classes': ['imperative_group'],
+        'actions': [
+            grammar.Action('gram:mood:set_imperative'),
+            grammar.Action('mansi:verb:set_person', arguments=['2']),
+            grammar.Action('gram:number:set_sing')
+        ]
+    },
+    strict=True
+)
+
+rombandeeva.add_element('universal:morpheme', '^н', 'n_suffix_imperative').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('gram:mood:set_imperative')
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '^э!', 'ee_suffix_imperative_present').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('gram:tense:set_present')
+    ]
+).add_class('imperative_present_2du_pl')
+
+rombandeeva.add_element('universal:morpheme', '^е!', 'yee_suffix_imperative_present').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('gram:tense:set_present')
+    ]
+).add_class('imperative_present_2du_pl')
+
+rombandeeva.get_system('universal:morpheme').subclasses_order(
+    '.imperative_present_2du_pl > #n_suffix_imperative',
+    parent_filter=grammar.LinkSentence('universal:entity=(token) & mansi:basic_pos=(verb)'),
+    select_into={
+        'id': 'imperative_group_2du_pl',
+        'classes': ['imperative_group'],
+        'actions': [
+            grammar.Action('gram:mood:set_imperative'),
+            grammar.Action('mansi:verb:set_person', arguments=['2']),
+            grammar.Action('gram:number:set_dual', branching=True),
+            grammar.Action('gram:number:set_plur', branching=True)
+        ]
+    },
+    strict=True
+)
 
 ### RUN seq:correction:mansi* mutation
 ### create mansi:morphemeYU
