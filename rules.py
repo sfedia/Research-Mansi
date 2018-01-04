@@ -1752,7 +1752,7 @@ rombandeeva.get_system('universal:morpheme').subclasses_order(
     parent_filter=grammar.LinkSentence('universal:entity=(token) & mansi:basic_pos=(verb)'),
     select_into={
         'id': 'imperative_group_2sg',
-        'classes': ['imperative_group'],
+        'classes': ['imperative_group', 'mood_changing'],
         'actions': [
             grammar.Action('gram:mood:set_imperative'),
             grammar.Action('mansi:verb:set_person', arguments=['2']),
@@ -1788,7 +1788,7 @@ rombandeeva.get_system('universal:morpheme').subclasses_order(
     parent_filter=grammar.LinkSentence('universal:entity=(token) & mansi:basic_pos=(verb)'),
     select_into={
         'id': 'imperative_group_2du_pl',
-        'classes': ['imperative_group'],
+        'classes': ['imperative_group', 'mood_changing'],
         'actions': [
             grammar.Action('gram:mood:set_imperative'),
             grammar.Action('mansi:verb:set_person', arguments=['2']),
@@ -1797,6 +1797,24 @@ rombandeeva.get_system('universal:morpheme').subclasses_order(
         ]
     },
     strict=True
+)
+
+rombandeeva.add_element('universal:morpheme', grammar.Temp.null(), 'null_for_mood_as_ind').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('gram:mood:set_indicative')
+    ]
+).add_class('mood_changing')
+
+
+# page 127
+
+rombandeeva.add_element('universal:collocation', 'вос *1 <[gram:mood=(indicative)> *1', 'imperative_3pers').applied(
+    grammar.LinkSentence('# & universal:entity=(input)'),
+    [
+        grammar.Action('gram:mood:set_imperative'),
+        grammar.Action('mansi:verb:set_person', arguments=['3'])
+    ]
 )
 
 ### RUN seq:correction:mansi* mutation
