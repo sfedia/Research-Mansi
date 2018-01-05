@@ -2034,5 +2034,7 @@ rombandeeva.get_system('universal:morpheme').subclasses_order(
     parent_filter=grammar.LinkSentence('universal:entity=(token) & mansi:basic_pos=(verb)')
 )
 
+# page 136
+
 ### RUN seq:correction:mansi* mutation
 ### create mansi:morphemeYU
