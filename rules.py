@@ -1940,41 +1940,88 @@ rombandeeva.get_system('universal:morpheme').subclasses_order(
     parent_filter=grammar.LinkSentence('universal:entity=(token) & mansi:basic_pos=(verb)')
 )
 
+rombandeeva.add_element('universal:morpheme', '^е', 'ye_latentive_present').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & gram:mood=(latentive)'),
+    [
+        grammar.Action('gram:tense:set_present')
+    ]
+).add_class('tense_suffs_latentive')
+
+rombandeeva.add_element('universal:morpheme', '^е!', 'yee_latentive_present').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & gram:mood=(latentive)'),
+    [
+        grammar.Action('gram:tense:set_present')
+    ]
+).add_class('tense_suffs_latentive')
+
+rombandeeva.add_element('universal:morpheme', '^э', 'e_latentive_present').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & gram:mood=(latentive)'),
+    [
+        grammar.Action('gram:tense:set_present')
+    ]
+).add_class('tense_suffs_latentive')
+
+rombandeeva.add_element('universal:morpheme', '^э!', 'ee_latentive_present').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & gram:mood=(latentive)'),
+    [
+        grammar.Action('gram:tense:set_present')
+    ]
+).add_class('tense_suffs_latentive')
+
 # page 133, try if this works for the tables on p. 132-133
 
 rombandeeva.add_element('universal:morpheme', '^м', 'm_suffix_past_latentive').applied(
-    grammar.LinkSentence('# & universal:entity=(token) & gram:mood=(latentive) & universal:reg_match=([ГЛАСНЫЙ]){post=()}'),
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb) & universal:reg_match=([ГЛАСНЫЙ]){post=()}'),
     [
-        grammar.Action('gram:tense:set_past')
+        grammar.Action('gram:tense:set_past'),
+        grammar.Action('gram:mood:set_latentive')
     ]
-)
+).add_class('latentive_suffs_past').add_class('latentive_suffs')
 
 rombandeeva.add_element('universal:morpheme', '^ум', 'um_suffix_past_latentive').applied(
     grammar.LinkSentence(
         '''# & universal:entity=(token)
-        & gram:mood=(latentive)
+        & mansi:basic_pos=(verb)
         & universal:reg_match=([СОГЛАСНЫЙ]){pre=()}
         & universal:reg_match!=([лн]){pre=()}
         & universal:reg_match(([СОГЛАСНЫЙ]|ы)){post=()}
         '''
     ),
     [
-        grammar.Action('gram:tense:set_past')
+        grammar.Action('gram:tense:set_past'),
+        grammar.Action('gram:mood:set_latentive')
     ]
-)
+).add_class('latentive_suffs_past').add_class('latentive_suffs')
 
 rombandeeva.add_element('universal:morpheme', '^ам', 'am_suffix_past_latentive').applied(
     grammar.LinkSentence(
         '''# & universal:entity=(token)
-        & gram:mood=(latentive)
-        & mansi:syl_count=(1)
-        & universal:reg_match=([ГЛАСНЫЙ][лн]){pre=()}
+        & mansi:basic_pos=(verb)
+        & mansi:syl_count=(1){pre=()}
+        & universal:reg_match=([КРАТКИЙ_ГЛАСНЫЙ][лн]){pre=()}
         '''
     ),
     [
         grammar.Action('gram:tense:set_past')
     ]
-)
+).add_class('latentive_suffs_past').add_class('latentive_suffs')
+
+# don't know if we need syl_count there
+rombandeeva.add_element('universal:morpheme', '^у!м', 'uum_suffix_past_latentive').applied(
+    grammar.LinkSentence(
+        '''# & universal:entity=(token)
+        & mansi:basic_pos=(verb)
+        & mansi:syl_count=(1){pre=()}
+        & universal:reg_match=([ДОЛГИЙ_ГЛАСНЫЙ][лн]){pre=()}
+        '''
+    ),
+    [
+        grammar.Action('gram:tense:set_past'),
+        grammar.Action('gram:mood:set_latentive')
+    ]
+).add_class('latentive_suffs_past').add_class('latentive_suffs')
+
+
 
 ### RUN seq:correction:mansi* mutation
 ### create mansi:morphemeYU
