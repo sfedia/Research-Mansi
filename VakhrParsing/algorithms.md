@@ -2,3 +2,4 @@
 - Extract the title (`A`)
 - Find the nearest tokens to `A` in the line
 - Obtain their position and ignore *examples* and *alternative forms*
+
