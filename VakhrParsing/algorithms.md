@@ -5,6 +5,7 @@
 
 # Pre-format the line
 - `A/B` -> `A /B`
+- case of `сп л отйт ь`
 
 # Recognize alternative forms
 Args: *position* **N** (of token in the line)
