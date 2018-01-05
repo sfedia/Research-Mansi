@@ -1266,7 +1266,7 @@ rombandeeva.add_element('universal:morpheme', '^м', 'm_unob_suffix').applied(
         & universal:reg_match=([СОГЛАСНЫЙ]$){pre=()}'''
     ),
     [
-        grammar.Action('mansi:mood:set_unobvious_action'),
+        grammar.Action('gram:mood:set_latentive'),
         grammar.Action('mansi:tense:set_past')
     ]
 )
@@ -1282,7 +1282,7 @@ rombandeeva.add_element('universal:morpheme', '^ум', 'um_unob_suffix').applied
         & universal:reg_match!=([лн]$){pre=()}'''
     ),
     [
-        grammar.Action('mansi:mood:set_unobvious_action'),
+        grammar.Action('gram:mood:set_latentive'),
         grammar.Action('mansi:tense:set_past')
     ]
 )
@@ -1297,7 +1297,7 @@ rombandeeva.add_element('universal:morpheme', '^ам', 'am_unob_suffix').applied
         & universal:reg_match=([лн]$){pre=()}'''
     ),
     [
-        grammar.Action('mansi:mood:set_unobvious_action'),
+        grammar.Action('gram:mood:set_latentive'),
         grammar.Action('mansi:tense:set_past')
     ]
 )
@@ -1313,7 +1313,7 @@ rombandeeva.add_element('mansi:morpheme_soft', '^има', 'ima_unob_suffix').app
         & mansi:conj=(subj_pass)'''
     ),
     [
-        grammar.Action('mansi:mood:set_unobvious_action')
+        grammar.Action('gram:mood:set_latentive')
     ]
 )
 
@@ -1328,7 +1328,7 @@ rombandeeva.add_element('mansi:morpheme_soft', '^ыма', 'yma_unob_suffix').app
         & mansi:conj=(subj_pass)'''
     ),
     [
-        grammar.Action('mansi:mood:set_unobvious_action')
+        grammar.Action('gram:mood:set_latentive')
     ]
 )
 
@@ -1907,9 +1907,37 @@ rombandeeva.add_element(
     ]
 )
 
+# latentive
+# the elements above providing latentive -- what's that???
 
+rombandeeva.add_element('universal:morpheme', '^н', 'n_for_latentive_praes').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb) & mansi:syl_count=(1)'),
+    [
+        grammar.Action('gram:mood:set_optative')
+    ]
+).add_class('latentive_suffs_present').add_class('latentive_suffs')
 
+rombandeeva.add_element('universal:morpheme', '^ын', 'yn_for_latentive_praes').applied(
+    grammar.LinkSentence(
+        '# & universal:entity=(token) & mansi:basic_pos=(verb) & universal:reg_match=([СОГЛАСНЫЙ]{2,}$)'
+    ),
+    [
+        grammar.Action('gram:mood:set_optative')
+    ]
+).add_class('latentive_suffs_present').add_class('latentive_suffs')
 
+rombandeeva.add_element('universal:morpheme', '^ан', 'an_for_latentive_praes').applied(
+    grammar.LinkSentence(
+        '# & universal:entity=(token) & mansi:basic_pos=(verb) & universal:reg_match=([СОГЛАСНЫЙ]{2,}$)'
+    ),
+    [
+        grammar.Action('gram:mood:set_optative')
+    ]
+).add_class('latentive_suffs_present').add_class('latentive_suffs')
+
+rombandeeva.get_system('universal:morpheme').subclasses_order(
+    '| .BASE > .latentive_suffs > '
+)
 
 ### RUN seq:correction:mansi* mutation
 ### create mansi:morphemeYU
