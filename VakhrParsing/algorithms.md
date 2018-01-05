@@ -3,6 +3,9 @@
 - Find the nearest tokens to `A` in the line
 - Obtain their position and ignore *examples* and *alternative forms*
 
+# Pre-format the line
+- `A/B` -> `A /B`
+
 # Recognize alternative forms
 Args: *position* **N** (of token in the line)
 - `true` if the token contains `’` or `°`
