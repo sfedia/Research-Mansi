@@ -5,7 +5,7 @@
 - Split the line in all relevant positions
 
 # Pre-format the line
-- `A/B` -> `A /B`
+- `A/B` OR `A/ B` -> `A /B`
 - case of `сп л отйт ь`
 
 # Join lines
