@@ -2006,7 +2006,7 @@ rombandeeva.add_element('universal:morpheme', '^ам', 'am_suffix_past_latentive
     ]
 ).add_class('latentive_suffs_past').add_class('latentive_suffs')
 
-# don't know if we need syl_count there
+# i am not sure we need syl_count there
 rombandeeva.add_element('universal:morpheme', '^у!м', 'uum_suffix_past_latentive').applied(
     grammar.LinkSentence(
         '''# & universal:entity=(token)
@@ -2021,7 +2021,18 @@ rombandeeva.add_element('universal:morpheme', '^у!м', 'uum_suffix_past_latenti
     ]
 ).add_class('latentive_suffs_past').add_class('latentive_suffs')
 
+rombandeeva.add_element('mansi:VowMorpheme', '^има', 'ima_latentive_subj_pass').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('gram:mood:set_latentive'),
+        grammar.Action('mansi:conj:set_subj_pass')
+    ]
+).add_class('latentive_suff_subj_pass')
 
+rombandeeva.get_system('universal:morpheme').subclasses_order(
+    '| .BASE > .latentive_suff_subj_pass > .verb_conj_personal |',
+    parent_filter=grammar.LinkSentence('universal:entity=(token) & mansi:basic_pos=(verb)')
+)
 
 ### RUN seq:correction:mansi* mutation
 ### create mansi:morphemeYU
