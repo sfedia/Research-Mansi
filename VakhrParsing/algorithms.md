@@ -1,11 +1,17 @@
-# Split the line
+# Split lines
 - Extract the title (`A`)
-- Find the nearest tokens to `A` in the line
+- Find the nearest tokens to `A` in the line (alphabet sort and string similarity)
 - Obtain their position and ignore *examples* and *alternative forms*
+- Split the line in all relevant positions
 
 # Pre-format the line
 - `A/B` -> `A /B`
 - case of `сп л отйт ь`
+
+# Join lines
+- `YES`: join line **B** and line **A** if line **A** ends with `-` (`\s*-\s*$`)
+- `NO`: else
+
 
 # Recognize alternative forms
 Args: *position* **N** (of token in the line)
