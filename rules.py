@@ -2414,5 +2414,13 @@ rombandeeva.add_element(
     ]
 )
 
+rombandeeva.add_element('mansi:VowMorpheme', '^йт', 'yt_suffix_rus').applied(
+    grammar.LinkSentence('# & universal:entity=(token)'),
+    [
+        grammar.Action('mansi:basic_pos:set_verb'),
+        grammar.Action('mansi:russian_loan_word')
+    ]
+)
+
 ### RUN seq:correction:mansi* mutation
 ### create mansi:morphemeYU
