@@ -8,7 +8,7 @@
 - `YES` if:
 ```python
 page_pattern = r'\n[{0}\-\s]+\n[{0}\-\s]+\n\d+\n|\n\d+\n[{0}\-\s]+\n[{0}\-\s]+\n|'
-page_pattern += r'\n[{0}\-\s]+\s+\d+\s+[{0}\-\s]+\n|\n\d+\n|\n[A-Z{$CMCC}{$SMCC}]\n'
+page_pattern += r'\n[{0}\-\s]+\s+\d+\s+[{0}\-\s]+\n|\n\d+\n|\n[A-Z{$CMCC}{$SMCC}-\s]\n'
 ```
 
 # Split lines
