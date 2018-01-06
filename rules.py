@@ -2422,5 +2422,84 @@ rombandeeva.add_element('mansi:VowMorpheme', '^йт', 'yt_suffix_rus').applied(
     ]
 )
 
+# page 143
+
+rombandeeva.get_system('universal:morpheme').subclasses_order(
+    '| .BASE >> ? > .participle_suffix |',
+    parent_filter=grammar.LinkSentence('universal:entity=(token) & mansi:basic_pos=(verb)')
+)
+
+rombandeeva.add_element('universal:morpheme', '^м', 'm_participle').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:make_participle'),
+        grammar.Action('mansi:make_action_marker')
+    ]
+).add_class('participle_suffix')
+
+rombandeeva.add_element('universal:morpheme', '^ум', 'um_participle').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:make_participle'),
+        grammar.Action('mansi:make_action_marker')
+    ]
+).add_class('participle_suffix')
+
+rombandeeva.add_element('universal:morpheme', '^ам', 'am_participle').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:make_participle'),
+        grammar.Action('mansi:make_action_marker')
+    ]
+).add_class('participle_suffix')
+
+rombandeeva.add_element('universal:morpheme', '^им', 'am_participle').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:make_participle'),
+        grammar.Action('mansi:sem:action-marker')
+    ]
+).add_class('participle_suffix')
+
+rombandeeva.add_element('universal:morpheme', '^н', 'n_participle').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:make_participle'),
+        grammar.Action('mansi:sem:tool-for-action')
+    ]
+).add_class('participle_suffix')
+
+rombandeeva.add_element('universal:morpheme', '^нэ', 'nе_participle').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:make_participle'),
+        grammar.Action('mansi:sem:tool-for-action')
+    ]
+).add_class('participle_suffix')
+
+rombandeeva.add_element('universal:morpheme', '^нэ!', 'nee_participle').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:make_participle'),
+        grammar.Action('mansi:sem:tool-for-action')
+    ]
+).add_class('participle_suffix')
+
+rombandeeva.add_element('universal:morpheme', '^ын', 'yn_participle').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:make_participle'),
+        grammar.Action('mansi:sem:tool-for-action')
+    ]
+).add_class('participle_suffix')
+
+rombandeeva.add_element('universal:morpheme', '^ан', 'an_participle').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:make_participle'),
+        grammar.Action('mansi:sem:tool-for-action')
+    ]
+).add_class('participle_suffix')
+
 ### RUN seq:correction:mansi* mutation
 ### create mansi:morphemeYU
