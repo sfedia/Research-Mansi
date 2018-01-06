@@ -2609,7 +2609,50 @@ rombandeeva.add_element(
     *1 <[mansi:lemma=(сирыл)]>''',
     'syntactic_adverb'
 ).applied(
-    grammar.LinkSentence('# & universal:entity=(adv)')
+    grammar.LinkSentence('# & universal:entity=(input)'),
+    [
+        grammar.Action('mansi:basic_pos:set_adv')
+    ]
+)
+
+# page 151
+
+rombandeeva.add_element(
+    'universal:collocation',
+    '<[mansi:basic_pos=(adv)]> :ignore[*1+] <[gram:case=(ish)]>',
+    'syntactic_adverb_comparative'
+).applied(
+    grammar.LinkSentence('# & universal:entity=(input)'),
+    [
+        grammar.Action('mansi:basic_pos:set_adv'),
+        grammar.Action('gram:set_comparative')
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '^нув', 'nuv_suffix_adv').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adv)'),
+    [
+        grammar.Action('gram:adv:comparative')
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '^нуве', 'nuve_suffix_adv').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adv)'),
+    [
+        grammar.Action('gram:adv:comparative')
+    ]
+)
+
+rombandeeva.add_element(
+    'universal:collocation',
+    '<[[mansi:lemma=(сяр)|mansi:lemma=(сака)]]> *1 <[mansi:basic_pos=(adv)]>',
+    'syntactiv_adv_superlative'
+).applied(
+    grammar.LinkSentence('# & universal:entity=(input)'),
+    [
+        grammar.Action('mansi:basic_pos=(adv)'),
+        grammar.Action('gram:set_superlative')
+    ]
 )
 
 ### RUN seq:correction:mansi* mutation
