@@ -2496,5 +2496,37 @@ rombandeeva.add_element('universal:morpheme', '^ан', 'an_participle').applied(
     ]
 ).add_class('participle_suffix')
 
+# TRANSGRESSIVE
+
+rombandeeva.add_element('universal:morpheme', '^им', 'im_transgressive').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:make_transgressive')
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '^ым', 'ym_transgressive').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:make_transgressive')
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '^м', 'm_transgressive').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:make_transgressive')
+    ]
+)
+
+# ???
+
+rombandeeva.add_element('universal:morpheme', '^т', 't_transgressive').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:make_transgressive')
+    ]
+)
+
 ### RUN seq:correction:mansi* mutation
 ### create mansi:morphemeYU
