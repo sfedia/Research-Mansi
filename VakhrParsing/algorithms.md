@@ -26,3 +26,5 @@ Args: *position* **N** (of token in the line)
 - Small mansi character class (SMCC): `[а-яӓёӈӧӱәӛ]`
 - SMCC & PUNCT: `[а-яӓёӈӧӱәӛ\,-]`
 - Regex for example range: `{$CMCC} {$SMMC&PUNCT}+ \s* [\.!\?] ( \s* {$CMMC} {$SMMC&PUNCT}+ \s* [\.!\?]* \s* ) ?`
+- `true` if token position **IN** the range
+- `false`: else
