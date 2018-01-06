@@ -1056,16 +1056,18 @@ for case, h_paradigm, m_paradigm in matyr_hotpa_matrix:
 # page 107, VERB
 # `not a derivative` parameter
 rombandeeva.add_element('universal:morpheme', '^ахт', 'aht_suffix').applied(
-    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb) & mansi:base_length=(1)'),
     [
-        grammar.Action('gram:make_intransitive')
+        grammar.Action('gram:make_intransitive'),
+        grammar.Action('gram:make_reflexive')
     ]
 ).add_class('trans_suffs')
 
 rombandeeva.add_element('universal:morpheme', '^хат', 'hat_suffix').applied(
-    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb) & mansi:base_length=(1)'),
     [
-        grammar.Action('gram:make_intransitive')
+        grammar.Action('gram:make_intransitive'),
+        grammar.Action('gram:make_reflexive')
     ]
 ).add_class('trans_suffs')
 
@@ -1113,25 +1115,6 @@ rombandeeva.get_system('universal:morpheme').subclasses_order(
     '''? < .lt_suff >> .inf_suff''',
     parent_filter=grammar.LinkSentence('universal:entity=(token) & mansi:basic_pos=(verb)')
 )
-
-rombandeeva.add_element('universal:morpheme', '^хат', 'hat_suffix').applied(
-    grammar.LinkSentence(
-        '# & universal:entity=(token) & mansi:basic_pos=(verb) & mansi:base_length=(1)'
-    ),
-    [
-        grammar.Action('gram:make_reflexive')
-    ]
-)
-
-rombandeeva.add_element('universal:morpheme', '^ахт', 'aht_suffix').applied(
-    grammar.LinkSentence(
-        '# & universal:entity=(token) & mansi:basic_pos=(verb) & mansi:base_length>(1)'
-    ),
-    [
-        grammar.Action('gram:make_reflexive')
-    ]
-)
-
 # reflexive не могут иметь при себе прямого дополнения
 
 # page 112, побудительные глаголы - повторение предыдущего
@@ -2035,6 +2018,8 @@ rombandeeva.get_system('universal:morpheme').subclasses_order(
 )
 
 # page 136
+
+
 
 ### RUN seq:correction:mansi* mutation
 ### create mansi:morphemeYU
