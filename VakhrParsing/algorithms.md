@@ -15,6 +15,7 @@
   - *regex_for_lines(..., REGEXP)* is `true` for *REGEXP* = `\n[{0}\-\s]+\n[{0}\-\s]+\n\d+\n`
   - *regex_for_lines(..., REGEXP)* is `true` for *REGEXP* = `\n\d+\n[{0}\-\s]+\n[{0}\-\s]+\n`
   - *regex_for_lines(..., REGEXP)* is `true` for *REGEXP* = `\n[{0}\-\s]+\s+\d+\s+[{0}\-\s]+\n`
+  - *regex_for_lines(..., REGEXP)* is `true` for *REGEXP* = `\n\d+\n`
   - *regex_for_lines(..., REGEXP)* is `true` for *REGEXP* = `\n\d+\n|\n[A-Z{$CMCC}{$SMCC}-\s]\n`
 - `NO`: else
 
