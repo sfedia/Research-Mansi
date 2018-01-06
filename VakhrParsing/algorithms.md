@@ -28,6 +28,7 @@
 # Pre-format the line
 - `A/B` OR `A/ B` -> `A /B`
 - case of `сп л отйт ь`
+- case of `(по матерйнской / лйнии)/ӓ°щойкә`
 
 # Join lines
 - `YES`: join line **B** and line **A** if line **A** ends with `-` (`\s*-\s*$`)
