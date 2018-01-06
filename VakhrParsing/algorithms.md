@@ -1,3 +1,16 @@
+# Character classes
+- Capital mansi character class (CMCC): `[А-ЯӒЁӇӦӰӘӚ]`
+- Small mansi character class (SMCC): `[а-яӓёӈӧӱәӛ]`
+- SMCC & PUNCT: `[а-яӓёӈӧӱәӛ\,-\s]`
+
+# Ignore lines
+- `YES` if line ~ `^ \s* \d+ \s* $`
+- `YES` if:
+```python
+page_pattern = r'\n[{0}\-\s]+\n[{0}\-\s]+\n\d+\n|\n\d+\n[{0}\-\s]+\n[{0}\-\s]+\n|'
+page_pattern += r'\n[{0}\-\s]+\s+\d+\s+[{0}\-\s]+\n|\n\d+\n|\n[A-Z{$CMCC}{$SMCC}]\n'
+```
+
 # Split lines
 - Extract the title (`A`)
 - Find the nearest tokens to `A` in the line (alphabet sort and string similarity)
@@ -22,9 +35,7 @@ Args: *position* **N** (of token in the line)
 
 # Recognize examples
 - Function *regex_range(REGEXP)* that returns two integers, indices of the first and the last token matched.
-- Capital mansi character class (CMCC): `[А-ЯӒЁӇӦӰӘӚ]`
-- Small mansi character class (SMCC): `[а-яӓёӈӧӱәӛ]`
-- SMCC & PUNCT: `[а-яӓёӈӧӱәӛ\,-\s]`
+- Character classes (see above)
 - Regex for example range: `{$CMCC} {$SMMC&PUNCT}+ \s* [\.!\?] ( \s* {$CMMC} {$SMMC&PUNCT}+ \s* [\.!\?]* \s* ) ?`
 - `true` if token position **IN** the range
 - `false`: else
