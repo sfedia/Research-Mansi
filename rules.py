@@ -489,7 +489,7 @@ rombandeeva.add_element('universal:morpheme', '^нуве', 'nuve_suffix').applie
     ]
 )
 
-rombandeeva.add_element('universal:morpheme', '^кве', 'kve_suffix').applied(
+rombandeeva.add_element('universal:morpheme', '^кве', 'kve_suffix_adj').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adj)'),
     [
         grammar.Action('sem:adj:dimin'),
@@ -2180,7 +2180,7 @@ rombandeeva.add_element('mansi:VowMorpheme', '^а!л', 'aal_verb_wf').applied(
         grammar.Action('mansi:sem:long_action', branching=True),
         grammar.Action('mansi:sem:many_times', branching=True)
     ]
-)
+).add_class('word_formation')
 
 rombandeeva.add_element('mansi:VowMorpheme', '^ыгл', 'ygl_verb_wf').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
@@ -2188,84 +2188,157 @@ rombandeeva.add_element('mansi:VowMorpheme', '^ыгл', 'ygl_verb_wf').applied(
         grammar.Action('mansi:sem:do_in_two_tacts', branching=True),
         grammar.Action('mansi:sem:many_times', branching=True)
     ]
-)
+).add_class('word_formation')
 
 rombandeeva.add_element('mansi:VowMorpheme', '^тл', 'tl_verb_wf').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
     [
         grammar.Action('mansi:sem:do_in_two_tacts')
     ]
-)
+).add_class('word_formation')
 
 rombandeeva.add_element('universal:morpheme', '^мыгт', 'mygt_verb_wf').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
     [
         grammar.Action('gram:set_inchoative')
     ]
-)
+).add_class('word_formation')
 
 rombandeeva.add_element('mansi:VowMorpheme', '^а!нт', 'a*nt_verb_wf').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
     [
         grammar.Action('mansi:sem:long_action')
     ]
-)
+).add_class('word_formation')
 
 rombandeeva.add_element('mansi:VowMorpheme', '^ант', 'a*nt_verb_wf').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
     [
         grammar.Action('mansi:sem:long_action')
     ]
-)
+).add_class('word_formation')
 
 rombandeeva.add_element('mansi:VowMorpheme', '^гал', 'gal_verb_wf').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
     [
         grammar.Action('mansi:sem:long_action')
     ]
-)
+).add_class('word_formation')
 
 rombandeeva.add_element('mansi:VowMorpheme', '^асьл', 'as*l_verb_wf').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
     [
         grammar.Action('mansi:sem:long_action')
     ]
-)
+).add_class('word_formation')
 
 rombandeeva.add_element('universal:morpheme', '^лант', 'lant_verb_wf').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
     [
         grammar.Action('mansi:sem:many_times')
     ]
-)
+).add_class('word_formation')
 
 rombandeeva.add_element('universal:morpheme', '^ата!л', 'ata*l_verb_wf').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
     [
         grammar.Action('mansi:sem:many_times')
     ]
-)
+).add_class('word_formation')
 
 rombandeeva.add_element('universal:morpheme', '^а!лыгл', 'a*lygl_verb_wf').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
     [
         grammar.Action('mansi:sem:many_times')
     ]
-)
+).add_class('word_formation')
 
 rombandeeva.add_element('universal:morpheme', '^ыгла!л', 'ygla*l_verb_wf').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
     [
         grammar.Action('mansi:sem:many_times')
     ]
-)
+).add_class('word_formation')
 
 rombandeeva.add_element('universal:morpheme', '^гала!л', 'gala*l_verb_wf').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
     [
         grammar.Action('mansi:sem:many_times')
     ]
+).add_class('word_formation')
+
+# page 140
+
+rombandeeva.add_element('universal:morpheme', '^кве', 'kve_verb_wf').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:sem:do_cordially')
+    ]
+).add_class('word_formation')
+
+rombandeeva.add_element('universal:morpheme', '^ке', 'ke_verb_wf').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:sem:do_cordially')
+    ]
+).add_class('word_formation')
+
+rombandeeva.add_element('universal:morpheme', '^те', 'te_verb_wf').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:sem:do_cordially')
+    ]
+).add_class('word_formation')
+
+# мягкий знак?
+
+rombandeeva.add_element('mansi:VowMorpheme', '^рись', 'ris*_verb_wf').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:sem:disparaging_pity')
+    ]
+).add_class('word_formation')
+
+# noun_to_verb
+
+rombandeeva.add_element('universal:morpheme', '^м', 'm_noun_to_verb').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:noun_to_verb'),
+        grammar.Action('gram:make_transitive')
+    ]
+).add_class('noun_to_verb_suff')
+
+rombandeeva.add_element('universal:morpheme', '^л', 'l_noun_to_verb').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:noun_to_verb'),
+        grammar.Action('gram:make_transitive', branching=True),
+        grammar.Action('gram:make_intransitive', branching=True)
+    ]
+).add_class('noun_to_verb_suff')
+
+rombandeeva.add_element('mansi:VowMorpheme', '^ал', 'al_noun_to_verb').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:noun_to_verb'),
+        grammar.Action('gram:make_transitive')
+    ]
+).add_class('noun_to_verb_suff')
+
+rombandeeva.add_element('universal:morpheme', '^т', 't_noun_to_verb').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:noun_to_verb'),
+        grammar.Action('gram:make_intransitive')
+    ]
 )
+
+@rombandeeva.foreach_in_class('noun_to_verb_suff')
+def mutation_link_for_noun_to_verb(element):
+    element.provide_mutation_link(
+        [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(noun)')]
+    )
 
 ### RUN seq:correction:mansi* mutation
 ### create mansi:morphemeYU
