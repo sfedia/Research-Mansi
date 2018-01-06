@@ -2397,7 +2397,7 @@ rombandeeva.add_element('universal:morpheme', '_^кон', 'kon_prefix').applied(
 rombandeeva.add_element('universal:morpheme', '^аль', 'al_suffix_archaic').applied(
     grammar.LinkSentence('# & universal:entity=(token)'),
     [
-        grammar.Action('universal:sem:meaning:unknown')
+        grammar.Action('mansi:set_basic_pos=(adv)')
     ]
 )
 
@@ -2526,6 +2526,90 @@ rombandeeva.add_element('universal:morpheme', '^т', 't_transgressive').applied(
     [
         grammar.Action('mansi:make_transgressive')
     ]
+)
+
+# page 149
+
+rombandeeva.add_element('mansi:VowMorpheme', '^акве', 'akwe_adj_to_adv').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adv)'),
+    [
+        grammar.Action('gram:adj_to_adv')
+    ]
+).provide_mutation_link(
+    [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adj)')]
+)
+
+rombandeeva.add_element('mansi:VowMorpheme', '^сан!', 'sa*ng_adj_to_adv').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adv)'),
+    [
+        grammar.Action('gram:adj_to_adv')
+    ]
+).provide_mutation_link(
+    [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adj)')]
+)
+
+rombandeeva.add_element('universal:morpheme', '^сын!', 'sy*ng_adj_to_adv').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adv)'),
+    [
+        grammar.Action('gram:adj_to_adv')
+    ]
+).provide_mutation_link(
+    [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adj)')]
+)
+
+rombandeeva.add_element('universal:morpheme', '^т', 't_pron_to_adv').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adv)'),
+    [
+        grammar.Action('gram:pronoun_to_adv')
+    ]
+).provide_mutation_link(
+    [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(pronoun)')]
+)
+
+rombandeeva.add_element('universal:morpheme', '^ле', 'le_pron/adv_to_adv').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adv)'),
+    [
+        grammar.Action('gram:pronoun_to_adv', branching=True),
+        grammar.Action('gram:new_adv', branching=True)
+    ]
+).provide_mutation_link(
+    [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(pronoun)')]
+)
+
+rombandeeva.add_element('universal:morpheme', '^ыл', 'yl_pron_to_adv').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adv)'),
+    [
+        grammar.Action('gram:pronoun_to_adv')
+    ]
+).provide_mutation_link(
+    [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(pronoun)')]
+)
+
+rombandeeva.add_element('mansi:VowMorpheme', '^ах', '[y]akh_verb_to_adv').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adv)'),
+    [
+        grammar.Action('gram:verb_to_adv')
+    ]
+).add_class('infinitive_excl_suff').provide_mutation_link(
+    [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(pronoun)')]
+)
+
+rombandeeva.add_element('mansi:VowMorpheme', '^$[ы]г', 'y?g_participle_to_adv').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:participle=()'),
+    [
+        grammar.Action('mansi:participle_to_adv')
+        # unset mansi:participle
+        # mansi:set_basic_pos=(adv)
+    ]
+)
+
+rombandeeva.add_element(
+    'universal:collocation',
+    '''<[[mansi:basic_pos=(pronoun) | mansi:basic_pos=(adj) | mansi:basic_pos=(numeral) | mansi:basic_pos=(adv)] ]>
+    *1 <[mansi:lemma=(сирыл)]>''',
+    'syntactic_adverb'
+).applied(
+    grammar.LinkSentence('# & universal:entity=(adv)')
 )
 
 ### RUN seq:correction:mansi* mutation
