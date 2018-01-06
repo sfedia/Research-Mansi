@@ -2340,5 +2340,66 @@ def mutation_link_for_noun_to_verb(element):
         [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(noun)')]
     )
 
+# page 141
+# OMG prefixes
+
+rombandeeva.add_element('universal:morpheme', '_^хот', 'hot_prefix').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:sem:meaning:remove')
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '_^лап', 'lap_prefix').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:sem:meaning:finish')
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '_^э!л', 'eel_prefix').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:sem:meaning:cut_off')
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '_^ёл', 'yol_prefix').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:sem:meaning:finish_resulting', branching=True),
+        grammar.Action('mansi:sem:meaning:completeness', branching=True)
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '_^но!х', 'noh_prefix').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:sem:meaning:finish', branching=True),
+        grammar.Action('mansi:sem:meaning:set_vertical', branching=True)
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '_^юв', 'yuv_prefix').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:sem:meaning:get_inward')
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '_^кон', 'kon_prefix').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
+    [
+        grammar.Action('mansi:sem:meaning:get_outward')
+    ]
+)
+
+rombandeeva.add_element('universal:morpheme', '^аль', 'al_suffix_archaic').applied(
+    grammar.LinkSentence('# & universal:entity=(token)'),
+    [
+        grammar.Action('universal:sem:meaning:unknown')
+    ]
+)
+
 ### RUN seq:correction:mansi* mutation
 ### create mansi:morphemeYU
