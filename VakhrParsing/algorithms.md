@@ -24,7 +24,7 @@ Args: *position* **N** (of token in the line)
 - Function *regex_range(REGEXP)* that returns two integers, indices of the first and the last token matched.
 - Capital mansi character class (CMCC): `[А-ЯӒЁӇӦӰӘӚ]`
 - Small mansi character class (SMCC): `[а-яӓёӈӧӱәӛ]`
-- SMCC & PUNCT: `[а-яӓёӈӧӱәӛ\,-]`
+- SMCC & PUNCT: `[а-яӓёӈӧӱәӛ\,-\s]`
 - Regex for example range: `{$CMCC} {$SMMC&PUNCT}+ \s* [\.!\?] ( \s* {$CMMC} {$SMMC&PUNCT}+ \s* [\.!\?]* \s* ) ?`
 - `true` if token position **IN** the range
 - `false`: else
