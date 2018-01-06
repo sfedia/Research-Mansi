@@ -1,7 +1,7 @@
 # Character classes
 - Capital mansi character class (CMCC): `[А-ЯӒЁӇӦӰӘӚ]`
 - Small mansi character class (SMCC): `[а-яӓёӈӧӱәӛ]`
-- SMCC & PUNCT: `[а-яӓёӈӧӱәӛ\,-\s]`
+- SMCC & PUNCT: `[а-яӓёӈӧӱәӛ\,\-\s]`
 
 # Ignore lines
 - `YES` if line ~ `^ \s* \d+ \s* $`
@@ -16,7 +16,7 @@
   - *regex_for_lines(..., REGEXP)* is `true` for *REGEXP* = `\n\d+\n[{0}\-\s]+\n[{0}\-\s]+\n`
   - *regex_for_lines(..., REGEXP)* is `true` for *REGEXP* = `\n[{0}\-\s]+\s+\d+\s+[{0}\-\s]+\n`
   - *regex_for_lines(..., REGEXP)* is `true` for *REGEXP* = `\n\d+\n`
-  - *regex_for_lines(..., REGEXP)* is `true` for *REGEXP* = `\n[A-Z{$CMCC}{$SMCC}-\s]\n`
+  - *regex_for_lines(..., REGEXP)* is `true` for *REGEXP* = `\n[A-Z{$CMCC}{$SMCC}\-\s]\n`
 - `NO`: else
 
 # Split lines
