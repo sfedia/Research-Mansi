@@ -2401,5 +2401,18 @@ rombandeeva.add_element('universal:morpheme', '^аль', 'al_suffix_archaic').ap
     ]
 )
 
+# page 142
+
+rombandeeva.add_element(
+    'universal:collocation',
+    '<[mansi:basic_pos=(noun)]> *1 <[mansi:lemma=(патун!кве)]>',
+    'compound_verb'
+).applied(
+    grammar.LinkSentence('# & universal:entity=(input)'),
+    [
+        grammar.Action('mansi:basic_pos:set_verb')
+    ]
+)
+
 ### RUN seq:correction:mansi* mutation
 ### create mansi:morphemeYU
