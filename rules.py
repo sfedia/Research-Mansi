@@ -2424,11 +2424,6 @@ rombandeeva.add_element('mansi:VowMorpheme', '^йт', 'yt_suffix_rus').applied(
 
 # page 143
 
-rombandeeva.get_system('universal:morpheme').subclasses_order(
-    '| .BASE >> ? > .participle_suffix |',
-    parent_filter=grammar.LinkSentence('universal:entity=(token) & mansi:basic_pos=(verb)')
-)
-
 rombandeeva.add_element('universal:morpheme', '^м', 'm_participle').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
     [
