@@ -28,6 +28,7 @@
 
 # Pre-format the line
 - `A/B` OR `A/ B` -> `A /B`
+- `A / B` -> `A /B` if `A` is russian and `B` is **not** russian
 - case of `сп л отйт ь`
 - case of `(по матерйнской / лйнии)/ӓ°щойкә`
 
