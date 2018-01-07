@@ -52,10 +52,16 @@ class Checker:
         token = re.sub(r'\/.*', '', token).strip('«»').strip(' ')
         token = token.strip('!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~')
         for x in self.get_alternatives(token):
+            returned = []
             for e, xx in enumerate([x, x.lower(), x.replace('-', ''), x.lower().replace('-', '')]):
                 str_parse = str(self.morph.parse(xx))
                 if 'DictionaryAnalyzer' in str_parse and not 'Unknown' in str_parse:
-                    return e + 1, xx
+                    returned.append((e + 1, xx))
                 elif xx in self.op_dict:
-                    return e + 1, xx
+                    returned.append((e + 1, xx))
+            for ret in returned:
+                if ret[0] in [3, 4]:
+                    return ret
+            if len(returned):
+                return returned[0]
         return False
