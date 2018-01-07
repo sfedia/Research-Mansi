@@ -19,6 +19,7 @@
   - *regex_for_lines(..., REGEXP)* is `true` for *REGEXP* = `\n[A-Z{$CMCC}{$SMCC}\-\s]\n`
 - `NO`: else
 
+
 # Split lines
 - Extract the title (`A`)
 - Find the nearest tokens to `A` in the line (alphabet sort and string similarity)
@@ -38,8 +39,8 @@
 # Recognize alternative forms
 Args: *position* **N** (of token in the line)
 - `true` if the token contains `’` or `°`
-- `true` if `/` was found on the start of the token with position **N** (collocations may be taken into account)
-- `true` if `/` was found on the start of a token with position **N**-**x** and all tokens with positions between **N** and **N**-**x** have `,` on the end (collocations may be taken into account)
+- `true` if `/` was found on the start of the token with position **N** (token groups may be taken into account)
+- `true` if `/` was found on the start of a token with position **N**-**x** and all tokens with positions between **N** and **N**-**x** have `,` on the end; if there are token groups (but not single tokens) between `,` length of token groups must be equal
 - `false`: else
 
 # Recognize examples
