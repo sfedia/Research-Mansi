@@ -3,23 +3,6 @@
 - Small mansi character class (SMCC): `[а-яӓёӈӧӱәӛ]`
 - SMCC & PUNCT: `[а-яӓёӈӧӱәӛ\,\-\s]`
 
-# Ignore lines
-- `YES` if line ~ `^ \s* \d+ \s* $`
-- Function *regex_for_lines(LINE_NUMBER, REGEXP)*
-  - split REGEXP by `r'\n'` => Array, each element should be equal to a single line
-  - first element is the current line (by default)
-  - all next elements should be next lines therefore
-  - return (`True`/ count of patterns between two newlines) if there is total regex array and line array one to one correspondence
-  - else return `False`
-- `YES` if:
-  - *regex_for_lines(..., REGEXP)* is `true` for *REGEXP* = `\n[{0}\-\s]+\n[{0}\-\s]+\n\d+\n`
-  - *regex_for_lines(..., REGEXP)* is `true` for *REGEXP* = `\n\d+\n[{0}\-\s]+\n[{0}\-\s]+\n`
-  - *regex_for_lines(..., REGEXP)* is `true` for *REGEXP* = `\n[{0}\-\s]+\s+\d+\s+[{0}\-\s]+\n`
-  - *regex_for_lines(..., REGEXP)* is `true` for *REGEXP* = `\n\d+\n`
-  - *regex_for_lines(..., REGEXP)* is `true` for *REGEXP* = `\n[A-Z{$CMCC}{$SMCC}\-\s]\n`
-- `NO`: else
-
-
 # Split lines
 - Extract the title (`A`)
 - Find the nearest tokens to `A` in the line (alphabet sort and string similarity)
