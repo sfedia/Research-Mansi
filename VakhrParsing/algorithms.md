@@ -17,6 +17,7 @@
 
 # Join lines
 - `YES`: join line **B** and line **A** if line **A** ends with `-` (`\s*-\s*$`)
+- `YES`: join line **B** and line **A** if line **A** starts with `\s*\d+[\.,]`
 - `NO`: else
 
 
