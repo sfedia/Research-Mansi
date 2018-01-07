@@ -3,10 +3,10 @@
 import re
 import is_russian
 
-bal_vakhr = open('balandin_vakhr_1.txt', encoding='utf-8').read().splitlines()
+bal_vakhr = open('balandin_vakhr_2.txt', encoding='utf-8').read().splitlines()
 checker = is_russian.Checker(import_op=False)
 
-with open('balandin_vakhr_2.txt', 'a', encoding='utf-8') as new_bv:
+with open('balandin_vakhr_3.txt', 'a', encoding='utf-8') as new_bv:
     for e, line in enumerate(bal_vakhr):
         tokens = line.split()
         new_line = []
@@ -17,6 +17,7 @@ with open('balandin_vakhr_2.txt', 'a', encoding='utf-8') as new_bv:
             else:
                 new_line.append(token)
         print(e)
+
         new_bv.write(' '.join(new_line) + "\n")
 
 new_bv.close()
