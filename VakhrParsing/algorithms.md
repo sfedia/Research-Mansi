@@ -17,7 +17,8 @@
 
 # Join lines
 - `YES`: join line **B** and line **A** if line **A** ends with `-` (`\s*-\s*$`)
-- `YES`: join line **B** and line **A** if line **A** starts with `\s*\d+[\.,]`
+- `YES`: join line **B** and line **A** if line **B** starts with `\s*\d+[\.,]`
+- `YES`: join line **B** and line **A** if line **A** ends with `,` (`\s*,\s*$`)
 - `NO`: else
 
 
@@ -26,6 +27,7 @@ Args: *position* **N** (of token in the line)
 - `true` if the token contains `’` or `°`
 - `true` if `/` was found on the start of the token with position **N** (token groups may be taken into account)
 - `true` if `/` was found on the start of a token with position **N**-**x** and all tokens with positions between **N** and **N**-**x** have `,` on the end; if there are token groups (but not single tokens) between `,` length of token groups must be equal
+  - case of `/1. ӓкӓк-өвәмл’ ӓптӓх,	ӓкӓн-өвәм-тӓптӓх; 2. ӓкӓн-ща°хщәй-тӓх, ӓкӓн-щӓ кщәйтӓх`
 - `false`: else
 
 # Recognize examples
