@@ -2646,7 +2646,7 @@ rombandeeva.add_element('universal:morpheme', '^нуве', 'nuve_suffix_adv').ap
 rombandeeva.add_element(
     'universal:collocation',
     '<[[mansi:lemma=(сяр)|mansi:lemma=(сака)]]> *1 <[mansi:basic_pos=(adv)]>',
-    'syntactiv_adv_superlative'
+    'syntactic_adv_superlative'
 ).applied(
     grammar.LinkSentence('# & universal:entity=(input)'),
     [
@@ -2654,6 +2654,45 @@ rombandeeva.add_element(
         grammar.Action('gram:set_superlative')
     ]
 )
+
+# page 153
+
+postpos_unmutable = [
+    ['мус', ('до')],
+    ['ёт', ('с')],
+    ['ма!гыс', ('для', 'за')],
+    ['палт', ('к', 'у')],
+    ['тармыл', ('на')],
+    ['паттыиг', ('вместо', 'взамен')],
+    ['уртыиг', ('вместо', 'взамен')],
+    ['пе!нтсыл', ('вместо', 'взамен')],
+    ['у!лтта', ('через')],
+    ['нупыл', ('в направлении')],
+    ['хосыт', ('по')],
+    ['ляльт', ('против')],
+    ['торыг', ('перед')],
+    ['урыл', ('о', 'про')],
+    ['о!вылтытыт', ('о', 'про')],
+    ['коны-пал', ('кроме')],
+    ['сыс', ('во время')],
+    ['э!ртын', ('когда')],
+    ['э!рт', ('когда')],
+    ['хольт', ('как')]
+]
+
+i = 0
+for lemma, meanings in postpos_unmutable:
+    pp_actions = [grammar.Action('mansi:basic_pos:set_postpos')]
+    if type(meanings) == str:
+        pp_actions.append(grammar.Action('mansi:translation:set_new', arguments=[meanings]))
+    else:
+        for meaning in meanings:
+            pp_actions.append(grammar.Action('mansi:translation:set_new', arguments=[meaning], branching=True))
+    rombandeeva.add_element('universal:token', lemma, '{}_postpos_lemma').applied(
+        grammar.LinkSentence('# & universal:entity=(input)'),
+        pp_actions
+    )
+
 
 ### RUN seq:correction:mansi* mutation
 ### create mansi:morphemeYU
