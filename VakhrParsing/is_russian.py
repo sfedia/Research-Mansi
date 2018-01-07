@@ -50,8 +50,9 @@ class Checker:
 
     def check(self, token):
         token = re.sub(r'\/.*', '', token).strip('«»')
+        token = token.strip('!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~')
         for x in self.get_alternatives(token):
-            for xx in (x, x.lower(), x.strip('-'), x.lower().strip('-')):
+            for xx in (x, x.lower(), x.replace('-', ''), x.lower().replace('-', '')):
                 str_parse = str(self.morph.parse(xx))
                 if 'DictionaryAnalyzer' in str_parse and not 'Unknown' in str_parse:
                     return True
