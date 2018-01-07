@@ -49,13 +49,13 @@ class Checker:
         return stack
 
     def check(self, token):
-        token = re.sub(r'\/.*', '', token).strip('«»')
+        token = re.sub(r'\/.*', '', token).strip('«»').strip(' ')
         token = token.strip('!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~')
         for x in self.get_alternatives(token):
-            for xx in (x, x.lower(), x.replace('-', ''), x.lower().replace('-', '')):
+            for e, xx in enumerate([x, x.lower(), x.replace('-', ''), x.lower().replace('-', '')]):
                 str_parse = str(self.morph.parse(xx))
                 if 'DictionaryAnalyzer' in str_parse and not 'Unknown' in str_parse:
-                    return True
+                    return e + 1, xx
                 elif xx in self.op_dict:
-                    return True
+                    return e + 1, xx
         return False
