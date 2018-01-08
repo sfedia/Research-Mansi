@@ -19,6 +19,7 @@
 - `YES`: join line **B** and line **A** if line **A** ends with `-` (`\s*-\s*$`)
 - `YES`: join line **B** and line **A** if line **B** starts with `\s*\d+[\.,]`
 - `YES`: join line **B** and line **A** if line **A** ends with `,` (`\s*,\s*$`)
+- `YES`: join line **B** and line **A** if the first tokens of lines **A**, **B** and **C** are sorted as [ **A**[0] , **C**[0], **B**[0] ]
 - `NO`: else
 
 
