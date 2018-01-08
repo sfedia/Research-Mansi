@@ -1,4 +1,4 @@
-# Character classes
+# Character classes [solved]
 - Capital mansi character class (CMCC): `[А-ЯӒЁӇӦӰӘӚ]`
 - Small mansi character class (SMCC): `[а-яӓёӈӧӱәӛ]`
 - SMCC & PUNCT: `[а-яӓёӈӧӱәӛ\,\-\s]`
@@ -10,12 +10,12 @@
 - Split the line in all relevant positions
 
 # Pre-format the line
-- `A/B` OR `A/ B` -> `A /B`
-- `A / B` -> `A /B` if `A` is russian and `B` is **not** russian
+- `A/B` OR `A/ B` -> `A /B` [solved]
+- `A / B` -> `A /B` if `A` is russian and `B` is **not** russian [solved]
 - case of `сп л отйт ь`
 - case of `(по матерйнской / лйнии)/ӓ°щойкә`
 
-# Join lines
+# Join lines [solved]
 - `YES` (via **whitespace**, `\s{2,}` -> ' '): join line **B** and line **A** if line **A** ends with `-` (`\s*-\s*$`)
 - `YES` (via **whitespace**, `\s{2,}` -> ' '): join line **B** and line **A** if line **B** starts with `\s*\d+[\.,]`
 - `YES` (via **whitespace**, `\s{2,}` -> ' '): join line **B** and line **A** if line **A** ends with `,` (`\s*,\s*$`)
