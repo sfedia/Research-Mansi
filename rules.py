@@ -2716,7 +2716,7 @@ postpos_unmutable = [
     ['та!ра', ('мимо')]
 ]
 
-i = 0
+pp_i = 0
 for lemma, meanings in postpos_unmutable:
     pp_actions = [grammar.Action('mansi:basic_pos:set_postpos')]
     if type(meanings) == str:
@@ -2724,10 +2724,11 @@ for lemma, meanings in postpos_unmutable:
     else:
         for meaning in meanings:
             pp_actions.append(grammar.Action('mansi:translation:set_new', arguments=[meaning], branching=True))
-    rombandeeva.add_element('universal:token', lemma, '{}_postpos_lemma').applied(
+    rombandeeva.add_element('universal:token', lemma, '{}_postpos_lemma'.format(pp_i)).applied(
         grammar.LinkSentence('# & universal:entity=(input)'),
         pp_actions
     )
+    pp_i += 1
 
 # page 159: ?
 
