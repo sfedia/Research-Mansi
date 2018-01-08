@@ -17,13 +17,13 @@ for e, line in enumerate(bal_vakhr):
         if check_stack != sorted_stack:
             join = True
     if e > 0:
-        if re.search(r'\s*-\s*$', line):
+        if re.search(r'\s*-\s*$', bal_vakhr[e - 1]):
             join = True
-        elif re.search(r'\s*\d+[\.,]\s*$', line):
+        elif re.search(r'^\s*\d+[\.,]', line):
             join = True
-        elif re.search(r'\s*,\s*$', line):
+        elif re.search(r'\s*,\s*$', bal_vakhr[e - 1]):
             join = True
-        elif re.search(r'\s*/\s*$', line):
+        elif re.search(r'\s*/\s*$', bal_vakhr[e - 1]):
             join = True
 
     if join:
@@ -32,6 +32,6 @@ for e, line in enumerate(bal_vakhr):
     else:
         new_bv.append(line)
 
-with open('balandin_vakhr_5.txt', 'w', encoding='utf-8') as new_bv_file:
+with open('balandin_vakhr_4.txt', 'w', encoding='utf-8') as new_bv_file:
     new_bv_file.write("\n".join(new_bv))
     new_bv_file.close()
