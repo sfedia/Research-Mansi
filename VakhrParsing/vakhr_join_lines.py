@@ -23,6 +23,8 @@ for e, line in enumerate(bal_vakhr):
             join = True
         elif re.search(r'\s*,\s*$', line):
             join = True
+        elif re.search(r'\s*/\s*$', line):
+            join = True
 
     if join:
         new_bv[-1] += ' ' + line
@@ -30,6 +32,6 @@ for e, line in enumerate(bal_vakhr):
     else:
         new_bv.append(line)
 
-with open('balandin_vakhr_4.txt', 'w', encoding='utf-8') as new_bv_file:
+with open('balandin_vakhr_5.txt', 'w', encoding='utf-8') as new_bv_file:
     new_bv_file.write("\n".join(new_bv))
     new_bv_file.close()
