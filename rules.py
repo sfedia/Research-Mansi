@@ -88,7 +88,7 @@ rombandeeva.get_system('universal:morpheme').subclasses_order(
 #
 is_noun = '# & universal:entity=(token) & mansi:basic_pos=(noun) '
 
-rombandeeva.add_element('universal:morpheme', grammar.Temp.null(), 'number_noun_null_suffix').applied(
+rombandeeva.add_element('universal:morpheme', grammar.Temp.NULL, 'number_noun_null_suffix').applied(
     [
         grammar.LinkSentence(is_noun),
         [grammar.Action('gram:number:set_sing')]
@@ -177,7 +177,7 @@ rombandeeva.add_element('universal:morpheme', '^ян', 'yan_suffix').applied(
     ]
 ).add_class('number_suffix')
 
-rombandeeva.add_element('universal:morpheme', grammar.Temp.null(), 'null_suffix_main_case').applied(
+rombandeeva.add_element('universal:morpheme', grammar.Temp.NULL, 'null_suffix_main_case').applied(
     [
         grammar.LinkSentence(is_noun),
         [grammar.Action('gram:case:set_main')]
@@ -605,7 +605,7 @@ rombandeeva.add_element('mansi:morphemeYU', '^ам', 'am_suffix').applied(
 rombandeeva.add_element('universal:morpheme', 'ий', 'iy_suffix').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adj)'),
     [
-        grammar.Action(grammar.Temp.null()),
+        grammar.Action(grammar.Temp.NULL),
         grammar.Action('mansi:russian_loan_word')
     ]
 )
@@ -613,7 +613,7 @@ rombandeeva.add_element('universal:morpheme', 'ий', 'iy_suffix').applied(
 rombandeeva.add_element('universal:morpheme', 'ый', 'iy_suffix').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adj)'),
     [
-        grammar.Action(grammar.Temp.null()),
+        grammar.Action(grammar.Temp.NULL),
         grammar.Action('mansi:russian_loan_word')
     ]
 )
@@ -1102,7 +1102,7 @@ rombandeeva.add_element('mansi:morphemeYU', '^гл', 'gl_suffix').applied(
     ]
 ).add_class('trans_suffs')
 
-rombandeeva.add_element('universal:morpheme', grammar.Temp.null(), 'null_for_trans').applied(
+rombandeeva.add_element('universal:morpheme', grammar.Temp.NULL, 'null_for_trans').applied(
     grammar.LinkSentence(
         '# & universal:entity=(token) & mansi:basic_pos=(verb)'
     ),
@@ -1157,7 +1157,7 @@ rombandeeva.add_element('universal:morpheme', '^ве', 've_spc_suffix').applied(
     ]
 ).add_class('conj_set')
 
-rombandeeva.add_element('universal:morpheme', grammar.Temp.null(), 'conj_null').applied(
+rombandeeva.add_element('universal:morpheme', grammar.Temp.NULL, 'conj_null').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
     [
         grammar.Action('mansi:conj:set_objectless')
@@ -1359,7 +1359,7 @@ rombandeeva.add_element('universal:morpheme', '^ын', 'yn_2sing_ind_objless').a
 
 rombandeeva.add_element(
     'universal:morpheme',
-    grammar.Temp.null(),
+    grammar.Temp.NULL,
     'null_3sing_ind_objless'
 ).applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb) & mansi:conj=(objectless)'),
@@ -1663,7 +1663,7 @@ rombandeeva.add_element('mansi:VowMorpheme', '^н', 'n_suffix_subj_pass').applie
     ]
 ).add_class('subj_pass_suffixes').add_class('verb_conj_personal')
 
-rombandeeva.add_element('universal:morpheme', grammar.Temp.null(), 'null_suffix_subj_pass').applied(
+rombandeeva.add_element('universal:morpheme', grammar.Temp.NULL, 'null_suffix_subj_pass').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:conj=(subj_pass)'),
     [
         grammar.Action('mansi:verb:set_person', arguments=['3']),
@@ -1787,7 +1787,7 @@ rombandeeva.get_system('universal:morpheme').subclasses_order(
     strict=True
 )
 
-rombandeeva.add_element('universal:morpheme', grammar.Temp.null(), 'null_for_mood_as_ind').applied(
+rombandeeva.add_element('universal:morpheme', grammar.Temp.NULL, 'null_for_mood_as_ind').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
     [
         grammar.Action('gram:mood:set_indicative')
