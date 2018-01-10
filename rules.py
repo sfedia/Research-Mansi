@@ -372,8 +372,8 @@ rombandeeva.add_element('universal:morpheme', '^п', 'p_wb_suffix').applied(
 
 
 @rombandeeva.foreach_in_class('verb_to_noun_suff')
-def ss_set_mutation_link(element):
-    element.provide_mutation_link(
+def ss_set_mutation_links(element):
+    element.provide_mutation_links(
         [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)')]
     )
 
@@ -410,8 +410,8 @@ rombandeeva.add_element('universal:morpheme', '^та', 'ta_wb_from_noun_suffix')
 
 
 @rombandeeva.foreach_in_class('adj_to_noun_suff')
-def atn_set_mutation_link(element):
-    element.provide_mutation_link(
+def atn_set_mutation_links(element):
+    element.provide_mutation_links(
         [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adj)')]
     )
 
@@ -453,8 +453,8 @@ rombandeeva.add_element('mansi:morphemeYU', '^та', 'ta_wb_from_verb_suffix').a
 
 
 @rombandeeva.foreach_in_class('verb_to_noun_suff')
-def vtn_set_mutation_link(element):
-    element.provide_mutation_link(
+def vtn_set_mutation_links(element):
+    element.provide_mutation_links(
         [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)')]
     )
 
@@ -502,7 +502,7 @@ rombandeeva.add_element('universal:morpheme', '^ысь', 'ys*-suffix').applied(
     [
         grammar.Action('gram:adj_to_adv')
     ]
-).provide_mutation_link(
+).provide_mutation_links(
     [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adj)')]
 )
 
@@ -531,7 +531,7 @@ rombandeeva.add_element('universal:morpheme', '^н!', 'ng_suffix').applied(
     [
         grammar.Action('gram:noun_to_adj')
     ]
-).provide_mutation_link(
+).provide_mutation_links(
     [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(noun)')]
 )
 
@@ -540,7 +540,7 @@ rombandeeva.add_element('universal:morpheme', '^ын!', 'yng_suffix').applied(
     [
         grammar.Action('gram:noun_to_adj')
     ]
-).provide_mutation_link(
+).provide_mutation_links(
     [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(noun)')]
 )
 
@@ -549,7 +549,7 @@ rombandeeva.add_element('universal:morpheme', '^ин!', 'ing_suffix').applied(
     [
         grammar.Action('gram:noun_to_adj')
     ]
-).provide_mutation_link(
+).provide_mutation_links(
     [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(noun)')]
 )
 
@@ -578,7 +578,7 @@ rombandeeva.add_element('mansi:morphemeYU', '^м', 'm_suffix').applied(
     [
         grammar.Action('gram:verb_to_adj')
     ]
-).add_class('yu.verb_ending_excl').provide_mutation_link(
+).add_class('yu.verb_ending_excl').provide_mutation_links(
     [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)')]
 )
 
@@ -587,7 +587,7 @@ rombandeeva.add_element('mansi:morphemeYU', '^ум', 'um_suffix').applied(
     [
         grammar.Action('gram:verb_to_adj')
     ]
-).add_class('yu.verb_ending_excl').provide_mutation_link(
+).add_class('yu.verb_ending_excl').provide_mutation_links(
     [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)')]
 )
 
@@ -596,7 +596,7 @@ rombandeeva.add_element('mansi:morphemeYU', '^ам', 'am_suffix').applied(
     [
         grammar.Action('gram:verb_to_adj')
     ]
-).add_class('yu.verb_ending_excl').provide_mutation_link(
+).add_class('yu.verb_ending_excl').provide_mutation_links(
     [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)')]
 )
 
@@ -2335,8 +2335,8 @@ rombandeeva.add_element('universal:morpheme', '^т', 't_noun_to_verb').applied(
 )
 
 @rombandeeva.foreach_in_class('noun_to_verb_suff')
-def mutation_link_for_noun_to_verb(element):
-    element.provide_mutation_link(
+def mutation_links_for_noun_to_verb(element):
+    element.provide_mutation_links(
         [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(noun)')]
     )
 
@@ -2535,7 +2535,7 @@ rombandeeva.add_element('mansi:VowMorpheme', '^акве', 'akwe_adj_to_adv').app
     [
         grammar.Action('gram:adj_to_adv')
     ]
-).provide_mutation_link(
+).provide_mutation_links(
     [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adj)')]
 )
 
@@ -2544,7 +2544,7 @@ rombandeeva.add_element('mansi:VowMorpheme', '^сан!', 'sa*ng_adj_to_adv').app
     [
         grammar.Action('gram:adj_to_adv')
     ]
-).provide_mutation_link(
+).provide_mutation_links(
     [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adj)')]
 )
 
@@ -2553,7 +2553,7 @@ rombandeeva.add_element('universal:morpheme', '^сын!', 'sy*ng_adj_to_adv').ap
     [
         grammar.Action('gram:adj_to_adv')
     ]
-).provide_mutation_link(
+).provide_mutation_links(
     [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adj)')]
 )
 
@@ -2562,7 +2562,7 @@ rombandeeva.add_element('universal:morpheme', '^т', 't_pron_to_adv').applied(
     [
         grammar.Action('gram:pronoun_to_adv')
     ]
-).provide_mutation_link(
+).provide_mutation_links(
     [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(pronoun)')]
 )
 
@@ -2572,7 +2572,7 @@ rombandeeva.add_element('universal:morpheme', '^ле', 'le_pron/adv_to_adv').app
         grammar.Action('gram:pronoun_to_adv', branching=True),
         grammar.Action('gram:new_adv', branching=True)
     ]
-).provide_mutation_link(
+).provide_mutation_links(
     [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(pronoun)')]
 )
 
@@ -2581,7 +2581,7 @@ rombandeeva.add_element('universal:morpheme', '^ыл', 'yl_pron_to_adv').applied
     [
         grammar.Action('gram:pronoun_to_adv')
     ]
-).provide_mutation_link(
+).provide_mutation_links(
     [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(pronoun)')]
 )
 
@@ -2590,7 +2590,7 @@ rombandeeva.add_element('mansi:VowMorpheme', '^ах', '[y]akh_verb_to_adv').appl
     [
         grammar.Action('gram:verb_to_adv')
     ]
-).add_class('infinitive_excl_suff').provide_mutation_link(
+).add_class('infinitive_excl_suff').provide_mutation_links(
     [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(pronoun)')]
 )
 
