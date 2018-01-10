@@ -28,7 +28,7 @@
 Args: *position* **N** (of token in the line)
 - `true` if the token contains `’` or `°`
 - `true` if `/` was found on the start of the token with position **N** (token groups may be taken into account)
-- `true` if `/` was found on the start of a token with position **N**-**x** and all tokens with positions between **N** and **N**-**x** have `,` on the end; if there are token groups (but not single tokens) between `,` length of token groups must be equal
+- `true` if `/` was found on the start of a token with position **N**-**x** and all tokens with positions between **N** and **N**-**x** have `,` on the end; if there are token groups (but not single tokens) between `,` number of tokens in all (or at least 2) groups must be equal
   - case of `/1. ӓкӓк-өвәмл’ ӓптӓх,	ӓкӓн-өвәм-тӓптӓх; 2. ӓкӓн-ща°хщәй-тӓх, ӓкӓн-щӓ кщәйтӓх`
 - `false`: else
 
