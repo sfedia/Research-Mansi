@@ -13,6 +13,7 @@ new_bv = []
 class SplitString:
     def __init__(self, str2split, simplify=True):
         self.str2split = str2split
+        self.str2split = re.sub(r',(?!\s)', ', ', self.str2split)
         self.symbols = [x for x in 'аӓбвгдеёжзийклмнӈоӧөпрстуӱфхцчшщъыьэәӛюя']
         self.simplify = {
             'ӓ': 'а',
@@ -84,21 +85,35 @@ class SplitString:
         unsorted_stripped = [x.strip(string.punctuation) for x in s.split()]
         sorted_stripped = []
         corresp = {}
+        corresp_indices = {}
+        corresp_use = {}
         for us_token in unsorted_stripped:
             key_token = us_token
             if simplify:
                 for simpl in self.simplify:
                     key_token = key_token.replace(simpl, self.simplify[simpl])
-            corresp[key_token] = us_token
+                key_token = key_token.lower()
+            if key_token not in corresp:
+                corresp[key_token] = []
+            if key_token not in corresp_indices:
+                corresp_indices[key_token] = []
+            corresp[key_token].append(us_token)
+            corresp_indices[key_token].append(
+                [x for x, v in enumerate(unsorted_stripped) if v == us_token and x not in corresp_indices[key_token]][0]
+            )
+            corresp_use[key_token] = 0
             sorted_stripped.append(key_token)
         sorted_stripped.sort()
         sorted_indexed = []
         for token in sorted_stripped:
             sorted_indexed.append(
-                (unsorted_stripped.index(corresp[token]), corresp[token])
+                (corresp_indices[token][corresp_use[token]], corresp[token][corresp_use[token]])
             )
+            corresp_use[token] += 1
         return sorted_indexed
 
 
-sm = SplitString("сорт щӱка /са°рт, со°рт сорум смерть /ӓ°щәл’")
-print(sm.check_in_af_range(3))
+sm = SplitString("вор ургалан хотпа леснйк /суй урәйл’ӓ°л’нәха°р, суй урәй-л’ӓнха°р; суй урәйл’ӓпха°р, суй урил’ӓлха°р ворсик I трясогӱзка /вӓрщәх Ворсик II Ворсик (клйчка со-бякн) /Ворсих")
+print(sm.sort_mansi(sm.str2split))
+while True:
+    print(sm.check_in_af_range(int(input())))
