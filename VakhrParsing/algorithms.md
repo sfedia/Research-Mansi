@@ -6,7 +6,7 @@
 # Split lines
 - Extract the title (`A`)
 - Find the nearest tokens to `A` in the line (alphabet sort and string similarity)
-- Obtain their position and ignore *examples* and *alternative forms*
+- Obtain their position and ignore *examples*, *alternative forms* and russian words
 - Split the line in all relevant positions
 
 # Pre-format the line
