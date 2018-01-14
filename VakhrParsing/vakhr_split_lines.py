@@ -24,13 +24,17 @@ class SplitString:
         self.sorted = self.sort_mansi(self.str2split, simplify)
         self.str_splitted = self.str2split.split()
         self.class_cmcc = r'[А-ЯӒЁӇӦӰӘӚ]'
-        self.class_smcc = r'[а-яӓёӈӧӱәӛ]'
-        self.class_smcc_n_punct = r'[а-яӓёӈӧӱәӛ\,\-\s]'
-        self.regex_examples = r'{CMCC}{SMMC_PUNCT}+\s*[\.!\?](\s*{CMMC}{SMMC_PUNCT}+\s*[\.!\?]*\s*)?'
+        self.class_smcc = r'[а-яӓёӈӧөӱәӛ]'
+        self.class_smcc_n_punct = r"[а-яӓёӈӧөӱәӛ\,\-\s']"
+        self.class_smcc_n_punct_ext = r"[а-яӓёӈӧөӱәӛ\,\-\s\(\)']"
+        self.regex_examples = r'{CMCC}{SMCC_PUNCT_EXT}+\s*[\.!\?](\s*{CMCC}({SMCC_PUNCT_EXT}+(\.\s*{SMCC}+)?)+\s*[\.!\?]*\s*)?'
         self.regex_examples = self.regex_examples.format(
-            CMCC=self.class_smcc,
-            SMCC_PUNCT=self.class_smcc_n_punct
+            CMCC=self.class_cmcc,
+            SMCC=self.class_smcc,
+            SMCC_PUNCT_EXT=self.class_smcc_n_punct_ext
         )
+        self.examp_ranges = self.regex_ranges(self.regex_examples, self.str2split)
+        print(self.regex_examples)
 
     @staticmethod
     def regex_ranges(regex, search_string):
@@ -45,9 +49,10 @@ class SplitString:
         sym_ranges = [[x.start(), x.end()] for x in re.finditer(regex, search_string)]
         token_ranges = []
         for sr_start, sr_end in sym_ranges:
-            start_token = min(new_token_inds, key=lambda x: abs(x - sr_start) * (8192 if x > sr_start else 1))
-            end_token = min(new_token_inds, key=lambda x: abs(x - sr_start) * (8192 if x < sr_start else 1))
-            token_ranges.append([start_token, end_token])
+            print(sr_start, sr_end)
+            start_token = min(new_token_inds, key=lambda x: abs(x - sr_start) * (65536 if x > sr_start else 1))
+            end_token = min(new_token_inds, key=lambda x: abs(x - sr_start) * (65536 if x < sr_start else 1))
+            token_ranges.append([new_token_inds.index(start_token), new_token_inds.index(end_token)])
         return token_ranges
 
     @staticmethod
@@ -121,7 +126,7 @@ class SplitString:
         return sorted_indexed
 
 
-sm = SplitString("вор ургалан хотпа леснйк /суй урәйл’ӓ°л’нәха°р, суй урәй-л’ӓнха°р; суй урәйл’ӓпха°р, суй урил’ӓлха°р ворсик I трясогӱзка /вӓрщәх Ворсик II Ворсик (клйчка со-бякн) /Ворсих")
+sm = SplitString("аврахыӈ обрывистый /оврә-хәк, оврәхәӈ ага, аха межд. эге; Аха, наӈ командан мирыӈ олнэтэ. Эге, да у тебя и комӓнда, окӓзывается,большӓя (досл. многолюдная). /аха; Аха, нӓг ел'мхөлс командән йа-нйәй ол'әй.")
 print(sm.sort_mansi(sm.str2split))
 while True:
     print(sm.check_in_af_range(int(input())))
