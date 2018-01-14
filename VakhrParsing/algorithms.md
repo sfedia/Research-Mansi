@@ -36,6 +36,6 @@ Args: *position* **N** (of token in the line)
 # Recognize examples
 - Function *regex_range(REGEXP)* that returns two integers, indices of the first and the last token matched.
 - Character classes (see above)
-- Regex for example range (ignore ws): `{$CMCC} {$SMCC&PUNCT}+ \s* [\.!\?] ( \s* {$CMCC} {$SMCC&PUNCT}+ \s* [\.!\?]* \s* ) ?`
+- Regex for example range (ignore ws): `{$CMCC} {$SMCC&PUNCT_EXT}+ \s* [\.!\?] ( \s* {$CMCC} {$SMCC&PUNCT_EXT}+ \s* [\.!\?]* \s* ) ?`
 - `true` if token position **IN** the range
 - `false`: else
