@@ -1,7 +1,7 @@
 # Character classes [solved]
 - Capital mansi character class (CMCC): `[А-ЯӒЁӇӦӰӘӚ]`
-- Small mansi character class (SMCC): `[а-яӓёӈӧӱәӛ]`
-- SMCC & PUNCT: `[а-яӓёӈӧӱәӛ\,\-\s]`
+- Small mansi character class (SMCC): `[а-яӓёӈӧөӱәӛ]`
+- SMCC & PUNCT: `[а-яӓёӈӧөӱәӛ\,\-\s]`
 - SMCC & PUNCT EXT: `[а-яӓёӈӧөӱәӛ\,\-\s\(\)]`
 
 # Split lines
