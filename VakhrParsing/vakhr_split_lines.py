@@ -23,6 +23,14 @@ class SplitString:
         }
         self.sorted = self.sort_mansi(self.str2split, simplify)
         self.str_splitted = self.str2split.split()
+        self.class_cmcc = r'[А-ЯӒЁӇӦӰӘӚ]'
+        self.class_smcc = r'[а-яӓёӈӧӱәӛ]'
+        self.class_smcc_n_punct = r'[а-яӓёӈӧӱәӛ\,\-\s]'
+        self.regex_examples = r'{CMCC}{SMMC_PUNCT}+\s*[\.!\?](\s*{CMMC}{SMMC_PUNCT}+\s*[\.!\?]*\s*)?'
+        self.regex_examples = self.regex_examples.format(
+            CMCC=self.class_smcc,
+            SMCC_PUNCT=self.class_smcc_n_punct
+        )
 
     @staticmethod
     def regex_ranges(regex, search_string):
