@@ -32,6 +32,16 @@ Args: *position* **N** (of token in the line)
 - `true` if `/` was found on the start of a token with position **N**-**x** and all tokens with positions between **N** and **N**-**x** have `,` on the end; if there are token groups (but not single tokens) between `,` number of tokens in all (or at least 2) groups must be equal
   - case of `/1. ӓкӓк-өвәмл’ ӓптӓх,	ӓкӓн-өвәм-тӓптӓх; 2. ӓкӓн-ща°хщәй-тӓх, ӓкӓн-щӓ кщәйтӓх`
 - `false`: else
+## Regex solution
+- Get token with position **N** -> `__ROOT__`
+- Join by whitespace `ARR[:N+1]` -> `PREFIX`
+- Join by whitespace `ARR[N:]` -> `POSTFIX`
+- Match `PREFIX` by `\/([^\/]+__ROOT__)$` -> extract group 1 -> `PREFIX_GROUPS`
+- Match `PREFIX_GROUPS` by `[^),;]+` -> extract groups **>0** -> `PREFIX_FORMS` -> trim()
+- max (?) length of a forms in `PREFIX_FORMS` -> `PF_MAX_LENGTH`
+- decrement `PF_MAX_LENGTH` -> `PF_MAX_LENGTH_DECR`
+- Match `POSTFIX` by `^пурәщ(\s+{SMCC}+){PF_LENGTH_DECR}` -> extract group 0 -> `POSTFIX_FORMS` -> trim()
+- **.start()** and **.end()** methods can be used to determine the borders
 
 # Recognize examples
 - Function *regex_range(REGEXP)* that returns two integers, indices of the first and the last token matched.
