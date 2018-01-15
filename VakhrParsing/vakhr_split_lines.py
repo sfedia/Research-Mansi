@@ -20,6 +20,7 @@ class SplitString:
             'ӓ': 'а',
             'ӧ': 'о',
             'ӱ': 'у',
+            'ӈ': 'н',
             'ӛ': 'ә'
         }
         self.sorted = self.sort_mansi(self.str2split, simplify)
@@ -91,7 +92,7 @@ class SplitString:
         group_numbers = [0]
         commas_number = 0
         wrong_const = 3
-        for i in range(position, slash_pos - 1, -1):
+        for i in range(position - 1, slash_pos - 1, -1):
             if (position - i) == wrong_const:
                 if self.debug:
                     print('AF Range: wrong const exceeded, return False')
@@ -101,10 +102,14 @@ class SplitString:
             else:
                 commas_number += 1
                 group_numbers.append(0)
-        in_range = len(group_numbers) != len(set(group_numbers)) and len(group_numbers) == (commas_number - 1)
+            if self.debug:
+                print('AF Range:', 'group_numbers=', group_numbers)
+                print('AF Range:', 'commas_number=', commas_number)
+                print('AF Range:', 'token=', str_splitted_ed[i])
+        in_range = len(group_numbers) != len(set(group_numbers)) and len(group_numbers) == (commas_number + 1)
         if self.debug and in_range:
             print('AF Range:', 'lookbehind test was successful')
-        else:
+        elif self.debug:
             print('AF Range:', 'lookbehind test was NOT successful')
         return in_range
 
@@ -155,7 +160,8 @@ class SplitString:
         for index, token in srted[null_index + 1:]:
             if index <= 2:
                 continue
-            print('Sorted:', 'check pos', index)
+            if self.debug:
+                print('Sorted:', 'check pos', index)
             if (next_sym is not None and token[0] in (title_sym, next_sym)) or title_sym == token[0]:
                 if self.debug:
                     print('Sorted:', 'THIS/NEXT SYM')
@@ -163,7 +169,8 @@ class SplitString:
                     if self.debug:
                         print('Sorted:', 'Not in Ex_R and Not in AF_R')
                     if last_index is None or (index - last_index) > 2:
-                        print('Sorted:', 'Last_Index Check')
+                        if self.debug:
+                            print('Sorted:', 'Last_Index Check')
                         split_positions.append(index)
                         last_index = index
         return split_positions
