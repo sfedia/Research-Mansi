@@ -11,7 +11,8 @@ new_bv = []
 
 
 class SplitString:
-    def __init__(self, str2split, simplify=True):
+    def __init__(self, str2split, simplify=True, debug=False):
+        self.debug = debug
         self.str2split = str2split
         self.str2split = re.sub(r',(?!\s)', ', ', self.str2split)
         self.symbols = [x for x in 'аӓбвгдеёжзийклмнӈоӧөпрстуӱфхцчшщъыьэәӛюя']
@@ -34,7 +35,8 @@ class SplitString:
             SMCC_PUNCT_EXT=self.class_smcc_n_punct_ext
         )
         self.examp_ranges = self.regex_ranges(self.regex_examples, self.str2split)
-        print(self.examp_ranges)
+        if debug:
+            print('Examp_Ranges:', self.examp_ranges)
 
     @staticmethod
     def regex_ranges(regex, search_string):
@@ -124,13 +126,15 @@ class SplitString:
         return sorted_indexed
 
     def get_split_positions(self):
-        sorted = self.sort_mansi(self.str2split)
+        srted = self.sort_mansi(self.str2split)
+        if self.debug:
+            print('Sorted:', srted)
         split_positions = []
-        title_sym = sorted[0][1][0]
+        title_sym = srted[0][1][0]
         this_index = self.symbols.index(title_sym)
         next_sym = None if this_index == len(self.symbols) - 1 else self.symbols[this_index + 1]
         last_index = None
-        for index, token in sorted:
+        for index, token in srted:
             if index <= 2:
                 continue
             if (next_sym is not None and token[0] in (title_sym, next_sym)) or title_sym == token[0]:
