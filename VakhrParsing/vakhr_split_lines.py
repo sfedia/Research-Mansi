@@ -34,7 +34,7 @@ class SplitString:
             SMCC_PUNCT_EXT=self.class_smcc_n_punct_ext
         )
         self.examp_ranges = self.regex_ranges(self.regex_examples, self.str2split)
-        print(self.regex_examples)
+        print(self.examp_ranges)
 
     @staticmethod
     def regex_ranges(regex, search_string):
@@ -49,9 +49,8 @@ class SplitString:
         sym_ranges = [[x.start(), x.end()] for x in re.finditer(regex, search_string)]
         token_ranges = []
         for sr_start, sr_end in sym_ranges:
-            print(sr_start, sr_end)
             start_token = min(new_token_inds, key=lambda x: abs(x - sr_start) * (65536 if x > sr_start else 1))
-            end_token = min(new_token_inds, key=lambda x: abs(x - sr_start) * (65536 if x < sr_start else 1))
+            end_token = min(new_token_inds, key=lambda x: abs(x - sr_end) * (65536 if x < sr_end else 1))
             token_ranges.append([new_token_inds.index(start_token), new_token_inds.index(end_token)])
         return token_ranges
 
@@ -94,7 +93,6 @@ class SplitString:
         return len(group_numbers) != len(set(group_numbers)) and len(group_numbers) == (commas_number - 1)
 
     def sort_mansi(self, s, simplify=True):
-        unsorted_unstripped = s.split()
         unsorted_stripped = [x.strip(string.punctuation) for x in s.split()]
         sorted_stripped = []
         corresp = {}
@@ -125,8 +123,24 @@ class SplitString:
             corresp_use[token] += 1
         return sorted_indexed
 
+    def get_split_positions(self):
+        sorted = self.sort_mansi(self.str2split)
+        split_positions = []
+        title_sym = sorted[0][1][0]
+        this_index = self.symbols.index(title_sym)
+        next_sym = None if this_index == len(self.symbols) - 1 else self.symbols[this_index + 1]
+        last_index = None
+        for index, token in sorted:
+            if index <= 2:
+                continue
+            if (next_sym is not None and token[0] in (title_sym, next_sym)) or title_sym == token[0]:
+                if not self.in_regex_ranges(index, self.examp_ranges) and not self.check_in_af_range(index):
+                    if last_index is None or (index - last_index) > 2:
+                        split_positions.append([index, token])
+                        last_index = index
+        return split_positions
+
+
 
 sm = SplitString("аврахыӈ обрывистый /оврә-хәк, оврәхәӈ ага, аха межд. эге; Аха, наӈ командан мирыӈ олнэтэ. Эге, да у тебя и комӓнда, окӓзывается,большӓя (досл. многолюдная). /аха; Аха, нӓг ел'мхөлс командән йа-нйәй ол'әй.")
-print(sm.sort_mansi(sm.str2split))
-while True:
-    print(sm.check_in_af_range(int(input())))
+print(sm.get_split_positions())
