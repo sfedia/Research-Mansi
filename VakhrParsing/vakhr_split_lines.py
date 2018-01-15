@@ -14,6 +14,8 @@ class SplitString:
     def __init__(self, str2split, simplify=True, debug=False):
         self.debug = debug
         self.str2split = str2split
+        if self.debug:
+            print('Str2Split:', self.str2split)
         self.str2split = re.sub(r',(?!\s)', ', ', self.str2split)
         self.symbols = [x for x in 'аӓбвгдеёжзийклмнӈоӧөпрстуӱфхцчшщъыьэәӛюя']
         self.simplify = {
