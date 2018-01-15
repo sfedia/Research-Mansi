@@ -91,7 +91,7 @@ class SplitString:
         group_numbers = [0]
         commas_number = 0
         wrong_const = 3
-        for i in range(position - 1, slash_pos - 1, -1):
+        for i in range(position, slash_pos - 1, -1):
             if (position - i) == wrong_const:
                 if self.debug:
                     print('AF Range: wrong const exceeded, return False')
