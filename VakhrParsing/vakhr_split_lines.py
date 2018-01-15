@@ -64,12 +64,18 @@ class SplitString:
         return False
 
     def check_in_af_range(self, position):
+        if self.debug:
+            print('AF Range: position', position)
         str_splitted_ed = self.str2split
         str_splitted_ed = re.sub(r'\d+\.\s*', '', str_splitted_ed)
         str_splitted_ed = str_splitted_ed.split()
         if re.search(r'[’°]', str_splitted_ed[position]):
+            if self.debug:
+                print('AF Range: special characters detected')
             return True
         if re.search(r'^\s*/', str_splitted_ed[position]):
+            if self.debug:
+                print('AF Range: slash detected')
             return True
         i = position
         slash_pos = 0
@@ -79,20 +85,28 @@ class SplitString:
                 break
             i -= 1
         if not slash_pos:
+            if self.debug:
+                print('AF Range: no slash pos, return False')
             return False
         group_numbers = [0]
         commas_number = 0
         wrong_const = 3
         for i in range(position - 1, slash_pos - 1, -1):
-            if i == wrong_const:
+            if (position - i) == wrong_const:
+                if self.debug:
+                    print('AF Range: wrong const exceeded, return False')
                 return False
-            if not re.search(r',\s*$', str_splitted_ed[position]):
+            if not re.search(r',\s*$', str_splitted_ed[i]):
                 group_numbers[-1] += 1
             else:
                 commas_number += 1
                 group_numbers.append(0)
-
-        return len(group_numbers) != len(set(group_numbers)) and len(group_numbers) == (commas_number - 1)
+        in_range = len(group_numbers) != len(set(group_numbers)) and len(group_numbers) == (commas_number - 1)
+        if self.debug and in_range:
+            print('AF Range:', 'lookbehind test was successful')
+        else:
+            print('AF Range:', 'lookbehind test was NOT successful')
+        return in_range
 
     def sort_mansi(self, s, simplify=True):
         unsorted_stripped = [x.strip(string.punctuation) for x in s.split()]
@@ -130,21 +144,30 @@ class SplitString:
         if self.debug:
             print('Sorted:', srted)
         split_positions = []
-        title_sym = srted[0][1][0]
+        null_index = [e for e, pair in enumerate(srted) if not pair[0]][0]
+        title_sym = srted[null_index][1][0]
         this_index = self.symbols.index(title_sym)
         next_sym = None if this_index == len(self.symbols) - 1 else self.symbols[this_index + 1]
         last_index = None
-        for index, token in srted:
+        null_index = [e for e, pair in enumerate(srted) if not pair[0]][0]
+        if null_index == len(srted) - 1:
+            return []
+        for index, token in srted[null_index + 1:]:
             if index <= 2:
                 continue
+            print('Sorted:', 'check pos', index)
             if (next_sym is not None and token[0] in (title_sym, next_sym)) or title_sym == token[0]:
+                if self.debug:
+                    print('Sorted:', 'THIS/NEXT SYM')
                 if not self.in_regex_ranges(index, self.examp_ranges) and not self.check_in_af_range(index):
+                    if self.debug:
+                        print('Sorted:', 'Not in Ex_R and Not in AF_R')
                     if last_index is None or (index - last_index) > 2:
-                        split_positions.append([index, token])
+                        print('Sorted:', 'Last_Index Check')
+                        split_positions.append(index)
                         last_index = index
         return split_positions
 
 
-
-sm = SplitString("аврахыӈ обрывистый /оврә-хәк, оврәхәӈ ага, аха межд. эге; Аха, наӈ командан мирыӈ олнэтэ. Эге, да у тебя и комӓнда, окӓзывается,большӓя (досл. многолюдная). /аха; Аха, нӓг ел'мхөлс командән йа-нйәй ол'әй.")
-print(sm.get_split_positions())
+while True:
+    print(SplitString(input(), debug=True).get_split_positions())
