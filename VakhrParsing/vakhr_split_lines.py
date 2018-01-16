@@ -31,12 +31,14 @@ class SplitString:
         self.class_smcc_n_punct = r"[а-яӓёӈӧөӱәӛ\,\-\s']"
         self.class_smcc_n_punct_ext = r"[а-яӓёӈӧөӱәӛ\,\-\s\(\)']"
         self.regex_examples = r'{CMCC}{SMCC_PUNCT_EXT}+\s*[\.!\?](\s*{CMCC}({SMCC_PUNCT_EXT}+(\.\s*{SMCC}+)?)+\s*[\.!\?]*\s*)?'
+        self.regex_examples += r'|;(\s+{SMCC_PUNCT_EXT}+)'
         self.token_number = 0
         self.regex_examples = self.regex_examples.format(
             CMCC=self.class_cmcc,
             SMCC=self.class_smcc,
             SMCC_PUNCT_EXT=self.class_smcc_n_punct_ext
         )
+        self.regex_examples += r'{5,}'
         self.examp_ranges = self.regex_ranges(self.regex_examples, self.str2split)
         if debug:
             print('Examp_Ranges:', self.examp_ranges)
@@ -113,7 +115,11 @@ class SplitString:
         postfix_forms_regex += r'{' + str(pf_ne_length_decr) + r'}'
 
         print(postfix_forms_regex)
-        postfix_forms = re.search(postfix_forms_regex, postfix).group(0).split()
+        try:
+            postfix_forms = re.search(postfix_forms_regex, postfix).group(0).split()
+        except AttributeError:
+            return False
+
         postfix_forms = [x.strip() for x in postfix_forms]
         end_pos = position + len(postfix_forms) - 1
         if len(postfix_forms) > 1:
@@ -187,5 +193,3 @@ while True:
     #print(SplitString(input(), debug=True).get_split_positions())
     a = SplitString(input(), debug=True)
     print(a.get_split_positions())
-    for _ in range(3):
-        print(a.check_in_af_range(int(input())))
