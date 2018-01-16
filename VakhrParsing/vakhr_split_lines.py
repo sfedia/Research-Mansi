@@ -175,11 +175,21 @@ class SplitString:
         if null_index == len(srted) - 1:
             return []
         for index, token in srted[null_index + 1:]:
+            if self.debug:
+                print('Position', index, ', step', -1)
             if index <= 2:
                 continue
+            if self.debug:
+                print('Position', index, ', step', 0)
             if (next_sym is not None and token[0] in (title_sym, next_sym)) or title_sym == token[0]:
+                if self.debug:
+                    print('Position', index, ', step', 1)
                 if not self.in_regex_ranges(index, self.examp_ranges) and not self.check_in_af_range(index):
+                    if self.debug:
+                        print('Position', index, ', step', 2)
                     if last_index is None or (index - last_index) > 1:
+                        if self.debug:
+                            print('Position', index, ', step', 3)
                         split_positions.append(index)
                         last_index = index
         return split_positions
