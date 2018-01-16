@@ -15,11 +15,13 @@ class SplitString:
         self.debug = debug
         self.str2split = str2split
         self.str2split = re.sub(r',(?!\s)', ', ', self.str2split)
+        self.str2split = re.sub(r'\d+\.\s*', '', self.str2split)
         self.symbols = [x for x in 'аӓбвгдеёжзийклмнӈоӧөпрстуӱфхцчшщъыьэәӛюя']
         self.simplify = {
             'ӓ': 'а',
             'ӧ': 'о',
             'ӱ': 'у',
+            'ӈ': 'н',
             'ӛ': 'ә'
         }
         self.sorted = self.sort_mansi(self.str2split, simplify)
@@ -65,14 +67,15 @@ class SplitString:
 
     def check_in_af_range(self, position):
         str_splitted_ed = self.str2split
-        str_splitted_ed = re.sub(r'\d+\.\s*', '', str_splitted_ed)
         str_splitted_ed = str_splitted_ed.split()
+
         if re.search(r"[’°']", str_splitted_ed[position]):
             return True
         if re.search(r'^\s*/', str_splitted_ed[position]):
             return True
         i = position
         slash_pos = 0
+
         while i > 0:
             if re.search(r'^\s*/', str_splitted_ed[i]):
                 slash_pos = i
@@ -80,19 +83,43 @@ class SplitString:
             i -= 1
         if not slash_pos:
             return False
-        group_numbers = [0]
-        commas_number = 0
-        wrong_const = 3
-        for i in range(position - 1, slash_pos - 1, -1):
-            if i == wrong_const:
-                return False
-            if not re.search(r',\s*$', str_splitted_ed[position]):
-                group_numbers[-1] += 1
-            else:
-                commas_number += 1
-                group_numbers.append(0)
 
-        return len(group_numbers) != len(set(group_numbers)) and len(group_numbers) == (commas_number - 1)
+        wrong_const = 3
+
+        root = str_splitted_ed[position]
+        prefix = ' '.join(str_splitted_ed[:position + 1])
+        postfix = ' '.join(str_splitted_ed[position:])
+
+        prefix_groups = re.search(r'/([^/]+{})$'.format(root), prefix).group(1)
+        prefix_forms = [x.strip() for x in re.findall(r'[^),;]+', prefix_groups)]
+
+        token_number = 0
+
+        def append_tn(x):
+            global token_number
+            token_number += x
+            return x
+
+        pf_length_values = [append_tn(len(x.split())) for x in prefix_forms]
+        pf_max_length = max(pf_length_values)
+        if pf_max_length > wrong_const:
+            return False
+
+        slash_pos = position - token_number + 1
+
+        pf_max_length_decr = pf_max_length - 1
+        postfix_forms_regex = r'^' + root
+        postfix_forms_regex += r'(\s+{SMCC}+)'.format(SMCC=self.class_smcc)
+        postfix_forms_regex += r'{' + str(pf_max_length_decr) + r'}'
+
+        postfix_forms = re.search(postfix_forms_regex, postfix).group(0)
+        postfix_forms = [x.strip() for x in postfix_forms]
+        end_pos = position + len(postfix_forms) - 1
+        pf_length_values.append(len(postfix_forms))
+        if len(pf_length_values) == len(set(pf_length_values)):
+            return False
+
+        return slash_pos <= position <= end_pos
 
     def sort_mansi(self, s, simplify=True):
         unsorted_stripped = [x.strip(string.punctuation) for x in s.split()]
@@ -141,8 +168,11 @@ class SplitString:
             if index <= 2:
                 continue
             if (next_sym is not None and token[0] in (title_sym, next_sym)) or title_sym == token[0]:
-                if not self.in_regex_ranges(index, self.examp_ranges) and not self.check_in_af_range(index):
-                    if last_index is None or (index - last_index) > 2:
+                print(index, 0)
+                if not self.in_regex_ranges(index, self.examp_ranges) or not self.check_in_af_range(index):
+                    print(index, 1)
+                    if last_index is None or (index - last_index) > 1:
+                        print(index, 2)
                         split_positions.append(index)
                         last_index = index
         return split_positions
