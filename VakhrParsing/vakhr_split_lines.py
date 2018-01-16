@@ -31,6 +31,7 @@ class SplitString:
         self.class_smcc_n_punct = r"[а-яӓёӈӧөӱәӛ\,\-\s']"
         self.class_smcc_n_punct_ext = r"[а-яӓёӈӧөӱәӛ\,\-\s\(\)']"
         self.regex_examples = r'{CMCC}{SMCC_PUNCT_EXT}+\s*[\.!\?](\s*{CMCC}({SMCC_PUNCT_EXT}+(\.\s*{SMCC}+)?)+\s*[\.!\?]*\s*)?'
+        self.token_number = 0
         self.regex_examples = self.regex_examples.format(
             CMCC=self.class_cmcc,
             SMCC=self.class_smcc,
@@ -65,6 +66,10 @@ class SplitString:
                 return True
         return False
 
+    def append_tn(self, x):
+        self.token_number += x
+        return x
+
     def check_in_af_range(self, position):
         str_splitted_ed = self.str2split
         str_splitted_ed = str_splitted_ed.split()
@@ -93,30 +98,30 @@ class SplitString:
         prefix_groups = re.search(r'/([^/]+{})$'.format(root), prefix).group(1)
         prefix_forms = [x.strip() for x in re.findall(r'[^),;]+', prefix_groups)]
 
-        token_number = 0
-
-        def append_tn(x):
-            global token_number
-            token_number += x
-            return x
-
-        pf_length_values = [append_tn(len(x.split())) for x in prefix_forms]
+        self.token_number = 0
+        pf_length_values = [self.append_tn(len(x.split())) for x in prefix_forms]
+        pf_ne_length = pf_length_values[0]
         pf_max_length = max(pf_length_values)
         if pf_max_length > wrong_const:
             return False
 
-        slash_pos = position - token_number + 1
+        slash_pos = position - self.token_number + 1
 
-        pf_max_length_decr = pf_max_length - 1
+        pf_ne_length_decr = pf_ne_length - 1
         postfix_forms_regex = r'^' + root
         postfix_forms_regex += r'(\s+{SMCC}+)'.format(SMCC=self.class_smcc)
-        postfix_forms_regex += r'{' + str(pf_max_length_decr) + r'}'
+        postfix_forms_regex += r'{' + str(pf_ne_length_decr) + r'}'
 
-        postfix_forms = re.search(postfix_forms_regex, postfix).group(0)
+        print(postfix_forms_regex)
+        postfix_forms = re.search(postfix_forms_regex, postfix).group(0).split()
         postfix_forms = [x.strip() for x in postfix_forms]
         end_pos = position + len(postfix_forms) - 1
-        pf_length_values.append(len(postfix_forms))
+        if len(postfix_forms) > 1:
+            del pf_length_values[-1]
+            pf_length_values.append(len(postfix_forms) + len(prefix_forms[-1].split()) - 1)
         if len(pf_length_values) == len(set(pf_length_values)):
+            return False
+        if max(pf_length_values) > wrong_const:
             return False
 
         return slash_pos <= position <= end_pos
@@ -169,7 +174,7 @@ class SplitString:
                 continue
             if (next_sym is not None and token[0] in (title_sym, next_sym)) or title_sym == token[0]:
                 print(index, 0)
-                if not self.in_regex_ranges(index, self.examp_ranges) or not self.check_in_af_range(index):
+                if not self.in_regex_ranges(index, self.examp_ranges) and not self.check_in_af_range(index):
                     print(index, 1)
                     if last_index is None or (index - last_index) > 1:
                         print(index, 2)
@@ -179,4 +184,8 @@ class SplitString:
 
 
 while True:
-    print(SplitString(input(), debug=True).get_split_positions())
+    #print(SplitString(input(), debug=True).get_split_positions())
+    a = SplitString(input(), debug=True)
+    print(a.get_split_positions())
+    for _ in range(3):
+        print(a.check_in_af_range(int(input())))
