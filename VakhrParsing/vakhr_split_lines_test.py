@@ -62,5 +62,7 @@ for e, test in enumerate(tests):
     else:
         wrong.append(e)
 
+print()
+print('---')
 print('{} out of {}'.format(correct, len(tests)))
 print('wrong tests:', ', '.join(['N' + str(x + 1) for x in wrong]))
