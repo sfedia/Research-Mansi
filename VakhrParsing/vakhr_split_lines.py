@@ -114,7 +114,6 @@ class SplitString:
         postfix_forms_regex += r'(\s+{SMCC}+)'.format(SMCC=self.class_smcc)
         postfix_forms_regex += r'{' + str(pf_ne_length_decr) + r'}'
 
-        print(postfix_forms_regex)
         try:
             postfix_forms = re.search(postfix_forms_regex, postfix).group(0).split()
         except AttributeError:
@@ -179,17 +178,15 @@ class SplitString:
             if index <= 2:
                 continue
             if (next_sym is not None and token[0] in (title_sym, next_sym)) or title_sym == token[0]:
-                print(index, 0)
                 if not self.in_regex_ranges(index, self.examp_ranges) and not self.check_in_af_range(index):
-                    print(index, 1)
                     if last_index is None or (index - last_index) > 1:
-                        print(index, 2)
                         split_positions.append(index)
                         last_index = index
         return split_positions
 
 
-while True:
-    #print(SplitString(input(), debug=True).get_split_positions())
-    a = SplitString(input(), debug=True)
-    print(a.get_split_positions())
+if __name__ == "__main__":
+    while True:
+        #print(SplitString(input(), debug=True).get_split_positions())
+        a = SplitString(input(), debug=True)
+        print(a.get_split_positions())
