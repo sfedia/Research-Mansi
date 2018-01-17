@@ -39,18 +39,19 @@ test_lines = []
 digit_n_paren = False
 for line in test_file.splitlines():
     if re.search(r'^\d+\)$', line):
+        i += 1
         continue
     elif line:
         test_lines.append(line)
-        i += 1
     elif not line:
+        tests.append([test_lines, test_results[i]])
         test_lines = []
-    tests.append([test_lines, test_results[i]])
+tests.append([test_lines, test_results[i]])
 
 correct = 0
 wrong = []
 for e, test in enumerate(tests):
-    result = SplitString(test[0][0], next_lines=test[0][1:]).get_split_positions()
+    result = SplitString(test[0][0], next_lines=[x for x in test[0][1:] if x != '']).get_split_positions()
     print("{})".format(e + 1), test[1], '<==>', result, '(result)')
     if result == test[1]:
         correct += 1
