@@ -204,8 +204,8 @@ class SplitString:
                     split_nl_first = self.next_lines[0].split()
                     split_nl_second = self.next_lines[1].split()
                     is_good = True
-                    for tkn in (split_nl_first, split_nl_second):
-                        is_good = not re.search(r'^\s*({}|{})'.format(self.class_smcc, self.class_cmcc), tkn)
+                    for tkn in (split_nl_first[0], split_nl_second[0]):
+                        is_good = re.search(r'^\s*({}|{})'.format(self.class_smcc, self.class_cmcc), tkn)
                     if is_good:
                         alphabet_comparison = token < split_nl_first[0] or token < split_nl_second[0]
 
