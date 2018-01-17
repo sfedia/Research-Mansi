@@ -29,21 +29,28 @@ test_results = [
     [3],  # 24
     [],  # 25
     [],  # 26
+    [7],  # 27
+    [],  # 28
 ]
 test_file = open('vakhr_split_lines_TESTS.txt', encoding='utf-8').read()
 tests = []
 i = -1
+test_lines = []
+digit_n_paren = False
 for line in test_file.splitlines():
-    if not line or re.search(r'^\d+\)$', line):
+    if re.search(r'^\d+\)$', line):
         continue
-    else:
+    elif line:
+        test_lines.append(line)
         i += 1
-    tests.append([line, test_results[i]])
+    elif not line:
+        test_lines = []
+    tests.append([test_lines, test_results[i]])
 
 correct = 0
 wrong = []
 for e, test in enumerate(tests):
-    result = SplitString(test[0]).get_split_positions()
+    result = SplitString(test[0][0], next_lines=test[0][1:]).get_split_positions()
     print("{})".format(e + 1), test[1], '<==>', result, '(result)')
     if result == test[1]:
         correct += 1
