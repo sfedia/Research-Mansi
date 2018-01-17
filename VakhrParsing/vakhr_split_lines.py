@@ -129,10 +129,14 @@ class SplitString:
             pf_length_values.append(len(postfix_forms) + len(prefix_forms[-1].split()) - 1)
         if len(pf_length_values) == len(set(pf_length_values)):
             return False
+        if max(pf_length_values) != min(pf_length_values):
+            return False
+        """
         if len(pf_length_values) < 4 and max(pf_length_values) - min(pf_length_values) > 1:
             return False
         if len(pf_length_values) >= 4 and max(pf_length_values) != min(pf_length_values):
             return False
+        """
         if max(pf_length_values) > wrong_const:
             return False
 
