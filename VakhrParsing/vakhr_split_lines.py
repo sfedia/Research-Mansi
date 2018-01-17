@@ -31,11 +31,12 @@ class SplitString:
         self.class_smcc_n_punct = r"[а-яӓёӈӧөӱәӛ\,\-\s']"
         self.class_smcc_n_punct_ext = r"[а-яӓёӈӧөӱәӛ\,\-\s\(\)']"
         self.regex_examples = r'{CMCC}{SMCC_PUNCT_EXT}+\s*[\.!\?](\s*{CMCC}({SMCC_PUNCT_EXT}+(\.\s*{SMCC}+)?)+\s*[\.!\?]*\s*)?'
-        self.regex_examples += r'|;(\s+{SMCC_PUNCT_EXT}+)'
+        self.regex_examples += r'|;(\s+{SMCC_PUNCT}+)'
         self.token_number = 0
         self.regex_examples = self.regex_examples.format(
             CMCC=self.class_cmcc,
             SMCC=self.class_smcc,
+            SMCC_PUNCT=self.class_smcc_n_punct,
             SMCC_PUNCT_EXT=self.class_smcc_n_punct_ext
         )
         self.regex_examples += r'{5,}'
@@ -43,8 +44,7 @@ class SplitString:
         if debug:
             print('Examp_Ranges:', self.examp_ranges)
 
-    @staticmethod
-    def regex_ranges(regex, search_string):
+    def regex_ranges(self, regex, search_string):
         new_token_inds = []
         new_token = True
         for i, sym in enumerate(search_string):
@@ -54,6 +54,8 @@ class SplitString:
             elif sym == ' ':
                 new_token = True
         sym_ranges = [[x.start(), x.end()] for x in re.finditer(regex, search_string)]
+        if self.debug:
+            print('Sym_Ranges:', sym_ranges)
         token_ranges = []
         for sr_start, sr_end in sym_ranges:
             start_token = min(new_token_inds, key=lambda x: abs(x - sr_start) * (65536 if x > sr_start else 1))
@@ -76,7 +78,7 @@ class SplitString:
         str_splitted_ed = self.str2split
         str_splitted_ed = str_splitted_ed.split()
 
-        if re.search(r"[’°']", str_splitted_ed[position]):
+        if re.search(r"[’°'ө]", str_splitted_ed[position]):
             return True
         if re.search(r'^\s*/', str_splitted_ed[position]):
             return True
@@ -125,6 +127,8 @@ class SplitString:
             del pf_length_values[-1]
             pf_length_values.append(len(postfix_forms) + len(prefix_forms[-1].split()) - 1)
         if len(pf_length_values) == len(set(pf_length_values)):
+            return False
+        if max(pf_length_values) - min(pf_length_values) > 1:
             return False
         if max(pf_length_values) > wrong_const:
             return False
