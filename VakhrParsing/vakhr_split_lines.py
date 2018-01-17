@@ -14,6 +14,7 @@ class SplitString:
     def __init__(self, str2split, simplify=True, debug=False):
         self.debug = debug
         self.str2split = str2split
+        self.src_str2split = self.str2split
         self.str2split = re.sub(r',(?!\s)', ', ', self.str2split)
         self.str2split = re.sub(r'\d+\.\s*', '', self.str2split)
         self.symbols = [x for x in 'аӓбвгдеёжзийклмнӈоӧөпрстуӱфхцчшщъыьэәӛюя']
@@ -181,7 +182,7 @@ class SplitString:
         for index, token in srted[null_index + 1:]:
             if self.debug:
                 print('Position', index, ', step', -1)
-            if index <= 2:
+            if index <= 2 or re.search(r'\d+\.\s*' + token + r'\s+', self.src_str2split):
                 continue
             if self.debug:
                 print('Position', index, ', step', 0)
