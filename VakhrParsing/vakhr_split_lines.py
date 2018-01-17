@@ -194,11 +194,12 @@ class SplitString:
             if self.debug:
                 print('Position', index, ', step', 0)
             alphabet_comparison = (next_sym is not None and token[0] in (title_sym, next_sym)) or title_sym == token[0]
+
             if alphabet_comparison and self.next_lines:
                 if len(self.next_lines) == 1:
                     split_nl = self.next_lines[0].split()
                     if re.search(r'^\s*({}|{})'.format(self.class_smcc, self.class_cmcc), split_nl[0]):
-                        alphabet_comparison = srted[null_index][1] < split_nl[0]
+                        alphabet_comparison = token < split_nl[0]
                 elif len(self.next_lines) > 1:
                     split_nl_first = self.next_lines[0].split()
                     split_nl_second = self.next_lines[1].split()
@@ -206,7 +207,8 @@ class SplitString:
                     for tkn in (split_nl_first, split_nl_second):
                         is_good = not re.search(r'^\s*({}|{})'.format(self.class_smcc, self.class_cmcc), tkn)
                     if is_good:
-                        alphabet_comparison = srted[null_index][1] < split_nl_first[0] or srted[null_index][1] < split_nl_second[0]
+                        alphabet_comparison = token < split_nl_first[0] or token < split_nl_second[0]
+
             if alphabet_comparison:
                 if self.debug:
                     print('Position', index, ', step', 1)
