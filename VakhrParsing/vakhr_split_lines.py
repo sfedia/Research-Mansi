@@ -172,6 +172,29 @@ class SplitString:
                 (corresp_indices[token][corresp_use[token]], corresp[token][corresp_use[token]])
             )
             corresp_use[token] += 1
+        title_includes = []
+        title_positions = []
+        title_index = None
+        for i, el in enumerate(sorted_indexed):
+            pos, token = el
+            for j, d_el in enumerate(sorted_indexed):
+                nps, tkn = d_el
+                if nps != 0:
+                    continue
+                else:
+                    title_index = j
+                if re.search(r'^' + token + r'.+', tkn) and len(token) > 4:
+                    title_includes.append(i)
+                    title_positions.append(pos)
+        if title_index is not None and title_includes and title_includes[0] < title_index and title_includes[0] < len(sorted_indexed) - 1:
+            found_title = sorted_indexed[title_includes[0]][1]
+            combined = found_title
+            next_index = [i for i, x in enumerate(sorted_indexed) if x[0] == (title_positions[0] + 1)][0]
+            combined += sorted_indexed[next_index][1]
+            if sorted_indexed[title_index][1] < combined:
+                sorted_indexed = sorted_indexed[:title_index + 1] +\
+                                 [(sorted_indexed[title_includes[0]][0], found_title)] + sorted_indexed[title_index + 1:]
+                del sorted_indexed[title_includes[0]]
         return sorted_indexed
 
     def get_split_positions(self):
