@@ -101,7 +101,11 @@ class SplitString:
         prefix = ' '.join(str_splitted_ed[:position + 1])
         postfix = ' '.join(str_splitted_ed[position:])
 
-        prefix_groups = re.search(r'/([^/]+{})$'.format(root), prefix).group(1)
+        try:
+            prefix_groups = re.search(r'/([^/]+{})$'.format(root), prefix).group(1)
+        except:
+            return False
+
         prefix_forms = [x.strip() for x in re.findall(r'[^),;]+', prefix_groups)]
 
         self.token_number = 0
@@ -238,7 +242,7 @@ class SplitString:
                 if not self.in_regex_ranges(index, self.examp_ranges) and not self.check_in_af_range(index):
                     if self.debug:
                         print('Position', index, ', step', 2)
-                    if last_index is None or (index - last_index) > 1:
+                    if last_index is None or (index - last_index) > 2:
                         if self.debug:
                             print('Position', index, ', step', 3)
                         split_positions.append(index)
