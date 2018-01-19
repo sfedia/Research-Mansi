@@ -38,6 +38,9 @@ test_results = [
     [4],  # 33
     [],  # 34
     [8],  # 35
+    [6],  # 36
+    [5],  # 37
+    [6],  # 38
 ]
 test_file = open('vakhr_split_lines_TESTS.txt', encoding='utf-8').read()
 tests = []
