@@ -247,11 +247,32 @@ class SplitString:
                             print('Position', index, ', step', 3)
                         split_positions.append(index)
                         last_index = index
+                        
         return split_positions
 
 
 if __name__ == "__main__":
     while True:
         #print(SplitString(input(), debug=True).get_split_positions())
-        a = SplitString(input(), debug=True)
-        print(a.get_split_positions())
+        input_string = input()
+        if input_string == 'PARSE_FILE':
+            break
+        else:
+            a = SplitString(input_string, debug=True)
+            print(a.get_split_positions())
+
+    print('lol')
+    vakhr_file = open('balandin_vakhr_4.txt', encoding='utf-8-sig')
+    with open('balandin_vakhr_SPLIT.txt', 'a') as bvs:
+        for e, line in enumerate(vakhr_file):
+            split_positions = SplitString(line, debug=True).get_split_positions()
+            pos_integers = [x[0] for x in split_positions]
+            new_lines = []
+            for i, token in enumerate(line.split()):
+                if i in pos_integers:
+                    new_lines.append('\n')
+                new_lines.append(token)
+            new_lines_join = ' '.join(new_lines)
+            new_lines_join = re.sub(r'\s+\n\s+', '\n', new_lines_join)
+            bvs.write(new_lines_join + '\n')
+        bvs.close()
