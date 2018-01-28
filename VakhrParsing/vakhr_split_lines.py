@@ -247,7 +247,12 @@ class SplitString:
                             print('Position', index, ', step', 3)
                         split_positions.append(index)
                         last_index = index
-                        
+        if len(split_positions) >= 2:
+            for j in range(len(split_positions) - len(split_positions) % 2, step=2):
+                # recurrent call -> self.get_split_positions(...)
+                # for the pair split_positions[N] and split_positions[N+1]
+                pass
+
         return split_positions
 
 
