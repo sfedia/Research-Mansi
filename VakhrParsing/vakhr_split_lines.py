@@ -247,13 +247,21 @@ class SplitString:
                             print('Position', index, ', step', 3)
                         split_positions.append(index)
                         last_index = index
+        new_split_positions = []
         if len(split_positions) >= 2:
-            for j in range(len(split_positions) - len(split_positions) % 2, step=2):
-                # recurrent call -> self.get_split_positions(...)
-                # for the pair split_positions[N] and split_positions[N+1]
-                pass
+            for j, pos in enumerate(split_positions):
+                new_split_positions.append(pos)
+                if pos % 2:
+                    continue
+                try:
+                    split_obj = SplitString(' '.join(self.str2split.split()[pos:split_positions[j+1]]))
+                    ex_pos = [x + pos for x in split_obj.get_split_positions()]
+                    if ex_pos:
+                        new_split_positions += ex_pos
+                except IndexError:
+                    pass
 
-        return split_positions
+        return new_split_positions
 
 
 if __name__ == "__main__":
