@@ -251,7 +251,7 @@ class SplitString:
         if len(split_positions) >= 2:
             for j, pos in enumerate(split_positions):
                 new_split_positions.append(pos)
-                if pos % 2:
+                if j % 2:
                     continue
                 try:
                     split_obj = SplitString(' '.join(self.str2split.split()[pos:split_positions[j+1]]))
@@ -260,6 +260,8 @@ class SplitString:
                         new_split_positions += ex_pos
                 except IndexError:
                     pass
+        else:
+            return split_positions
 
         return new_split_positions
 
