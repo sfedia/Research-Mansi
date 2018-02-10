@@ -1,0 +1,7375 @@
+﻿A1 Бондарко, А. В.
+FD 1976
+YR 1976
+T1 Теория морфологических категорий
+PP Л.
+PB Наука
+K1 грамматическое значение
+K1 значение
+
+
+A1 Булыгина, Т. В.
+FD 1980
+YR 1980
+T3 Булыгина & Шмелёв 199715-44
+T1 Грамматические и семантические категории и их связи 
+K1 грамматическое значение
+K1 значение
+
+
+A1 Bybee, J. L.
+FD 1985
+YR 1985
+T1 Morphology: A study of the relation between meaning and form
+PP Amsterdam
+PB Benjamins
+K1 грамматическое значение
+K1 значение
+
+
+A1 Anderson, Steven R.
+# a
+FD 1985
+YR 1985
+T3 Language typology and syntactic descriptionvol. III: Grammatical categories and the lexicon
+T2 Vol. III
+T1 Typological distinctions in word formation 
+A2 Shopen, T.
+PP Cambridge
+SP 3
+OP 56
+K1 грамматическое значение
+K1 значение
+
+
+A1 Corbett, G. G.
+FD 1999
+YR 1999
+T3 Yearbook of morphology 19981-22
+T1 Prototypical inflection: implications for typology 
+K1 грамматическое значение
+K1 значение
+
+
+A1 Stump, G.
+FD 2005
+YR 2005
+T3 P
+T1 Word formation and inflectional morphology 
+PP Štekauer & R. Lieber (eds.). Handbook of word-formation. Dordrecht
+SP 49
+OP 71
+K1 грамматическое значение
+K1 значение
+
+
+A1 Якобсон, Р. О.
+FD 1959
+YR 1959
+T3 Якобсон 1985231-238
+T1 Взгляды Боаса на грамматическое значение 
+NO Пер. с англ. 
+K1 грамматическое значение
+K1 обязательность
+
+
+RT Book, Whole
+A1 Гринберг
+T1 [Гринберг,1960]
+FD 1960
+YR 1960
+K1 грамматическое значение
+K1 обязательность
+
+
+A1 Зализняк, А. А.
+FD 1967
+YR 1967
+T1 Русское именное словоизменение
+PP М.
+PB Наука
+K1 грамматическое значение
+K1 обязательность
+
+
+A1 Маслова, Е. С.
+FD 1994
+YR 1994
+T2 Sec. 53.3
+T3 Известия РАН, серия литературы и языка
+T1 О критерии обязательности в морфологии 
+K1 грамматическое значение
+K1 обязательность
+
+
+A1 Перцов, Н. В.
+FD 2001
+YR 2001
+T1 Инварианты в русском словоизменении
+PP М.
+PB Языки русской культуры
+K1 грамматическое значение
+K1 обязательность
+
+
+A1 Сумбатова, Н. Р.
+FD 2002
+YR 2002
+T3 Лингвистический беспредел: Сб. статей к 70-летию А. И. Кузнецовой. 
+T1 Еще раз про обязательность 
+A2 Кибрик, А. Е.
+PP М.
+SP 289
+OP 304
+K1 грамматическое значение
+K1 обязательность
+
+
+A1 Князев, Ю. П.
+FD 2007
+YR 2007
+T1 Грамматическая семантика: Русский язык в типологической перспективе
+PP М.
+PB Языки славянских культур
+K1 грамматическое значение
+K1 обязательность
+
+
+A1 Bickel, B.
+A1 Nichols, J.
+FD 2007
+YR 2007
+T3 Language typology and syntactic descriptionvol. III: Grammatical categories and the lexicon
+T2 Vol. III
+T1 Inflectional morphology 
+A2 Shopen, T.
+PP Cambridge
+SP 169
+OP 240
+K1 грамматическое значение
+K1 обязательность
+
+
+RT Book, Whole
+A1 Зализняк
+T1 [Зализняк,1967]
+FD 1967
+YR 1967
+K1 парадигма
+K1 грамматическое значение
+
+
+A1 Matthews, P. H.
+FD 1972
+YR 1972
+T1 Inflectional morphology (a theoretical study based on aspects of Latin verb conjugation)
+PP Cambridge
+PB Cambridge U. Press
+K1 парадигма
+K1 грамматическое значение
+
+
+RT Book, Whole
+A1 Ревзин
+T1 [Ревзин,1973]
+FD 1973
+YR 1973
+K1 парадигма
+K1 грамматическое значение
+
+
+A1 Кубрякова, Е. С.
+FD 1974
+YR 1974
+T1 Основы морфологического анализа (на материале германских языков)
+PP М.
+PB Наука
+K1 парадигма
+K1 грамматическое значение
+
+
+A1 Wurzel, W. U.
+FD 1984
+YR 1984
+T1 Flexionsmorphologie und Natürlichkeit
+PP B.
+PB Akademie-Verlag 
+K1 парадигма
+K1 грамматическое значение
+
+
+RT Book, Whole
+A1 Bybee
+T1 [Bybee,1985]
+FD 1985
+YR 1985
+K1 парадигма
+K1 грамматическое значение
+
+
+A1 Dressler, W. U.
+A1 Mayerthaler, W.
+A1 Panagl, O.
+A1 Wurzel, W. U.
+FD 1987
+YR 1987
+T1 Leitmotifs in natural morphology
+PP Amsterdam
+PB Benjamins
+K1 парадигма
+K1 грамматическое значение
+
+
+A1 Comrie, B.
+FD 1991
+YR 1991
+T3 Paradigms: The economy of inflection. 
+T1 Form and function in identifying cases 
+A2 Plank, F.
+PP B.
+SP 41
+OP 55
+K1 парадигма
+K1 грамматическое значение
+
+
+A1 Anderson, Steven R.
+FD 1992
+YR 1992
+T1 A-morphous morphology
+PP Cambridge
+PB Cambridge U. Press
+K1 парадигма
+K1 грамматическое значение
+
+
+A1 Aronoff, M.
+FD 1994
+YR 1994
+T1 Morphology by itself: stems and inflectional classes
+PP Cambridge (MA)
+PB MIT
+K1 парадигма
+K1 грамматическое значение
+
+
+A1 Beard, R.
+# a
+FD 1995
+YR 1995
+T1 Lexeme-morpheme base morphology
+PP Albany
+PB SUNY Press
+K1 парадигма
+K1 грамматическое значение
+
+
+A1 Lemaréchal, A.
+FD 1998
+YR 1998
+T1 Etudes de morphologie en f(x, …)
+PP P.
+PB Peeters
+K1 парадигма
+K1 грамматическое значение
+
+
+A1 Stump, G.
+FD 2001
+YR 2001
+T1 Inflectional morphology
+PP Cambridge
+PB Cambridge U. Press
+K1 парадигма
+K1 грамматическое значение
+
+
+A1 Blevins, J. P.
+FD 2004
+YR 2004
+T3 Explorations in nominal inflection
+T1 Inflection classes and economy 
+A2 Müller, G.
+PP B.
+K1 парадигма
+K1 грамматическое значение
+
+
+RT Book, Whole
+A1 Bybee
+T1 [Bybee,1985]
+FD 1985
+YR 1985
+K1 оппозиция
+K1 грамматическое значение
+K1 значение
+
+
+A1 Dahl, Ö.
+FD 1985
+YR 1985
+T1 Tense and aspect systems
+PP Oxford
+PB Blackwell
+K1 оппозиция
+K1 грамматическое значение
+K1 значение
+
+
+A1 Живов, В. М.
+A1 Тимберлейк, А.
+FD 1997
+YR 1997
+T3 Вопросы языкознания1997
+T1 Расставаясь со структурализмом 
+K1 оппозиция
+K1 грамматическое значение
+K1 значение
+
+
+RT Book, Whole
+A1 Taylor
+T1 [Taylor,2003]
+FD 2003
+YR 2003
+K1 оппозиция
+K1 грамматическое значение
+K1 значение
+
+
+A1 Апресян, Ю. Д.
+FD 2004
+YR 2004
+T3 Типологические обоснования в грамматике: К 70-летию проф. В. С. Храковского. 
+T1 Принципы организации центра и периферии в лексике и грамматике 
+A2 Володин, А. П.
+PP М.
+SP 20
+OP 35
+K1 оппозиция
+K1 грамматическое значение
+K1 значение
+
+
+A1 Арутюнова, Н. Д.
+FD 1965
+YR 1965
+T3 Аналитические конструкции в языках различных типов
+T1 О критерии выделения аналитических форм 
+A2 Жирмунский, В. М.
+A2 Суник, О. П.
+PP М.–Л.
+SP 89
+OP 93
+K1 грамматика
+K1 форма
+K1 грамматическое значение
+
+
+RT Book, Whole
+A1 Арутюнова
+T1 [Арутюнова,1965]
+FD 1965
+YR 1965
+K1 грамматика
+K1 форма
+K1 грамматическое значение
+
+
+A1 Храковский, В. С.
+FD 1965
+YR 1965
+T3 Аналитические конструкции в языках различных типов
+T1 Аналитическая конструкция, аналитическая словоформа, аналитическое слово 
+A2 Жирмунский, В. М.
+A2 Суник, О. П.
+PP М.–Л.
+SP 209
+OP 221
+K1 грамматика
+K1 форма
+K1 грамматическое значение
+
+
+A1 Tauli, V.
+FD 1958
+YR 1958
+T1 The structural tendencies of languages
+PP Helsinki
+PB Academia scientiarum Fennica
+K1 грамматика
+K1 форма
+K1 грамматическое значение
+
+
+A1 Schwegler, A.
+FD 1990
+YR 1990
+T1 Analyticity and syntheticity
+PP B.
+PB Mouton de Gruyter
+K1 категория
+K1 грамматическое значение
+K1 число
+
+
+A1 Squartini, M.
+FD 1998
+YR 1998
+T1 Verbal periphrases in Romance: Aspect, actionality, and grammaticalization
+PP B.
+PB Mouton de Gruyter
+K1 категория
+K1 грамматическое значение
+K1 число
+
+
+A1 Павлов, В. М.
+FD 1998
+YR 1998
+T3 Типология
+T1 О месте «аналитической формы слова» и «аналитической конструкции» в грамматической системе 
+A2 Козинцева, Н. А.
+A2 Оглоблин, А. К.
+PP Грамматика. Семантика
+SP 235
+OP 245
+K1 категория
+K1 грамматическое значение
+K1 число
+
+
+A1 Калинина, Е. Ю.
+FD 2004
+YR 2004
+T3 40 лет Санкт-Петербургской типологической школе
+T1 Выражение предикативных категорий и место связки в структуре именного предложения 
+A2 Храковский, В. С.
+PP М.
+SP 129
+OP 144
+K1 категория
+K1 грамматическое значение
+K1 число
+
+
+A1 Сумбатова, Н. Р.
+FD 2004
+YR 2004
+T3 40 лет Санкт-Петербургской типологической школе
+T1 Коммуникативные категории и система глагола (о некоторых типологических особенностях дагестанского глагола) 
+A2 Храковский, В. С.
+PP М.
+SP 487
+OP 504
+K1 категория
+K1 грамматическое значение
+K1 число
+
+
+RT Book, Section
+A1 Булыгина, Т. В.
+A1 Крылов, С. А.
+T1 Категория
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 флексия
+K1 грамматическое значение
+K1 парадигма
+K1 лексема
+K1 словоформа
+K1 категория
+
+
+RT Book, Section
+A1 Булыгина, Т. В.
+A1 Крылов, С. А.
+T1 Лексема
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 флексия
+K1 грамматическое значение
+K1 парадигма
+K1 лексема
+K1 словоформа
+K1 категория
+
+
+RT Book, Section
+A1 Булыгина, Т. В.
+A1 Крылов, С. А.
+T1 Флексия
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 флексия
+K1 грамматическое значение
+K1 парадигма
+K1 лексема
+K1 словоформа
+K1 категория
+
+
+RT Book, Section
+A1 Зализняк, А. А.
+T1 Словоизменение
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 флексия
+K1 грамматическое значение
+K1 парадигма
+K1 лексема
+K1 словоформа
+K1 категория
+
+
+RT Book, Section
+A1 Зализняк, А. А.
+T1 Словоформа
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 флексия
+K1 грамматическое значение
+K1 парадигма
+K1 лексема
+K1 словоформа
+K1 категория
+
+
+RT Book, Section
+A1 Кубрякова, Е. С.
+T1 Парадигма
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 флексия
+K1 грамматическое значение
+K1 парадигма
+K1 лексема
+K1 словоформа
+K1 категория
+
+
+RT Book, Section
+A1 Кубрякова, Е. С.
+T1 Словообразование
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 флексия
+K1 грамматическое значение
+K1 парадигма
+K1 лексема
+K1 словоформа
+K1 категория
+
+
+RT Book, Section
+A1 см. список литературы sub ЛЭС
+T1 Языкознание: Большой энциклопедический словарь
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 грамматическое значение
+
+
+A1 Brown, K.
+A2 .
+A2 Miller, J.
+FD 1999
+YR 1999
+T1 Concise encyclopedia of grammatical categories
+PP Amsterdam
+PB Elsevier
+K1 грамматическое значение
+
+
+A2 Brown, K.
+FD 2006
+YR 2006
+T1 Encyclopedia of language and linguistics
+PP Amsterdam
+PB Elsevier 
+K1 грамматическое значение
+
+
+RT Book, Whole
+A1 Апресян и
+T1 [Апресян и,2004]
+FD 2004
+YR 2004
+K1 грамматический показатель
+
+
+RT Book, Whole
+A1 Dahl
+T1 [Dahl,1985]
+FD 1985
+YR 1985
+K1 грамматический показатель
+
+
+A1 Wierzbicka, A.
+FD 1988
+YR 1988
+T1 The semantics of grammar
+PP Amsterdam
+PB Benjamins
+K1 грамматический показатель
+
+
+A1 Поливанова, А. К.
+FD 1983
+YR 1983
+T3 Проблемы структурной лингвистики 1981
+T1 Выбор числовых форм существительных в русском языке 
+PP М.
+SP 130
+OP 145
+K1 грамматический показатель
+
+
+A1 Givón, T.
+FD 1991
+YR 1991
+T3 Approaches to grammaticalizationvol. 1
+T2 Vol. 1
+T1 Serial verbs and the mental reality of event: grammatical vs cognitive packaging 
+A2 Traugott, E. C.
+A2 Heine, B.
+PP Amsterdam
+SP 81
+OP 127
+K1 грамматический показатель
+K1 семантика
+K1 аспект
+
+
+A1 Bybee, J. L.
+A1 Perkins, R.
+A1 Pagliuca, W.
+FD 1994
+YR 1994
+T1 The evolution of grammar: Tense, aspect and modality in the languages of the world
+PP Chicago
+PB The U. of Chicago Press
+K1 грамматический показатель
+K1 семантика
+K1 аспект
+
+
+A1 Dahl, Ö.
+FD 2004
+YR 2004
+T1 The growth and maintenance of linguistic complexity
+PP Amsterdam
+PB Benjamins
+K1 грамматический показатель
+K1 семантика
+K1 аспект
+
+
+A1 Якобсон, Р. О.
+FD 1936
+YR 1936
+T3 Якобсон 1985133-175
+T1 К общему учению о падеже 
+NO Пер. с нем. 
+K1 инвариант
+K1 грамматический показатель
+K1 граммема
+
+
+A1 Курилович, Е.
+FD 1955
+YR 1955
+T3 Вопросы языкознания1955
+T1 Заметки о значении слова 
+SP 73
+OP 81
+K1 инвариант
+K1 грамматический показатель
+K1 граммема
+
+
+A1 Janda, L.
+FD 1993
+YR 1993
+T1 A geography of case semantics: The Czech dative and the Russian instrumental
+PP B.
+PB Mouton de Gruyter
+K1 инвариант
+K1 грамматический показатель
+K1 граммема
+
+
+A1 Падучева, Е. В.
+FD 1996
+YR 1996
+T1 Семантические исследования
+PP М.
+PB Языки русской культуры
+K1 инвариант
+K1 грамматический показатель
+K1 граммема
+
+
+RT Book, Whole
+A1 Перцов
+T1 [Перцов,2001]
+FD 2001
+YR 2001
+K1 инвариант
+K1 грамматический показатель
+K1 граммема
+
+
+A1 Бондарко, А. В.
+FD 2003
+YR 2003
+T3 Проблемы функциональной грамматики
+T1 Инварианты и прототипы в системе функциональной грамматики 
+A2 Бондарко, А. В.
+SP 5
+OP 36
+K1 инвариант
+K1 грамматический показатель
+K1 граммема
+
+
+RT Book, Whole
+A1 Dahl
+T1 [Dahl,1985]
+FD 1985
+YR 1985
+K1 грамматический показатель
+
+
+A1 Bybee, J. L.
+A1 Dahl, Ö.
+FD 1989
+YR 1989
+T2 Sec. 13.1
+T3 Studies in language
+T1 The creation of tense and aspect systems in the languages of the world 
+K1 грамматический показатель
+
+
+A1 Comrie, B.
+FD 1989
+YR 1989
+T1 Language universals and linguistic typology: Syntax and morphology
+PP Oxford
+PB Blackwell 
+K1 грамматический показатель
+
+
+RT Book, Whole
+A1 Bybee et al.
+T1 [Bybee et al.,1994]
+FD 1994
+YR 1994
+K1 грамматический показатель
+
+
+A1 Чвани, К. В.
+FD 1998
+YR 1998
+T3 Типология вида
+T1 Вид как часть универсального набора семантических признаков 
+A2 Черткова, М. Ю.
+PP , поиски, решения. М.
+SP 490
+OP 497
+K1 грамматический показатель
+
+
+A1 Ramat, P.
+FD 1999
+YR 1999
+T2 Sec. 37.1
+T3 Linguistics
+T1 Linguistic categories and linguists categorization 
+K1 грамматический показатель
+
+
+A1 Haspelmath, M.
+FD 2007
+YR 2007
+T2 Sec. 11.1
+T3 Linguistic typology
+T1 Pre-established categories dont exist: consequences for language description and typology 
+K1 грамматический показатель
+
+
+A1 Hopper, P. J.
+A1 Thompson, S.
+FD 1984
+YR 1984
+T2 Sec. 60.4
+T3 Language
+T1 The discourse basis for lexical categories in Universal grammar 
+K1 грамматический показатель
+K1 отношение
+
+
+A1 Langacker, R. W.
+# b
+FD 1987
+YR 1987
+T2 Sec. 63.1
+T3 Language
+T1 Nouns and verbs 
+K1 грамматический показатель
+K1 отношение
+
+
+A2 Алпатов, В. М.
+FD 1990
+YR 1990
+T1 Части речи: теория и типология
+PP М.
+PB Наука
+K1 грамматический показатель
+
+
+A1 Ревзина, О. Г.
+A1 Ревзин, И. И.
+FD 1975
+YR 1975
+T3 Лингво-типологические исследованияII
+T1 Проблема частей речи в современной лингвистике 
+A2 Андрющенко, В. М.
+PP М.
+SP 5
+OP 41
+K1 грамматический показатель
+
+
+A1 Степанов, Ю. С.
+FD 1981
+YR 1981
+T1 Имена. Предикаты. Предложения. 
+PP М.
+PB Наука
+K1 грамматический показатель
+
+
+A1 Тестелец, Я. Г.
+FD 1990
+YR 1990
+T1 Наблюдения над семантикой оппозиций «имя 
+PP » и «существительное / прилагательное» (к постановке проблемы) // В. М. Алпатов (ред.). Части речи
+PB теория и типология. М.: Наука
+K1 грамматический показатель
+K1 глагол
+
+
+A1 Sasse, H.-J.
+# a
+FD 1993
+YR 1993
+T2 Sec. 46.3
+T3 Sprachtypologie und Universalienforschung
+T1 Das Nomen – eine universelle Kategorie? 
+K1 грамматический показатель
+K1 глагол
+
+
+A1 Курилович, Е.
+FD 1936
+YR 1936
+T3 Курилович 196257-70
+T1 Деривация лексическая и деривация синтаксическая (к теории частей речи) 
+K1 грамматический показатель
+
+
+A1 Lemaréchal, A.
+FD 1989
+YR 1989
+T1 Les parties du discours: Syntaxe et sématique
+PP P.
+PB Presses Universitaires de France
+K1 грамматический показатель
+
+
+A1 Croft, W.
+FD 1991
+YR 1991
+T1 Syntactic categories and grammatical relations: The cognitive organization of information
+PP Chicago
+PB The U. of Chicago Press
+K1 грамматический показатель
+
+
+A1 Hengeveld, K.
+FD 1992
+YR 1992
+T1 Non-verbal predication: Theory, typology, diachrony
+PP Berlin
+PB Mouton de Gruyter
+K1 грамматический показатель
+
+
+A1 Schachter, P.
+FD 1985
+YR 1985
+T3 Language typology and syntactic descriptionvol. I
+T2 Vol. I
+T1 Parts-of-speech systems 
+A2 Shopen, T.
+PP Cambridge
+K1 грамматический показатель
+
+
+A1 Sasse, H.-J.
+# b
+FD 1993
+YR 1993
+T3 Syntax: An international book of contemporary research. 
+T1 Syntactic categories and subcategories 
+A2 Jacobs, J.
+PP B.
+SP 646
+OP 686
+K1 грамматический показатель
+
+
+RT Book, Whole
+A1 Dixon
+T1 [Dixon,1977a]
+FD 1977a
+YR 1977a
+K1 грамматический показатель
+K1 прилагательное
+K1 глагол
+
+
+RT Book, Whole
+A1 Dixon
+T1 [Dixon,1994a]
+FD 1994a
+YR 1994a
+K1 грамматический показатель
+K1 прилагательное
+K1 глагол
+
+
+A1 Aikhenvald, A. Y.
+# b
+FD 2004
+YR 2004
+T1 Evidentiality
+PP Oxford
+PB Oxford U. Press
+K1 грамматический показатель
+K1 прилагательное
+K1 глагол
+
+
+A1 Thompson, S. A.
+FD 1988
+YR 1988
+T3 Explaining language universals
+T1 A discourse approach to the category “adjective” 
+A2 Hawkins, J. A.
+PP Oxford
+SP 167
+OP 185
+K1 грамматический показатель
+K1 прилагательное
+K1 глагол
+
+
+RT Book, Whole
+A1 Bhat
+T1 [Bhat,1996]
+FD 1996
+YR 1996
+K1 грамматический показатель
+K1 прилагательное
+K1 глагол
+
+
+A1 Wetzer, H.
+FD 1996
+YR 1996
+T1 The typology of adjectival predication
+PP B.
+PB Mouton de Gruyter
+K1 грамматический показатель
+K1 прилагательное
+K1 глагол
+
+
+A1 Beck, D.
+FD 2002
+YR 2002
+T1 The typology of parts of speech systems: The markedness of adjectives
+PP L.
+PB Routledge
+K1 грамматический показатель
+K1 прилагательное
+K1 глагол
+
+
+A1 Вольф, Е. М.
+FD 1978
+YR 1978
+T1 Грамматика и семантика прилагательных: На материале иберо-романских языков
+PP М.
+PB Наука
+K1 грамматический показатель
+
+
+A1 Bolinger, D.
+FD 1967
+YR 1967
+T2 Sec. 18
+T3 Lingua
+T1 Adjectives in English: attribution and predication 
+K1 грамматический показатель
+K1 прилагательное
+K1 семантика
+
+
+A1 Вежбицкая, А.
+FD 1999
+YR 1999
+T3 Анна Вежбицкая
+T1 Что значит имя существительное? (или: чем существительные отличаются от прилагательных?) 
+PP Семантические универсалии и описание языков. М.
+SP 91
+OP 133
+NO Пер. с англ. 
+K1 грамматический показатель
+K1 семантика
+
+
+RT Book, Whole
+A1 Wierzbicka
+T1 [Wierzbicka,1988]
+FD 1988
+YR 1988
+K1 грамматический показатель
+K1 семантика
+
+
+A1 Ramat, P.
+A1 Ricca, D.
+FD 1994
+YR 1994
+T2 Sec. 6.2
+T3 Rivista di linguistica
+T1 Prototypical adverbs: On the scalarity--radiality of the notion of adverb 
+K1 грамматический показатель
+K1 семантика
+
+
+A1 Филипенко, М. В.
+FD 2003
+YR 2003
+T1 Семантика наречий и адвербиальных выражений
+PP М.
+PB Азбуковник
+K1 грамматический показатель
+K1 семантика
+
+
+A1 Пеньковский, А. Б.
+FD 2004
+YR 2004
+T1 Очерки по русской семантике
+PP М.
+PB Языки славянских культур
+K1 грамматический показатель
+K1 семантика
+
+
+A1 Hagège, C.
+FD 1975
+YR 1975
+T1 Le problème linguistique des prépositions et la solution chinoise
+PP P.
+PB Peeters
+K1 грамматикализация
+K1 грамматический показатель
+K1 семантика
+
+
+A1 Luraghi, S.
+FD 2003
+YR 2003
+T1 On the meaning of prepositions and cases: The expression of semantic roles in Ancient Greek
+PP Amsterdam
+PB Benjamins
+K1 грамматикализация
+K1 грамматический показатель
+K1 семантика
+
+
+A1 Дурново, Н.Н.
+FD 1922
+YR 1922
+T3 Вопросы языкознания1971
+T1 О склонении в современном великорусском литературном языке 
+SP 90
+OP 103
+NO Пер. с франц. 
+K1 грамматический показатель
+
+
+A1 Щерба, Л. В.
+FD 1928
+YR 1928
+T3 Л
+T1 О частях речи в русском языке 
+PP В. Щерба. Языковая система и речевая деятельность. Л.
+SP 77
+OP 100
+K1 грамматический показатель
+
+
+A1 Пешковский, А. М.
+FD 1956
+YR 1956
+T1 Русский синтаксис в научном освещении
+PP М.
+PB Учпедгиз 
+K1 грамматический показатель
+
+
+A1 Виноградов, В. В.
+FD 1947
+YR 1947
+T1 Русский язык (грамматическое учение о слове)
+PP М.
+PB Учпедгиз 
+K1 грамматический показатель
+
+
+A1 Аванесов, Р. И.
+A1 Сидоров, В. Н.
+FD 1945
+YR 1945
+T1 Очерк грамматики русского литературного языка
+PP М.
+PB Учпедгиз
+K1 грамматический показатель
+
+
+A1 Панов, М. В.
+FD 1960
+YR 1960
+T3 Труды по общему языкознанию и русскому языку
+T1 О частях речи в русском языке 
+A2 Панов, М. В.
+A2 Земская, Е. А.
+A2 Кузьмина, С. М.
+PP Т. 1. М.
+SP 151
+OP 164
+K1 грамматический показатель
+
+
+RT Book, Whole
+A1 Зализняк
+T1 [Зализняк,1967]
+FD 1967
+YR 1967
+K1 грамматический показатель
+
+
+A1 Garde, P.
+FD 1981
+YR 1981
+T2 Sec. 76.1
+T3 Bulletin de la Société de linguistique de Paris
+T1 Des parties du discours, notamment en russe 
+K1 грамматический показатель
+
+
+A1 Исаченко, А. В.
+FD 1955
+YR 1955
+T3 Вопросы языкознания1955
+T1 О возникновении и развитии «категории состояния» в славянских языках 
+SP 48
+OP 65
+K1 грамматический показатель
+K1 предикатив
+K1 категория
+
+
+A1 Маслов, Ю. С.
+FD 1948
+YR 1948
+T2 Sec. 7.4
+T3 Известия АН СССР, серия литературы и языка
+T1 Вид и лексическое значение глагола в современном русском литературном языке 
+K1 грамматический показатель
+K1 предикат
+
+
+A1 Vendler, Z.
+FD 1957
+YR 1957
+T2 Sec. 66
+T3 The philosophical review
+T1 Verbs and times 
+K1 грамматический показатель
+K1 предикат
+
+
+A1 Булыгина, Т. В.
+FD 1982
+YR 1982
+T3 Булыгина & Шмелёв 199745-112
+T1 К построению типологии предикатов в русском языке 
+K1 грамматический показатель
+
+
+A1 Арутюнова, Н. Д.
+A1 Падучева, Е. В.
+FD 1985
+YR 1985
+T3 Новое в зарубежной лингвистикевып. XVI: Лингвистическая прагматика
+T2 Вып. XVI
+T1 Истоки, проблемы и категории прагматики 
+PP М.
+SP 3
+OP 42
+K1 грамматический показатель
+
+
+A1 Татевосов, С. Г.
+FD 2005
+YR 2005
+T3 Вопросы языкознания2005
+T1 Акциональность: типология и теория 
+SP 108
+OP 141
+K1 грамматический показатель
+
+
+A1 Смит, К.
+FD 1998
+YR 1998
+T3 Типология вида
+T1 Двухкомпонентная теория вида 
+A2 Черткова, М. Ю.
+PP , поиски, решения. М.
+SP 404
+OP 421
+K1 грамматический показатель
+
+
+A1 Sasse, H.-J.
+FD 1991
+YR 1991
+T3 Belgian journal of linguistics6
+T1 Aspect and Aktionsart: a reconciliation 
+A2 Vetters, C.
+A2 Vandeweghe, W.
+SP 31
+OP 45
+K1 грамматический показатель
+
+
+A1 Breu, W.
+FD 1994
+YR 1994
+T2 Sec. 18.1
+T3 Studies in language
+T1 Interactions between lexical, temporal and aspectual meanings 
+K1 грамматический показатель
+
+
+A1 Friedman, V. A.
+FD 2000
+YR 2000
+T3 Evidentials
+T1 Confirmative--nonconfirmative in Balkan Slavic, Balkan Romance, and Albanian with additional observations on Turkish, Romani, Georgian and Lak 
+A2 Johanson, L.
+A2 Utas, B.
+PP , Iranian and neighbouring languages. B.
+SP 329
+OP 366
+K1 грамматический показатель
+
+
+A1 Bertinetto, P. M.
+A1 Delfitto, D.
+FD 2000
+YR 2000
+T3 Tense and aspect in the languages of Europe
+T1 Aspect vs Actionality: Why they should be kept apart 
+A2 Dahl, Ö.
+PP B.
+SP 189
+OP 225
+K1 грамматический показатель
+
+
+A1 Dahl, Ö.
+FD 1981
+YR 1981
+T3 Ph
+T1 On the definition of the telic-atelic (bounded-unbounded) distinction 
+PP J. Tedeschi & A. Zaenen (eds.). Syntax and semantics, vol. 14
+SP 79
+OP 90
+K1 грамматический показатель
+K1 глагол
+
+
+A1 Declerck, R.
+FD 1979
+YR 1979
+T2 Sec. 17
+T3 Linguistics
+T1 Aspect and the bounded--unbounded (telic--atelic) distinction 
+K1 грамматический показатель
+K1 глагол
+
+
+A1 Verkuyl, H. J.
+FD 1993
+YR 1993
+T1 A theory of aspectuality: The interaction between temporal and atemporal structure
+PP Cambridge
+PB Cambridge U. Press
+K1 грамматический показатель
+K1 глагол
+
+
+A1 Гловинская, М. Я.
+FD 2001
+YR 2001
+T1 Многозначность и синонимия в видо-временной системе русского глагола
+PP М.
+PB Азбуковник
+K1 грамматический показатель
+K1 глагол
+
+
+RT Book, Section
+A1 Булыгина, Т. В.
+A1 Крылов, С. А.
+T1 Понятийные категории
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 грамматический показатель
+K1 существительное
+K1 глагол
+K1 категория
+
+
+RT Book, Section
+A1 Живов, В. М.
+T1 Части речи
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 грамматический показатель
+K1 существительное
+K1 глагол
+K1 категория
+
+
+RT Book, Section
+A1 Живов, В. М.
+T1 Существительное
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 грамматический показатель
+K1 существительное
+K1 глагол
+K1 категория
+
+
+RT Book, Section
+A1 Степанов, Ю. С.
+T1 Имя
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 грамматический показатель
+K1 существительное
+K1 глагол
+K1 категория
+
+
+RT Book, Section
+A1 Маслов, Ю. С.
+T1 Глагол
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 грамматический показатель
+K1 существительное
+K1 глагол
+K1 категория
+
+
+RT Book, Section
+A1 Вольф, Е. М.
+T1 Прилагательное
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 грамматический показатель
+K1 существительное
+K1 глагол
+K1 категория
+
+
+RT Book, Section
+A1 Васильева, Н. В.
+T1 Наречие
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 грамматический показатель
+K1 существительное
+K1 глагол
+K1 категория
+
+
+RT Book, Section
+A1 Васильева, Н. В.
+T1 Служебные слова
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 грамматический показатель
+K1 существительное
+K1 глагол
+K1 категория
+
+
+RT Book, Whole
+A1 Зализняк
+T1 [Зализняк,1967]
+FD 1967
+YR 1967
+K1 согласование
+K1 управление
+K1 основные синтаксические граммемы имени
+
+
+A1 Кибрик, А. Е.
+# a
+FD 1977
+YR 1977
+T3 Кибрик 1992102-123
+T1 О соотношении понятия синтаксического подчинения с понятиями согласования, управления и примыкания 
+K1 согласование
+K1 управление
+K1 основные синтаксические граммемы имени
+
+
+RT Book, Whole
+A1 Barlow
+A1 Ferguson
+T1 [Barlow,Ferguson,1988]
+FD 1988
+YR 1988
+K1 согласование
+K1 управление
+K1 основные синтаксические граммемы имени
+
+
+A1 Мельчук, И. А.
+FD 1993
+YR 1993
+T3 Вопросы языкознания1993
+T1 Согласование, управление, конгруэнтность 
+SP 16
+OP 58
+K1 согласование
+K1 управление
+K1 основные синтаксические граммемы имени
+
+
+A1 Corbett, G. G.
+FD 2006
+YR 2006
+T1 Agreement
+PP Cambridge
+PB Cambridge U. Press
+K1 согласование
+K1 управление
+K1 основные синтаксические граммемы имени
+
+
+A1 Тестелец, Я. Г.
+FD 2001
+YR 2001
+T1 Введение в общий синтаксис
+PP М.
+PB РГГУ
+K1 согласование
+K1 управление
+K1 основные синтаксические граммемы имени
+
+
+A1 Ельмслев, Л.
+FD 1956
+YR 1956
+T3 О
+T1 О категориях личности–неличности и одушевленности–неодушевленности 
+PP Г. Ревзина (сост.). Принципы типологического анализа языков различного строя. М.
+SP 114
+OP 152
+NO Пер. с франц. 
+K1 основные синтаксические граммемы имени
+
+
+A1 Heine, B.
+FD 1982
+YR 1982
+T3 Apprehension: Das sprachliche Erfassen von Gegenständen. 
+T1 African noun class systems 
+A2 Seiler, H.
+A2 Lehmann, C.
+PP Part I
+SP 189
+OP 216
+K1 основные синтаксические граммемы имени
+
+
+A1 Corbett, G. G.
+FD 1990
+YR 1990
+T1 Gender
+PP Cambridge
+PB Cambridge U. Press
+K1 основные синтаксические граммемы имени
+
+
+A1 Корбет, Г. Г.
+FD 1992
+YR 1992
+T3 Вопросы языкознания1992
+T1 Типология родовых систем 
+SP 21
+OP 30
+K1 основные синтаксические граммемы имени
+
+
+A1 Corbett, G. G.
+FD 2007
+YR 2007
+T3 Language typology and syntactic descriptionvol. III: Grammatical categories and the lexicon
+T2 Vol. III
+T1 Gender and noun classes 
+A2 Shopen, T.
+PP Cambridge
+SP 241
+OP 279
+K1 основные синтаксические граммемы имени
+
+
+A1 Corbett, G. G.
+A1 Fraser, N. M.
+FD 2000
+YR 2000
+T3 Systems of nominal classification
+T1 Gender assignment: a typology and a model 
+A2 Senft, G.
+PP Cambridge
+K1 основные синтаксические граммемы имени
+
+
+RT Book, Whole
+A1 Dixon
+T1 [Dixon,1968]
+FD 1968
+YR 1968
+K1 основные синтаксические граммемы имени
+
+
+A1 Ревзина, О. Г.
+FD 1973
+YR 1973
+T3 Структурно-типологические исследования в области грамматики славянских языков
+T1 Общая теория грамматических категорий 
+A2 Зализняк, А. А.
+PP М.
+SP 5
+OP 38
+K1 основные синтаксические граммемы имени
+
+
+A1 Serzisko, F.
+FD 1982
+YR 1982
+T3 Issues in the theory of the universal grammar
+T1 Gender, noun class and number classification 
+A2 Dirven, R.
+A2 Radden, G.
+PP Tübingen
+K1 основные синтаксические граммемы имени
+
+
+RT Book, Whole
+A1 Aikhenvald
+T1 [Aikhenvald,2004a]
+FD 2004a
+YR 2004a
+K1 основные синтаксические граммемы имени
+
+
+RT Book, Whole
+A1 Serzisko
+T1 [Serzisko,1982]
+FD 1982
+YR 1982
+K1 классификатор
+K1 основные синтаксические граммемы имени
+
+
+A1 Allan, K.
+FD 1977
+YR 1977
+T2 Sec. 53.2
+T3 Language
+T1 Classifiers 
+K1 классификатор
+K1 основные синтаксические граммемы имени
+
+
+A1 Aikhenvald, A. Y.
+FD 2000
+YR 2000
+T1 Classifiers: A typology of noun categorization devices
+PP Oxford
+PB Oxford U. Press
+K1 классификатор
+K1 основные синтаксические граммемы имени
+
+
+A1 Lakoff, G.
+FD 1987
+YR 1987
+T1 Women, fire and dangerous things
+PP Chicago
+PB The U. of Chicago Press
+K1 доминанта
+K1 основные синтаксические граммемы имени
+K1 категория
+
+
+A2 Craig, C.
+FD 1986
+YR 1986
+T1 Noun classes and categorization
+PP Amsterdam
+PB Benjamins
+K1 доминанта
+K1 основные синтаксические граммемы имени
+K1 категория
+
+
+A1 Dahl, Ö.
+FD 1999
+YR 1999
+T3 Gender in grammar and cognition
+T1 Animacy and the notion of semantic gender 
+A2 Unterbeck, B.
+A2 Rissanen, M.
+PP B.
+SP 99
+OP 116
+K1 доминанта
+K1 основные синтаксические граммемы имени
+K1 категория
+
+
+A1 Журинский, А. Н.
+FD 1987
+YR 1987
+T3 Именные классы в языках Африки
+T1 Соотношение систем именных классов исконных и заимствованных слов в языках банту 
+A2 Охотина, Н. В.
+PP М.
+SP 179
+OP 189
+K1 доминанта
+K1 основные синтаксические граммемы имени
+K1 категория
+
+
+A1 Köpcke, K.-M.
+A1 Zubin, D.
+FD 1995
+YR 1995
+T3 E
+T1 Prinzipien für die Genuszuweisung im Deutschen 
+PP Lang; G. Zifonun (Hrsg.). Deutsch-Typologisch. B.
+SP 473
+OP 491
+K1 доминанта
+K1 основные синтаксические граммемы имени
+K1 категория
+
+
+RT Book, Whole
+A1 Corbett
+A1 Fraser
+T1 [Corbett,Fraser,2000]
+FD 2000
+YR 2000
+K1 доминанта
+K1 основные синтаксические граммемы имени
+K1 категория
+
+
+A1 Nesset, T.
+FD 2006
+YR 2006
+T2 Sec. 116.9
+T3 Lingua
+T1 Gender meets the usage-based model: four principles of rule interaction in gender assignment 
+K1 доминанта
+K1 основные синтаксические граммемы имени
+K1 категория
+
+
+A1 Dahl, Ö.
+A1 Fraurud, K.
+FD 1996
+YR 1996
+T3 Th
+T1 Animacy in grammar and discourse 
+PP Fretheim & J. K. Gundel (eds.). Reference and referent accessibility. Amsterdam
+SP 47
+OP 64
+K1 доминанта
+K1 основные синтаксические граммемы имени
+K1 категория
+
+
+RT Book, Whole
+A1 Dahl
+T1 [Dahl,1999]
+FD 1999
+YR 1999
+K1 доминанта
+K1 основные синтаксические граммемы имени
+K1 категория
+
+
+RT Book, Whole
+A1 Heine
+T1 [Heine,1982]
+FD 1982
+YR 1982
+K1 основные синтаксические граммемы имени
+
+
+A1 Охотина, Н. В.
+FD 1985
+YR 1985
+T1 Согласовательные классы в восточных и южных языках банту
+PP М.
+PB Наука
+K1 основные синтаксические граммемы имени
+
+
+A1 Аксёнова, И. С.
+FD 1987
+YR 1987
+T3 Именные классы в языках Африки
+T1 Семантико-функциональный статус так называемой «начальной гласной» именного префикса в языках банту 
+A2 Охотина, Н. В.
+PP М.
+SP 125
+OP 178
+K1 основные синтаксические граммемы имени
+
+
+A1 Коваль, А. И.
+FD 1997
+YR 1997
+T3 Основы африканского языкознания (именные категории)
+T1 Именные категории в пулар-фульфульде 
+A2 Виноградов, В. А.
+PP М.
+SP 92
+OP 220
+K1 основные синтаксические граммемы имени
+
+
+RT Book, Whole
+A1 Creissels
+T1 [Creissels,2001b]
+FD 2001b
+YR 2001b
+K1 основные синтаксические граммемы имени
+
+
+A1 Хайдаков, С. М.
+FD 1980
+YR 1980
+T1 Принципы именной классификации в дагестанских языках
+PP М.
+PB Наука
+K1 основные синтаксические граммемы имени
+
+
+A1 Алексеев, М. Е.
+FD 2003
+YR 2003
+T1 Сравнительно-историческая морфология нахско-дагестанских языков. Категории имени. 
+PP М.
+PB Academia
+K1 основные синтаксические граммемы имени
+
+
+A1 Sands, K.
+FD 1995
+YR 1995
+T2 Sec. 37.3
+T3 Anthropological linguistics
+T1 Nominal classification in Australia 
+K1 основные синтаксические граммемы имени
+
+
+A1 Givón, T.
+FD 1978
+YR 1978
+T3 Universals of human languagevol. 4: Syntax
+T2 Vol. 4
+T1 Definiteness and referentiality 
+A2 Greenberg, J. H.
+PP Stanford
+SP 293
+OP 330
+K1 аспект
+K1 основные синтаксические граммемы имени
+
+
+A1 Claudi, U.
+FD 1985
+YR 1985
+T1 Zur Entstehung von Genussystemen: Überlegungen zu einigen theoretischen Aspekten, verbunden mit einer Fallstudie des Zande
+PP Hamburg
+PB Buske
+K1 аспект
+K1 основные синтаксические граммемы имени
+
+
+A1 Гладкий, А. В.
+FD 1973
+YR 1973
+T3 Проблемы грамматического моделирования
+T1 Попытка формального определения понятий падежа и рода существительного 
+A2 Зализняк, А. А.
+PP М.
+SP 24
+OP 53
+K1 падеж
+K1 основные синтаксические граммемы имени
+
+
+RT Book, Whole
+A1 Мельчук
+T1 [Мельчук,1998]
+FD 1998
+YR 1998
+K1 падеж
+K1 основные синтаксические граммемы имени
+
+
+A1 Blake, B. J.
+FD 1994
+YR 1994
+T1 Case
+PP Cambridge
+PB Cambridge U. Press
+K1 падеж
+K1 основные синтаксические граммемы имени
+
+
+A1 Anderson, John M.
+FD 2009
+YR 2009
+T3 The Oxford handbook of case
+T1 Case in localist case grammar 
+A2 Malchukov, A.
+A2 Spencer, A.
+PP Oxford
+SP 121
+OP 135
+K1 падеж
+K1 основные синтаксические граммемы имени
+
+
+A1 Serbat, G.
+FD 1981
+YR 1981
+T1 Cas et fonctions
+PP P.
+PB Presses Universitaires de France
+K1 падеж
+K1 основные синтаксические граммемы имени
+
+
+A1 Dirven, R.
+A2 .
+A2 Radden, G.
+FD 1987
+YR 1987
+T1 Concepts of case
+PP Tübingen
+PB Narr
+K1 падеж
+K1 основные синтаксические граммемы имени
+
+
+RT Book, Whole
+A1 Janda
+T1 [Janda,1993]
+FD 1993
+YR 1993
+K1 падеж
+K1 семантика
+K1 основные синтаксические граммемы имени
+K1 категория
+
+
+A1 Arkadiev, P.
+FD 2009
+YR 2009
+T3 The Oxford handbook of case
+T1 Poor (two-term) case systems: limits of neutralization 
+A2 Malchukov, A.
+A2 Spencer, A.
+PP Oxford
+SP 686
+OP 699
+K1 основные синтаксические граммемы имени
+
+
+A1 Blake, B. J.
+FD 2009
+YR 2009
+T3 The Oxford handbook of case
+T1 History of the research on case 
+A2 Malchukov, A.
+A2 Spencer, A.
+PP Oxford
+SP 13
+OP 26
+K1 основные синтаксические граммемы имени
+
+
+A1 Butt, M.
+FD 2009
+YR 2009
+T3 The Oxford handbook of case
+T1 Modern approaches to case: an overview 
+A2 Malchukov, A.
+A2 Spencer, A.
+PP Oxford
+SP 27
+OP 43
+K1 основные синтаксические граммемы имени
+
+
+A1 Lazard, G.
+FD 1994
+YR 1994
+T1 Lactance
+PP P.
+PB Presses Universitaires de France. 
+K1 отношение
+K1 значение
+K1 аспект
+K1 падеж
+K1 основные синтаксические граммемы имени
+
+
+RT Book, Whole
+A1 Aikhenvald
+A1 Dixon
+A1 Onishi
+T1 [Aikhenvald,Dixon,Onishi,2001]
+FD 2001
+YR 2001
+K1 отношение
+K1 значение
+K1 аспект
+K1 падеж
+K1 основные синтаксические граммемы имени
+
+
+A1 Kulikov, L.
+A2 Malchukov, A.
+A2 .
+A2 de Swart, P.
+FD 2006
+YR 2006
+T1 Case, Valency and Transitivity
+PP Amsterdam
+PB Benjamins
+K1 отношение
+K1 значение
+K1 аспект
+K1 падеж
+K1 основные синтаксические граммемы имени
+
+
+A1 Климов, Г. А.
+FD 1973
+YR 1973
+T1 Очерк общей теории эргативности
+PP М.
+PB Наука
+K1 основные синтаксические граммемы имени
+
+
+A1 Comrie, B.
+FD 1978
+YR 1978
+T3 Syntactic typology: Studies in the phenomenology of language. 
+T1 Ergativity 
+A2 Lehmann, W. P.
+PP Austin
+SP 329
+OP 394
+K1 основные синтаксические граммемы имени
+
+
+A1 Kalmár, I.
+FD 1979
+YR 1979
+T3 Ergativity: Towards a theory of grammatical relations. 
+T1 The antipassive and grammatical relations in Eskimo 
+A2 Plank, F.
+PP L.
+SP 117
+OP 143
+K1 основные синтаксические граммемы имени
+
+
+RT Book, Whole
+A1 Dixon
+T1 [Dixon,1994b]
+FD 1994b
+YR 1994b
+K1 основные синтаксические граммемы имени
+
+
+RT Book, Whole
+A1 Lazard
+T1 [Lazard,1994]
+FD 1994
+YR 1994
+K1 основные синтаксические граммемы имени
+
+
+A1 Primus, B.
+FD 1999
+YR 1999
+T1 Cases and thematic roles
+PP Ergative, accusative and active. Tübingen
+PB Niemeyer
+K1 основные синтаксические граммемы имени
+
+
+A1 Paul, I.
+A1 Travis, L.
+FD 2006
+YR 2006
+T3 Ergativity: emerging issues. 
+T1 Ergativity in Austronesian languages: what it can do, what it cant, but not why 
+A2 Johns, A.
+PP Dordrecht
+SP 315
+OP 335
+K1 основные синтаксические граммемы имени
+
+
+A1 Bossong, G.
+FD 1985
+YR 1985
+T1 Empirische Universalienforschung: Differenzielle Objektmarkierung in den neuiranischen Sprachen
+PP Tübingen
+PB Narr
+K1 падеж
+K1 значение
+K1 маркирование
+K1 основные синтаксические граммемы имени
+
+
+A1 Lazard, G.
+FD 1982
+YR 1982
+T2 Sec. 73.1
+T3 Bulletin de la Société de linguistique de Paris
+T1 Le morphème -râ en persan et les relations actancielles 
+K1 падеж
+K1 значение
+K1 маркирование
+K1 основные синтаксические граммемы имени
+
+
+RT Book, Whole
+A1 Lazard
+T1 [Lazard,1994]
+FD 1994
+YR 1994
+K1 падеж
+K1 значение
+K1 маркирование
+K1 основные синтаксические граммемы имени
+
+
+A2 Plank, F.
+FD 1984
+YR 1984
+T1 Objects: Towards a theory of grammatical relations
+PP L.
+PB Academic press
+K1 падеж
+K1 значение
+K1 маркирование
+K1 основные синтаксические граммемы имени
+
+
+RT Book, Whole
+A1 Comrie
+T1 [Comrie,1989]
+FD 1989
+YR 1989
+K1 падеж
+K1 значение
+K1 маркирование
+K1 основные синтаксические граммемы имени
+
+
+A1 Jones, M. A.
+FD 1995
+YR 1995
+T3 J
+T1 The prepositional accusative in Sardinian: its distribution and syntactic repercussions 
+PP Ch. Smith & M. Maiden (eds.). Linguistic theory and the Romance languages. Amsterdam
+SP 37
+OP 75
+K1 падеж
+K1 значение
+K1 маркирование
+K1 основные синтаксические граммемы имени
+
+
+A1 Bossong, G.
+FD 1998
+YR 1998
+T3 Actance et valence dans les langues de lEurope
+T1 Le marquage différentiel de lobjet dans les langues de lEurope 
+A2 Feuillet, J.
+PP B.
+SP 193
+OP 258
+K1 падеж
+K1 значение
+K1 маркирование
+K1 основные синтаксические граммемы имени
+
+
+A1 Aissen, J. L.
+FD 2003
+YR 2003
+T2 Sec. 21.3
+T3 Natural language and linguistic theory
+T1 Differential object marking: Iconicity vs economy 
+K1 падеж
+K1 значение
+K1 маркирование
+K1 основные синтаксические граммемы имени
+
+
+A1 Malchukov, A.
+A1 de Swart, P.
+FD 2009
+YR 2009
+T3 The Oxford handbook of case
+T1 Differential case marking and actancy variation 
+A2 Malchukov, A.
+A2 Spencer, A.
+PP Oxford
+SP 338
+OP 355
+K1 падеж
+K1 значение
+K1 маркирование
+K1 основные синтаксические граммемы имени
+
+
+A1 Hjelmslev, L.
+FD 1937
+YR 1937
+T1 La catégorie des cas: Etude de grammaire générale
+PP Aarhus
+PB Universitetsforlaget 
+K1 падеж
+K1 значение
+K1 маркирование
+K1 основные синтаксические граммемы имени
+
+
+A1 Курилович, Е.
+FD 1949
+YR 1949
+T3 Курилович 1962175-203
+T1 Проблема классификации падежей 
+NO Пер. с франц. 
+K1 падеж
+K1 значение
+K1 маркирование
+K1 основные синтаксические граммемы имени
+
+
+RT Book, Whole
+A1 Blake
+T1 [Blake,1994]
+FD 1994
+YR 1994
+K1 падеж
+K1 основные синтаксические граммемы имени
+
+
+A1 Johanson, L.
+FD 2006
+YR 2006
+T3 Casevalency and transitivity
+T1 Two approaches to specificity 
+A2 Kulikov, L.
+PP Amsterdam
+SP 225
+OP 247
+K1 падеж
+K1 основные синтаксические граммемы имени
+
+
+A1 Bickel, B.
+A1 Nichols, J.
+FD 2009
+YR 2009
+T3 The Oxford handbook of case
+T1 Case marking and alignment 
+A2 Malchukov, A.
+A2 Spencer, A.
+PP Oxford
+SP 304
+OP 321
+K1 падеж
+K1 основные синтаксические граммемы имени
+
+
+RT Book, Whole
+A1 Van Belle
+A1 Van Langendonck
+T1 [Van Belle,Van Langendonck,1996]
+FD 1996
+YR 1996
+K1 падеж
+K1 основные синтаксические граммемы имени
+
+
+RT Book, Whole
+A1 Van Langendonck
+A1 Van Belle
+T1 [Van Langendonck,Van Belle,1998]
+FD 1998
+YR 1998
+K1 падеж
+K1 основные синтаксические граммемы имени
+
+
+A1 Davidse, K.
+A2 .
+A2 Lamiroy, B.
+FD 2002
+YR 2002
+T1 The nominative and accusative and their counterparts
+PP Amsterdam
+PB Benjamins
+K1 падеж
+K1 основные синтаксические граммемы имени
+
+
+A1 Campe, P.
+FD 1994
+YR 1994
+T1 Case, semantic roles, and grammatical relations: A comprehensive bibliography
+PP Amsterdam
+PB Benjamins
+K1 падеж
+K1 основные синтаксические граммемы имени
+
+
+A1 Кибрик, А. Е.
+FD 1970
+YR 1970
+T3 Язык и человек
+T1 К типологии пространственных значений 
+PP М.
+SP 110
+OP 156
+K1 локализация
+K1 значение
+K1 основные синтаксические граммемы имени
+K1 категория
+
+
+A1 Comrie, B.
+A1 Polinsky, M.
+FD 1998
+YR 1998
+T3 A
+T1 The great Daghestanian case hoax 
+PP Siewierska & Jae Jung Song (eds.). Case, typology and grammar
+SP 95
+OP 114
+K1 локализация
+K1 значение
+K1 основные синтаксические граммемы имени
+K1 категория
+
+
+A1 Comrie, B.
+FD 1999
+YR 1999
+T2 Sec. 52
+T3 Sprachtypologie und Universalienforschung
+T1 Spatial cases in Daghestanian languages 
+K1 локализация
+K1 значение
+K1 основные синтаксические граммемы имени
+K1 категория
+
+
+A1 Haspelmath, M.
+# b
+FD 1997
+YR 1997
+T1 From space to time: Temporal adverbials in the worlds languages
+PP München
+PB LINCOM Europa
+K1 локализация
+K1 значение
+K1 основные синтаксические граммемы имени
+K1 категория
+
+
+A1 Ганенков, Д. С.
+FD 2002
+YR 2002
+T3 Исследования по теории грамматикивып. 2: Грамматикализация пространственных значений
+T2 Вып. 2
+T1 Типология падежных значений: семантическая зона пролатива 
+A2 Плунгян, В. А.
+PP М.
+SP 57
+OP 98
+K1 локализация
+K1 значение
+K1 основные синтаксические граммемы имени
+K1 категория
+
+
+A1 Невская, И. А.
+FD 2005
+YR 2005
+T1 Пространственные отношения в тюркских языках Южной Сибири (на материале шорского языка)
+PP Новосибирск
+PB Институт филологии СО РАН
+K1 локализация
+K1 значение
+K1 основные синтаксические граммемы имени
+K1 категория
+
+
+A1 Creissels, D.
+FD 2009
+YR 2009
+T3 The Oxford handbook of case
+T1 Spatial cases 
+A2 Malchukov, A.
+A2 Spencer, A.
+PP Oxford
+SP 609
+OP 625
+K1 локализация
+K1 значение
+K1 основные синтаксические граммемы имени
+K1 категория
+
+
+A1 Муравьёва, И. А.
+# a
+FD 1994
+YR 1994
+T2 Sec. 53.3
+T3 Известия РАН, серия литературы и языка
+T1 Локативные серии: словоизменение или словообразование? 
+K1 локализация
+K1 значение
+K1 основные синтаксические граммемы имени
+K1 категория
+
+
+A1 Ганенков, Д. С.
+FD 2005
+YR 2005
+T3 Вопросы языкознания2005
+T1 Контактные локализации в нахско-дагестанских языках 
+SP 100
+OP 116
+K1 локализация
+K1 значение
+K1 основные синтаксические граммемы имени
+K1 категория
+
+
+A1 Топоров, В. Н.
+FD 1961
+YR 1961
+T1 Локатив в славянских языках
+PP М.
+PB Изд-во АН СССР
+K1 падеж
+K1 значение
+K1 основные синтаксические граммемы имени
+
+
+A1 Blake, B. J.
+FD 1977
+YR 1977
+T1 Case marking in Australian languages
+PP Canberra
+PB Australian National U
+K1 основные синтаксические граммемы имени
+
+
+A1 Bennett, P. R.
+FD 1974
+YR 1974
+T2 Sec. 37.1
+T3 Bulletin of the School of Oriental and African studies
+T1 Tone and the Nilotic case system 
+K1 основные синтаксические граммемы имени
+
+
+A1 Sasse, H.-J.
+FD 1984
+YR 1984
+T3 Current progress in Afro-Asiatic linguistics
+T1 Case in Cushitic, Semitic and Berber 
+A2 Bynon, J.
+PP Amsterdam
+K1 основные синтаксические граммемы имени
+
+
+A1 Кибрик, А. Е.
+A1 Кодзасов, С. В.
+FD 1990
+YR 1990
+T1 Сопоставительное изучение дагестанских языков: Имя. Фонетика. 
+PP М.
+PB МГУ
+K1 основные синтаксические граммемы имени
+
+
+A1 Daniel, M.
+A1 Ganenkov, D.
+FD 2009
+YR 2009
+T3 The Oxford handbook of case
+T1 Case marking in Daghestanian: limits of elaboration 
+A2 Malchukov, A.
+A2 Spencer, A.
+PP Oxford
+SP 668
+OP 685
+K1 основные синтаксические граммемы имени
+
+
+A1 Stilo, D.
+FD 2009
+YR 2009
+T3 The Oxford handbook of case
+T1 Case in Iranian: from reduction and loss to innovation and renewal 
+A2 Malchukov, A.
+A2 Spencer, A.
+PP Oxford
+SP 700
+OP 715
+K1 основные синтаксические граммемы имени
+
+
+A1 Daniel, M.
+A1 Spencer, A.
+FD 2009
+YR 2009
+T3 The Oxford handbook of case
+T1 The vocative – an outlier case 
+A2 Malchukov, A.
+A2 Spencer, A.
+PP Oxford
+SP 626
+OP 634
+K1 основные синтаксические граммемы имени
+
+
+RT Book, Whole
+A1 Алексеев
+T1 [Алексеев,2003]
+FD 2003
+YR 2003
+K1 основные синтаксические граммемы имени
+
+
+A1 Plank, F.
+FD 1994
+YR 1994
+T3 The encyclopedia of language and linguisticsvol. 3
+T2 Vol. 3
+T1 Inflection and derivation 
+A2 Asher, R. E.
+PP Oxford
+SP 1671
+OP 1678
+K1 существительное
+K1 основные синтаксические граммемы имени
+
+
+RT Book, Whole
+A1 Якобсон
+T1 [Якобсон,1936]
+FD 1936
+YR 1936
+K1 основные синтаксические граммемы имени
+
+
+A1 Якобсон, Р. О.
+FD 1958
+YR 1958
+T3 Якобсон 1985176-197
+T1 Морфологические наблюдения над славянским склонением 
+K1 основные синтаксические граммемы имени
+
+
+A1 Бенвенист, Э.
+FD 1961
+YR 1961
+T3 Бенвенист 1974156-164
+T1 К анализу падежных функций: латинский генитив 
+K1 основные синтаксические граммемы имени
+
+
+RT Book, Whole
+A1 Janda
+T1 [Janda,1993]
+FD 1993
+YR 1993
+K1 основные синтаксические граммемы имени
+
+
+A1 Anderson, Lloyd B.
+FD 1986
+YR 1986
+T3 Evidentiality: The linguistic coding of epistemology. 
+T1 Evidentials, paths of change, and mental maps: typologically regular asymmetries 
+A2 Chafe, W.
+A2 Nichols, J.
+PP Norwood (NJ)
+SP 273
+OP 312
+K1 маркирование
+K1 основные синтаксические граммемы имени
+
+
+A1 Майзель, С. С.
+FD 1957
+YR 1957
+T1 Изафет в турецком языке
+PP М.-Л.
+PB Изд-во АН СССР
+K1 изафет
+K1 показатель
+K1 основные синтаксические граммемы имени
+
+
+A1 Расторгуева, В. С.
+FD 1975
+YR 1975
+T3 В
+T1 Вопросы общей эволюции морфологического типа 
+PP С. Расторгуева, Д. И. Эдельман. Опыт историко-типологического исследования иранских языков. Том I. М.
+SP 89
+OP 224
+K1 изафет
+K1 показатель
+K1 основные синтаксические граммемы имени
+
+
+A1 Есперсен, О.
+FD 1924
+YR 1924
+T1 Философия грамматики 
+PP М.
+PB ИЛ
+K1 основные семантические граммемы имени
+
+
+A1 Реформатский, А. А.
+FD 1960
+YR 1960
+T3 А
+T1 Число и грамматика 
+PP А. Реформатский. Лингвистика и поэтика / Сост. В. А. Виноградов. М.
+SP 76
+OP 87
+K1 основные семантические граммемы имени
+
+
+A1 Исаченко, А. В.
+FD 1961
+YR 1961
+T3 Вопросы языкознания1961
+T1 О грамматическом значении 
+SP 28
+OP 43
+K1 основные семантические граммемы имени
+
+
+RT Book, Section
+A1 Зализняк
+T1 [Зализняк,1967]
+FD 1967
+YR 1967
+SP 55
+OP 62
+K1 основные семантические граммемы имени
+
+
+A1 Ревзин, И. И.
+FD 1969
+YR 1969
+T3 Вопросы языкознания1969
+T1 Так называемое «немаркированное множественное число» в современном русском языке 
+SP 102
+OP 109
+K1 основные семантические граммемы имени
+
+
+A1 Зализняк, А. А.
+A1 Падучева, Е. В.
+FD 1974
+YR 1974
+T3 Семиотика и информатика – Opera selecta1997
+T2 Вып. 35
+T1 О контекстной синонимии единственного и множественного числа существительных 
+K1 основные семантические граммемы имени
+
+
+A1 Булатова, Л. Н.
+FD 1983
+YR 1983
+T3 Проблемы структурной лингвистики 1981
+T1 Еще о грамматическом статусе категории числа существительных в русском языке 
+PP М.
+SP 120
+OP 130
+K1 основные семантические граммемы имени
+
+
+A1 Мельчук, И. А.
+FD 1985
+YR 1985
+T1 Поверхностный синтаксис русских числовых выражений
+PP Вена
+PB Wiener Slavistischer Almanach
+K1 основные семантические граммемы имени
+
+
+RT Book, Whole
+A1 Поливанова
+T1 [Поливанова,1983]
+FD 1983
+YR 1983
+K1 основные семантические граммемы имени
+
+
+RT Book, Whole
+A1 Wierzbicka
+T1 [Wierzbicka,1988]
+FD 1988
+YR 1988
+K1 основные семантические граммемы имени
+
+
+A2 Фрумкина, Р. М.
+FD 1990
+YR 1990
+T1 Язык и структура знаний
+PP М.
+PB Ин-т языкознания РАН
+K1 основные семантические граммемы имени
+
+
+A1 Ляшевская, О. Н.
+FD 2004
+YR 2004
+T1 Семантика русского числа
+PP М.
+PB Языки славянских культур
+K1 основные семантические граммемы имени
+K1 число
+K1 семантика
+K1 категория
+
+
+A1 Меновщиков, Г. А.
+FD 1970
+YR 1970
+T3 Вопросы языкознания1970
+T1 Способы выражения единственности и множественности в языках разного типа 
+SP 82
+OP 88
+K1 собирательность
+K1 основные семантические граммемы имени
+K1 показатель
+K1 число
+
+
+A1 Гузев, В. Г.
+A1 Насилов, Д. М.
+FD 1975
+YR 1975
+T3 Вопросы языкознания1975
+T1 К интерпретации категории числа имен существительных в тюркских языках 
+SP 98
+OP 111
+K1 собирательность
+K1 основные семантические граммемы имени
+K1 показатель
+K1 число
+
+
+A1 Смирнова, И. А.
+FD 1981
+YR 1981
+T3 Вопросы языкознания1981
+T1 Категория числа в языках с немаркированным именем (на материале иранских языков) 
+SP 77
+OP 87
+K1 собирательность
+K1 основные семантические граммемы имени
+K1 показатель
+K1 число
+
+
+A1 Гак, В. Г.
+A1 Кузнецов, С. Н.
+FD 1985
+YR 1985
+T3 Лингвистическая типология
+T1 О типологии квантитативной сегментации предметов 
+A2 Вардуль, И. Ф.
+A2 Солнцев, В. М.
+PP М.
+SP 113
+OP 122
+K1 собирательность
+K1 основные семантические граммемы имени
+K1 показатель
+K1 число
+
+
+A1 Кибрик, А. Е.
+FD 1985
+YR 1985
+T3 Кибрик 1992131-135
+T1 Числовые формы несчетных существительных в дагестанских языках 
+K1 собирательность
+K1 основные семантические граммемы имени
+K1 показатель
+K1 число
+
+
+RT Book, Whole
+A1 Dryer
+T1 [Dryer,1989]
+FD 1989
+YR 1989
+K1 собирательность
+K1 основные семантические граммемы имени
+K1 показатель
+K1 число
+
+
+A1 Kinkade, M.
+A1 Dale, 
+FD 1981
+YR 1981
+T2 Sec. 23.6
+T3 Anthropological linguistics
+T1 Singular vs plural roots in Salish 
+K1 показатель
+K1 аргумент
+K1 грамматикализация
+K1 глагол
+K1 основные семантические граммемы имени
+K1 множественность
+
+
+A1 Lichtenberk, F.
+FD 1985
+YR 1985
+T2 Sec. 5.1
+T3 Australian journal of linguistics
+T1 Multiple uses of reciprocal constructions 
+K1 показатель
+K1 аргумент
+K1 грамматикализация
+K1 глагол
+K1 основные семантические граммемы имени
+K1 множественность
+
+
+A1 Durie, M.
+FD 1986
+YR 1986
+T3 Berkeley Linguistics Society
+T1 The grammaticization of number as a verbal category 
+SP 335
+OP 370
+K1 показатель
+K1 аргумент
+K1 грамматикализация
+K1 глагол
+K1 основные семантические граммемы имени
+K1 множественность
+
+
+A1 Newman, P.
+FD 1990
+YR 1990
+T1 Nominal and verbal plurality in Chadic
+PP Dordrecht
+PB Foris
+K1 показатель
+K1 аргумент
+K1 грамматикализация
+K1 глагол
+K1 основные семантические граммемы имени
+K1 множественность
+
+
+A1 Gil, D.
+FD 1993
+YR 1993
+T2 Sec. 46.4
+T3 Sprachtypologie und Universalienforschung
+T1 Nominal and verbal quantification 
+K1 показатель
+K1 аргумент
+K1 грамматикализация
+K1 глагол
+K1 основные семантические граммемы имени
+K1 множественность
+
+
+A1 Kemmer, S.
+# b
+FD 1993
+YR 1993
+T3 Faits de langues2
+T1 Verbal and nominal collectives 
+SP 85
+OP 95
+K1 показатель
+K1 аргумент
+K1 грамматикализация
+K1 глагол
+K1 основные семантические граммемы имени
+K1 множественность
+
+
+A1 Frajzyngier, Z.
+FD 1997
+YR 1997
+T2 Sec. 1
+T3 Linguistic Typology
+T1 Grammaticalization of number: from demonstratives to nominal and verbal plural 
+K1 показатель
+K1 аргумент
+K1 грамматикализация
+K1 глагол
+K1 основные семантические граммемы имени
+K1 множественность
+
+
+A2 Храковский, В. С.
+FD 1989
+YR 1989
+T1 Типология итеративных конструкций
+PP Л.
+PB Наука
+K1 множественность
+K1 основные семантические граммемы имени
+
+
+A1 Dressler, W. U.
+FD 1968
+YR 1968
+T1 Studien zur verbalen Pluralität: Iterativum, Distributivum, Durativum, Intensivum in der allgemeinen Grammatik, im Lateinischen und Hethitischen
+PP Wien
+PB Böhlau. – 
+K1 множественность
+K1 основные семантические граммемы имени
+
+
+A1 Bonomi, A.
+FD 1995
+YR 1995
+T3 Temporal referenceaspect and actionality: Semantic and syntactic perspectives
+T2 Vol. 1
+T1 Aspect and quantification 
+A2 Bertinetto, P. M.
+PP Torino
+SP 93
+OP 110
+K1 множественность
+K1 основные семантические граммемы имени
+
+
+A1 Лютикова, Е. А.
+A1 Татевосов, С. Г.
+A1 Иванов, М. Ю.
+A1 Пазельская, А. Г.
+A1 Шлуинский, А. Б.
+FD 2006
+YR 2006
+T1 Структура события и семантика глагола в карачаево-балкарском языке
+PP М.
+PB ИМЛИ РАН
+K1 множественность
+K1 основные семантические граммемы имени
+
+
+A1 Corbett, G. G.
+FD 2000
+YR 2000
+T1 Number
+PP Cambridge
+PB Cambridge U. Press
+K1 множественность
+K1 основные семантические граммемы имени
+K1 число
+
+
+A1 Бюлер, К.
+FD 1934
+YR 1934
+T1 Теория языка 
+PP М.
+PB Прогресс
+K1 семантика
+K1 основные семантические граммемы имени
+K1 детерминация
+
+
+A1 Guillaume, G.
+FD 1919
+YR 1919
+T1 Le problème de larticle et sa solution dans la langue française
+PP P.
+PB Hachette 
+K1 семантика
+K1 основные семантические граммемы имени
+K1 детерминация
+
+
+A1 Скрелина, Л. М.
+FD 1971
+YR 1971
+T3 НДВШ
+T1 Об одном направлении во французской лингвистике: Школа Гийома 
+K1 семантика
+K1 основные семантические граммемы имени
+K1 детерминация
+
+
+A1 Реферовская, Е. А.
+FD 1997
+YR 1997
+T1 Философия лингвистики Гюстава Гийома
+PP СПб.
+PB Академический проект
+K1 семантика
+K1 основные семантические граммемы имени
+K1 детерминация
+
+
+A1 Hawkins, J. A.
+FD 1978
+YR 1978
+T1 Definiteness and indefiniteness: A study in reference and grammaticality prediction
+PP L.
+PB Croom Helm
+K1 основные семантические граммемы имени
+
+
+A1 Sperber, D.
+A1 Wilson, D.
+FD 1986
+YR 1986
+T1 Relevance: communication and cognition
+PP Oxford
+PB Blackwell 
+K1 основные семантические граммемы имени
+
+
+A1 Heim, I.
+FD 1988
+YR 1988
+T1 The semantics of definite and indefinite noun phrases
+PP N.Y.
+PB Garland
+K1 основные семантические граммемы имени
+
+
+A1 Lyons, C.
+FD 1999
+YR 1999
+T1 Definiteness 
+PP Cambridge
+PB Cambridge U. Press
+K1 основные семантические граммемы имени
+
+
+RT Book, Whole
+A1 van der Auwera
+T1 [van der Auwera,1980]
+FD 1980
+YR 1980
+K1 основные семантические граммемы имени
+
+
+A1 Stark, E.
+A2 Leiss, E.
+A2 .
+A2 Abraham, W.
+FD 2007
+YR 2007
+T1 Nominal determination: Typology, context constraints, and historical emergence
+PP Amsterdam
+PB Benjamins
+K1 основные семантические граммемы имени
+
+
+RT Book, Whole
+A1 Christophersen
+T1 [Christophersen,1939]
+FD 1939
+YR 1939
+K1 основные семантические граммемы имени
+K1 детерминация
+
+
+A1 Jespersen, O.
+FD 1949
+YR 1949
+T1 A Modern English grammar on historical principles. Part VII. Syntax. 
+PP Niels Haislund. L.
+PB Allen & Unwin
+K1 основные семантические граммемы имени
+K1 детерминация
+
+
+RT Book, Whole
+A1 Chesterman
+T1 [Chesterman,1991]
+FD 1991
+YR 1991
+K1 основные семантические граммемы имени
+K1 детерминация
+
+
+A1 Крылов, С. А.
+FD 1984
+YR 1984
+T3 Семиотика и информатикавып. 23
+T2 Вып. 23
+T1 Детерминация имени в русском языке: теоретические проблемы 
+K1 основные семантические граммемы имени
+
+
+A2 Николаева, Т. М.
+FD 1979
+YR 1979
+T1 Категория определенности-неопределенности в славянских и балканских языках
+PP М.
+PB Наука
+K1 основные семантические граммемы имени
+
+
+RT Book, Whole
+A1 Иванов
+T1 [Иванов,1979]
+FD 1979
+YR 1979
+K1 основные семантические граммемы имени
+
+
+A1 Ревзина, О. Г.
+FD 1979
+YR 1979
+T3 Категория определенности-неопределенности в славянских и балканских языках
+T1 Функциональный подход к языку и категория определенности-неопределенности 
+A2 Николаева, Т. М.
+PP М.
+SP 64
+OP 89
+K1 основные семантические граммемы имени
+
+
+A1 Chvany, C. V.
+FD 1983
+YR 1983
+T3 Selected essays of Catherine V
+T1 On «definiteness» in Bulgarian, English and Russian 
+A2 Yokoyama, O. T.
+A2 Klenin, E.
+PP Chvany. Columbus (OH)
+SP 128
+OP 147
+K1 основные семантические граммемы имени
+
+
+A1 Friedman, V. A.
+# a
+FD 2003
+YR 2003
+T3 American contributions to the 13th International congress of Slavists
+T1 One as an indefinite marker in Balkan and Non-Balkan Slavic 
+A2 Timberlake, A.
+A2 Flier, M.
+PP Bloomington
+SP 93
+OP 112
+K1 основные семантические граммемы имени
+
+
+A1 Weiss, D.
+FD 2004
+YR 2004
+T3 What makes grammaticalization? A look from its fringes and its components
+T1 The rise of an indefinite article: the case of Macedonian еден 
+A2 Bisang, W.
+PP B.
+SP 139
+OP 165
+K1 основные семантические граммемы имени
+
+
+A1 Breu, W.
+FD 2008
+YR 2008
+T3 S
+T1 Развитие систем артиклей в славянских микроязыках в абсолютном языковом контакте 
+PP Kempgen et al. (Hrsg.). Deutsche Beiträge zum 14. Internationalen Slavistenkongress. München
+SP 75
+OP 88
+K1 основные семантические граммемы имени
+
+
+A1 Mayer, G. L.
+FD 1988
+YR 1988
+T1 The definite article in contemporary standard Bulgarian
+PP Wiesbaden
+PB Harrassowitz
+K1 основные семантические граммемы имени
+
+
+A1 Mladenova, O.
+FD 2007
+YR 2007
+T1 Definiteness in Bulgarian: Modelling the processes of language change
+PP B.
+PB Mouton de Gruyter
+K1 основные семантические граммемы имени
+
+
+A1 Падучева, Е. В.
+FD 1985
+YR 1985
+T1 Высказывание и его соотнесенность с действительностью: Референциальные аспекты семантики местоимений
+PP М.
+PB Наука
+K1 семантика
+K1 основные семантические граммемы имени
+K1 детерминация
+
+
+A1 Гладров, В.
+FD 1992
+YR 1992
+T3 Теория функциональной грамматики: Субъектность. Объектность. Коммуникативная перспектива высказывания. 
+T1 Семантика и выражение определенности 
+A2 Бондарко, А. В.
+PP Определенность / неопределенность. СПб
+SP 232
+OP 266
+NO неопределенности 
+K1 семантика
+K1 основные семантические граммемы имени
+K1 детерминация
+
+
+A1 Левин, Ю. И.
+FD 1973
+YR 1973
+T3 Проблемы грамматического моделирования
+T1 О семантике местоимений 
+A2 Зализняк, А. А.
+PP М.
+SP 108
+OP 121
+K1 основные семантические граммемы имени
+K1 местоимение
+K1 семантика
+K1 аспект
+
+
+A1 Селиверстова, О. Н.
+FD 1988
+YR 1988
+T1 Местоимения в языке и речи
+PP М.
+PB Наука
+K1 основные семантические граммемы имени
+K1 местоимение
+K1 семантика
+K1 аспект
+
+
+A1 Кузьмина, С. М.
+FD 1989
+YR 1989
+T3 Грамматические исследования: функционально-стилистический аспект. 
+T1 Семантика и стилистика неопределенных местоимений 
+A2 Шмелёв, Д. Н.
+PP (Суперсегментная фонетика. Морфологическая семантика). М.
+SP 158
+OP 231
+K1 основные семантические граммемы имени
+K1 местоимение
+K1 семантика
+K1 аспект
+
+
+A1 Haspelmath, M.
+# a
+FD 1997
+YR 1997
+T1 Indefinite pronouns
+PP Oxford
+PB Clarendon
+K1 основные семантические граммемы имени
+K1 местоимение
+K1 семантика
+K1 аспект
+
+
+A1 Татевосов, С. Г.
+FD 2002
+YR 2002
+T1 Семантика составляющих именной группы: кванторные слова
+PP М.
+PB ИМЛИ РАН
+K1 основные семантические граммемы имени
+K1 местоимение
+K1 семантика
+K1 аспект
+
+
+A1 Джусти, Ф.
+FD 1982
+YR 1982
+T3 Новое в зарубежной лингвистикевып. XV: Современная зарубежная русистика
+T2 Вып. XV
+T1 Нереферентные показатели имени нарицательного 
+PP М.
+SP 498
+OP 511
+K1 основные семантические граммемы имени
+K1 нереферентность
+
+
+RT Book, Whole
+A1 Аксёнова
+T1 [Аксёнова,1987]
+FD 1987
+YR 1987
+K1 основные семантические граммемы имени
+K1 нереферентность
+
+
+RT Book, Whole
+A1 Johanson
+T1 [Johanson,2006]
+FD 2006
+YR 2006
+K1 основные семантические граммемы имени
+K1 нереферентность
+
+
+RT Book, Whole
+A1 Vogeleer
+A1 Tasmowski
+T1 [Vogeleer,Tasmowski,2006]
+FD 2006
+YR 2006
+K1 основные семантические граммемы имени
+K1 нереферентность
+
+
+A1 Кронгауз, М. А.
+FD 1984
+YR 1984
+T3 Семиотика и информатикавып. 23
+T2 Вып. 23
+T1 Тип референции именных групп с местоимениями все, всякий, каждый 
+K1 основные семантические граммемы имени
+
+
+RT Book, Section
+A1 Падучева
+T1 [Падучева,1985]
+FD 1985
+YR 1985
+SP 79
+OP 107
+K1 основные семантические граммемы имени
+
+
+A1 Bunt, H. C.
+FD 1985
+YR 1985
+T1 Mass terms and model-theoretic semantics
+PP Cambridge
+PB Cambridge U. Press
+K1 основные семантические граммемы имени
+
+
+A1 Krifka, M.
+FD 1989
+YR 1989
+T1 Nominalreferenz und Zeitkonstitution. Zur Semantik von Massentermen, Pluraltermen und Aspektklassen. 
+PP München
+PB Fink
+K1 основные семантические граммемы имени
+
+
+A1 Булыгина, Т. В.
+A1 Шмелёв, А. Д.
+FD 1988
+YR 1988
+T3 Булыгина & Шмелёв 1997193-209
+T1 Естественно-языковая и логическая квантификация 
+K1 основные семантические граммемы имени
+
+
+A1 Bach, E.
+A2 Jelinek, E.
+A2 Kratzer, A.
+A2 .
+A2 Partee, B. H.
+FD 1995
+YR 1995
+T1 Quantification in natural languages
+PP Dordrecht
+PB Kluwer
+K1 основные семантические граммемы имени
+
+
+RT Book, Whole
+A1 Татевосов
+T1 [Татевосов,2002]
+FD 2002
+YR 2002
+K1 основные семантические граммемы имени
+
+
+A2 Plank, F.
+FD 2003
+YR 2003
+T1 Noun phrase structure in the languages of Europe
+PP B.
+PB Mouton de Gruyter
+K1 основные семантические граммемы имени
+
+
+RT Book, Whole
+A1 Vogeleer
+A1 Tasmowski
+T1 [Vogeleer,Tasmowski,2006]
+FD 2006
+YR 2006
+K1 основные семантические граммемы имени
+
+
+A2 Ярцева, В. Н.
+FD 1977
+YR 1977
+T1 Категории бытия и обладания в языке
+PP М.
+PB Наука
+K1 отношение
+K1 основные семантические граммемы имени
+K1 семантика
+
+
+A1 Ultan, R.
+# b
+FD 1978
+YR 1978
+T3 Universals of human languagevol. 4: Syntax
+T2 Vol. 4
+T1 Towards a typology of substantival possession 
+A2 Greenberg, J. H.
+PP Stanford
+SP 11
+OP 50
+K1 отношение
+K1 основные семантические граммемы имени
+K1 семантика
+
+
+A1 Seiler, H.
+FD 1983
+YR 1983
+T1 Possession as an operational dimension of language
+PP Tübingen
+PB Narr
+K1 отношение
+K1 основные семантические граммемы имени
+K1 семантика
+
+
+A1 Топоров, В. Н.
+FD 1986
+YR 1986
+T3 Славянское и балканское языкознание
+T1 О некоторых предпосылках формирования категории посессивности 
+A2 Калнынь, Л. Э.
+A2 Молошная, Т. Н.
+SP 142
+OP 167
+K1 отношение
+K1 основные семантические граммемы имени
+K1 семантика
+
+
+A1 Чинчлей, К. Г.
+FD 1990
+YR 1990
+T1 Типология категории посессивности
+PP Кишинев
+PB Штиинца
+K1 отношение
+K1 основные семантические граммемы имени
+K1 семантика
+
+
+A2 Бондарко, А. В.
+FD 1996
+YR 1996
+T1 Теория функциональной грамматики: Локативность. Бытийность. Посессивность. Обусловленность. 
+PP СПб
+PB Наука
+K1 отношение
+K1 основные семантические граммемы имени
+K1 семантика
+
+
+A1 Langacker, R. W.
+FD 1995
+YR 1995
+T3 J
+T1 Possession and possessive constructions 
+PP R. Taylor & R. E. MacLaury (eds.). Language and the cognitive construal of the world. B.
+SP 51
+OP 79
+K1 отношение
+K1 основные семантические граммемы имени
+K1 семантика
+
+
+A1 Taylor, J. R.
+FD 1996
+YR 1996
+T1 Possessives in English: An exploration in Cognitive Grammar
+PP Oxford
+PB Clarendon
+K1 отношение
+K1 основные семантические граммемы имени
+K1 семантика
+
+
+A1 Heine, B.
+FD 1997
+YR 1997
+T1 Possession: Cognitive sources, forces, and grammaticalization
+PP Cambridge
+PB Cambridge U. Press
+K1 отношение
+K1 основные семантические граммемы имени
+K1 семантика
+
+
+A1 Koptjevskaja-Tamm, M.
+FD 2002
+YR 2002
+T2 Sec. 55.2
+T3 Sprachtypologie und Universalienforschung
+T1 Adnominal possession in the European languages: form and function 
+K1 отношение
+K1 основные семантические граммемы имени
+K1 семантика
+
+
+A1 Baron, I.
+A2 Herslund, M.
+A2 .
+A2 Sørensen, F.
+FD 2001
+YR 2001
+T1 Dimensions of possession
+PP Amsterdam
+PB Benjamins
+K1 отношение
+K1 основные семантические граммемы имени
+K1 семантика
+
+
+A1 Dahl, Ö.
+A1 Koptjevskaja-Tamm, M.
+FD 2001
+YR 2001
+T3 Dimensions of possession
+T1 Kinship in grammar 
+A2 Baron, I.
+PP Amsterdam
+SP 201
+OP 225
+K1 отношение
+K1 основные семантические граммемы имени
+K1 семантика
+
+
+A1 Seiler, H.
+FD 2001
+YR 2001
+T3 Dimensions of possession
+T1 The operational basis of possession: a dimensional approach revisited 
+A2 Baron, I.
+PP Amsterdam
+SP 27
+OP 40
+K1 отношение
+K1 основные семантические граммемы имени
+K1 семантика
+
+
+RT Book, Whole
+A1 Kim et al.
+T1 [Kim et al.,2004]
+FD 2004
+YR 2004
+K1 основные семантические граммемы имени
+K1 семантика
+K1 число
+
+
+A1 Chappell, H.
+A2 .
+A2 McGregor, W. B.
+FD 1996
+YR 1996
+T1 The grammar of inalienability: A typological perspective on body part terms and the part-whole relation
+PP B.
+PB Mouton de Gruyter
+K1 основные семантические граммемы имени
+K1 семантика
+K1 принадлежность
+
+
+A1 Holvoet, A.
+FD 2001
+YR 2001
+T3 Circum-Baltic languages
+T1 Impersonals and passives in Baltic and Finnic 
+A2 Dahl, Ö.
+A2 Koptjevskaja-Tamm, M.
+PP Amsterdam
+SP 363
+OP 389
+K1 основные семантические граммемы имени
+K1 семантика
+K1 принадлежность
+
+
+A1 Mithun, M.
+FD 2001
+YR 2001
+T3 Dimensions of possession
+T1 The difference a category makes in the expression of possession and inalienability 
+A2 Baron, I.
+PP Amsterdam
+SP 285
+OP 310
+K1 основные семантические граммемы имени
+K1 семантика
+K1 принадлежность
+
+
+RT Book, Whole
+A1 Stolz et al.
+T1 [Stolz et al.,2008]
+FD 2008
+YR 2008
+K1 основные семантические граммемы имени
+K1 семантика
+K1 принадлежность
+
+
+RT Book, Whole
+A1 Иванов
+T1 [Иванов,1989]
+FD 1989
+YR 1989
+K1 основные семантические граммемы имени
+K1 посессивность
+
+
+A1 Журинская, М. А.
+FD 1978
+YR 1978
+T3 О языкахфольклоре и литературе Океании
+T1 Именные посессивные конструкции в меланезийских языках 
+A2 Петриковская, А. С.
+PP М.
+SP 16
+OP 38
+K1 основные семантические граммемы имени
+K1 посессивность
+
+
+A1 Wilson, W. H.
+FD 1982
+YR 1982
+T1 Proto-Polynesian possessive marking
+PP Canberra
+PB ANU
+K1 основные семантические граммемы имени
+K1 посессивность
+
+
+RT Book, Whole
+A1 Fischer
+T1 [Fischer,2000]
+FD 2000
+YR 2000
+K1 основные семантические граммемы имени
+K1 посессивность
+
+
+A1 Velázquez-Castillo, M.
+FD 1996
+YR 1996
+T1 The grammar of possession: inalienability, incorporation and possessor ascension in Guaraní
+PP Amsterdam
+PB Benjamins
+K1 основные семантические граммемы имени
+K1 посессивность
+
+
+A1 Lehmann, C.
+FD 1998
+YR 1998
+T1 Possession in Yucatec Maya: Structures, functions, typology
+PP München
+PB LINCOM Europa
+K1 основные семантические граммемы имени
+K1 посессивность
+
+
+A1 Haspelmath, M.
+FD 1999
+YR 1999
+T2 Sec. 75.2
+T3 Language
+T1 Explaining article-possessor incompatibility: economic motivation in noun phrase syntax 
+K1 основные семантические граммемы имени
+K1 посессивность
+K1 детерминация
+
+
+A1 Fraurud, K.
+FD 2001
+YR 2001
+T3 Dimensions of possession
+T1 Possessives with extensive use: a source of definite articles? 
+A2 Baron, I.
+PP Amsterdam
+SP 243
+OP 267
+K1 основные семантические граммемы имени
+K1 посессивность
+K1 детерминация
+
+
+RT Book, Whole
+A1 Kim et al.
+T1 [Kim et al.,2004]
+FD 2004
+YR 2004
+K1 основные семантические граммемы имени
+K1 посессивность
+K1 детерминация
+
+
+RT Book, Section
+A1 Виноградов, В. А.
+T1 Число
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 посессивность
+K1 число
+K1 основные семантические граммемы имени
+K1 собирательность
+K1 местоимение
+
+
+RT Book, Section
+A1 Виноградов, В. А.
+T1 Собирательность
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 посессивность
+K1 число
+K1 основные семантические граммемы имени
+K1 собирательность
+K1 местоимение
+
+
+RT Book, Section
+A1 Арутюнова, Н. Д.
+T1 Референция
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 посессивность
+K1 число
+K1 основные семантические граммемы имени
+K1 собирательность
+K1 местоимение
+
+
+RT Book, Section
+A1 Крылов, С. А.
+A1 Падучева, Е. В.
+T1 Местоимения
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 посессивность
+K1 число
+K1 основные семантические граммемы имени
+K1 собирательность
+K1 местоимение
+
+
+RT Book, Section
+A1 Николаева, Т. М.
+T1 Определенность
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 посессивность
+K1 число
+K1 основные семантические граммемы имени
+K1 собирательность
+K1 местоимение
+
+
+RT Book, Section
+A1 Виноградов, В. А.
+T1 Артикль
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 посессивность
+K1 число
+K1 основные семантические граммемы имени
+K1 собирательность
+K1 местоимение
+
+
+RT Book, Section
+A1 Журинская, М. А.
+T1 Посессивность
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 посессивность
+K1 число
+K1 основные семантические граммемы имени
+K1 собирательность
+K1 местоимение
+
+
+A1 Мельчук, И. А.
+A1 Холодович, А. А.
+FD 1970
+YR 1970
+T3 Народы Азии и Африки1970
+T1 К теории грамматического залога (определение, исчисление) 
+SP 111
+OP 124
+K1 залог
+K1 определение
+K1 залог и актантная деривация
+
+
+A1 Холодович, А. А.
+FD 1979
+YR 1979
+T1 Залог
+PP I
+PB Определение. Исчисление // А. А. Холодович. Проблемы грамматической теории. Л.: Наука
+K1 залог
+K1 определение
+K1 залог и актантная деривация
+
+
+RT Book, Section
+A1 Мельчук
+T1 [Мельчук,1998]
+FD 1998
+YR 1998
+SP 163
+OP 195
+K1 залог
+K1 определение
+K1 залог и актантная деривация
+
+
+A1 Мельчук, И. А.
+FD 2004
+YR 2004
+T3 40 лет Санкт-Петербургской типологической школе
+T1 Определение категории залога и исчисление возможных залогов: 30 лет спустя 
+A2 Храковский, В. С.
+PP М.
+SP 286
+OP 314
+K1 залог
+K1 определение
+K1 залог и актантная деривация
+
+
+A1 Успенский, В. А.
+FD 1977
+YR 1977
+T3 Проблемы лингвистической типологии и структуры языка
+T1 К понятию диатезы 
+A2 Храковский, В. С.
+PP Л.
+SP 65
+OP 84
+K1 залог и актантная деривация
+K1 предложение
+K1 успенскость
+K1 период
+K1 успенский
+
+
+A1 Падучева, Е. В.
+FD 1974
+YR 1974
+T1 О семантике синтаксиса: Материалы к трансформационной грамматике русского языка
+PP М.
+PB Наука
+K1 залог и актантная деривация
+K1 предложение
+K1 успенскость
+K1 период
+K1 успенский
+
+
+A1 Храковский, В. С.
+FD 1991
+YR 1991
+T3 Теория функциональной грамматики: Персональность. Залоговость. 
+T1 Пассивные конструкции 
+A2 Бондарко, А. В.
+PP СПб
+SP 141
+OP 180
+K1 залог и актантная деривация
+
+
+A1 Comrie, B.
+FD 1977
+YR 1977
+T3 Syntax and semanticsvol. 8: Grammatical relations
+T2 Vol. 8
+T1 In defense of spontaneous demotion: the impersonal passive 
+A2 Cole, P.
+A2 Sadock, J. M.
+PP N.Y.
+SP 47
+OP 58
+K1 залог и актантная деривация
+K1 имперсонал
+K1 аспект
+K1 разновидность
+K1 пассив
+K1 грамматика
+K1 залог
+
+
+A1 Frajzyngier, Z.
+FD 1982
+YR 1982
+T2 Sec. 58
+T3 Lingua
+T1 Indefinite agent, passive and impersonal passive: a functional study 
+K1 залог и актантная деривация
+K1 имперсонал
+K1 аспект
+K1 разновидность
+K1 пассив
+K1 грамматика
+K1 залог
+
+
+A1 Кибрик, А. Е.
+FD 1982
+YR 1982
+T3 Новое в зарубежной лингвистикевып. XI: Современные синтаксические теории в американской лингвистике
+T2 Вып. XI
+T1 Проблема синтаксических отношений в универсальной грамматике 
+PP М.
+SP 5
+OP 36
+K1 грамматика
+K1 залог и актантная деривация
+
+
+RT Book, Section
+A1 Тестелец
+T1 [Тестелец,2001]
+FD 2001
+YR 2001
+SP 358
+OP 359
+K1 грамматика
+K1 залог и актантная деривация
+
+
+A1 Siewierska, A.
+FD 1984
+YR 1984
+T1 The passive: a comparative linguistic analysis
+PP L.
+PB Croom Helm
+K1 залог и актантная деривация
+K1 семантика
+
+
+A1 Abraham, W.
+A2 .
+A2 Leisiö, L.
+FD 2006
+YR 2006
+T1 Passivization and typology: form and function
+PP Amsterdam
+PB Benjamins
+K1 залог и актантная деривация
+K1 семантика
+
+
+A1 Bisang, W.
+A2 Himmelmann, N. P.
+A2 .
+A2 Wiemer, B.
+FD 2004
+YR 2004
+T1 What makes grammaticalization? A look from its fringes and its components
+PP B.
+PB Mouton de Gruyter
+K1 залог и актантная деривация
+K1 семантика
+
+
+A1 Givón, T.
+FD 1990
+YR 1990
+T1 Syntax: a functional-typological introduction
+T2 Vol. II
+PP Amsterdam
+PB Benjamins 
+K1 залог
+K1 залог и актантная деривация
+
+
+A1 Shibatani, M.
+FD 1985
+YR 1985
+T2 Sec. 61
+T3 Language
+T1 Passives and related constructions: a prototype analysis 
+K1 залог
+K1 залог и актантная деривация
+K1 агенс
+K1 пассив
+
+
+A1 Kozinsky, I. Š.
+A1 Nedjalkov, V. P.
+A1 Polinskaja, M. S.
+FD 1988
+YR 1988
+T3 Passive and voice
+T1 Antipassive in Chukchee: oblique object, object incorporation, zero object 
+A2 Shibatani, M.
+PP Amsterdam
+SP 651
+OP 706
+K1 антипассив
+K1 залог
+K1 залог и актантная деривация
+K1 имперсонал
+
+
+A1 Cooreman, A.
+FD 1994
+YR 1994
+T3 Voice: Form and function. 
+T1 A functional typology of antipassives 
+A2 Fox, B.
+A2 Hopper, P. J.
+PP Amsterdam
+SP 49
+OP 88
+K1 антипассив
+K1 залог
+K1 залог и актантная деривация
+K1 имперсонал
+
+
+A1 Langacker, R. W.
+FD 2006
+YR 2006
+T3 Voice and grammatical relations: in honor of Masayoshi Shibatani. 
+T1 Dimensions of defocusing 
+A2 Tsunoda, T.
+A2 Kageyama, T.
+PP Amsterdam
+SP 115
+OP 137
+K1 антипассив
+K1 залог
+K1 залог и актантная деривация
+K1 имперсонал
+
+
+RT Book, Whole
+A1 Barber
+T1 [Barber,1975]
+FD 1975
+YR 1975
+K1 залог и актантная деривация
+
+
+A1 Kemmer, S.
+# a
+FD 1993
+YR 1993
+T1 The middle voice
+PP Amsterdam
+PB Benjamins
+K1 залог и актантная деривация
+
+
+A1 Fox, B.
+A2 .
+A2 Hopper, P. J.
+FD 1994
+YR 1994
+T1 Voice: Form and function
+PP Amsterdam
+PB Benjamins
+K1 залог и актантная деривация
+
+
+A1 Givón, T.
+# a
+FD 1994
+YR 1994
+T3 Voice and inversion
+T1 The pragmatics of de-transitive voice: functional and typological aspects of inversion 
+A2 Givón, T.
+PP Amsterdam
+SP 3
+OP 44
+K1 залог и актантная деривация
+
+
+A1 Klaiman, M. H.
+FD 1991
+YR 1991
+T1 Grammatical voice
+PP Cambridge
+PB Cambridge U. Press
+K1 залог
+K1 залог и актантная деривация
+
+
+RT Book, Whole
+A1 Dixon
+A1 Aikhenvald
+T1 [Dixon,Aikhenvald,1997]
+FD 1997
+YR 1997
+K1 деривация
+K1 залог и актантная деривация
+K1 глагол
+
+
+RT Book, Whole
+A1 Dixon
+A1 Aikhenvald
+T1 [Dixon,Aikhenvald,2000]
+FD 2000
+YR 2000
+K1 деривация
+K1 залог и актантная деривация
+K1 глагол
+
+
+RT Book, Whole
+A1 Kemmer
+T1 [Kemmer,1993a]
+FD 1993a
+YR 1993a
+K1 показатель
+K1 залог и актантная деривация
+K1 аспект
+
+
+A1 Haspelmath, M.
+FD 1990
+YR 1990
+T2 Sec. 14.1
+T3 Studies in language
+T1 The grammaticization of passive morphology 
+K1 показатель
+K1 залог и актантная деривация
+K1 аспект
+
+
+RT Book, Whole
+A1 Creissels
+T1 [Creissels,2001a]
+FD 2001a
+YR 2001a
+K1 показатель
+K1 залог и актантная деривация
+K1 аспект
+
+
+A1 Недялков, В. П.
+A1 Сильницкий, Г. Г.
+FD 1969
+YR 1969
+T3 Типология каузативных конструкций: Морфологический каузатив. 
+T1 Типология морфологических и лексических каузативов 
+A2 Холодович, А. А.
+PP Л.
+SP 20
+OP 50
+K1 деривация
+K1 залог и актантная деривация
+K1 каузатив
+K1 значение
+
+
+RT Book, Whole
+A1 Shibatani
+T1 [Shibatani,1976]
+FD 1976
+YR 1976
+K1 деривация
+K1 залог и актантная деривация
+K1 каузатив
+K1 значение
+
+
+A1 Мельчук, И. А.
+FD 1974
+YR 1974
+T3 Типология пассивных конструкций: Диатезы и залоги. 
+T1 О синтаксическом нуле 
+A2 Холодович, А. А.
+PP Л.
+SP 343
+OP 361
+K1 деривация
+K1 реципрок
+K1 залог и актантная деривация
+K1 рефлексива
+
+
+A1 Генюшене, Э. Ш.
+A1 Недялков, В. П.
+FD 1991
+YR 1991
+T3 Теория функциональной грамматики: Персональность. Залоговость. 
+T1 Типология рефлексивных конструкций 
+A2 Бондарко, А. В.
+PP СПб
+SP 241
+OP 276
+K1 деривация
+K1 реципрок
+K1 залог и актантная деривация
+K1 рефлексива
+
+
+A1 Долинина, И. Б.
+FD 1989
+YR 1989
+T1 Синтаксически значимые категории английского глагола
+PP М.
+PB Наука
+K1 залог и актантная деривация
+
+
+A1 Аксёнова, И. С.
+FD 1990
+YR 1990
+T3 И
+T1 Глагол 
+PP С. Аксёнова, И. Н. Топорова. Введение в бантуистику (Имя. Глагол). М.
+SP 127
+OP 240
+K1 залог и актантная деривация
+
+
+A1 Аксёнова, И. С.
+FD 1972
+YR 1972
+T3 Типология глагола в африканских языках
+T1 Значение направительного суффикса глагола в языках банту 
+A2 Охотина, Н. В.
+PP М.
+SP 3
+OP 72
+K1 залог и актантная деривация
+
+
+A1 Maslova, E. S.
+FD 2007
+YR 2007
+T3 Reciprocal constructions
+T1 Reciprocal and polyadic (Remarkable reciprocals in Bantu) 
+A2 Nedjalkov, 
+PP Amsterdam
+SP 335
+OP 352
+K1 залог и актантная деривация
+
+
+A1 Холодович, А. А.
+FD 1978
+YR 1978
+T3 Проблемы теории грамматического залога
+T1 Теоретические проблемы реципрока в современном японском языке 
+A2 Храковский, В. С.
+PP Л..
+SP 5
+OP 16
+K1 реципрок
+K1 залог и актантная деривация
+
+
+A1 Nedjalkov, V. P.
+# a
+FD 2007
+YR 2007
+T3 Reciprocal constructions
+T1 Overview of the research: definitions of terms, framework, and related issues 
+A2 Nedjalkov, 
+PP Amsterdam
+SP 3
+OP 114
+K1 реципрок
+K1 залог и актантная деривация
+
+
+RT Book, Whole
+A1 Nedjalkov
+T1 [Nedjalkov,2007a]
+FD 2007a
+YR 2007a
+K1 реципрок
+K1 залог и актантная деривация
+
+
+RT Book, Section
+A1 Князев
+T1 [Князев,2007]
+FD 2007
+YR 2007
+SP 258
+OP 368
+K1 реципрок
+K1 залог и актантная деривация
+K1 рефлексива
+
+
+A1 Babby, L. H.
+A1 Brecht, R.
+FD 1975
+YR 1975
+T2 Sec. 51.2
+T3 Language
+T1 The syntax of voice in Russian 
+K1 залог и актантная деривация
+
+
+A1 Babby, L. H.
+FD 1983
+YR 1983
+T2 Sec. 11
+T3 Wiener slavistischer Almanach
+T1 The relation between causative and voice: Russian vs Turkish 
+K1 залог и актантная деривация
+
+
+A1 Baker, M.
+FD 1988
+YR 1988
+T1 Incorporation: A theory of grammatical function changing
+PP Chicago
+PB U. of Chicago Press
+K1 деривация
+K1 залог и актантная деривация
+
+
+A1 Comrie, B.
+# a
+FD 1985
+YR 1985
+T3 Language typology and syntactic descriptionvol. III: Grammatical categories and the lexicon
+T2 Vol. III
+T1 Causative verb formation and other verb-deriving morphology 
+A2 Shopen, T.
+PP Cambridge
+SP 301
+OP 348
+K1 залог и актантная деривация
+
+
+RT Book, Whole
+A1 Коваль
+A1 Нялибули
+T1 [Коваль,Нялибули,1997]
+FD 1997
+YR 1997
+K1 залог и актантная деривация
+
+
+A1 Haspelmath, M.
+# b
+FD 1993
+YR 1993
+T3 Causatives and transitivity
+T1 More on the typology of inchoative
+A2 Comrie, B.
+PP Amsterdam
+SP 87
+OP 120
+NO causative verb alternations 
+K1 деривация
+K1 залог и актантная деривация
+K1 каузатив
+
+
+A2 Shibatani, M.
+FD 2002
+YR 2002
+T1 The grammar of causation and interpersonal manipulation
+PP Amsterdam
+PB Benjamins
+K1 деривация
+K1 залог и актантная деривация
+K1 каузатив
+
+
+RT Book, Whole
+A1 Dixon
+T1 [Dixon,2000]
+FD 2000
+YR 2000
+K1 деривация
+K1 залог и актантная деривация
+K1 каузатив
+
+
+A1 Kulikov, L.
+FD 2001
+YR 2001
+T3 Language typology and language universals: an international handbook. 
+T1 Causatives 
+A2 Haspelmath, M.
+PP B.
+SP 886
+OP 898
+K1 деривация
+K1 залог и актантная деривация
+K1 каузатив
+
+
+A1 Shibatani, M.
+FD 1996
+YR 1996
+T3 Grammatical constructions: Their form and meaning. Essays dedicated to Charles J. Fillmore. 
+T1 Applicatives and benefactives: a cognitive account 
+A2 Shibatani, M.
+A2 Thompson, S. A.
+PP Oxford
+SP 157
+OP 194
+K1 деривация
+K1 залог и актантная деривация
+K1 каузатив
+
+
+RT Book, Whole
+A1 Haspelmath
+T1 [Haspelmath,1993b]
+FD 1993b
+YR 1993b
+K1 залог и актантная деривация
+K1 каузатив
+K1 декаузатив
+
+
+A1 Падучева, Е. В.
+FD 2001
+YR 2001
+T3 Русский язык в научном освещении 152-79
+T1 Каузативный глагол и декаузатив в русском языке 
+K1 залог и актантная деривация
+K1 каузатив
+K1 декаузатив
+
+
+A1 Томмола, Х.
+FD 1998
+YR 1998
+T3 Типология
+T1 Заметки к типологии амбиперсонала 
+A2 Козинцева, Н. А.
+A2 Оглоблин, А. К.
+PP Грамматика. Семантика. К 65-летию В. С. Храковского. СПб
+SP 41
+OP 57
+K1 залог и актантная деривация
+K1 форма
+K1 глагол
+
+
+RT Book, Whole
+A1 Lichtenberk
+T1 [Lichtenberk,1985]
+FD 1985
+YR 1985
+K1 деривация
+K1 залог и актантная деривация
+K1 показатель
+K1 значение
+K1 рефлексива
+K1 реципрок
+K1 ассоциатив
+K1 полисемия
+
+
+A1 Nedjalkov, V. P.
+# c
+FD 2007
+YR 2007
+T3 Reciprocal constructions
+T1 Polysemy of reciprocal markers 
+A2 Nedjalkov, 
+PP Amsterdam
+SP 231
+OP 333
+K1 реципрок
+K1 залог и актантная деривация
+K1 показатель
+K1 полисемия
+
+
+A1 Якобсон, Р. О.
+FD 1957
+YR 1957
+T3 О
+T1 Шифтеры, глагольные категории и русский глагол 
+PP Г. Ревзина (сост.). Принципы типологического анализа языков различного строя. М.
+SP 95
+OP 113
+NO Пер. с англ. 
+K1 дейктические и "шифтерные" категории
+K1 семантика
+K1 акт
+K1 аспект
+
+
+RT Book, Whole
+A1 Бенвенист и
+T1 [Бенвенист и,1958]
+FD 1958
+YR 1958
+K1 дейктические и "шифтерные" категории
+K1 семантика
+K1 акт
+K1 аспект
+
+
+A1 Hagège, C.
+FD 1993
+YR 1993
+T1 The language builder: An essay on the human signature in linguistic morphogenesis
+PP Amsterdam
+PB Benjamins
+K1 дейктические и "шифтерные" категории
+K1 эгоцентричность
+
+
+RT Book, Whole
+A1 Падучева
+T1 [Падучева,1985]
+FD 1985
+YR 1985
+K1 дейктические и "шифтерные" категории
+K1 семантика
+
+
+RT Book, Whole
+A1 Арутюнова
+A1 Падучева
+T1 [Арутюнова,Падучева,1985]
+FD 1985
+YR 1985
+K1 дейктические и "шифтерные" категории
+K1 семантика
+
+
+RT Book, Whole
+A1 Бюлер
+T1 [Бюлер,1934]
+FD 1934
+YR 1934
+K1 дейктические и "шифтерные" категории
+
+
+A1 Крылов, С. А.
+A1 Падучева, Е. В.
+FD 1992
+YR 1992
+T3 Человеческий фактор в языке
+T1 Общие вопросы дейксиса 
+A2 Арутюнова, Н. Д.
+PP , модальность, дейксис. М.
+SP 154
+OP 194
+K1 дейктические и "шифтерные" категории
+
+
+A1 Апресян, Ю. Д.
+FD 1986
+YR 1986
+T3 Ю
+T1 Дейксис в лексике и грамматике и наивная модель мира 
+PP Д. Апресян. Избранные труды, том II
+SP 629
+OP 650
+K1 дейктические и "шифтерные" категории
+
+
+RT Book, Section
+A1 Падучева
+T1 [Падучева,1996]
+FD 1996
+YR 1996
+SP 266
+OP 271
+K1 дейктические и "шифтерные" категории
+
+
+A1 Майтинская, К. Е.
+FD 1969
+YR 1969
+T1 Местоимения в языках разных систем
+PP М.
+PB Наука
+K1 дейктические и "шифтерные" категории
+K1 аспект
+K1 семантика
+K1 местоимение
+K1 категория
+
+
+RT Book, Whole
+A1 Селиверстова
+T1 [Селиверстова,1988]
+FD 1988
+YR 1988
+K1 дейктические и "шифтерные" категории
+K1 аспект
+K1 семантика
+K1 местоимение
+K1 категория
+
+
+A1 Cysouw, M.
+FD 2003
+YR 2003
+T1 The paradigmatic structure of person marking
+PP Oxford
+PB Oxford U. Press
+K1 дейктические и "шифтерные" категории
+K1 аспект
+K1 семантика
+K1 местоимение
+K1 категория
+
+
+A1 Siewierska, A.
+FD 2004
+YR 2004
+T1 Person
+PP Cambridge
+PB Cambridge U. Press
+K1 дейктические и "шифтерные" категории
+K1 аспект
+K1 семантика
+K1 местоимение
+K1 категория
+
+
+A2 Бондарко, А.В.
+FD 1991
+YR 1991
+T1 Теория функциональной грамматики. Персональность. Залоговость. 
+PP СПб
+PB Наука
+K1 дейктические и "шифтерные" категории
+K1 аспект
+K1 семантика
+K1 местоимение
+K1 категория
+
+
+A1 Greenberg, J. H.
+FD 1988
+YR 1988
+T2 Sec. 12.1
+T3 Studies in language
+T1 The first person inclusive dual as an ambiguous category 
+K1 дейктические и "шифтерные" категории
+K1 аспект
+K1 семантика
+K1 местоимение
+K1 категория
+
+
+A1 Daniel, M.
+FD 2005
+YR 2005
+T3 Clusivity
+T1 Understanding inclusives 
+A2 Filimonova, E.
+SP 3
+OP 48
+K1 дейктические и "шифтерные" категории
+K1 аспект
+K1 семантика
+K1 местоимение
+K1 категория
+
+
+A1 Соколовская, Н. К.
+FD 1980
+YR 1980
+T3 Теория и типология местоимений
+T1 Некоторые семантические универсалии в системе личных местоимений 
+A2 Вардуль, И. Ф.
+PP М.
+SP 84
+OP 103
+K1 дейктические и "шифтерные" категории
+K1 настоящее
+K1 значение
+K1 местоимение
+
+
+A1 Hagège, C.
+FD 1974
+YR 1974
+T2 Sec. 69.1
+T3 Bulletin de la Société de linguistique de Paris
+T1 Les pronoms logophoriques 
+K1 дейктические и "шифтерные" категории
+K1 местоимение
+K1 семантика
+
+
+A1 Stirling, L.
+FD 1988
+YR 1988
+T1 Switch-reference and logophoricity in discourse representation theory
+PP Edinburgh
+PB U. of Edinburgh
+K1 дейктические и "шифтерные" категории
+K1 местоимение
+K1 семантика
+
+
+A1 Culy, C. D.
+FD 1997
+YR 1997
+T2 Sec. 35.5
+T3 Linguistics
+T1 Logophoric pronouns and point of view 
+K1 дейктические и "шифтерные" категории
+K1 местоимение
+K1 семантика
+
+
+A1 Güldemann, T.
+FD 2003
+YR 2003
+T2 Sec. 56.4
+T3 Sprachtypologie und Universalienforschung
+T1 Logophoricity in Africa: an attempt to explain and evaluate the significance of its modern distribution 
+K1 дейктические и "шифтерные" категории
+K1 местоимение
+K1 семантика
+
+
+A1 Jelinek, E.
+FD 1984
+YR 1984
+T2 Sec. 2
+T3 Natural language and linguistic theory
+T1 Empty categories, case and configurationality 
+K1 дейктические и "шифтерные" категории
+K1 субъект
+K1 категория
+
+
+A1 Baker, Mark C.
+FD 1996
+YR 1996
+T1 The polysynthesis parameter
+PP N.Y.
+PB Oxford U. Press
+K1 дейктические и "шифтерные" категории
+K1 аргумент
+K1 словоформа
+K1 категория
+
+
+A1 Lyons, J.
+FD 1977
+YR 1977
+T1 Semantics
+T2 Vol. 1-2
+PP Cambridge
+PB Cambridge U. Press
+K1 дейктические и "шифтерные" категории
+K1 категория
+
+
+A1 Hartmann, D.
+FD 1982
+YR 1982
+T3 Here and there: cross-linguistic studies on deixis and demonstration. 
+T1 Deixis and anaphora in German dialects: the semantics and pragmatics of two definite articles in dialectal varieties 
+A2 Weissenborn, J.
+A2 Klein, W.
+PP Amsterdam
+SP 187
+OP 207
+K1 дейктические и "шифтерные" категории
+K1 категория
+
+
+A1 Weissenborn, J.
+A2 .
+A2 Klein, W.
+FD 1982
+YR 1982
+T1 Here and there: cross-linguistic studies on deixis and demonstration
+PP Amsterdam
+PB Benjamins
+K1 дейктические и "шифтерные" категории
+K1 категория
+
+
+A2 Rauh, G.
+FD 1983
+YR 1983
+T1 Essays on deixis
+PP Tübingen
+PB Narr
+K1 дейктические и "шифтерные" категории
+K1 категория
+
+
+A1 Pick, H. L.
+A2 .
+A2 Acredolo, L. P.
+FD 1983
+YR 1983
+T1 Spatial orientation: Theory, research and application
+PP N.Y.
+PB Plenum
+K1 дейктические и "шифтерные" категории
+K1 категория
+
+
+A2 Lenz, F.
+FD 2003
+YR 2003
+T1 Deictic conceptualization of space, time and person
+PP Amsterdam
+PB Benjamins
+K1 дейктические и "шифтерные" категории
+K1 категория
+
+
+RT Book, Whole
+A1 Dixon
+T1 [Dixon,2003]
+FD 2003
+YR 2003
+K1 дейктические и "шифтерные" категории
+K1 категория
+
+
+A1 Diessel, H.
+FD 1999
+YR 1999
+T1 Demonstratives: Form, function and grammaticalization
+PP Amsterdam
+PB Benjamins
+K1 дейктические и "шифтерные" категории
+K1 категория
+
+
+A1 Diessel, H.
+FD 2006
+YR 2006
+T3 Encyclopedia of language and linguistics
+T1 Demonstratives 
+A2 Brown, K.
+PP Oxford
+SP 430
+OP 435
+K1 дейктические и "шифтерные" категории
+K1 категория
+
+
+A1 Anderson, Steven R.
+A1 Keenan, E.
+FD 1985
+YR 1985
+T3 Language typology and syntactic descriptionvol. III: Grammatical categories and the lexicon
+T2 Vol. III
+T1 Deixis 
+A2 Shopen, T.
+PP Cambridge
+SP 259
+OP 308
+K1 дейктические и "шифтерные" категории
+K1 категория
+
+
+A1 Ростовцев-Попель, А. А.
+FD 2009
+YR 2009
+T3 Вопросы языкознания2009
+T1 Типология демонстративов: средние дейктики 
+SP 22
+OP 34
+K1 дейктические и "шифтерные" категории
+
+
+A1 Плунгян, В. А.
+# a
+FD 2002
+YR 2002
+T3 Исследования по теории грамматикивып. 2: Грамматикализация пространственных значений
+T2 Вып. 2
+T1 О специфике выражения именных пространственных характеристик в глаголе: категория глагольной ориентации 
+A2 Плунгян, В. А.
+PP М.
+SP 57
+OP 98
+K1 дейктические и "шифтерные" категории
+K1 категория
+
+
+RT Book, Whole
+A1 Talmy и
+T1 [Talmy и,1985]
+FD 1985
+YR 1985
+K1 дейктические и "шифтерные" категории
+K1 значение
+K1 глагол
+K1 число
+
+
+A1 Talmy, L.
+FD 2000
+YR 2000
+T3 L
+T1 Lexicalization patterns; Surveying lexicalization patterns 
+PP Talmy. Towards a cognitive semantics, vol. II
+SP 21
+OP 212
+K1 дейктические и "шифтерные" категории
+K1 значение
+K1 глагол
+K1 число
+
+
+A1 Sinha, C.
+A1 Kuteva, T.
+FD 1995
+YR 1995
+T2 Sec. 18
+T3 Nordic Journal of Linguistics
+T1 Distributed spatial semantics 
+K1 дейктические и "шифтерные" категории
+
+
+A1 Schaefer, R. P.
+A1 Gaines, R.
+FD 1997
+YR 1997
+T2 Sec. 26.2
+T3 Studies in African linguistics
+T1 Toward a typology of directional motion for African languages 
+K1 дейктические и "шифтерные" категории
+
+
+A1 Рожанский, Ф. И.
+FD 2000
+YR 2000
+T3 Логический анализ языка: Языки пространств. 
+T1 Направление движения (типологическое исследование) 
+A2 Арутюнова, Н. Д.
+A2 Левонтина, И. Б.
+PP М.
+SP 56
+OP 66
+K1 дейктические и "шифтерные" категории
+
+
+A1 Slobin, D. I.
+FD 2003
+YR 2003
+T3 Relating events in narrative: Typological and contextual perspectives. 
+T1 The many ways to search for a frog: Linguistic typology and the expression of motion events 
+A2 Strömqvist, S.
+A2 Verhoeven, L.
+PP Mahwah (NJ)
+SP 219
+OP 257
+K1 дейктические и "шифтерные" категории
+
+
+A1 Zlatev, J.
+FD 1997
+YR 1997
+T1 Situated embodiment: Studies in the emergence of spatial meaning
+PP Stockholm
+PB Gotab
+
+
+K1 дейктические и "шифтерные" категории
+K1 число
+
+
+A1 Levinson, S. C.
+FD 2003
+YR 2003
+T1 Space in language and cognition: Explorations in cognitive diversity
+PP Cambridge
+PB Cambridge U. Press
+K1 дейктические и "шифтерные" категории
+K1 число
+
+
+A1 Leer, J.
+FD 1989
+YR 1989
+T3 Athapaskan linguistics
+T1 Directional systems in Athapaskan and Na-Dene 
+A2 Cook, E.-D.
+A2 Rice, K.
+PP B.
+SP 575
+OP 622
+K1 дейктические и "шифтерные" категории
+K1 число
+
+
+A1 Levinson, S. C.
+A1 Haviland, J. B.
+FD 1994
+YR 1994
+T2 Sec. 32.3
+T3 Linguistics
+T1 Spatial conceptualization in Mayan languages 
+SP 613
+OP 622
+K1 дейктические и "шифтерные" категории
+K1 число
+
+
+A1 Ozanne-Rivierre, F.
+FD 1997
+YR 1997
+T3 Referring to space: studies in Austronesian and Papuan languages. 
+T1 Spatial reference in New Caledonian languages 
+A2 Senft, G.
+PP Oxford
+SP 83
+OP 100
+K1 дейктические и "шифтерные" категории
+K1 число
+
+
+A1 Wälchli, B.
+# a
+FD 2001
+YR 2001
+T2 Sec. 54.3
+T3 Sprachtypologie & Universalienforschung
+T1 A typology of displacement (with special reference to Latvian) 
+K1 дейктические и "шифтерные" категории
+K1 число
+
+
+A2 Bennardo, G.
+FD 2002
+YR 2002
+T1 Representing space in Oceania: Culture in language and mind
+PP Canberra
+PB Australian National U. 
+K1 дейктические и "шифтерные" категории
+K1 число
+
+
+RT Book, Whole
+A1 Невская
+T1 [Невская,2005]
+FD 2005
+YR 2005
+K1 дейктические и "шифтерные" категории
+K1 число
+
+
+A1 Кронгауз, М. А.
+FD 1998
+YR 1998
+T1 Приставки и глаголы в русском языке: семантическая грамматика
+PP М.
+PB Языки русской культуры
+K1 дейктические и "шифтерные" категории
+
+
+A2 Rousseau, A.
+FD 1995
+YR 1995
+T1 Les préverbes dans les langues dEurope: Introduction à létude de la préverbation
+PP Lille
+PB Septentrion
+K1 дейктические и "шифтерные" категории
+
+
+A2 Кронгауз, М. А.
+FD 2001
+YR 2001
+T1 Глагольные префиксы и префиксальные глаголы
+PP М.
+PB РГГУ 
+K1 дейктические и "шифтерные" категории
+
+
+A1 Агранат, Т. Б.
+FD 1989
+YR 1989
+T2 Sec. 25.4
+T3 Советское финно-угроведение
+T1 Функции превербов в современном венгерском языке 
+K1 дейктические и "шифтерные" категории
+
+
+A1 Майсак, Т. А.
+A1 Татевосов, С. Г.
+FD 2000
+YR 2000
+T3 Вопросы языкознания 2000
+T1 Пространство говорящего в категориях грамматики, или чего нельзя сказать о себе самом 
+SP 68
+OP 80
+K1 дейктические и "шифтерные" категории
+
+
+A1 Wälchli, B.
+# b
+FD 2001
+YR 2001
+T3 Circum-Baltic languages
+T1 Lexical evidence for the parallel development of the Latvian and Livonian verb particles 
+A2 Dahl, Ö.
+A2 Koptjevskaja-Tamm, M.
+PP Amsterdam
+SP 413
+OP 441
+K1 дейктические и "шифтерные" категории
+
+
+A1 Майсак, Т. А.
+A1 Мерданова, С. Р.
+FD 2002
+YR 2002
+T3 Исследования по теории грамматикивып. 2: Грамматикализация пространственных значений
+T2 Вып. 2
+T1 Система пространственных превербов в агульском языке 
+A2 Плунгян, В. А.
+PP М.
+SP 251
+OP 294
+K1 дейктические и "шифтерные" категории
+
+
+A1 Сизова, И. А.
+FD 2007
+YR 2007
+T3 Lingua Gotica: Новые исследования. Памяти М. М. Гухман. 
+T1 О статусе готских превербов 
+A2 Бабенко, Н. С.
+A2 Зеленецкий, А. Н.
+PP Калуга
+SP 160
+OP 179
+K1 дейктические и "шифтерные" категории
+
+
+A1 Reichenbach, H.
+FD 1947
+YR 1947
+T1 Elements of symbolic logic
+PP N.Y.
+PB MacMillan
+K1 дейктические и "шифтерные" категории
+
+
+A1 Comrie, B.
+# b
+FD 1985
+YR 1985
+T1 Tense
+PP Cambridge
+PB Cambridge U. Press
+K1 дейктические и "шифтерные" категории
+
+
+A1 Coseriu, E.
+FD 1976
+YR 1976
+T1 Das romanische Verbalsystem 
+PP H. Bertsch. Tübingen
+PB Narr
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 оппозиция
+K1 прошедшее
+
+
+RT Book, Whole
+A1 Lyons, J.
+T1 [Lyons,1977]
+FD 1977
+YR 1977
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 оппозиция
+K1 прошедшее
+
+
+A1 Thieroff, R.
+FD 1994
+YR 1994
+T3 Tense systems in European languages
+T1 Inherent verb categories and categorizations in European languages 
+A2 Thieroff, R.
+A2 Ballweg, J.
+PP Tübingen
+SP 3
+OP 45
+K1 дейктические и "шифтерные" категории
+K1 дистанция
+K1 граммема
+K1 категория
+
+
+RT Book, Whole
+A1 Thieroff
+T1 [Thieroff,1994]
+FD 1994
+YR 1994
+K1 дейктические и "шифтерные" категории
+K1 дистанция
+K1 граммема
+K1 категория
+
+
+A1 Thieroff, R.
+FD 1995
+YR 1995
+T3 Tense systems in European languagesII
+T1 More on inherent verb categories in European languages 
+A2 Thieroff, R.
+PP Tübingen
+SP 1
+OP 36
+K1 дейктические и "шифтерные" категории
+K1 дистанция
+K1 граммема
+K1 категория
+
+
+A1 Declerck, R.
+FD 1991
+YR 1991
+T1 Tense in English
+PP L.
+PB Routledge
+K1 дейктические и "шифтерные" категории
+K1 категория
+
+
+A1 Klein, W.
+FD 1994
+YR 1994
+T1 Time in language
+PP L.
+PB Routledge
+K1 дейктические и "шифтерные" категории
+K1 категория
+
+
+RT Book, Whole
+A1 Comrie
+T1 [Comrie,1985b]
+FD 1985b
+YR 1985b
+K1 дейктические и "шифтерные" категории
+
+
+A1 Bertinetto, P. M.
+FD 2000
+YR 2000
+T3 Tense and aspect in the languages of Europe
+T1 The progressive in Romance, as compared with English 
+A2 Dahl, Ö.
+PP B.
+SP 559
+OP 604
+K1 дейктические и "шифтерные" категории
+
+
+A1 Ultan, R.
+# a
+FD 1978
+YR 1978
+T3 Universals of human languagevol. 3: Word structure
+T2 Vol. 3
+T1 The nature of future tenses 
+A2 Greenberg, J. H.
+PP Stanford
+SP 83
+OP 123
+K1 дейктические и "шифтерные" категории
+K1 будущее
+
+
+RT Book, Whole
+A1 Bybee et al.
+T1 [Bybee et al.,1994]
+FD 1994
+YR 1994
+K1 дейктические и "шифтерные" категории
+K1 будущее
+K1 прошедшее
+
+
+RT Book, Whole
+A1 Bybee
+A1 Dahl
+T1 [Bybee,Dahl,1989]
+FD 1989
+YR 1989
+K1 дейктические и "шифтерные" категории
+K1 будущее
+K1 прошедшее
+
+
+A1 Dahl, Ö.
+FD 2000
+YR 2000
+T3 Morphology
+T1 Tense 
+A2 Booij, G.
+SP 1180
+OP 1190
+K1 дейктические и "шифтерные" категории
+K1 будущее
+K1 форма
+
+
+A1 Майсак, Т. А.
+A1 Мерданова, С. Р.
+FD 2003
+YR 2003
+T3 Вопросы языкознания2003
+T1 Будущее время в агульском языке в типологической перспективе 
+SP 76
+OP 107
+K1 дейктические и "шифтерные" категории
+K1 будущее
+K1 форма
+
+
+RT Book, Whole
+A1 Fici Giusti
+T1 [Fici Giusti,1997]
+FD 1997
+YR 1997
+K1 дейктические и "шифтерные" категории
+K1 будущее
+
+
+A1 Галямина, Ю. Е.
+FD 2001
+YR 2001
+T3 Исследования по теории грамматикивып. 1: Глагольные категории
+T2 Вып. 1
+T1 Акцессивно-рецессивная полисемия показателей залога и актантной деривации 
+A2 Плунгян, В. А.
+PP М.
+SP 178
+OP 197
+K1 дейктические и "шифтерные" категории
+K1 значение
+K1 отсутствие
+K1 результат
+K1 сверхпрошлое
+
+
+RT Book, Whole
+A1 Plungian
+A1 van der Auwera
+T1 [Plungian,van der Auwera,2006]
+FD 2006
+YR 2006
+K1 дейктические и "шифтерные" категории
+K1 значение
+K1 отсутствие
+K1 результат
+K1 сверхпрошлое
+
+
+RT Book, Whole
+A1 Dahl
+T1 [Dahl,1985]
+FD 1985
+YR 1985
+K1 дейктические и "шифтерные" категории
+K1 значение
+K1 отсутствие
+K1 результат
+K1 сверхпрошлое
+
+
+A1 Squartini, M.
+FD 1999
+YR 1999
+T2 Sec. 3.1
+T3 Linguistic typology
+T1 On the semantics of the Pluperfect: evidence from Germanic and Romance 
+K1 дейктические и "шифтерные" категории
+K1 значение
+K1 отсутствие
+K1 результат
+K1 сверхпрошлое
+
+
+A1 Dahl, Ö.
+FD 1983
+YR 1983
+T2 Sec. 21
+T3 Linguistics
+T1 Temporal distance: remoteness distinctions 
+K1 дейктические и "шифтерные" категории
+K1 дистанция
+K1 категория
+
+
+RT Book, Section
+A1 Dahl
+T1 [Dahl,1985]
+FD 1985
+YR 1985
+SP 120
+OP 128
+K1 дейктические и "шифтерные" категории
+K1 дистанция
+K1 категория
+
+
+A1 Fleischman, S.
+FD 1989
+YR 1989
+T2 Sec. 13.1
+T3 Studies in language
+T1 Temporal distance: a basic linguistic metaphor 
+K1 дейктические и "шифтерные" категории
+K1 значение
+K1 граммема
+K1 дистанция
+K1 модальность
+
+
+A1 Аксёнова, И. С.
+FD 1997
+YR 1997
+T1 Категории вида, времени и наклонения в языках банту
+PP М.
+PB Наука
+K1 дейктические и "шифтерные" категории
+K1 дистанция
+
+
+A1 Nurse, D.
+FD 2008
+YR 2008
+T1 Tense and aspect in Bantu
+PP Oxford
+PB Oxford U. Press
+K1 дейктические и "шифтерные" категории
+K1 дистанция
+
+
+RT Book, Whole
+A1 Якобсон
+T1 [Якобсон,1957]
+FD 1957
+YR 1957
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 аспект
+
+
+A1 Маслов, Ю. С.
+FD 1978
+YR 1978
+T3 Вопросы сопоставительной аспектологии
+T1 К основаниям сопоставительной аспектологии 
+A2 Маслов, Ю. С.
+PP Л.
+SP 4
+OP 44
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 аспект
+
+
+A2 Бондарко, А. В.
+FD 1987
+YR 1987
+T1 Теория функциональной грамматики: Введение. Аспектуальность. Временная локализованность. Таксис. 
+PP Л
+PB Наука
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 аспект
+
+
+A1 Недялков, И. В.
+FD 2003
+YR 2003
+T3 Проблемы функциональной грамматики: Семантическая инвариантность-вариативность. 
+T1 Зависимый таксис в разноструктурных языках: значения одновременности-предшествования-следования 
+A2 Бондарко, А. В.
+PP СПб
+SP 156
+OP 174
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 аспект
+
+
+A1 Храковский, В. С.
+FD 2003
+YR 2003
+T3 Вопросы языкознания2003
+T1 Категория таксиса (общая характеристика) 
+SP 32
+OP 54
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 аспект
+
+
+A2 Храковский, В. С.
+FD 2009
+YR 2009
+T1 Типология таксисных конструкций
+PP М.
+PB Знак
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 аспект
+
+
+A1 Johanson, L.
+FD 2004
+YR 2004
+T3 Типологические обоснования в грамматике: к 70-летию проф. В. С. Храковского. 
+T1 On the contribution of the viewpoint markers to taxis 
+A2 Володин, А. П.
+PP М.
+SP 191
+OP 200
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 показатель
+
+
+A1 Недялков, В. П.
+FD 1990
+YR 1990
+T3 Типология и грамматика
+T1 Основные типы деепричастий 
+A2 Храковский, В. С.
+PP Л.
+SP 36
+OP 59
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 отношение
+K1 средство
+
+
+A1 Haspelmath, M.
+A2 .
+A2 König, E.
+FD 1995
+YR 1995
+T1 Converbs in cross-linguistic perspective
+PP B.
+PB Mouton de Gruyter
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 отношение
+K1 средство
+
+
+A1 Козинцева, Н. А.
+FD 2003
+YR 2003
+T3 Проблемы функциональной грамматики
+T1 Таксисные функции, передаваемые причастиями и причастными оборотами, в русском языке 
+A2 Бондарко, А. В.
+SP 175
+OP 189
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 отношение
+K1 средство
+
+
+A1 Вимер, Б.
+FD 2004
+YR 2004
+T3 40 лет Санкт-Петербургской типологической школе
+T1 Таксис и коинциденция в зависимых предикациях: литовские причастия на ‑damas 
+A2 Храковский, В. С.
+PP М.
+SP 53
+OP 73
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 отношение
+K1 средство
+
+
+RT Book, Section
+A1 Арутюнова, Н. Д.
+T1 Прагматика
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 дейксис
+K1 местоимение
+K1 прошедшее
+
+
+RT Book, Section
+A1 Володин, А. П.
+T1 Лицо
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 дейксис
+K1 местоимение
+K1 прошедшее
+
+
+RT Book, Section
+A1 Виноградов, В. А.
+T1 Инклюзив
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 дейксис
+K1 местоимение
+K1 прошедшее
+
+
+RT Book, Section
+A1 Виноградов, В. А.
+T1 Эксклюзив
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 дейксис
+K1 местоимение
+K1 прошедшее
+
+
+RT Book, Section
+A1 Крылов, С. А.
+A1 Падучева, Е. В.
+T1 Местоимения
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 дейксис
+K1 местоимение
+K1 прошедшее
+
+
+RT Book, Section
+A1 Крылов, С. А.
+A1 Падучева, Е. В.
+T1 Местоименные слова
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 дейксис
+K1 местоимение
+K1 прошедшее
+
+
+RT Book, Section
+A1 Виноградов, В. А.
+T1 Дейксис
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 дейксис
+K1 местоимение
+K1 прошедшее
+
+
+RT Book, Section
+A1 Падучева, Е. В.
+T1 Анафорическое отношение
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 дейксис
+K1 местоимение
+K1 прошедшее
+
+
+RT Book, Section
+A1 Маслов, Ю. С.
+T1 Время
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 дейксис
+K1 местоимение
+K1 прошедшее
+
+
+RT Book, Section
+A1 Маслов, Ю. С.
+T1 Будущее время
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 дейксис
+K1 местоимение
+K1 прошедшее
+
+
+RT Book, Section
+A1 Маслов, Ю. С.
+T1 Настоящее время
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 дейксис
+K1 местоимение
+K1 прошедшее
+
+
+RT Book, Section
+A1 Маслов, Ю. С.
+T1 Прошедшее время
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 дейксис
+K1 местоимение
+K1 прошедшее
+
+
+RT Book, Section
+A1 Бондарко, А. В.
+T1 Таксис
+T2 Лингвистический энциклопедический словарь
+PP М.
+PB Сов. энциклопедия
+FD 1990
+YR 1990
+OP 683
+K1 дейктические и "шифтерные" категории
+K1 таксис
+K1 отношение
+K1 будущее
+K1 настоящее
+K1 дейксис
+K1 местоимение
+K1 прошедшее
+
+
+RT Book, Whole
+A1 Friedrich
+T1 [Friedrich,1974]
+FD 1974
+YR 1974
+K1 глагольные семантические зоны
+
+
+A1 Comrie, B.
+FD 1976
+YR 1976
+T1 Aspect: An introduction to the study of verbal aspect and related problems
+PP Cambridge
+PB Cambridge U. Press 
+K1 аспектология
+K1 глагольные семантические зоны
+
+
+RT Book, Whole
+A1 Tedeschi
+A1 Zaenen
+T1 [Tedeschi,Zaenen,1981]
+FD 1981
+YR 1981
+K1 глагольные семантические зоны
+
+
+A1 Tommola, H.
+FD 1984
+YR 1984
+T3 C
+T1 On the aspectual significance of «phase meanings» 
+PP De Groot & H. Tommola (eds.). Aspect bound , Slavonic and Finno-Ugrian aspectology. Dordrecht
+SP 111
+OP 132
+K1 глагольные семантические зоны
+
+
+A1 Dik, S. C.
+FD 1994
+YR 1994
+T3 Tenseaspect and action: empirical and theoretical contributions to language typology. 
+T1 Verbal semantics in functional grammar 
+A2 Bache, C.
+PP B.
+SP 23
+OP 42
+K1 глагольные семантические зоны
+
+
+A1 Vet, C.
+A2 .
+A2 Vetters, C.
+FD 1994
+YR 1994
+T1 Tense and aspect in discourse
+PP B.
+PB Mouton de Gruyter
+K1 глагольные семантические зоны
+
+
+A1 Маслов, Ю. С.
+# b
+FD 1984
+YR 1984
+T1 Очерки по аспектологии
+PP Л.
+PB ЛГУ
+K1 глагольные семантические зоны
+K1 число
+
+
+A1 Маслов, Ю. С.
+FD 2004
+YR 2004
+T1 Избранные труды: Аспектология. Общее языкознание. 
+PP М.
+PB Языки славянской культуры
+K1 аспектология
+K1 имперфект
+K1 перфект
+K1 глагольные семантические зоны
+
+
+RT Book, Whole
+A1 Bybee
+T1 [Bybee,1985]
+FD 1985
+YR 1985
+K1 аспектология
+K1 глагольные семантические зоны
+
+
+RT Book, Whole
+A1 Dahl
+T1 [Dahl,1985]
+FD 1985
+YR 1985
+K1 аспектология
+K1 глагольные семантические зоны
+
+
+RT Book, Whole
+A1 Bybee
+A1 Dahl
+T1 [Bybee,Dahl,1989]
+FD 1989
+YR 1989
+K1 глагол
+K1 семантика
+K1 глагольные семантические зоны
+K1 число
+
+
+RT Book, Whole
+A1 Bybee et al.
+T1 [Bybee et al.,1994]
+FD 1994
+YR 1994
+K1 глагол
+K1 семантика
+K1 глагольные семантические зоны
+K1 число
+
+
+A1 Dahl, Ö.
+A1 Hedin, E.
+FD 2000
+YR 2000
+T3 Tense and aspect in the languages of Europe
+T1 Current relevance and event reference 
+A2 Dahl, Ö.
+PP B.
+SP 385
+OP 402
+K1 глагол
+K1 семантика
+K1 глагольные семантические зоны
+K1 число
+
+
+A1 Майсак, Т. А.
+A1 Татевосов, С. Г.
+FD 1998
+YR 1998
+T3 Типология вида
+T1 Вид и модальность: способы взаимодействия (на материале цахурского языка) 
+A2 Черткова, М. Ю.
+PP , поиски, решения. М.
+SP 265
+OP 280
+K1 глагольные семантические зоны
+
+
+RT Book, Whole
+A1 Книга Cohen
+T1 [Книга Cohen,1989]
+FD 1989
+YR 1989
+K1 значение
+K1 глагольные семантические зоны
+
+
+A1 Lazard, G.
+FD 2001
+YR 2001
+T3 G
+T1 Aspect, temps, mode de procès 
+PP Lazard. Etudes de linguistique générale. P. 
+SP 445
+OP 459
+K1 значение
+K1 глагольные семантические зоны
+
+
+A1 Tournadre, N.
+FD 2004
+YR 2004
+T2 Sec. 99.1
+T3 Bulletin de la Societe de linguistique de Paris
+T1 Typologie des aspects verbaux et intégration à une théorie du TAM 
+K1 значение
+K1 глагольные семантические зоны
+
+
+RT Book, Whole
+A1 Smith
+T1 [Smith,1992]
+FD 1992
+YR 1992
+K1 предикат
+K1 аспект
+K1 перфектив
+K1 глагольные семантические зоны
+K1 оппозиция
+K1 имперфектив
+K1 категория
+
+
+A1 Hopper, P. J.
+FD 1979
+YR 1979
+T3 T
+T1 Aspect and foregrounding in discourse 
+PP Givón (ed.), Syntax and semantics, vol. 12
+SP 213
+OP 241
+K1 аспект
+K1 глагольные семантические зоны
+
+
+A1 Anderson, Lloyd B.
+FD 1982
+YR 1982
+T3 Tense-aspect: Between semantics and pragmatics. 
+T1 The «perfect» as a universal and as a language-particular category 
+A2 Hopper, P. J.
+PP Amsterdam
+SP 227
+OP 264
+K1 аспект
+K1 глагольные семантические зоны
+
+
+A1 Thelin, N. B.
+FD 1990
+YR 1990
+T3 Verbal aspect in discourse: contributions of the semantics of time and temporal perspective in Slavic and non-Slavic languages. 
+T1 On concept of time: prolegomena to a theory of aspect and tense in narrative discourse 
+A2 Thelin, N.B.
+PP Amsterdam
+SP 91
+OP 129
+K1 аспект
+K1 глагольные семантические зоны
+
+
+A1 Weinrich, H.
+FD 1964
+YR 1964
+T1 Tempus: Besprochene und erzählte Welt
+PP Stuttgart
+PB Kohlhammer 
+K1 форма
+K1 глагольные семантические зоны
+
+
+A1 Smith, C.
+FD 1996
+YR 1996
+T2 Sec. 62.3
+T3 International journal of American linguistics
+T1 Aspectual categories in Navajo 
+K1 глагольные семантические зоны
+
+
+RT Book, Whole
+A1 Смит
+T1 [Смит,1998]
+FD 1998
+YR 1998
+K1 глагольные семантические зоны
+
+
+A1 Wierzbicka, A.
+FD 1967
+YR 1967
+T3 To honor Roman Jakobson: Essays on the occasion of his 70-th birthday. 
+T1 On the semantics of verbal aspect in Polish 
+PP The Hague
+SP 2231
+OP 2249
+K1 аспектология
+K1 семантика
+K1 глагольные семантические зоны
+
+
+RT Book, Whole
+A1 Бондарко
+T1 [Бондарко,1971]
+FD 1971
+YR 1971
+K1 аспектология
+K1 семантика
+K1 глагольные семантические зоны
+
+
+A1 Гловинская, М. Я.
+FD 1982
+YR 1982
+T1 Семантические типы видовых противопоставлений русского глагола
+PP М.
+PB Наука
+K1 аспектология
+K1 семантика
+K1 глагольные семантические зоны
+
+
+A1 Шелякин, М. А.
+FD 1983
+YR 1983
+T1 Категория вида и способы действия русского глагола
+PP Tallinn
+PB Valgus
+K1 аспектология
+K1 семантика
+K1 глагольные семантические зоны
+
+
+RT Book, Whole
+A1 Падучева
+T1 [Падучева,1996]
+FD 1996
+YR 1996
+K1 аспектология
+K1 семантика
+K1 глагольные семантические зоны
+
+
+A1 Шатуновский, И. Б.
+FD 1996
+YR 1996
+T1 Семантика предложения и нереферентные слова
+PP М.
+PB Языки русской культуры
+K1 аспектология
+K1 семантика
+K1 глагольные семантические зоны
+
+
+A1 Зализняк, Анна А.
+A1 Шмелёв, А. Д.
+FD 2000
+YR 2000
+T1 Введение в русскую аспектологию
+PP М.
+PB Языки славянских культур
+K1 аспектология
+K1 семантика
+K1 глагольные семантические зоны
+
+
+A1 Stunová, A.
+FD 1993
+YR 1993
+T1 Contrastive study of Russian and Czech aspect: Invariance vs, discourse
+PP Amsterdam
+PB Rodopi
+K1 глагольные семантические зоны
+
+
+A1 Dickey, S. M.
+FD 2000
+YR 2000
+T1 Parameters of Slavic aspect: A cognitive approach
+PP Stanford
+PB CSLI publications
+K1 глагольные семантические зоны
+
+
+A1 Петрухина, Е. В.
+FD 2000
+YR 2000
+T1 Аспектуальные категории глагола в русском языке в сопоставлении с чешским, словацким, польским и болгарским языками
+PP М.
+PB МГУ
+K1 глагольные семантические зоны
+
+
+A1 Sawicki, L.
+FD 2000
+YR 2000
+T2 Sec. 8
+T3 Linguistica Baltica
+T1 Remarks on the category of aspect in Lithuanian 
+K1 глагольные семантические зоны
+
+
+RT Book, Whole
+A1 Wälchli
+T1 [Wälchli,2001b]
+FD 2001b
+YR 2001b
+K1 глагольные семантические зоны
+
+
+A1 Bennett, M.
+A1 Partee, B. H.
+FD 1978
+YR 1978
+T1 Toward the logic of tense and aspect in English
+PP Bloomington
+PB IULC
+K1 аспектология
+K1 глагольные семантические зоны
+
+
+A1 Palmer, F. R.
+FD 1988
+YR 1988
+T1 The English verb
+PP London
+PB Longman 
+K1 аспектология
+K1 глагольные семантические зоны
+
+
+A1 Brinton, L. J.
+FD 1988
+YR 1988
+T1 The development of English aspectual system
+PP Cambridge
+PB Cambridge U. Press
+K1 аспектология
+K1 глагольные семантические зоны
+
+
+A1 Binnick, R. I.
+FD 1991
+YR 1991
+T1 Time and the verb: A guide to tense and aspect
+PP Oxford
+PB Blackwell
+K1 аспектология
+K1 глагольные семантические зоны
+
+
+A1 Bull, W. E.
+FD 1960
+YR 1960
+T1 Time, tense and the verb: A study in theoretical and applied linguistics, with particular attention to Spanish
+PP Berkeley
+PB U. of California Press
+K1 аспектология
+K1 глагольные семантические зоны
+
+
+A1 Bertinetto, P. M.
+FD 1986
+YR 1986
+T1 Tempo, aspetto e azione nel verbo italiano: Il sistema dellindicativo
+PP Firenze
+PB Accademia della Crusca
+K1 аспектология
+K1 глагольные семантические зоны
+
+
+A1 Franckel, J.-J.
+FD 1989
+YR 1989
+T1 Etude de quelques marqueurs aspectuels du français
+PP Genève
+PB Droz
+K1 аспектология
+K1 глагольные семантические зоны
+
+
+A1 Gosselin, L.
+FD 1996
+YR 1996
+T1 Sématique de la temporalité en français: Un modèle calculatoire et cognitif du temps et de laspect
+PP Louvain-la-Neuve
+PB Duculot
+K1 аспектология
+K1 глагольные семантические зоны
+
+
+RT Book, Whole
+A1 Squartini
+T1 [Squartini,1998]
+FD 1998
+YR 1998
+K1 аспектология
+K1 глагольные семантические зоны
+
+
+A1 McCoard, R. W.
+FD 1978
+YR 1978
+T1 The English perfect: Tense-choice and pragmatic inferences
+PP Amsterdam
+PB North Holland
+K1 значение
+K1 перфект
+K1 результатив
+K1 глагольные семантические зоны
+K1 форма
+K1 семантика
+
+
+A1 Anderson, Steven R.
+FD 1982
+YR 1982
+T2 Sec. 13.4
+T3 Linguistic inquiry
+T1 Wheres morphology? 
+K1 значение
+K1 перфект
+K1 результатив
+K1 глагольные семантические зоны
+K1 форма
+K1 семантика
+
+
+RT Book, Whole
+A1 Dahl
+T1 [Dahl,1985]
+FD 1985
+YR 1985
+K1 значение
+K1 перфект
+K1 результатив
+K1 глагольные семантические зоны
+K1 форма
+K1 семантика
+
+
+A1 Кашкин, В. Б.
+FD 1991
+YR 1991
+T1 Функциональная типология перфекта
+PP Воронеж
+PB ВГУ
+K1 значение
+K1 перфект
+K1 результатив
+K1 глагольные семантические зоны
+K1 форма
+K1 семантика
+
+
+A1 Klein, W.
+A1 Vater, H.
+FD 1998
+YR 1998
+T3 Typology of verbal categories: Papers presented to Vladimir Nedjalkov on the occasion of his 70th birthday. 
+T1 The perfect in English and German 
+A2 Kulikov, L.
+A2 Vater, H.
+PP Tübingen
+SP 215
+OP 235
+K1 значение
+K1 перфект
+K1 результатив
+K1 глагольные семантические зоны
+K1 форма
+K1 семантика
+
+
+A1 Schwenter, S. A.
+FD 1994
+YR 1994
+T2 Sec. 32.6
+T3 Linguistics
+T1 “Hot news” and the grammaticalization of perfects 
+K1 значение
+K1 перфект
+K1 результатив
+K1 глагольные семантические зоны
+K1 форма
+K1 семантика
+
+
+RT Book, Whole
+A1 Fici Giusti
+T1 [Fici Giusti,1995]
+FD 1995
+YR 1995
+K1 значение
+K1 перфект
+K1 результатив
+K1 глагольные семантические зоны
+K1 форма
+K1 семантика
+
+
+RT Book, Whole
+A1 Bybee et al.
+T1 [Bybee et al.,1996]
+FD 1996
+YR 1996
+K1 значение
+K1 перфект
+K1 результатив
+K1 глагольные семантические зоны
+K1 форма
+K1 семантика
+
+
+A1 Michaelis, L. A.
+FD 1998
+YR 1998
+T1 Aspectual grammar and past-time reference
+PP L.
+PB Routledge
+K1 значение
+K1 перфект
+K1 результатив
+K1 глагольные семантические зоны
+K1 форма
+K1 семантика
+
+
+A1 Lindstedt, J.
+FD 2000
+YR 2000
+T3 Tense and aspect in the languages of Europe
+T1 The perfect – aspectual, temporal and evidential 
+A2 Dahl, Ö.
+PP B.
+SP 365
+OP 383
+K1 значение
+K1 перфект
+K1 результатив
+K1 глагольные семантические зоны
+K1 форма
+K1 семантика
+
+
+RT Book, Whole
+A1 Dahl
+A1 Hedin
+T1 [Dahl,Hedin,2000]
+FD 2000
+YR 2000
+K1 значение
+K1 перфект
+K1 результатив
+K1 глагольные семантические зоны
+K1 форма
+K1 семантика
+
+
+A1 Маслов, Ю. С.
+FD 1983
+YR 1983
+T3 Типология результативных конструкций (результативстатив, пассив, перфект)
+T1 Результатив, перфект и глагольный вид 
+A2 Недялков, В. П.
+PP Л.
+SP 41
+OP 54
+K1 значение
+K1 перфект
+K1 результатив
+K1 глагольные семантические зоны
+K1 форма
+K1 семантика
+
+
+A2 Nedjalkov, V. P.
+FD 1988
+YR 1988
+T1 Typology of resultative constructions
+PP Amsterdam
+PB Benjamins
+K1 значение
+K1 перфект
+K1 результатив
+K1 глагольные семантические зоны
+K1 форма
+K1 семантика
+
+
+RT Book, Whole
+A1 Iturrioz Leza
+T1 [Iturrioz Leza,1992]
+FD 1992
+YR 1992
+K1 значение
+K1 перфект
+K1 результатив
+K1 глагольные семантические зоны
+K1 форма
+K1 семантика
+
+
+A1 Wiemer, B.
+A1 Giger, M.
+FD 2005
+YR 2005
+T1 Resultativa in den nordslavischen und baltischen Sprachen: Bestandsaufnahme unter arealen und grammatikalisierungstheoretischen Gesichtspunkten
+PP München
+PB LINCOM Europa
+K1 значение
+K1 перфект
+K1 результатив
+K1 глагольные семантические зоны
+K1 форма
+K1 семантика
+
+
+A1 Недялков, В. П.
+FD 1987
+YR 1987
+T3 Теория функциональной грамматики: Введение. Аспектуальность. Временная локализованность. Таксис. 
+T1 Начинательность и средства ее выражения в языках разных типов 
+A2 Бондарко, А. В.
+PP Л
+SP 180
+OP 195
+K1 значение
+K1 перфект
+K1 результатив
+K1 глагольные семантические зоны
+K1 форма
+K1 семантика
+
+
+RT Book, Whole
+A1 Brinton
+T1 [Brinton,1988]
+FD 1988
+YR 1988
+K1 значение
+K1 перфект
+K1 результатив
+K1 глагольные семантические зоны
+K1 форма
+K1 семантика
+
+
+RT Book, Whole
+A1 Dik
+T1 [Dik,1994]
+FD 1994
+YR 1994
+K1 значение
+K1 перфект
+K1 результатив
+K1 глагольные семантические зоны
+K1 форма
+K1 семантика
+
+
+A1 Балли, Ш.
+FD 1932
+YR 1932
+T1 Общая лингвистика и вопросы французского языка 
+PP М.
+PB ИЛ
+K1 модальность
+K1 глагольные семантические зоны
+
+
+A1 Булыгина, Т. В.
+A1 Шмелёв, А. Д.
+FD 1990
+YR 1990
+T3 Булыгина & Шмелёв 1997209-231
+T1 «Возможности» естественного языка и модальная логика 
+K1 модальность
+K1 глагольные семантические зоны
+
+
+A2 Бондарко, А. В.
+FD 1990
+YR 1990
+T1 Теория функциональной грамматики: Темпоральность. Модальность. 
+PP Л.
+PB Наука
+K1 модальность
+K1 глагольные семантические зоны
+
+
+RT Book, Section
+A1 Шатуновский
+T1 [Шатуновский,1996]
+FD 1996
+YR 1996
+SP 172
+OP 308
+K1 модальность
+K1 глагольные семантические зоны
+
+
+RT Book, Whole
+A1 Palmer
+T1 [Palmer,1986]
+FD 1986
+YR 1986
+K1 модальность
+K1 глагольные семантические зоны
+
+
+A1 Palmer, F. R.
+FD 2001
+YR 2001
+T1 Mood and modality
+PP Cambridge
+PB Cambridge U. Press 
+K1 модальность
+K1 глагольные семантические зоны
+
+
+RT Book, Whole
+A1 Bybee
+T1 [Bybee,1985]
+FD 1985
+YR 1985
+K1 модальность
+K1 глагольные семантические зоны
+
+
+RT Book, Whole
+A1 Bybee et al.
+T1 [Bybee et al.,1994]
+FD 1994
+YR 1994
+K1 модальность
+K1 глагольные семантические зоны
+
+
+RT Book, Whole
+A1 van der Auwera
+A1 Plungian
+T1 [van der Auwera,Plungian,1998]
+FD 1998
+YR 1998
+K1 модальность
+K1 глагольные семантические зоны
+
+
+A1 Bybee, J. L.
+A2 .
+A2 Fleischman, S.
+FD 1995
+YR 1995
+T1 Modality in grammar and discourse
+PP Amsterdam
+PB Benjamins
+K1 глагольные семантические зоны
+
+
+A2 .
+A1 Frawley, W.
+FD 2006
+YR 2006
+T1 The expression of modality
+PP B.
+PB Mouton de Gruyter
+K1 глагольные семантические зоны
+
+
+A1 Dik, S. C.
+FD 1989
+YR 1989
+T1 The theory of functional grammar
+PP Part I
+PB The structure of the clause. Dordrecht: Foris
+K1 модальность
+K1 глагольные семантические зоны
+
+
+RT Book, Whole
+A1 van der Auwera
+A1 Dendale
+T1 [van der Auwera,Dendale,2000]
+FD 2000
+YR 2000
+K1 модальность
+K1 глагольные семантические зоны
+
+
+RT Book, Whole
+A1 Dressler
+T1 [Dressler,1968]
+FD 1968
+YR 1968
+K1 оптатив
+K1 глагольные семантические зоны
+K1 императив
+K1 оценка
+K1 семантика
+K1 интенсивность
+
+
+RT Book, Whole
+A1 Dressler
+A1 Merlini Barbaresi
+T1 [Dressler,Merlini Barbaresi,1994]
+FD 1994
+YR 1994
+K1 оптатив
+K1 глагольные семантические зоны
+K1 императив
+K1 оценка
+K1 семантика
+K1 интенсивность
+
+
+A1 Вольф, Е. М.
+FD 1985
+YR 1985
+T1 Функциональная семантика оценки
+PP М.
+PB Наука
+K1 оптатив
+K1 глагольные семантические зоны
+K1 императив
+K1 оценка
+K1 семантика
+K1 интенсивность
+
+
+A1 Арутюнова, Н. Д.
+FD 1999
+YR 1999
+T1 Язык и мир человека
+PP Москва
+PB Языки русской культуры
+K1 оптатив
+K1 глагольные семантические зоны
+K1 императив
+K1 оценка
+K1 семантика
+K1 интенсивность
+
+
+A1 Сепир, Э.
+FD 1944
+YR 1944
+T3 Новое в зарубежной лингвистикевып. XVI: Лингвистическая прагматика
+T2 Вып. XVI
+T1 Градуирование: семантическое исследование 
+PP М.
+SP 43
+OP 78
+NO Пер. с англ. 
+K1 оптатив
+K1 глагольные семантические зоны
+K1 императив
+K1 оценка
+K1 семантика
+K1 интенсивность
+
+
+A1 Stassen, L.
+FD 1985
+YR 1985
+T1 Comparison and universal grammar
+PP L.
+PB Blackwell
+K1 оптатив
+K1 глагольные семантические зоны
+K1 императив
+K1 оценка
+K1 семантика
+K1 интенсивность
+
+
+A2 Traugott, E. C.
+FD 1986
+YR 1986
+T1 On conditionals
+PP Cambridge
+PB Cambridge U. Press
+K1 оптатив
+K1 глагольные семантические зоны
+K1 императив
+K1 оценка
+K1 семантика
+K1 интенсивность
+
+
+A1 Nikiforidou, K.
+FD 1990
+YR 1990
+T1 Conditional and concessive clauses in Modern Greek: A syntactic and semantic description
+PP Berkeley, CA
+PB U. of California at Berkeley
+K1 оптатив
+K1 глагольные семантические зоны
+K1 императив
+K1 оценка
+K1 семантика
+K1 интенсивность
+
+
+A1 Athanasiadou, A.
+A2 .
+A2 Dirven, R.
+FD 1997
+YR 1997
+T1 On conditionals again
+PP Amsterdam
+PB Benjamins
+K1 оптатив
+K1 глагольные семантические зоны
+K1 императив
+K1 оценка
+K1 семантика
+K1 интенсивность
+
+
+A1 Храковский, В. С.
+# b
+FD 1996
+YR 1996
+T3 А
+T1 Условные конструкции (опыт исчисления) 
+PP В. Бондарко (ред.), Теория функциональной грамматики , бытийность, посессивность, обусловленность. СПб
+SP 175
+OP 213
+K1 оптатив
+K1 глагольные семантические зоны
+K1 императив
+K1 оценка
+K1 семантика
+K1 интенсивность
+
+
+A1 Declerck, R.
+A1 Reed, S.
+FD 2001
+YR 2001
+T1 Conditionals: A comprehensive empirical analysis
+PP B.
+PB Mouton de Gruyter
+K1 оптатив
+K1 глагольные семантические зоны
+K1 императив
+K1 оценка
+K1 семантика
+K1 интенсивность
+
+
+A1 Dancygier, B.
+A1 Sweetser, E. E.
+FD 2005
+YR 2005
+T1 Mental spaces in grammar: Conditional constructions
+PP Cambridge
+PB Cambridge U. Press
+K1 оптатив
+K1 глагольные семантические зоны
+K1 императив
+K1 оценка
+K1 семантика
+K1 интенсивность
+
+
+A1 Храковский, В. С.
+A1 Володин, А. П.
+FD 1986
+YR 1986
+T1 Семантика и типология императива. Русский императив. 
+PP Л.
+PB Наука
+K1 оптатив
+K1 глагольные семантические зоны
+K1 императив
+K1 оценка
+K1 семантика
+K1 интенсивность
+
+
+A2 Храковский, В. С.
+FD 1992
+YR 1992
+T1 Типология императивных конструкций
+PP СПб
+PB Наука
+K1 оптатив
+K1 глагольные семантические зоны
+K1 императив
+K1 оценка
+K1 семантика
+K1 интенсивность
+
+
+RT Book, Whole
+A1 ван дер Аувера
+A1 Гусев
+A1 Добрушина
+T1 [ван дер Аувера,Гусев,Добрушина,2004]
+FD 2004
+YR 2004
+K1 оптатив
+K1 глагольные семантические зоны
+K1 императив
+K1 оценка
+K1 семантика
+K1 интенсивность
+
+
+A1 Фортейн, Э.
+FD 2008
+YR 2008
+T3 Вопросы языкознания2008
+T1 Полисемия императива в русском языке 
+SP 3
+OP 23
+K1 оптатив
+K1 глагольные семантические зоны
+K1 императив
+K1 оценка
+K1 семантика
+K1 интенсивность
+
+
+A1 Chafe, W.
+FD 1995
+YR 1995
+T3 Modality in grammar and discourse
+T1 The realis-irrealis distinction in Caddo, the Northern Iroquoian languages, and English 
+A2 Bybee, J.
+A2 Fleischman, S.
+PP Amsterdam
+SP 349
+OP 366
+K1 глагольные семантические зоны
+K1 ирреалиса
+
+
+A1 Roberts, J. R.
+FD 1990
+YR 1990
+T2 Sec. 26
+T3 Journal of linguistics
+T1 Modality in Amele and other Papuan languages 
+K1 глагольные семантические зоны
+K1 ирреалиса
+
+
+A1 Givón, T.
+# b
+FD 1994
+YR 1994
+T2 Sec. 18.2
+T3 Studies in language
+T1 Irrealis and the subjunctive 
+K1 глагольные семантические зоны
+K1 ирреалиса
+
+
+A1 Bybee, J. L.
+FD 1998
+YR 1998
+T2 Sec. 40.2
+T3 Anthropological linguistics
+T1 Irrealis as a grammatical category 
+K1 глагольные семантические зоны
+K1 ирреалиса
+
+
+A1 Elliott, J. R.
+FD 2000
+YR 2000
+T2 Sec. 4.1
+T3 Linguistic Typology
+T1 Realis and irrealis: Forms and concepts of the grammaticalisation of reality 
+K1 глагольные семантические зоны
+K1 ирреалиса
+
+
+RT Book, Whole
+A1 Ландер
+A1 др.
+T1 [Ландер,др.,2004]
+FD 2004
+YR 2004
+K1 глагольные семантические зоны
+K1 ирреалиса
+
+
+A1 Ландер, Ю. А.
+A2 Плунгян, В. А.
+A2 .
+A2 Урманчиева, А. Ю.
+FD 2004
+YR 2004
+T1 Исследования по теории грамматики, вып
+PP 3
+PB Ирреалис и ирреальность. М.: Гнозис
+K1 глагольные семантические зоны
+K1 ирреалиса
+
+
+A1 Plungian, V. A.
+FD 2005
+YR 2005
+T3 Modality in Slavonic languages: New perspectives. 
+T1 Irrealis and modality in Russian and in typological perspective 
+A2 Hansen, B.
+A2 Karlík, P.
+PP München
+SP 187
+OP 198
+K1 глагольные семантические зоны
+K1 ирреалиса
+
+
+A1 Haarmann, H.
+FD 1970
+YR 1970
+T1 Die indirekte Erlebnisform als grammatische Kategorie: eine eurasische Isoglosse
+PP Wiesbaden
+PB Harrassowitz
+K1 эвиденциальность
+K1 глагольные семантические зоны
+
+
+A1 Givón, T.
+FD 1982
+YR 1982
+T2 Sec. 6.1
+T3 Studies in language
+T1 Evidentiality and epistemic space 
+K1 эвиденциальность
+K1 глагольные семантические зоны
+
+
+A1 Slobin, D. I.
+A1 Aksu, A.
+FD 1982
+YR 1982
+T3 Tense-aspect: Between Semantics and Pragmatics. 
+T1 Tense, aspect, and modality in the use of the Turkish evidential 
+A2 Hopper, P.
+PP Amsterdam
+SP 185
+OP 200
+K1 эвиденциальность
+K1 глагольные семантические зоны
+
+
+A1 Chafe, W.
+FD 1986
+YR 1986
+T3 Evidentiality: The linguistic coding of epistemology. 
+T1 Evidentiality in English conversation and academic writing 
+A2 Chafe, W.
+A2 Nichols, J.
+PP Norwood (NJ)
+SP 261
+OP 272
+K1 эвиденциальность
+K1 отношение
+K1 глагольные семантические зоны
+K1 медиативность
+K1 категория
+
+
+A1 Willett, T.
+FD 1988
+YR 1988
+T2 Sec. 12.1
+T3 Studies in language
+T1 A cross-linguistic survey of the grammaticalization of evidentiality 
+K1 эвиденциальность
+K1 отношение
+K1 глагольные семантические зоны
+K1 медиативность
+K1 категория
+
+
+A1 Duchet, J.-L.
+A1 Përnaska, R.
+FD 1996
+YR 1996
+T3 Lénonciation médiatisée
+T1 Ladmiratif albanais: recherche dun invariant sémantique 
+A2 Guentchéva, Z.
+PP Louvain
+SP 31
+OP 46
+K1 эвиденциальность
+K1 отношение
+K1 глагольные семантические зоны
+K1 медиативность
+K1 категория
+
+
+A1 Guentchéva, Z.
+A2 .
+A2 Landaburu, J.
+FD 2007
+YR 2007
+T1 Lénonciation médiatisée II – Le traitement épistémologique de linformation: illustrations amérindiennes et caucasiennes
+PP Louvain
+PB Peeters
+K1 эвиденциальность
+K1 отношение
+K1 глагольные семантические зоны
+K1 медиативность
+K1 категория
+
+
+A1 Johanson, L.
+A2 .
+A2 Utas, B.
+FD 2000
+YR 2000
+T1 Evidentials: Turkic, Iranian and neighbouring languages
+PP B.
+PB Mouton de Gruyter
+K1 эвиденциальность
+K1 отношение
+K1 глагольные семантические зоны
+K1 медиативность
+K1 категория
+
+
+A1 Dendale, P.
+A1 Tasmowski, L.
+FD 2001
+YR 2001
+T2 Sec. 33.3
+T3 Journal of pragmatics
+T1 Introduction: evidentiality and related notions 
+K1 эвиденциальность
+K1 отношение
+K1 глагольные семантические зоны
+K1 медиативность
+K1 категория
+
+
+RT Book, Whole
+A1 Aikhenvald
+A1 Dixon
+T1 [Aikhenvald,Dixon,2003]
+FD 2003
+YR 2003
+K1 эвиденциальность
+K1 отношение
+K1 глагольные семантические зоны
+K1 медиативность
+K1 категория
+
+
+RT Book, Whole
+A1 Squartini
+T1 [Squartini,2007]
+FD 2007
+YR 2007
+K1 эвиденциальность
+K1 отношение
+K1 глагольные семантические зоны
+K1 медиативность
+K1 категория
+
+
+A1 Козинцева, Н. А.
+FD 1994
+YR 1994
+T3 Вопросы языкознания1994
+T1 Категория эвиденциальности (проблемы типологического анализа) 
+SP 92
+OP 104
+K1 глагольные семантические зоны
+
+
+A1 Вимер, Б.
+FD 2007
+YR 2007
+T3 Эвиденциальность в языках Европы и Азии
+T1 Косвенная засвидетельствованность в литовском языке 
+A2 Храковский, В. С.
+PP Сб. статей памяти Н. А. Козинцевой. СПб
+SP 197
+OP 240
+K1 глагольные семантические зоны
+
+
+RT Book, Whole
+A1 Aikhenvald
+T1 [Aikhenvald,2004b]
+FD 2004b
+YR 2004b
+K1 эвиденциальность
+K1 настоящее
+K1 глагольные семантические зоны
+
+
+A1 Lazard, G.
+FD 1999
+YR 1999
+T2 Sec. 3.1
+T3 Linguistic Typology
+T1 Mirativity, evidentiality, mediativity, or other? 
+K1 глагольные семантические зоны
+K1 семантика
+K1 миративность
+
+
+A1 Friedman, V. A.
+FD 2005
+YR 2005
+T2 Sec. 58.1
+T3 Sprachtypologie und Universalienforschung
+T1 Admirativity: between modality and evidentiality 
+K1 глагольные семантические зоны
+K1 семантика
+K1 миративность
+
+
