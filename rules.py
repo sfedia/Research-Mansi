@@ -115,7 +115,7 @@ rombandeeva.add_element('universal:morpheme', '^ыг', 'yg_suffix').applied(
 
 rombandeeva.add_element('universal:morpheme', '^яг', 'yag_suffix').applied(
     [
-        grammar.LinkSentence(is_noun + '& [ МЯГКИЕ СОГЛАСНЫЕ | universal:end=(и)]'),
+        grammar.LinkSentence(is_noun + '& [ universal:reg_match=([МЯГКИЙ СОГЛАСНЫЙ]$){pre=()} | universal:end=(и)]'),
         [grammar.Action('gram:number:set_dual')]
     ]
 ).add_class('number_suffix')
@@ -163,7 +163,7 @@ rombandeeva.add_element('universal:morpheme', '^н', 'n_suffix').applied(
 
 rombandeeva.add_element('universal:morpheme', '^ан', 'an_suffix').applied(
     [
-        grammar.LinkSentence(is_noun + '& [ ТВЁРДЫЕ СОГЛАСНЫЕ ]'),
+        grammar.LinkSentence(is_noun + '& universal:reg_match=([ТВЁРДЫЙ СОГЛАСНЫЙ]$){pre=()}'),
         [grammar.Action('gram:number:set_plur')]
     ]
 ).add_class('number_suffix')
@@ -172,7 +172,7 @@ rombandeeva.add_element('universal:morpheme', '^ан', 'an_suffix').applied(
 
 rombandeeva.add_element('universal:morpheme', '^ян', 'yan_suffix').applied(
     [
-        grammar.LinkSentence(is_noun + '& [ МЯГКИЕ СОГЛАСНЫЕ | universal:end=(и)]'),
+        grammar.LinkSentence(is_noun + '& [ universal:reg_match=([МЯГКИЙ СОГЛАСНЫЙ]$){pre=()} | universal:end=(и)]'),
         [grammar.Action('gram:number:set_plur')]
     ]
 ).add_class('number_suffix')
