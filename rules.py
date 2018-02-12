@@ -186,28 +186,28 @@ rombandeeva.add_element('universal:morpheme', grammar.Temp.NULL, 'null_suffix_ma
 
 rombandeeva.add_element('universal:morpheme', '^н', 'n_case_suffix').applied(
     [
-        grammar.LinkSentence(is_noun + '& {universal:before:rx_check > [ГЛАСНЫЙ | ГЛАСНЫЙ СОГЛАСНЫЙ]$}=()'),
+        grammar.LinkSentence(is_noun + '& universal:reg_match=([ГЛАСНЫЙ | ГЛАСНЫЙ СОГЛАСНЫЙ]$){pre=()}'),
         [grammar.Action('gram:case:set_napr')]
     ]
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^ын', 'yn_case_suffix').applied(
     [
-        grammar.LinkSentence(is_noun + '& {universal:before:rx_check > [СОГЛАСНЫЙ]{2}$}=()'),
+        grammar.LinkSentence(is_noun + '& universal:reg_match=([СОГЛАСНЫЙ]{2}$){pre=()}'),
         [grammar.Action('gram:case:set_napr')]
     ]
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^т', 't_case_suffix').applied(
     [
-        grammar.LinkSentence(is_noun + '& {universal:before:rx_check > [ГЛАСНЫЙ | ГЛАСНЫЙ СОГЛАСНЫЙ]$}=()'),
+        grammar.LinkSentence(is_noun + '& universal:reg_match=([ГЛАСНЫЙ | ГЛАСНЫЙ СОГЛАСНЫЙ]$){pre=()}'),
         [grammar.Action('gram:case:set_loc')]
     ]
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^ыт', 'yt_case_suffix').applied(
     [
-        grammar.LinkSentence(is_noun + '& {universal:before:rx_check > [СОГЛАСНЫЙ]{2}$}=()'),
+        grammar.LinkSentence(is_noun + '& universal:reg_match=([СОГЛАСНЫЙ]{2}$){pre=()}'),
         [grammar.Action('gram:case:set_loc')]
     ]
 ).add_class('case_suffix')
@@ -220,19 +220,19 @@ rombandeeva.add_element('universal:morpheme', '^ныл', 'nyl_case_suffix').appl
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^л', 'l_case_suffix').applied(
-    [grammar.LinkSentence(is_noun + '& {universal:before:rx_check > [ГЛАСНЫЙ]$}=()'),
+    [grammar.LinkSentence(is_noun + '& universal:reg_match=([ГЛАСНЫЙ]$){pre=()}'),
         [grammar.Action('gram:case:set_instr')]
     ]
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^ыл', 'l_case_suffix').applied(
-    [grammar.LinkSentence(is_noun + '& {universal:before:rx_check > [ТВЁРДЫЙ СОГЛАСНЫЙ]$}=()'),
+    [grammar.LinkSentence(is_noun + '& universal:reg_match=([ТВЁРДЫЙ СОГЛАСНЫЙ]$){pre=()}'),
         [grammar.Action('gram:case:set_instr')]
     ]
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^л', 'l_case_suffix').applied(
-    [grammar.LinkSentence(is_noun + '& {universal:before:rx_check > [МЯГКИЙ СОГЛАСНЫЙ]$}=()'),
+    [grammar.LinkSentence(is_noun + '& universal:reg_match=([МЯГКИЙ СОГЛАСНЫЙ]$){pre=()}'),
         [grammar.Action('gram:case:set_instr')]
     ]
 ).add_class('case_suffix')
@@ -244,13 +244,13 @@ rombandeeva.add_element('universal:morpheme', '^г', 'g_case_suffix').applied(
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^ыг', 'yg_case_suffix').applied(
-    [grammar.LinkSentence(is_noun + '& {universal:before:rx_check > [ТВЁРДЫЙ СОГЛАСНЫЙ]$}=()'),
+    [grammar.LinkSentence(is_noun + '& universal:reg_match=([ТВЁРДЫЙ СОГЛАСНЫЙ]$){pre=()}'),
         [grammar.Action('gram:case:set_transf')]
     ]
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^иг', 'yg_case_suffix').applied(
-    [grammar.LinkSentence(is_noun + '& [{universal:before:rx_check > [МЯГКИЙ СОГЛАСНЫЙ]$}=() | universal:end=(и)]'),
+    [grammar.LinkSentence(is_noun + '& [universal:reg_match=([МЯГКИЙ СОГЛАСНЫЙ]$){pre=()} | universal:end=(и)]'),
         [grammar.Action('gram:case:set_transf')]
     ]
 ).add_class('case_suffix')
