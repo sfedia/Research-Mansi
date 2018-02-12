@@ -136,7 +136,7 @@ for number, person, suffix, id in lps_matrix:
             grammar.LinkSentence(
                 is_noun + '& gram:possessor:number=({0}) & gram:possessor:person=({0})'.format(number, person)
             ),
-            [grammar.Action('mansi:make_lp > {0} > {1}'.format(number, person))]
+            [grammar.Action('mansi:make_lp', arguments=[number, person])]
         ]
     )
 
@@ -146,8 +146,8 @@ rombandeeva.add_element('universal:morpheme', '^ы!н', 'yn_suffix').add_class('
             is_noun + '& gram:possessor:number!=(sing) & gram:possessor:person=(2)'
         ),
         [
-            grammar.Action('mansi:make_lp > sing > 2'),
-            grammar.Action('mansi:make_lp > dual > 2'),
+            grammar.Action('mansi:make_lp', arguments=['sing', '2'], branching=True),
+            grammar.Action('mansi:make_lp', arguments=['dual', '2'], branching=True),
         ]
     ]
 )
