@@ -46,6 +46,19 @@ class SplitString:
         if debug:
             print('Examp_Ranges:', self.examp_ranges)
 
+    @staticmethod
+    def name_escape(str2esc, double=False):
+        str2esc_rep = {
+            '*': [r'\*', r'\\*'],
+            '$': [r'\$', r'\\$'],
+            '^': [r'\^', r'\\^'],
+            '(': [r'\(', r'\\('],
+            ')': [r'\)', r'\\)']
+        }
+        for mr_key in str2esc_rep:
+            str2esc = str2esc.replace(mr_key, str2esc_rep[mr_key][int(double)])
+        return str2esc
+
     def regex_ranges(self, regex, search_string):
         new_token_inds = []
         new_token = True
@@ -187,6 +200,7 @@ class SplitString:
                     continue
                 else:
                     title_index = j
+                token = self.name_escape(token)
                 if re.search(r'^' + token + r'.+', tkn) and len(token) > 4:
                     title_includes.append(i)
                     title_positions.append(pos)
@@ -201,19 +215,23 @@ class SplitString:
                 del sorted_indexed[title_includes[0]]
         return sorted_indexed
 
-    def get_split_positions(self):
+    def get_split_positions(self, recurrent=True):
         srted = self.sort_mansi(self.str2split)
         if self.debug:
             print('Sorted:', srted)
         split_positions = []
         null_index = [e for e, pair in enumerate(srted) if not pair[0]][0]
-        title_sym = srted[null_index][1][0]
+        try:
+            title_sym = srted[null_index][1][0]
+        except IndexError:
+            return []
         this_index = self.symbols.index(title_sym)
         next_sym = None if this_index == len(self.symbols) - 1 else self.symbols[this_index + 1]
         last_index = None
         if null_index == len(srted) - 1:
             return []
         for index, token in srted[null_index + 1:]:
+            token = self.name_escape(token)
             if self.debug:
                 print('Position', index, ', step', -1)
             if index <= 2 or re.search(r'\d+\.\s*' + token + r'\s+', self.src_str2split):
@@ -253,8 +271,11 @@ class SplitString:
                 new_split_positions.append(pos)
                 if j % 2:
                     continue
+                if not recurrent:
+                    continue
                 try:
                     split_obj = SplitString(' '.join(self.str2split.split()[pos:split_positions[j+1]]))
+                    print(split_obj.str2split)
                     ex_pos = [x + pos for x in split_obj.get_split_positions()]
                     if ex_pos:
                         new_split_positions += ex_pos
@@ -278,10 +299,10 @@ if __name__ == "__main__":
 
     print('lol')
     vakhr_file = open('balandin_vakhr_4.txt', encoding='utf-8-sig')
-    with open('balandin_vakhr_SPLIT.txt', 'a') as bvs:
+    with open('balandin_vakhr_SPLIT.txt', 'a', encoding='utf-8-sig') as bvs:
         for e, line in enumerate(vakhr_file):
-            split_positions = SplitString(line, debug=True).get_split_positions()
-            pos_integers = [x[0] for x in split_positions]
+            split_positions = SplitString(line, debug=True).get_split_positions(recurrent=True)
+            pos_integers = [(x if type(x) == int else x[0]) for x in split_positions]
             new_lines = []
             for i, token in enumerate(line.split()):
                 if i in pos_integers:
