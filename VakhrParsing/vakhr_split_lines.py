@@ -17,7 +17,7 @@ class SplitString:
         self.src_str2split = self.str2split
         self.str2split = re.sub(r',(?!\s)', ', ', self.str2split)
         self.str2split = re.sub(r'\d+\.\s*', '', self.str2split)
-        self.symbols = [x for x in 'аӓбвгдеёжзийклмнӈоӧөпрстуӱфхцчшщъыьэәӛюя']
+        self.symbols = [x for x in 'аӓбвгдеёжзийклмнӈоӧөпрстуӱфхцчшщъьыэәӛюя']
         self.next_lines = next_lines
         self.simplify = {
             'ӓ': 'а',
@@ -182,7 +182,9 @@ class SplitString:
             )
             corresp_use[key_token] = 0
             sorted_stripped.append(key_token)
-        sorted_stripped.sort()
+        sorted_stripped = sorted(
+            sorted_stripped, key=lambda word: [self.symbols.index(x) if x in self.symbols else -1 for x in word]
+        )
         sorted_indexed = []
         for token in sorted_stripped:
             sorted_indexed.append(
