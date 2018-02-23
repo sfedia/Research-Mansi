@@ -46,6 +46,8 @@ rombandeeva.add_element('universal:morpheme', '^т', 't_suffix').add_class('caus
 rombandeeva.add_element('universal:morpheme', '^л', 'l_suffix').add_class('caus_suffixes') # TR
 rombandeeva.add_element('mansi:VowMorpheme', '^лт', 'lt_suffix').add_class('caus_suffixes') # CAUS
 rombandeeva.add_element('universal:morpheme', '^пт', 'pt_suffix').add_class('caus_suffixes')
+rombandeeva.add_element('universal:morpheme', '^лтт', 'ltt_suffix').add_class('caus_suffixes')
+rombandeeva.add_element('universal:morpheme', '^тт', 'tt_suffix').add_class('caus_suffixes')
 for element in rombandeeva.get_by_class_name('caus_suffixes'):
     # or just element.applied ??
     rombandeeva.get_by_id(element.get_id()).applied(
@@ -856,7 +858,8 @@ rombandeeva.get_system('universal:morpheme').subclasses_order(
     parent_filter=grammar.LinkSentence(
       'universal:entity=(token) & mansi:simple_pos=(pronoun) & mansi:pronoun:is_personal=()',
       rombandeeva
-   )
+   ),
+   strict=True
 )
 
 lps_matrix_2 = [
@@ -1054,38 +1057,23 @@ for case, h_paradigm, m_paradigm in matyr_hotpa_matrix:
 rombandeeva.add_element('universal:morpheme', '^ахт', 'aht_suffix').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb) & mansi:base_length=(1)'),
     [
-        grammar.Action('gram:make_intransitive'),
-        grammar.Action('gram:make_reflexive')
+        grammar.Action('gram:make_reflexive')  # REFL
     ]
 ).add_class('trans_suffs')
 
 rombandeeva.add_element('universal:morpheme', '^хат', 'hat_suffix').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb) & mansi:base_length=(1)'),
     [
-        grammar.Action('gram:make_intransitive'),
-        grammar.Action('gram:make_reflexive')
+        grammar.Action('gram:make_reflexive')  # REFL
     ]
 ).add_class('trans_suffs')
-
-transitive_suffs = [('lt', 'лт'), ('pt', 'пт'), ('ltt', 'лтт'), ('tt', 'тт')]
-for code, suff in transitive_suffs:
-    rombandeeva.add_element('universal:morpheme', '^' + suff, code + '_suffix').applied(
-        grammar.LinkSentence(
-            '# & universal:entity=(token) & mansi:basic_pos=(verb) & gram:intransitive=()'
-        ),
-        [
-            grammar.Action('gram:make_transitive')
-        ]
-    ).add_class('trans_suffs')
-
-rombandeeva.get_by_id('lt_suffix').add_class('lt_suff')
 
 rombandeeva.add_element('mansi:morphemeYU', '^ыгл', 'ygl_suffix').applied(
     grammar.LinkSentence(
         '# & universal:entity=(token) & mansi:basic_pos=(verb) & gram:intransitive=()'
     ),
     [
-        grammar.Action('gram:make_transitive')
+        grammar.Action('gram:make_transitive')  # TR
     ]
 ).add_class('trans_suffs')
 
@@ -1094,7 +1082,7 @@ rombandeeva.add_element('mansi:morphemeYU', '^гл', 'gl_suffix').applied(
         '# & universal:entity=(token) & mansi:basic_pos=(verb) & gram:intransitive=()'
     ),
     [
-        grammar.Action('gram:make_transitive')
+        grammar.Action('gram:make_transitive')  # TR
     ]
 ).add_class('trans_suffs')
 
