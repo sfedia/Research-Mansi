@@ -257,6 +257,13 @@ rombandeeva.add_element('universal:morpheme', '^иг', 'yg_case_suffix').applied
     ]
 ).add_class('case_suffix')
 
+rombandeeva.add_element('mansi:VowMorpheme', '^а', 'a_case_suffix_voc').applied(
+    [
+        grammar.LinkSentence(is_noun),
+        [grammar.Action('gram:case:set_voc')]
+    ]
+).add_class('case_suffix')
+
 # page 70
 
 is_verb = '# & universal:entity=(token) & mansi:basic_pos=(verb) '
