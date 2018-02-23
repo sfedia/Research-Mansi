@@ -392,7 +392,7 @@ rombandeeva.add_element('universal:morpheme', '^т', 't_wb_from_noun_suffix').ap
         grammar.LinkSentence(is_noun),
         [
             grammar.Action('mansi:adj_to_noun'),
-            grammar.Action('mansi:sem:obj-size')
+            grammar.Action('mansi:sem:obj-size')  # SBST.Q
         ]
     ]
 ).add_class('adj_ending_excl').add_class('word_building_suffix').add_class('adj_to_noun_suff')
@@ -550,16 +550,6 @@ rombandeeva.add_element('universal:morpheme', '^кве', 'kve_suffix_adj').appli
         grammar.Action('gram:set_dimin')  # DIM
     ]
 )
-
-rombandeeva.add_element('universal:morpheme', '^ысь', 'ys*-suffix').applied(
-    grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adv)'),
-    [
-        grammar.Action('gram:adj_to_adv')
-    ]
-).provide_mutation_links(
-    [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adj)')]
-)
-
 
 rombandeeva.add_element('universal:collocation', '''
     <[gram:case=(nom)]> *1 <[gram:case=(ish)]> *1 <[mansi:basic_pos=(adj) & gram:case=(nom)]>
