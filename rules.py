@@ -251,7 +251,7 @@ rombandeeva.add_element('universal:morpheme', '^ыг', 'yg_case_suffix').applied
     ]
 ).add_class('case_suffix')
 
-rombandeeva.add_element('universal:morpheme', '^иг', 'yg_case_suffix').applied(
+rombandeeva.add_element('universal:morpheme', '^иг', 'ig_case_suffix').applied(
     *[grammar.LinkSentence(is_noun + '& [universal:reg_match=([МЯГКИЙ СОГЛАСНЫЙ]$){pre=()} | universal:end=(и)]'),
         [grammar.Action('gram:case:set_transf')]
     ]
