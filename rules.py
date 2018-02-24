@@ -142,7 +142,7 @@ for number, person, suffix, id in lps_matrix:
         ]
     )
 
-rombandeeva.add_element('universal:morpheme', '^ы!н', 'yn_suffix_poss').add_class('lps').applied(
+rombandeeva.add_element('universal:morpheme', '^ы!н', 'yn_suffix_lps').add_class('lps').applied(
     *[
         grammar.LinkSentence(
             is_noun + '& gram:possessor:number!=(sing) & gram:possessor:person=(2)'
