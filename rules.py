@@ -816,7 +816,7 @@ for person_number, cases in personal_pronouns:
         ).applied(
             grammar.LinkSentence('# & universal:entity=(input)'),
             [
-                grammar.Action('mansi:pronoun:personal:' + person_number)
+                grammar.Action('mansi:pronoun:personal:' + person_number),
                 grammar.Action('gram:case:' + case)
             ]
         )
