@@ -646,7 +646,7 @@ rombandeeva.add_element('mansi:morphemeYU', '^ам', 'am_suffix').applied(
 
 # page 83
 
-rombandeeva.add_element('universal:morpheme', 'ий', 'iy_suffix').applied(
+rombandeeva.add_element('universal:morpheme', 'ий', 'ij_suffix').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adj)'),
     [
         grammar.Action(grammar.Temp.NULL),
@@ -654,7 +654,7 @@ rombandeeva.add_element('universal:morpheme', 'ий', 'iy_suffix').applied(
     ]
 )
 
-rombandeeva.add_element('universal:morpheme', 'ый', 'iy_suffix').applied(
+rombandeeva.add_element('universal:morpheme', 'ый', 'yj_suffix').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adj)'),
     [
         grammar.Action(grammar.Temp.NULL),
