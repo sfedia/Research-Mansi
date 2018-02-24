@@ -626,7 +626,7 @@ rombandeeva.add_element('mansi:morphemeYU', '^м', 'm_suffix').applied(
     [grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)')]
 )
 
-rombandeeva.add_element('mansi:morphemeYU', '^ум', 'um_suffix').applied(
+rombandeeva.add_element('mansi:morphemeYU', '^ум', 'um_suffix_participle').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(adj)'),
     [
         grammar.Action('gram:set_participle')
