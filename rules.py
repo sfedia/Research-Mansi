@@ -227,13 +227,13 @@ rombandeeva.add_element('universal:morpheme', '^л', 'l_case_suffix').applied(
     ]
 ).add_class('case_suffix')
 
-rombandeeva.add_element('universal:morpheme', '^ыл', 'l_case_suffix').applied(
+rombandeeva.add_element('universal:morpheme', '^ыл', 'yl_case_suffix').applied(
     *[grammar.LinkSentence(is_noun + '& universal:reg_match=([ТВЁРДЫЙ СОГЛАСНЫЙ]$){pre=()}'),
         [grammar.Action('gram:case:set_instr')]
     ]
 ).add_class('case_suffix')
 
-rombandeeva.add_element('universal:morpheme', '^л', 'l_case_suffix').applied(
+rombandeeva.add_element('universal:morpheme', '^ил', 'il_case_suffix').applied(
     *[grammar.LinkSentence(is_noun + '& universal:reg_match=([МЯГКИЙ СОГЛАСНЫЙ]$){pre=()}'),
         [grammar.Action('gram:case:set_instr')]
     ]
