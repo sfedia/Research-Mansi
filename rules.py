@@ -284,12 +284,12 @@ rombandeeva.add_element('universal:char_regex:responsive', 'c\g<2>', 'XsX_sequen
     ]
 ).add_class('XsX_pair')
 
-rombandeeva.get_class('XsX_pair').added_behaviour('override')
+rombandeeva.get_class('XsX_pair', await=True).added_behaviour('override')
 ## /
 
 ## warning: mutation strategy may be applied wrong to these elements <= is_verb is too broad for that
 
-rombandeeva.get_class('infinitive_excl_suff').added_behaviour('override')
+rombandeeva.get_class('infinitive_excl_suff', await=True).added_behaviour('override')
 
 # infinitive!
 
@@ -427,7 +427,7 @@ def atn_set_mutation_links(element):
 
 # page 73, mutation scheme is complicated
 
-rombandeeva.get_class('adj_ending_excl').added_behaviour('override')
+rombandeeva.get_class('adj_ending_excl', await=True).added_behaviour('override')
 # Need some universal:char_regex AS adj_ending_excl there??
 
 rombandeeva.add_element('mansi:morphemeYU', '^т', 't_wb_from_verb_suffix').applied(
@@ -514,7 +514,7 @@ def vtn_set_mutation_links(element):
 
 ## mansi:morphemeYU ^ункве < universal:morpheme ^ункве
 
-rombandeeva.get_class('yu.verb_ending_excl').added_behaviour('override mutate>MUTATION')
+rombandeeva.get_class('yu.verb_ending_excl', await=True).added_behaviour('override mutate>MUTATION')
 
 rombandeeva.add_element('universal:char_regex', 'ololo', 'random2728').applied(
     grammar.LinkSentence('something'),
@@ -728,7 +728,7 @@ rombandeeva.add_element('universal:morpheme', '^кем', 'kem_suffix').applied(
     ]
 ).add_class('kem_abstraction')
 
-rombandeeva.get_class('kem_abstraction').added_behaviour('''
+rombandeeva.get_class('kem_abstraction', await=True).added_behaviour('''
     prepend <universal:morpheme> ( (^ах) | (^ман) ) -> (0.5|0.5)
 ''')
 
@@ -2351,7 +2351,7 @@ for pp_word, pp_id in postpos_mutable:
         ]
     ).add_class('postpos_mutable')
 
-rombandeeva.get_class('postpos_mutable').intrusion(
+rombandeeva.get_class('postpos_mutable', await=True).intrusion(
     grammar.LinkSentence('universal:entity=(token) & mansi:basic_pos=(noun)'),
     whitelist={
         'classes': ['case_suffixes', 'verb_conj_personal']
