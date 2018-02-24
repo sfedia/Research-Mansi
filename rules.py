@@ -108,7 +108,7 @@ rombandeeva.add_element('universal:morpheme', '^г', 'g_suffix').applied(
 
 rombandeeva.add_element('universal:morpheme', '^ыг', 'yg_suffix').applied(
     [
-        grammar.LinkSentence(is_noun + '& universal:reg_match=([ТВЁРДЫЙ СОГЛАСНЫЙ]$){pre=()}')
+        grammar.LinkSentence(is_noun + '& universal:reg_match=([ТВЁРДЫЙ СОГЛАСНЫЙ]$){pre=()}'),
         [grammar.Action('gram:number:set_dual')]
     ]
 ).add_class('number_suffix')
