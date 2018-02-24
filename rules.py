@@ -36,7 +36,7 @@ rombandeeva.need_form_parameter(
 #####
 
 rombandeeva.add_element('universal:morpheme', '^та!л', 'tal_suffix').applied(
-    [
+    *[
         grammar.LinkSentence('# & universal:entity=(token) & mansi:simple_pos=(adj)'),
         [grammar.Action('sem:make_opposite')]  # CAR
     ]
@@ -51,7 +51,7 @@ rombandeeva.add_element('universal:morpheme', '^тт', 'tt_suffix').add_class('c
 for element in rombandeeva.get_by_class_name('caus_suffixes'):
     # or just element.applied ??
     rombandeeva.get_by_id(element.get_id()).applied(
-        [
+        *[
             grammar.LinkSentence('# & universal:entity=(token) & mansi:simple_pos=(verb) & sem:non_causative=()'),
             [ grammar.Action('sem:make_causative')]
         ]
@@ -91,14 +91,14 @@ rombandeeva.get_system('universal:morpheme').subclasses_order(
 is_noun = '# & universal:entity=(token) & mansi:basic_pos=(noun) '
 
 rombandeeva.add_element('universal:morpheme', grammar.Temp.NULL, 'number_noun_null_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun),
         [grammar.Action('gram:number:set_sing')]
     ]
 ).add_class('number_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^г', 'g_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun + '& [ universal:end=(а) | universal:end=(е) | universal:end=(я) ]'),
         [grammar.Action('gram:number:set_dual')]
     ]
@@ -107,7 +107,7 @@ rombandeeva.add_element('universal:morpheme', '^г', 'g_suffix').applied(
 # твёрдые согласные?
 
 rombandeeva.add_element('universal:morpheme', '^ыг', 'yg_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun + '& universal:reg_match=([ТВЁРДЫЙ СОГЛАСНЫЙ]$){pre=()}'),
         [grammar.Action('gram:number:set_dual')]
     ]
@@ -116,7 +116,7 @@ rombandeeva.add_element('universal:morpheme', '^ыг', 'yg_suffix').applied(
 # мягкие согласные?
 
 rombandeeva.add_element('universal:morpheme', '^яг', 'yag_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun + '& [ universal:reg_match=([МЯГКИЙ СОГЛАСНЫЙ]$){pre=()} | universal:end=(и)]'),
         [grammar.Action('gram:number:set_dual')]
     ]
@@ -134,7 +134,7 @@ lps_matrix = [
 
 for number, person, suffix, id in lps_matrix:
     rombandeeva.add_element('universal:morpheme', '^' + suffix, id + '_suffix').add_class('lps').applied(
-        [
+        *[
             grammar.LinkSentence(
                 is_noun + '& gram:possessor:number=({0}) & gram:possessor:person=({0})'.format(number, person)
             ),
@@ -143,7 +143,7 @@ for number, person, suffix, id in lps_matrix:
     )
 
 rombandeeva.add_element('universal:morpheme', '^ы!н', 'yn_suffix').add_class('lps').applied(
-    [
+    *[
         grammar.LinkSentence(
             is_noun + '& gram:possessor:number!=(sing) & gram:possessor:person=(2)'
         ),
@@ -155,7 +155,7 @@ rombandeeva.add_element('universal:morpheme', '^ы!н', 'yn_suffix').add_class('
 )
 
 rombandeeva.add_element('universal:morpheme', '^н', 'n_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun + '& [ universal:end=(а) | universal:end=(е) | universal:end=(э) ]'),
         [grammar.Action('gram:number:set_plur')]
     ]
@@ -164,7 +164,7 @@ rombandeeva.add_element('universal:morpheme', '^н', 'n_suffix').applied(
 # твёрдые согласные?
 
 rombandeeva.add_element('universal:morpheme', '^ан', 'an_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun + '& universal:reg_match=([ТВЁРДЫЙ СОГЛАСНЫЙ]$){pre=()}'),
         [grammar.Action('gram:number:set_plur')]
     ]
@@ -173,92 +173,92 @@ rombandeeva.add_element('universal:morpheme', '^ан', 'an_suffix').applied(
 # мягкие согласные?
 
 rombandeeva.add_element('universal:morpheme', '^ян', 'yan_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun + '& [ universal:reg_match=([МЯГКИЙ СОГЛАСНЫЙ]$){pre=()} | universal:end=(и)]'),
         [grammar.Action('gram:number:set_plur')]
     ]
 ).add_class('number_suffix')
 
 rombandeeva.add_element('universal:morpheme', grammar.Temp.NULL, 'null_suffix_main_case').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun),
         [grammar.Action('gram:case:set_main')]
     ]
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^н', 'n_case_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun + '& universal:reg_match=([ГЛАСНЫЙ | ГЛАСНЫЙ СОГЛАСНЫЙ]$){pre=()}'),
         [grammar.Action('gram:case:set_napr')]
     ]
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^ын', 'yn_case_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun + '& universal:reg_match=([СОГЛАСНЫЙ]{2}$){pre=()}'),
         [grammar.Action('gram:case:set_napr')]
     ]
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^т', 't_case_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun + '& universal:reg_match=([ГЛАСНЫЙ | ГЛАСНЫЙ СОГЛАСНЫЙ]$){pre=()}'),
         [grammar.Action('gram:case:set_loc')]
     ]
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^ыт', 'yt_case_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun + '& universal:reg_match=([СОГЛАСНЫЙ]{2}$){pre=()}'),
         [grammar.Action('gram:case:set_loc')]
     ]
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^ныл', 'nyl_case_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun),
         [grammar.Action('gram:case:set_ish')]
     ]
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^л', 'l_case_suffix').applied(
-    [grammar.LinkSentence(is_noun + '& universal:reg_match=([ГЛАСНЫЙ]$){pre=()}'),
+    *[grammar.LinkSentence(is_noun + '& universal:reg_match=([ГЛАСНЫЙ]$){pre=()}'),
         [grammar.Action('gram:case:set_instr')]
     ]
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^ыл', 'l_case_suffix').applied(
-    [grammar.LinkSentence(is_noun + '& universal:reg_match=([ТВЁРДЫЙ СОГЛАСНЫЙ]$){pre=()}'),
+    *[grammar.LinkSentence(is_noun + '& universal:reg_match=([ТВЁРДЫЙ СОГЛАСНЫЙ]$){pre=()}'),
         [grammar.Action('gram:case:set_instr')]
     ]
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^л', 'l_case_suffix').applied(
-    [grammar.LinkSentence(is_noun + '& universal:reg_match=([МЯГКИЙ СОГЛАСНЫЙ]$){pre=()}'),
+    *[grammar.LinkSentence(is_noun + '& universal:reg_match=([МЯГКИЙ СОГЛАСНЫЙ]$){pre=()}'),
         [grammar.Action('gram:case:set_instr')]
     ]
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^г', 'g_case_suffix').applied(
-    [grammar.LinkSentence(is_noun + '& [ universal:end=(а) | universal:end=(е) | universal:end=(э) ]'),
+    *[grammar.LinkSentence(is_noun + '& [ universal:end=(а) | universal:end=(е) | universal:end=(э) ]'),
         [grammar.Action('gram:case:set_transf')]
     ]
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^ыг', 'yg_case_suffix').applied(
-    [grammar.LinkSentence(is_noun + '& universal:reg_match=([ТВЁРДЫЙ СОГЛАСНЫЙ]$){pre=()}'),
+    *[grammar.LinkSentence(is_noun + '& universal:reg_match=([ТВЁРДЫЙ СОГЛАСНЫЙ]$){pre=()}'),
         [grammar.Action('gram:case:set_transf')]
     ]
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^иг', 'yg_case_suffix').applied(
-    [grammar.LinkSentence(is_noun + '& [universal:reg_match=([МЯГКИЙ СОГЛАСНЫЙ]$){pre=()} | universal:end=(и)]'),
+    *[grammar.LinkSentence(is_noun + '& [universal:reg_match=([МЯГКИЙ СОГЛАСНЫЙ]$){pre=()} | universal:end=(и)]'),
         [grammar.Action('gram:case:set_transf')]
     ]
 ).add_class('case_suffix')
 
 rombandeeva.add_element('mansi:VowMorpheme', '^а', 'a_case_suffix_voc').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun),
         [grammar.Action('gram:case:set_voc')]
     ]
@@ -271,14 +271,14 @@ is_verb = '# & universal:entity=(token) & mansi:basic_pos=(verb) '
 ## AN IMPORTANT RULE
 
 rombandeeva.add_element('universal:char_regex', '([ГЛАСНЫЙ])с([ГЛАСНЫЙ])', 'XsX_sequence').applied(
-    [
+    *[
         grammar.LinkSentence('#'),
         []
     ]
 ).add_class('XsX_pair')
 
 rombandeeva.add_element('universal:char_regex:responsive', 'c\g<2>', 'XsX_sequence').applied(
-    [
+    *[
         grammar.LinkSentence('#'),
         [grammar.Action('seq:correction:mansi:XsX')]
     ]
@@ -294,7 +294,7 @@ rombandeeva.get_class('infinitive_excl_suff').added_behaviour('override')
 # infinitive!
 
 rombandeeva.add_element('universal:morpheme', '^ун!кве', 'u+_infinitive_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(
             is_verb + '& universal:reg_match=([СОГЛАСНЫЙ_ТВЁРД]$){pre=()} & universal:syl_count:odd=(){pre=()}'
         ),
@@ -303,7 +303,7 @@ rombandeeva.add_element('universal:morpheme', '^ун!кве', 'u+_infinitive_suf
 ).add_class('infinitive_excl_suff').add_class('inf_suff')
 
 rombandeeva.add_element('universal:morpheme', '^юн!кве', 'yu+_infinitive_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(
             is_verb + '& universal:reg_match=(([СОГЛАСНЫЙ_МЯГК]|й)$){pre=()} & universal:syl_count:odd=(){pre=()}'
         ),
@@ -312,7 +312,7 @@ rombandeeva.add_element('universal:morpheme', '^юн!кве', 'yu+_infinitive_su
 ).add_class('infinitive_excl_suff').add_class('inf_suff')
 
 rombandeeva.add_element('universal:morpheme', '^ан!кве', 'a+_infinitive_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(
             is_verb + '& universal:reg_match=([СОГЛАСНЫЙ]$){pre=()} & universal:syl_count:even=(){pre=()}'
         ),
@@ -321,7 +321,7 @@ rombandeeva.add_element('universal:morpheme', '^ан!кве', 'a+_infinitive_suf
 ).add_class('infinitive_excl_suff').add_class('inf_suff')
 
 rombandeeva.add_element('universal:morpheme', '^н!кве', 'null+_infinitive_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_verb + '& universal:reg_match=([ГЛАСНЫЙ]$){pre=()} & universal:syl_count=(1)'),
         [grammar.Action('gram:verb:set_infinitive')]
     ]
@@ -330,7 +330,7 @@ rombandeeva.add_element('universal:morpheme', '^н!кве', 'null+_infinitive_su
 # уп, ап, па, пи, п
 
 rombandeeva.add_element('universal:morpheme', '^уп', 'up_wb_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun),
         [
             grammar.Action('mansi:verb_to_noun'),
@@ -340,7 +340,7 @@ rombandeeva.add_element('universal:morpheme', '^уп', 'up_wb_suffix').applied(
 ).add_class('infinitive_excl_suff').add_class('word_building_suffix').add_class('verb_to_noun_suff')
 
 rombandeeva.add_element('universal:morpheme', '^ап', 'ap_wb_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun),
         [
             grammar.Action('mansi:verb_to_noun'),
@@ -350,7 +350,7 @@ rombandeeva.add_element('universal:morpheme', '^ап', 'ap_wb_suffix').applied(
 ).add_class('infinitive_excl_suff').add_class('word_building_suffix').add_class('verb_to_noun_suff')
 
 rombandeeva.add_element('universal:morpheme', '^па', 'pa_wb_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun),
         [
             grammar.Action('mansi:verb_to_noun'),
@@ -360,7 +360,7 @@ rombandeeva.add_element('universal:morpheme', '^па', 'pa_wb_suffix').applied(
 ).add_class('infinitive_excl_suff').add_class('word_building_suffix').add_class('verb_to_noun_suff')
 
 rombandeeva.add_element('universal:morpheme', '^пи', 'pi_wb_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun),
         [
             grammar.Action('mansi:verb_to_noun'),
@@ -370,7 +370,7 @@ rombandeeva.add_element('universal:morpheme', '^пи', 'pi_wb_suffix').applied(
 ).add_class('infinitive_excl_suff').add_class('word_building_suffix').add_class('verb_to_noun_suff')
 
 rombandeeva.add_element('universal:morpheme', '^п', 'p_wb_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun),
         [
             grammar.Action('mansi:verb_to_noun'),
@@ -388,7 +388,7 @@ def ss_set_mutation_links(element):
 
 
 rombandeeva.add_element('universal:morpheme', '^т', 't_wb_from_noun_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun),
         [
             grammar.Action('mansi:adj_to_noun'),
@@ -398,7 +398,7 @@ rombandeeva.add_element('universal:morpheme', '^т', 't_wb_from_noun_suffix').ap
 ).add_class('adj_ending_excl').add_class('word_building_suffix').add_class('adj_to_noun_suff')
 
 rombandeeva.add_element('universal:morpheme', '^ит', 'it_wb_from_noun_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun),
         [
             grammar.Action('mansi:adj_to_noun'),
@@ -408,7 +408,7 @@ rombandeeva.add_element('universal:morpheme', '^ит', 'it_wb_from_noun_suffix')
 ).add_class('adj_ending_excl').add_class('word_building_suffix').add_class('adj_to_noun_suff')
 
 rombandeeva.add_element('universal:morpheme', '^та', 'ta_wb_from_noun_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun),
         [
             grammar.Action('mansi:adj_to_noun'),
@@ -431,7 +431,7 @@ rombandeeva.get_class('adj_ending_excl').added_behaviour('override')
 # Need some universal:char_regex AS adj_ending_excl there??
 
 rombandeeva.add_element('mansi:morphemeYU', '^т', 't_wb_from_verb_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun),
         [
             grammar.Action('mansi:verb_to_noun:size')
@@ -440,7 +440,7 @@ rombandeeva.add_element('mansi:morphemeYU', '^т', 't_wb_from_verb_suffix').appl
 ).add_class('verb_to_noun').add_class('yu.verb_ending_excl').add_class('verb_to_noun_suff')
 
 rombandeeva.add_element('mansi:morphemeYU', '^ит', 'it_wb_from_verb_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun),
         [
             grammar.Action('mansi:verb_to_noun:size')
@@ -449,7 +449,7 @@ rombandeeva.add_element('mansi:morphemeYU', '^ит', 'it_wb_from_verb_suffix').a
 ).add_class('verb_to_noun').add_class('yu.verb_ending_excl').add_class('verb_to_noun_suff')
 
 rombandeeva.add_element('mansi:morphemeYU', '^та', 'ta_wb_from_verb_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun),
         [
             grammar.Action('mansi:verb_to_noun:size')
@@ -460,7 +460,7 @@ rombandeeva.add_element('mansi:morphemeYU', '^та', 'ta_wb_from_verb_suffix').a
 ### EDIT
 
 rombandeeva.add_element('mansi:VowMorpheme', '^си', 'si_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun),
         [
             grammar.Action('mansi:sem:coll') # COLL
@@ -469,7 +469,7 @@ rombandeeva.add_element('mansi:VowMorpheme', '^си', 'si_suffix').applied(
 )
 
 rombandeeva.add_element('universal:morpheme', '^х', 'h_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun),
         [
             grammar.Action('mansi:verb_to_noun')
@@ -478,7 +478,7 @@ rombandeeva.add_element('universal:morpheme', '^х', 'h_suffix').applied(
 ).add_class('verb_to_noun').add_class('yu.verb_ending_excl').add_class('verb_to_noun_suff')
 
 rombandeeva.add_element('universal:morpheme', '^ах', 'ah_suffix').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun),
         [
             grammar.Action('mansi:verb_to_noun') # SBST
@@ -487,7 +487,7 @@ rombandeeva.add_element('universal:morpheme', '^ах', 'ah_suffix').applied(
 ).add_class('verb_to_noun').add_class('yu.verb_ending_excl').add_class('verb_to_noun_suff')
 
 rombandeeva.add_element('universal:morpheme', '^ум', 'um_suffix_sbst').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun),
         [
             grammar.Action('mansi:verb_to_noun') # SBST
@@ -496,7 +496,7 @@ rombandeeva.add_element('universal:morpheme', '^ум', 'um_suffix_sbst').applied
 ).add_class('verb_to_noun').add_class('yu.verb_ending_excl').add_class('verb_to_noun_suff')
 
 rombandeeva.add_element('universal:morpheme', '^м', 'm_suffix_sbst').applied(
-    [
+    *[
         grammar.LinkSentence(is_noun),
         [
             grammar.Action('mansi:verb_to_noun')
