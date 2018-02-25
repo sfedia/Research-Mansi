@@ -809,10 +809,10 @@ personal_pronouns = {
     }
 }
 
-for person_number, cases in personal_pronouns:
-    for case, value in cases:
+for person_number in personal_pronouns:
+    for case in personal_pronouns[person_number]:
         rombandeeva.add_element(
-            'universal:token', value, 'pers_pron_{}.{}'.format(person_number, case)
+            'universal:token', personal_pronouns[person_number][case], 'pers_pron_{}.{}'.format(person_number, case)
         ).applied(
             grammar.LinkSentence('# & universal:entity=(input)'),
             [
