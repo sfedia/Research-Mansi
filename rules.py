@@ -217,7 +217,7 @@ rombandeeva.add_element('universal:morpheme', '^ыт', 'yt_case_suffix').applied
 rombandeeva.add_element('universal:morpheme', '^ныл', 'nyl_case_suffix').applied(
     *[
         grammar.LinkSentence(is_noun),
-        [grammar.Action('gram:case:set_ish')]
+        [grammar.Action('gram:case:set_abl')]
     ]
 ).add_class('case_suffix')
 
@@ -241,19 +241,19 @@ rombandeeva.add_element('universal:morpheme', '^ил', 'il_case_suffix').applied
 
 rombandeeva.add_element('universal:morpheme', '^г', 'g_case_suffix').applied(
     *[grammar.LinkSentence(is_noun + '& [ universal:end=(а) | universal:end=(е) | universal:end=(э) ]'),
-        [grammar.Action('gram:case:set_transf')]
+        [grammar.Action('gram:case:set_trans')]
     ]
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^ыг', 'yg_case_suffix').applied(
     *[grammar.LinkSentence(is_noun + '& universal:reg_match=([ТВЁРДЫЙ СОГЛАСНЫЙ]$){pre=()}'),
-        [grammar.Action('gram:case:set_transf')]
+        [grammar.Action('gram:case:set_trans')]
     ]
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^иг', 'ig_case_suffix').applied(
     *[grammar.LinkSentence(is_noun + '& [universal:reg_match=([МЯГКИЙ СОГЛАСНЫЙ]$){pre=()} | universal:end=(и)]'),
-        [grammar.Action('gram:case:set_transf')]
+        [grammar.Action('gram:case:set_trans')]
     ]
 ).add_class('case_suffix')
 
@@ -552,7 +552,7 @@ rombandeeva.add_element('universal:morpheme', '^кве', 'kve_suffix_adj').appli
 )
 
 rombandeeva.add_element('universal:collocation', '''
-    <[gram:case=(nom)]> *1 <[gram:case=(ish)]> *1 <[mansi:basic_pos=(adj) & gram:case=(nom)]>
+    <[gram:case=(nom)]> *1 <[gram:case=(abl)]> *1 <[mansi:basic_pos=(adj) & gram:case=(nom)]>
 ''', 'analytic_comp').applied(
     grammar.LinkSentence('# & universal:entity=(input)'),
     [
@@ -748,63 +748,63 @@ personal_pronouns = {
         'nom': 'ам',
         'acc': 'а!нум',
         'dat': 'а!нумн',
-        'ish': 'а!нумныл',
+        'abl': 'а!нумныл',
         'instr': 'а!нумтыл',
     },
     '2SG': {
         'nom': 'нан!',
         'acc': 'нан!ын',
         'dat': 'нан!ынн',
-        'ish': 'нан!ынныл',
+        'abl': 'нан!ынныл',
         'instr': 'нан!ынтыл',
     },
     '3SG': {
         'nom': 'тав',
         'acc': 'таве',
         'dat': 'таве!н',
-        'ish': 'таве!ныл',
+        'abl': 'таве!ныл',
         'instr': 'таветыл',
     },
     '1DUAL': {
         'nom': 'ме!н',
         'acc': 'ме!нме!н',
         'dat': 'ме!нме!нн',
-        'ish': 'ме!нме!нныл',
+        'abl': 'ме!нме!нныл',
         'instr': 'ме!нме!нтыл',
     },
     '2DUAL': {
         'nom': 'нэ!н',
         'acc': 'нэ!нан',
         'dat': 'нэ!нанн',
-        'ish': 'нэ!нанныл',
+        'abl': 'нэ!нанныл',
         'instr': 'нэ!нантыл',
     },
     '3DUAL': {
         'nom': 'тэ!н',
         'acc': 'тэ!нтэ!н',
         'dat': 'тэ!нтэ!нн',
-        'ish': 'тэ!нтэ!нныл',
+        'abl': 'тэ!нтэ!нныл',
         'instr': 'тэ!нтэ!нтыл',
     },
     '1PL': {
         'nom': 'ма!н',
         'acc': 'ма!нав',
         'dat': 'ма!навн',
-        'ish': 'ма!навныл',
+        'abl': 'ма!навныл',
         'instr': 'ма!навтыл'
     },
     '2PL': {
         'nom': 'на!н',
         'acc': 'на!нан',
         'dat': 'нананн',
-        'ish': 'на!нанныл',
+        'abl': 'на!нанныл',
         'instr': 'на!нантыл'
     },
     '3PL': {
         'nom': 'та!н',
         'acc': 'та!наныл',
         'dat': 'та!нанылн',
-        'ish': 'та!нанылныл',
+        'abl': 'та!нанылныл',
         'instr': 'та!нанылтыл'
     }
 }
@@ -932,6 +932,7 @@ def interrog_pronouns_as_nouns(element):
     )
     element.bw_list(exclude={'mutations': ['gram:case:set_loc']})
 
+
 demonstr_pronoun_matrix = [
     [['ты', 'та'], ['тыиг', 'таиг'], ['тыит', 'таит']],
     [['тыи', 'таи'], ['тыиг', 'таиг'], ['тыит', 'таит']],
@@ -941,7 +942,7 @@ demonstr_pronoun_matrix = [
     [['тыиг', 'таиг'], [], []]
 ]
 
-cases = ['nom', 'acc', 'dat', 'ish', 'instr', 'transf']
+cases = ['nom', 'acc', 'dat', 'abl', 'instr', 'trans']
 num = ['sing', 'dual', 'plur']
 for j, group in enumerate(demonstr_pronoun_matrix):
     for e, number in enumerate(group):
@@ -1003,9 +1004,9 @@ for j in range(3):
 matyr_hotpa_matrix = [
     ['nom', 'хо!тпа', 'матыр'],
     ['dat', 'хо!тпан', 'матарн'],
-    ['ish', 'хо!тпаныл', 'матарныл'],
+    ['abl', 'хо!тпаныл', 'матарныл'],
     ['instr', 'хо!тпал', 'матарыл'],
-    ['transf', 'хо!тпаг', 'матарыг']
+    ['trans', 'хо!тпаг', 'матарыг']
 ]
 
 for case, h_paradigm, m_paradigm in matyr_hotpa_matrix:
@@ -2297,7 +2298,7 @@ rombandeeva.add_element(
 
 rombandeeva.add_element(
     'universal:collocation',
-    '<[mansi:basic_pos=(adv)]> :ignore[*1+] <[gram:case=(ish)]>',
+    '<[mansi:basic_pos=(adv)]> :ignore[*1+] <[gram:case=(abl)]>',
     'syntactic_adverb_comparative'
 ).applied(
     grammar.LinkSentence('# & universal:entity=(input)'),
