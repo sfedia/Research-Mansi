@@ -914,10 +914,10 @@ for sing, dual, plur, id_word in interrog_pronoun:
             grammar.Action('gram:number:set_dual')
         ]
     ).add_class('interrog_pronoun')
-    rombandeeva.add_element('universal:token', sing, '{}_sing'.format(id_word)).applied(
+    rombandeeva.add_element('universal:token', plur, '{}_plur'.format(id_word)).applied(
         grammar.LinkSentence('# & universal:entity=(input)'),
         [
-            grammar.Action('gram:number:set_dual')
+            grammar.Action('gram:number:set_plur')
         ]
     ).add_class('interrog_pronoun')
 
