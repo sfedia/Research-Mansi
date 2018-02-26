@@ -2022,7 +2022,7 @@ rombandeeva.add_element('universal:morpheme', '^мыгт', 'mygt_suffix').applie
 
 dur_suffs = ['а!нт', 'ант', 'гал', 'л', 'ас', 'асьл', 'ал', 'а!л', 'с', 'ыгл', 'тл']
 
-for e, suff in dur_suffs:
+for e, suff in enumerate(dur_suffs):
     rombandeeva.add_element('universal:morpheme', '^' + suff, 'dur_suff_' + str(e)).applied(
         grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
         [
