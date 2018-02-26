@@ -940,6 +940,8 @@ cases = ['nom', 'acc', 'dat', 'abl', 'instr', 'trans']
 num = ['sing', 'dual', 'plur']
 for j, group in enumerate(demonstr_pronoun_matrix):
     for e, number in enumerate(group):
+        if not number:
+            continue
         rombandeeva.add_element(
             'universal:token', number[0], 'pd.ty_{}_{}'.format(j, e)
         ).applied(

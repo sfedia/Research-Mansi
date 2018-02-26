@@ -22,33 +22,63 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="rules.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="rules.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rules.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41871">
-              <caret line="2463" column="5" lean-forward="false" selection-start-line="2463" selection-start-column="5" selection-end-line="2463" selection-end-column="5" />
+            <state relative-caret-position="69">
+              <caret line="943" column="20" lean-forward="false" selection-start-line="943" selection-start-column="20" selection-end-line="943" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="balandin_vakhr_4.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VakhrParsing/balandin_vakhr_4.txt">
+      <file leaf-file-name="VakhrParser2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VakhrParsing/VakhrParser2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14722">
-              <caret line="866" column="129" lean-forward="false" selection-start-line="866" selection-start-column="129" selection-end-line="866" selection-end-column="129" />
+            <state relative-caret-position="867">
+              <caret line="52" column="50" lean-forward="false" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vakhr_split_lines.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="rules.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_dir/rules.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="122">
+              <caret line="945" column="8" lean-forward="false" selection-start-line="945" selection-start-column="8" selection-end-line="945" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VakhrSplit.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VakhrParsing/VakhrSplit.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1224">
+              <caret line="73" column="33" lean-forward="false" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vakhr_split_lines.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VakhrParsing/vakhr_split_lines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="256" column="43" lean-forward="true" selection-start-line="256" selection-start-column="43" selection-end-line="256" selection-end-column="43" />
+            <state relative-caret-position="3247">
+              <caret line="193" column="27" lean-forward="false" selection-start-line="193" selection-start-column="27" selection-end-line="193" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grammar.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_dir/grammar.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="111">
+              <caret line="333" column="69" lean-forward="true" selection-start-line="333" selection-start-column="69" selection-end-line="333" selection-end-column="69" />
               <folding>
-                <element signature="e#20#29#0" expanded="true" />
+                <element signature="e#19#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -57,11 +87,9 @@
       <file leaf-file-name="vakhr_split_lines_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VakhrParsing/vakhr_split_lines_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="44" column="13" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-              <folding>
-                <element signature="e#19#50#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="476">
+              <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,67 +97,29 @@
       <file leaf-file-name="vakhr_split_lines_TESTS.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VakhrParsing/vakhr_split_lines_TESTS.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1768">
-              <caret line="104" column="3" lean-forward="true" selection-start-line="104" selection-start-column="3" selection-end-line="104" selection-end-column="3" />
+            <state relative-caret-position="2142">
+              <caret line="126" column="98" lean-forward="false" selection-start-line="126" selection-start-column="98" selection-end-line="126" selection-end-column="98" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="balandin_vakhr_3.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VakhrParsing/balandin_vakhr_3.txt">
+      <file leaf-file-name="balandin_vakhr_4.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VakhrParsing/balandin_vakhr_4.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
-              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+            <state relative-caret-position="4454">
+              <caret line="262" column="126" lean-forward="false" selection-start-line="262" selection-start-column="121" selection-end-line="262" selection-end-column="126" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vakhr_slash_handler.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VakhrParsing/vakhr_slash_handler.py">
+      <file leaf-file-name="balandin_vakhr_SPLIT.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/VakhrParsing/balandin_vakhr_SPLIT.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="6" column="45" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-              <folding>
-                <element signature="e#20#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vakhr_join_lines.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VakhrParsing/vakhr_join_lines.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-              <folding>
-                <element signature="e#20#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="is_russian.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VakhrParsing/is_russian.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-              <folding>
-                <element signature="e#20#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vakhr_remove_hyphen.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VakhrParsing/vakhr_remove_hyphen.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="20" column="47" lean-forward="false" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
-              <folding>
-                <element signature="e#20#29#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="13855">
+              <caret line="815" column="23" lean-forward="false" selection-start-line="815" selection-start-column="23" selection-end-line="815" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -145,36 +135,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>'\^ыл'</find>
-      <find>@</find>
-      <find>collocation</find>
-      <find>\n[{0}\-\s]+\n[{0}\-\s]+\n\d+\n</find>
-      <find>\n[аӓбвгдеёжзийклмнӈоӧөпрстуӱфхцчшщъыьэәӛюя\-\s]+\n\d+\n</find>
-      <find>\n[{0}\-\s]+\s+\d+\s+[{0}\-\s]+\n</find>
-      <find>\n[аӓбвгдеёжзийклмнӈоӧөпрстуӱфхцчшщъыьэәӛюя\-\s]+\s+\d+\s+[аӓбвгдеёжзийклмнӈоӧөпрстуӱфхцчшщъыьэәӛюя\-\s]+\n</find>
-      <find>\n\d+\n[{0}\-\s]+\n[{0}\-\s]+\n</find>
-      <find>(?&lt;=[^,])\n[аӓбвгдеёжзийклмнӈоӧөпрстуӱфхцчшщъыьэәӛюя\-\s]+\s+\d+\s+[аӓбвгдеёжзийклмнӈоӧөпрстуӱфхцчшщъыьэәӛюя\-\s]+\n</find>
-      <find>\n\d+\n[аӓбвгдеёжзийклмнӈоӧөпрстуӱфхцчшщъыьэәӛюя\-\s]+\n[аӓбвгдеёжзийклмнӈоӧөпрстуӱфхцчшщъыьэәӛюя\-\s]+\n</find>
-      <find>\n[аӓбвгдеёжзийклмнӈоӧөпрстуӱфхцчшщъыьэәӛюя\-\s]+\n[аӓбвгдеёжзийклмнӈоӧөпрстуӱфхцчшщъыьэәӛюя\-\s]+\n\d+\n</find>
-      <find>\n\d+\n</find>
-      <find>\n[A-ZА-ЯӒЁӇӦӰӘӚа-яӓёӈӧӱәӛ\-\s]\n</find>
-      <find>[^\s\.\/]1[^\s\.\/]</find>
-      <find>[^\s\.\/]5[^\s\.\/]</find>
-      <find>\s+-[^\s]</find>
-      <find>\s+-([^\s])</find>
-      <find>intrusion</find>
-      <find>\(('[^']+')\)</find>
-      <find>personal</find>
-      <find>verb_conj_personal</find>
-      <find>sorted</find>
-      <find>/\s+[^\s]</find>
-      <find>[а-яё]/\s+[^\s]</find>
-      <find>[а-яё]/\s+[^\s/]</find>
-      <find>([а-яё])/\s+([^\s/])</find>
+      <find>tal</find>
+      <find>\^кве</find>
+      <find>\^ке</find>
+      <find>\^м'</find>
+      <find>intrans</find>
+      <find>\^ам</find>
+      <find>\^им</find>
+      <find>NULL</find>
+      <find>sorted\(</find>
+      <find>\.applied\([\n\s]+\[\n\s{4}\s+</find>
       <find>print</find>
-      <find>пувиньтаӈкве</find>
-      <find>LinkSentence\('[^#]</find>
-      <find>101</find>
+      <find>yn_suff</find>
+      <find>yn_suffix</find>
+      <find>\.get</find>
+      <find>\.get_class\(['&quot;].+?['&quot;]\)</find>
+      <find>get_class</find>
+      <find>um</find>
+      <find>[^a-z]um[^a-z]</find>
+      <find>lps_matrix</find>
+      <find>[^a-z]um_suffix[^a-z]</find>
+      <find>um_suffix</find>
+      <find>suffix_lps'</find>
+      <find>iy_suffix</find>
+      <find>iy</find>
+      <find>ish</find>
+      <find>transf</find>
+      <find>interrog_pro</find>
+      <find>subelems_intrusion</find>
+      <find>add_element</find>
+      <find>DUAL</find>
     </findStrings>
     <replaceStrings>
       <replace>verb_to_noun_suff</replace>
@@ -187,6 +177,8 @@
       <replace>$1</replace>
       <replace>srted</replace>
       <replace>$1 /$2</replace>
+      <replace>trans</replace>
+      <replace>DU</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -213,7 +205,6 @@
         <option value="$PROJECT_DIR$/../selkup-org/input.html" />
         <option value="$PROJECT_DIR$/balandin_vakhr.txt" />
         <option value="$PROJECT_DIR$/VakhrParser2.py" />
-        <option value="$PROJECT_DIR$/VakhrParsing/VakhrParser2.py" />
         <option value="$PROJECT_DIR$/VakhrParsing/test.txt" />
         <option value="$PROJECT_DIR$/VakhrParsing/balandin_vakhr.txt" />
         <option value="$PROJECT_DIR$/VakhrParsing/VakhrSplit.py" />
@@ -223,12 +214,16 @@
         <option value="$PROJECT_DIR$/VakhrParsing/vakhr_remove_hyphen.py" />
         <option value="$PROJECT_DIR$/VakhrParsing/balandin_vakhr_3.txt" />
         <option value="$PROJECT_DIR$/VakhrParsing/vakhr_join_lines.py" />
-        <option value="$PROJECT_DIR$/rules.py" />
         <option value="$PROJECT_DIR$/VakhrParsing/is_russian.py" />
         <option value="$PROJECT_DIR$/VakhrParsing/balandin_vakhr_4.txt" />
+        <option value="$PROJECT_DIR$/VakhrParsing/VakhrParser2.py" />
+        <option value="$PROJECT_DIR$/VakhrParsing/balandin_vakhr_SPLIT.txt" />
         <option value="$PROJECT_DIR$/VakhrParsing/vakhr_split_lines_test.py" />
         <option value="$PROJECT_DIR$/VakhrParsing/vakhr_split_lines_TESTS.txt" />
         <option value="$PROJECT_DIR$/VakhrParsing/vakhr_split_lines.py" />
+        <option value="$PROJECT_DIR$/test_dir/grammar.py" />
+        <option value="$PROJECT_DIR$/test_dir/rules.py" />
+        <option value="$PROJECT_DIR$/rules.py" />
       </list>
     </option>
   </component>
@@ -238,7 +233,7 @@
     <option name="height" value="735" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -251,7 +246,31 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Research-Mansi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Research-Mansi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Research-Mansi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Research-Mansi" type="462c0819:PsiDirectoryNode" />
+              <item name="test_dir" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Research-Mansi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Research-Mansi" type="462c0819:PsiDirectoryNode" />
+              <item name="VakhrParsing" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -269,7 +288,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.vakhr_split_lines_test">
+  <component name="RunManager" selected="Python.rules">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -414,36 +433,36 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <configuration name="is_russian" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="grammar" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/VakhrParsing" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_dir" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Research-Mansi" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/VakhrParsing/is_russian.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_dir/grammar.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="rules" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/VakhrParsing" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_dir" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Research-Mansi" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/VakhrParsing/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_dir/rules.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -500,19 +519,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.test" />
-      <item index="1" class="java.lang.String" itemvalue="Python.vakhr_join_lines" />
-      <item index="2" class="java.lang.String" itemvalue="Python.is_russian" />
-      <item index="3" class="java.lang.String" itemvalue="Python.vakhr_split_lines" />
-      <item index="4" class="java.lang.String" itemvalue="Python.vakhr_split_lines_test" />
+      <item index="0" class="java.lang.String" itemvalue="Python.vakhr_join_lines" />
+      <item index="1" class="java.lang.String" itemvalue="Python.vakhr_split_lines" />
+      <item index="2" class="java.lang.String" itemvalue="Python.vakhr_split_lines_test" />
+      <item index="3" class="java.lang.String" itemvalue="Python.rules" />
+      <item index="4" class="java.lang.String" itemvalue="Python.grammar" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.vakhr_split_lines_test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.vakhr_split_lines" />
-        <item index="2" class="java.lang.String" itemvalue="Python.vakhr_join_lines" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test" />
-        <item index="4" class="java.lang.String" itemvalue="Python.is_russian" />
+        <item index="0" class="java.lang.String" itemvalue="Python.rules" />
+        <item index="1" class="java.lang.String" itemvalue="Python.grammar" />
+        <item index="2" class="java.lang.String" itemvalue="Python.vakhr_split_lines" />
+        <item index="3" class="java.lang.String" itemvalue="Python.vakhr_split_lines_test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.vakhr_join_lines" />
       </list>
     </recent_temporary>
   </component>
@@ -545,10 +564,10 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0036603222" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16764276" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945284" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34542587" sideWeight="0.19033675" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23659305" sideWeight="0.8389458" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35173503" sideWeight="0.8389458" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945284" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -561,7 +580,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -571,17 +590,17 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34542587" sideWeight="0.19033675" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35173503" sideWeight="0.8389458" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945284" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30441642" sideWeight="0.8389458" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945284" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0036603222" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16764276" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34542587" sideWeight="0.80966324" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -610,9 +629,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/void.py" />
-    <entry file="file://$PROJECT_DIR$/twirpx_bibliography.py" />
-    <entry file="file://$PROJECT_DIR$/rules.py" />
     <entry file="file://$PROJECT_DIR$/bibliography.py" />
     <entry file="file://$PROJECT_DIR$/bibliography.py" />
     <entry file="file://$PROJECT_DIR$/bibliography/twirpx/print_results.py" />
@@ -636,13 +652,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bibliography/antlr-test/gramsem.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliography/antlr-test/gramsem.g4" />
     <entry file="file://$PROJECT_DIR$/latex/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -720,21 +730,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VakhrParsing/VakhrParser2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="52" column="50" lean-forward="false" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/VakhrParsing/test.txt" />
-    <entry file="file://$PROJECT_DIR$/VakhrParsing/VakhrSplit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="73" column="33" lean-forward="false" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/VakhrParsing/balandin_vakhr.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -781,9 +777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-          <folding>
-            <element signature="e#20#29#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -791,9 +784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="20" column="47" lean-forward="false" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
-          <folding>
-            <element signature="e#20#29#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -801,17 +791,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="6" column="45" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-          <folding>
-            <element signature="e#20#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VakhrParsing/balandin_vakhr_4.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14722">
-          <caret line="866" column="129" lean-forward="false" selection-start-line="866" selection-start-column="129" selection-end-line="866" selection-end-column="129" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -819,7 +798,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
           <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -827,45 +805,88 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-          <folding>
-            <element signature="e#20#29#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rules.py">
+    <entry file="file://$PROJECT_DIR$/VakhrParsing/VakhrSplit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41871">
-          <caret line="2463" column="5" lean-forward="false" selection-start-line="2463" selection-start-column="5" selection-end-line="2463" selection-end-column="5" />
+        <state relative-caret-position="1224">
+          <caret line="73" column="33" lean-forward="false" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VakhrParsing/balandin_vakhr_4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4454">
+          <caret line="262" column="126" lean-forward="false" selection-start-line="262" selection-start-column="121" selection-end-line="262" selection-end-column="126" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VakhrParsing/balandin_vakhr_SPLIT.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13855">
+          <caret line="815" column="23" lean-forward="false" selection-start-line="815" selection-start-column="23" selection-end-line="815" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VakhrParsing/vakhr_split_lines_TESTS.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
-          <caret line="104" column="3" lean-forward="true" selection-start-line="104" selection-start-column="3" selection-end-line="104" selection-end-column="3" />
+        <state relative-caret-position="2142">
+          <caret line="126" column="98" lean-forward="false" selection-start-line="126" selection-start-column="98" selection-end-line="126" selection-end-column="98" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VakhrParsing/vakhr_split_lines_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="44" column="13" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-          <folding>
-            <element signature="e#19#50#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="476">
+          <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VakhrParsing/vakhr_split_lines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="256" column="43" lean-forward="true" selection-start-line="256" selection-start-column="43" selection-end-line="256" selection-end-column="43" />
+        <state relative-caret-position="3247">
+          <caret line="193" column="27" lean-forward="false" selection-start-line="193" selection-start-column="27" selection-end-line="193" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VakhrParsing/VakhrParser2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="52" column="50" lean-forward="false" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_dir/grammar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="333" column="69" lean-forward="true" selection-start-line="333" selection-start-column="69" selection-end-line="333" selection-end-column="69" />
           <folding>
-            <element signature="e#20#29#0" expanded="true" />
+            <element signature="e#19#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_dir/rules.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="945" column="8" lean-forward="false" selection-start-line="945" selection-start-column="8" selection-end-line="945" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rules.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="943" column="20" lean-forward="false" selection-start-line="943" selection-start-column="20" selection-end-line="943" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
