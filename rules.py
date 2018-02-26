@@ -825,7 +825,7 @@ for person_number in personal_pronouns:
             grammar.LinkSentence('# & universal:entity=(input)'),
             [
                 grammar.Action('mansi:pronoun:personal:' + person_number),
-                grammar.Action('gram:case:' + case)
+                grammar.Action('gram:case:set_' + case)
             ]
         )
 
@@ -2100,6 +2100,7 @@ rombandeeva.add_element('universal:morpheme', '^т', 't_noun_to_verb').applied(
     ]
 ).add_class('noun_to_verb_suff')
 
+
 @rombandeeva.foreach_in_class('noun_to_verb_suff')
 def mutation_links_for_noun_to_verb(element):
     element.provide_mutation_links(
@@ -2108,6 +2109,7 @@ def mutation_links_for_noun_to_verb(element):
 
 # page 141
 # OMG prefixes
+
 
 rombandeeva.add_element('universal:morpheme', '_^хот', 'hot_prefix').applied(
     grammar.LinkSentence('# & universal:entity=(token) & mansi:basic_pos=(verb)'),
