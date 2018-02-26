@@ -765,21 +765,21 @@ personal_pronouns = {
         'abl': 'таве!ныл',
         'instr': 'таветыл',
     },
-    '1DUAL': {
+    '1DU': {
         'nom': 'ме!н',
         'acc': 'ме!нме!н',
         'dat': 'ме!нме!нн',
         'abl': 'ме!нме!нныл',
         'instr': 'ме!нме!нтыл',
     },
-    '2DUAL': {
+    '2DU': {
         'nom': 'нэ!н',
         'acc': 'нэ!нан',
         'dat': 'нэ!нанн',
         'abl': 'нэ!нанныл',
         'instr': 'нэ!нантыл',
     },
-    '3DUAL': {
+    '3DU': {
         'nom': 'тэ!н',
         'acc': 'тэ!нтэ!н',
         'dat': 'тэ!нтэ!нн',
@@ -922,16 +922,10 @@ for sing, dual, plur, id_word in interrog_pronoun:
     ).add_class('interrog_pronoun')
 
 
-@rombandeeva.foreach_in_class('interrog_pronoun')
-def interrog_pronouns_as_nouns(element):
-    element.intrusion(
-        grammar.LinkSentence('universal:entity=(token) & mansi:basic_pos=(noun)'),
-        whitelist={
-            'classes': ['case_suffixes']
-        }
-    )
-    element.bw_list(exclude={'mutations': ['gram:case:set_loc']})
-
+rombandeeva.get_class('interrog_pronoun').intrusion(
+    class_list=['case_suffixes'],
+    bw_list=grammar.BWList(exclude_mutations=['gram:case:set_loc'])
+)
 
 demonstr_pronoun_matrix = [
     [['ты', 'та'], ['тыиг', 'таиг'], ['тыит', 'таит']],
