@@ -2347,10 +2347,7 @@ for pp_word, pp_id in postpos_mutable:
     ).add_class('postpos_mutable')
 
 rombandeeva.get_class('postpos_mutable', await=True).intrusion(
-    grammar.LinkSentence('universal:entity=(token) & mansi:basic_pos=(noun)'),
-    whitelist={
-        'classes': ['case_suffixes', 'verb_conj_personal']
-    }
+    class_list=['case_suffixes', 'verb_conj_personal']
 )
 
 rombandeeva.get_system('universal:morpheme').subclasses_order(
