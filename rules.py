@@ -1794,14 +1794,14 @@ rombandeeva.add_element(
 
 # page 128
 
-rombandeeva.add_element('mansi:VowMorpheme', '^$[ы]нув').applied(
+rombandeeva.add_element('mansi:VowMorpheme', '^$[ы]нув', 'ynuv_suffix').applied(
     grammar.LinkSentence('# & universal:entity=(token) & [mansi:syl_count=(1) | mansi:syl_count=(3)]'),
     [
         grammar.Action('gram:mood:set_conjunctive')
     ]
 ).add_class('nuv_suffixes')
 
-rombandeeva.add_element('mansi:VowMorpheme', '^$[а]нув').applied(
+rombandeeva.add_element('mansi:VowMorpheme', '^$[а]нув', 'anuv_suffix').applied(
     grammar.LinkSentence('# & universal:entity=(token) & [mansi:syl_count=(2)]'),
     [
         grammar.Action('gram:mood:set_conjunctive')
