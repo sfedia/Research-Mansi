@@ -1023,8 +1023,6 @@ for case, h_paradigm, m_paradigm in matyr_hotpa_matrix:
         ]
     )
 
-rombandeeva.add_element('universal:token:start', 'хо!тпа')
-
 # negative pronouns нэ!мхо!тпа and нэ!матыр
 for case, h_paradigm, m_paradigm in matyr_hotpa_matrix:
     rombandeeva.add_element(
