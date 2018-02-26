@@ -43,7 +43,6 @@ rombandeeva.add_element('universal:morpheme', '^та!л', 'tal_suffix').applied(
 )
 #
 rombandeeva.add_element('universal:morpheme', '^т', 't_suffix').add_class('caus_suffixes') # CAUS
-rombandeeva.add_element('universal:morpheme', '^л', 'l_suffix').add_class('caus_suffixes') # TR
 rombandeeva.add_element('mansi:VowMorpheme', '^лт', 'lt_suffix').add_class('caus_suffixes') # CAUS
 rombandeeva.add_element('universal:morpheme', '^пт', 'pt_suffix').add_class('caus_suffixes')
 rombandeeva.add_element('universal:morpheme', '^лтт', 'ltt_suffix').add_class('caus_suffixes')
@@ -53,9 +52,18 @@ for element in rombandeeva.get_by_class_name('caus_suffixes'):
     rombandeeva.get_by_id(element.get_id()).applied(
         *[
             grammar.LinkSentence('# & universal:entity=(token) & mansi:simple_pos=(verb) & sem:non_causative=()'),
-            [ grammar.Action('sem:make_causative')]
+            [
+                grammar.Action('sem:make_causative')
+            ]
         ]
     )
+
+rombandeeva.add_element('universal:morpheme', '^л', 'l_suffix').applied(
+    grammar.LinkSentence('# & universal:entity=(token) & mansi:simple_pos=(verb) & gram:intransitive=()'),
+    [
+        grammar.Action('gram:make_transitive')
+    ]
+).add_class('trans_suffixes')
 
 rombandeeva.get_system('universal:morpheme').subclasses_order(
    '? < .number_suffix <<>> .lps >> .case_suffix >> ?',
@@ -189,14 +197,14 @@ rombandeeva.add_element('universal:morpheme', grammar.Temp.NULL, 'null_suffix_ma
 rombandeeva.add_element('universal:morpheme', '^н', 'n_case_suffix').applied(
     *[
         grammar.LinkSentence(is_noun + '& universal:reg_match=([ГЛАСНЫЙ | ГЛАСНЫЙ СОГЛАСНЫЙ]$){pre=(н)}'),
-        [grammar.Action('gram:case:set_napr')]
+        [grammar.Action('gram:case:set_lat')]
     ]
 ).add_class('case_suffix')
 
 rombandeeva.add_element('universal:morpheme', '^ын', 'yn_case_suffix').applied(
     *[
         grammar.LinkSentence(is_noun + '& universal:reg_match=([СОГЛАСНЫЙ]{2}$){pre=(ын)}'),
-        [grammar.Action('gram:case:set_napr')]
+        [grammar.Action('gram:case:set_lat')]
     ]
 ).add_class('case_suffix')
 
