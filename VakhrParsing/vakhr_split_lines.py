@@ -20,11 +20,11 @@ class SplitString:
         self.symbols = [x for x in 'аӓбвгдеёжзийклмнӈоӧөпрстуӱфхцчшщъьыэәӛюя']
         self.next_lines = next_lines
         self.simplify = {
-            'ӓ': 'а',
-            'ӧ': 'о',
-            'ӱ': 'у',
-            'ӈ': 'н',
-            'ӛ': 'ә'
+            #'ӓ': 'а',
+            #'ӧ': 'о',
+            #'ӱ': 'у',
+            #'ӈ': 'н',
+            #'ӛ': 'ә'
         }
         self.sorted = self.sort_mansi(self.str2split, simplify)
         self.str_splitted = self.str2split.split()
@@ -296,7 +296,7 @@ if __name__ == "__main__":
         if input_string == 'PARSE_FILE':
             break
         else:
-            a = SplitString(input_string, debug=True)
+            a = SplitString(input_string, debug=True, simplify=False)
             print(a.get_split_positions())
 
     print('lol')
