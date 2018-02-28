@@ -4,7 +4,7 @@ import re
 import is_russian
 import string
 
-bal_vakhr = open('balandin_vakhr_4.txt', encoding='utf-8').read().splitlines()
+bal_vakhr = open('balandin_vakhr_5x.txt', encoding='utf-8').read().splitlines()
 checker = is_russian.Checker(import_op=False)
 len_bv = len(bal_vakhr)
 new_bv = []
@@ -182,9 +182,18 @@ class SplitString:
             )
             corresp_use[key_token] = 0
             sorted_stripped.append(key_token)
-        sorted_stripped = sorted(
-            sorted_stripped, key=lambda word: [self.symbols.index(x) if x in self.symbols else -1 for x in word]
-        )
+
+        ss_pair = []
+        for j, tkn in enumerate(sorted_stripped):
+            ss_pair.append([tkn, [self.symbols.index(x) if x in self.symbols else -1 for x in tkn]])
+            if j == 0:
+                continue
+            if sorted_stripped[0].startswith(sorted_stripped[j]) and len(sorted_stripped[j]) < len(sorted_stripped[0]):
+                if j < len(sorted_stripped):
+                    ss_pair[j][1] += [self.symbols.index(x) if x in self.symbols else -1 for x in sorted_stripped[j + 1]]
+
+        sorted_stripped = [x[0] for x in sorted(ss_pair, key=lambda element: element[1])]
+
         sorted_indexed = []
         for token in sorted_stripped:
             sorted_indexed.append(
@@ -209,12 +218,15 @@ class SplitString:
         if title_index is not None and title_includes and title_includes[0] < title_index and title_includes[0] < len(sorted_indexed) - 1:
             found_title = sorted_indexed[title_includes[0]][1]
             combined = found_title
-            next_index = [i for i, x in enumerate(sorted_indexed) if x[0] == (title_positions[0] + 1)][0]
-            combined += sorted_indexed[next_index][1]
-            if sorted_indexed[title_index][1] < combined:
-                sorted_indexed = sorted_indexed[:title_index + 1] +\
-                                 [(sorted_indexed[title_includes[0]][0], found_title)] + sorted_indexed[title_index + 1:]
-                del sorted_indexed[title_includes[0]]
+            print([i for i, x in enumerate(sorted_indexed) if x[0] == (title_positions[0] + 1)])
+            indices_found = [i for i, x in enumerate(sorted_indexed) if x[0] == (title_positions[0] + 1)]
+            if indices_found:
+                next_index = indices_found[0]
+                combined += sorted_indexed[next_index][1]
+                if sorted_indexed[title_index][1] < combined:
+                    sorted_indexed = sorted_indexed[:title_index + 1] +\
+                                     [(sorted_indexed[title_includes[0]][0], found_title)] + sorted_indexed[title_index + 1:]
+                    del sorted_indexed[title_includes[0]]
         return sorted_indexed
 
     def get_split_positions(self, recurrent=True):
@@ -241,6 +253,8 @@ class SplitString:
             if self.debug:
                 print('Position', index, ', step', 0)
             alphabet_comparison = (next_sym is not None and token[0] in (title_sym, next_sym)) or title_sym == token[0]
+            print('AC', alphabet_comparison)
+            print('next_sym=', next_sym, '; token[0]=', token[0], '; (ts, ns)=', (title_sym, next_sym))
 
             if alphabet_comparison and self.next_lines:
                 if len(self.next_lines) == 1:
@@ -300,8 +314,8 @@ if __name__ == "__main__":
             print(a.get_split_positions())
 
     print('lol')
-    vakhr_file = open('balandin_vakhr_4.txt', encoding='utf-8-sig')
-    with open('balandin_vakhr_SPLIT.txt', 'a', encoding='utf-8-sig') as bvs:
+    vakhr_file = open('balandin_vakhr_5x.txt', encoding='utf-8-sig')
+    with open('balandin_vakhr_6a.txt', 'a', encoding='utf-8-sig') as bvs:
         for e, line in enumerate(vakhr_file):
             split_positions = SplitString(line, debug=True).get_split_positions(recurrent=True)
             pos_integers = [(x if type(x) == int else x[0]) for x in split_positions]
