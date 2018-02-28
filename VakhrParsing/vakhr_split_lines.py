@@ -189,7 +189,8 @@ class SplitString:
             if j == 0:
                 continue
             if sorted_stripped[0].startswith(sorted_stripped[j]) and len(sorted_stripped[j]) < len(sorted_stripped[0]):
-                if j < len(sorted_stripped):
+                if j < len(sorted_stripped) - 1:
+                    print('SoStr', sorted_stripped, j)
                     ss_pair[j][1] += [self.symbols.index(x) if x in self.symbols else -1 for x in sorted_stripped[j + 1]]
 
         sorted_stripped = [x[0] for x in sorted(ss_pair, key=lambda element: element[1])]
@@ -252,6 +253,8 @@ class SplitString:
                 continue
             if self.debug:
                 print('Position', index, ', step', 0)
+            if not token:
+                continue
             alphabet_comparison = (next_sym is not None and token[0] in (title_sym, next_sym)) or title_sym == token[0]
             print('AC', alphabet_comparison)
             print('next_sym=', next_sym, '; token[0]=', token[0], '; (ts, ns)=', (title_sym, next_sym))
