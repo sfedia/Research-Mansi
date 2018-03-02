@@ -75,7 +75,11 @@ class Stem:
                             re.sub(r'^\d+\.?\s*', '', x).strip(string.punctuation + ' ')
                             for x in re.split(r'\s*[;,]\s*', numbered_group)
                         ]
-                        pw_pairs = [self.r_checker.check(x)[1:] for x in translations]
+
+                        def convert_none(x): return (None,) * 3 if x is None else x
+
+                        pw_pairs = [convert_none(self.r_checker.check(x))[1:] for x in translations]
+                        pw_pairs = [x for x in pw_pairs if None not in x]
                         props = {
                             'lemma': ls[occ],
                             'pos_tags': [x[1] for x in pw_pairs],
@@ -92,4 +96,4 @@ class Stem:
 
 
 stemmer = Stem()
-print(stemmer.find('сосантаӈкве', start_del=[], end_del=['ыл', 'ныл', 'н', 'ан', 'л']))
+print(stemmer.find(..., start_del=[], end_del=['ыл', 'ныл', 'н', 'ан', 'л']))
