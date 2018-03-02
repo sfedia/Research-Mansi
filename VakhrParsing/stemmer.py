@@ -42,34 +42,47 @@ class Stem:
         for ts in line_arr:
             arr = line_arr[ts]
             for line in arr:
+                line = re.sub(r'\(.+?\)', '', line)
+                line = re.sub(r'\s{2,}', ' ', line)
                 ls = line.split()
                 occs = [i for i, tkn in enumerate(ls) if tkn.strip() == ts]  # comparison function
                 for occ in occs:
-                    # *[EG()] P R
-                    if occ < len(ls) - 1:
+                    # *[EG()] (!) P R
+                    if occ < len(ls) - 1 and not re.search(r'\d+\.?', ls[occ + 1]):
                         check_next = self.r_checker.check(ls[occ + 1])
                         if check_next:
                             # prop_set.append
                             props = {
                                 'lemma': ls[occ],
                                 'pos_tags': check_next[2],
-                                'translation': ['']
+                                'translation': ''
                             }
                             i = occ + 1
                             while i < len(ls):
                                 r_check = self.r_checker.check(ls[i].strip(string.punctuation))
-                                print(ls[i], r_check)
                                 if not r_check:
                                     break
-                                if not re.search(r'\s*[,;]\s*$', ls[i]):
-                                    if not props['translation'][-1]:
-                                        props['translation'][-1] = r_check[1].strip(string.punctuation)
-                                    else:
-                                        props['translation'][-1] += ' ' + r_check[1].strip(string.punctuation)
-                                else:
-                                    props['translation'].append(r_check[1].strip(string.punctuation))
+                                props['translation'] += ' ' + r_check[1] + (',' if re.search(r'[;,]\s*$', ls[i]) else '')
                                 i += 1
+                            props['translation'] = [
+                                x.strip(string.punctuation + ' ') for x in re.split(r'\s*[;,]\s*', props['translation'])
+                            ]
                             prop_set.append(props)
+                    elif occ < len(ls) - 1 and re.search(r'\d+\.?', ls[occ + 1]):
+                        parsed_field = ' '.join(ls[occ + 1:])
+                        numbered_group = re.search(r'(\d+\.\s*[^;,/]+[;,/]\s*)+', parsed_field).group(0)
+                        translations = [
+                            re.sub(r'^\d+\.?\s*', '', x).strip(string.punctuation + ' ')
+                            for x in re.split(r'\s*[;,]\s*', numbered_group)
+                        ]
+                        pw_pairs = [self.r_checker.check(x)[1:] for x in translations]
+                        props = {
+                            'lemma': ls[occ],
+                            'pos_tags': [x[1] for x in pw_pairs],
+                            'translation': [x[0] for x in pw_pairs]
+                        }
+                        props['pos_tags'] = list(set(list(itertools.chain(*props['pos_tags']))))
+                        prop_set.append(props)
 
         returned_set = []
         for obj in prop_set:
@@ -79,4 +92,4 @@ class Stem:
 
 
 stemmer = Stem()
-print(stemmer.find('нэпакыт', start_del=[], end_del=['ыт', 'т']))
+print(stemmer.find('сосантаӈкве', start_del=[], end_del=['ыл', 'ныл', 'н', 'ан', 'л']))
