@@ -24,11 +24,11 @@ class Checker:
     mistakes = {
         'ӓ': ['а'],
         'ӱ': ['у'],
-        'й': ['и', 'й'],
+        'й': ['и', 'й', 'я'],
         'ӧ': ['о'],
         'ё': ['е', 'ё'],
         'ө': ['о'],
-        'е': ['е', 'з'],
+        'е': ['е', 'з', 'с'],
         'б': ['б', 'о'],
         'к': ['к', 'а'],
         '1': ['и', '1'],
@@ -36,6 +36,28 @@ class Checker:
         'я': ['я', 'а'],
         'н': ['н', 'и']
     }
+
+    @staticmethod
+    def extract_basic_pos(s):
+        cor = {
+            'NOUN': 'noun',
+            'ADJF': 'adj',
+            'ADJS': 'adj',
+            'COMP': 'adj',
+            'VERB': 'verb',
+            'INFN': 'verb',
+            'PRTF': 'participle',
+            'GRND': 'gerund',
+            'NUMR': 'numeral',
+            'ADVB': 'adv',
+            'NPRO': 'pronoun',
+            'PRED': 'predicative',
+            'PREP': 'preposition',
+            'CONJ': 'conjunction',
+            'PRCL': 'particple',
+            'INTJ': 'interjection'
+        }
+        return [cor[key] for key in cor if key in s]
 
     def get_alternatives(self, s):
         stack = [s]
@@ -59,8 +81,8 @@ class Checker:
             returned = []
             for e, xx in enumerate([x, x.lower(), x.replace('-', ''), x.lower().replace('-', '')]):
                 str_parse = str(self.morph.parse(xx))
-                if 'DictionaryAnalyzer' in str_parse and not 'Unknown' in str_parse:
-                    returned.append((e + 1, xx))
+                if 'DictionaryAnalyzer' in str_parse and not re.search('Unknown|HyphenatedWordsAnalyzer', str_parse):
+                    returned.append((e + 1, xx, self.extract_basic_pos(str_parse)))
                 elif xx in self.op_dict:
                     returned.append((e + 1, xx))
             for ret in returned:
@@ -68,4 +90,4 @@ class Checker:
                     return ret
             if len(returned):
                 return returned[0]
-        return False
+        return None
