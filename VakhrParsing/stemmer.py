@@ -43,16 +43,34 @@ class Stem:
             arr = line_arr[ts]
             for line in arr:
                 ls = line.split()
-                occs = [i for i, tkn in enumerate(ls) if tkn.strip() == ts]
+                occs = [i for i, tkn in enumerate(ls) if tkn.strip() == ts]  # comparison function
                 for occ in occs:
                     # *[EG()] P R
                     if occ < len(ls) - 1:
                         check_next = self.r_checker.check(ls[occ + 1])
                         if check_next:
-                            prop_set.append({
+                            # prop_set.append
+                            props = {
                                 'lemma': ls[occ],
-                                'pos_tags': check_next[2]
-                            })
+                                'pos_tags': check_next[2],
+                                'translation': ['']
+                            }
+                            i = occ + 1
+                            while i < len(ls):
+                                r_check = self.r_checker.check(ls[i].strip(string.punctuation))
+                                print(ls[i], r_check)
+                                if not r_check:
+                                    break
+                                if not re.search(r'\s*[,;]\s*$', ls[i]):
+                                    if not props['translation'][-1]:
+                                        props['translation'][-1] = r_check[1].strip(string.punctuation)
+                                    else:
+                                        props['translation'][-1] += ' ' + r_check[1].strip(string.punctuation)
+                                else:
+                                    props['translation'].append(r_check[1].strip(string.punctuation))
+                                i += 1
+                            prop_set.append(props)
+
         returned_set = []
         for obj in prop_set:
             if obj not in returned_set:
