@@ -92,7 +92,7 @@ class Stem:
                                 'lemma': ls[occ],
                                 'pos_tags': check_next[2],
                                 'translation': '',
-                                'stems': stems[ls]
+                                'stems': stems[ts]
                             }
                             i = occ + 1
                             while i < len(ls):
@@ -136,5 +136,5 @@ class Stem:
 
 stemmer = Stem()
 start = time.time()
-print(stemmer.find('тартавет', start_del=[], end_del=['а', 'вет', 'ыт', 'ег'], end_add=['ӈкве', 'аӈкве', 'юӈкве', 'уӈкве']))
+print(stemmer.find('потыртас', start_del=[], end_del=['а', 'с'], end_add=['ӈкве', 'аӈкве', 'юӈкве', 'уӈкве']))
 print(time.time() - start)
