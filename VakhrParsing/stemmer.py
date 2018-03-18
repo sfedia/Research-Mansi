@@ -4,14 +4,28 @@ import re
 import string
 import itertools
 import is_russian
+import json
+import sqlite3
 import time
 
 
 class Stem:
-    def __init__(self):
+    def __init__(self, save_cache=None):
         self.bal_file = open('balandin_vakhr_5.txt', encoding='utf-8-sig').read().splitlines()
         self.token_index = {}
         self.r_checker = is_russian.Checker(import_op=False)
+        self.save_cache = save_cache
+        if self.save_cache:
+            self.cache_db = sqlite3.connect(self.save_cache)
+            self.cache_db_cursor = self.cache_db.cursor()
+            try:
+                self.cache_db_cursor.execute('CREATE TABLE stemmer_cache(title text, result text)')
+            except sqlite3.OperationalError:
+                pass
+        else:
+            self.cache_db_cursor = None
+        self.lozv = sqlite3.connect('lozv.sqlite3')
+        self.lozv_cursor = self.lozv.cursor()
         for e, line in enumerate(self.bal_file):
             for token in line.split():
                 token = token.strip(string.punctuation)
@@ -19,10 +33,30 @@ class Stem:
                     self.token_index[token] = []
                 self.token_index[token].append(e)
 
+    def cache_result(self, title, result):
+        if not self.cache_db_cursor:
+            return
+        result = json.dumps(result)
+        wq = 'INSERT INTO stemmer_cache(title, result) SELECT ?, ? ' \
+             'WHERE NOT EXISTS(SELECT 1 FROM stemmer_cache WHERE title=?)'
+        self.cache_db_cursor.execute(wq, (title, result, title,))
+
+    def write_cache(self):
+        self.cache_db.commit()
+        self.cache_db.close()
+        self.lozv.close()
+
+    def cache_request(self, title):
+        if not self.cache_db_cursor:
+            return None
+        res = self.cache_db_cursor.execute('SELECT result FROM stemmer_cache WHERE title=?', (title,)).fetchall()
+        if res:
+            return [json.loads(x[0]) for x in res]
+        return None
+
     def find(self, token, start_del=[], end_del=[], start_add=[], end_add=[]):
         del_substrings = [('start_del', x) for x in start_del]
         del_substrings += [('end_del', x) for x in end_del]
-
         del_perms = [[]]
         for e in range(len(del_substrings)):
             perms = list(itertools.permutations(del_substrings, e + 1))
@@ -49,6 +83,10 @@ class Stem:
             if not is_valid:
                 continue
             ###
+            creq = self.cache_request(token_snapshot)
+            if creq:
+                return creq
+
             if token_snapshot in self.token_index:
                 line_arr[token_snapshot] = tuple(self.bal_file[x] for x in self.token_index[token_snapshot])
                 if token_snapshot not in stems:
@@ -113,6 +151,7 @@ class Stem:
                             for x in re.split(r'\s*[;,]\s*', numbered_group)
                         ]
 
+                        # polymorphism sucks:
                         def convert_none(x): return (None,) * 3 if x is None else x
 
                         pw_pairs = [convert_none(self.r_checker.check(x))[1:] for x in translations]
@@ -131,10 +170,13 @@ class Stem:
         for obj in prop_set:
             if obj not in returned_set:
                 returned_set.append(obj)
+                for stem in obj['stems']:
+                    self.cache_result(stem, obj)
         return returned_set
 
 
-stemmer = Stem()
+stemmer = Stem(save_cache='cache_table.sqlite3')
 start = time.time()
 print(stemmer.find('потыртас', start_del=[], end_del=['а', 'с'], end_add=['ӈкве', 'аӈкве', 'юӈкве', 'уӈкве']))
 print(time.time() - start)
+stemmer.write_cache()
