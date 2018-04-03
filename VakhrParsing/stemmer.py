@@ -3,7 +3,7 @@
 import re
 import string
 import itertools
-import is_russian
+import mansi_stemmer.is_russian as is_russian
 import json
 import sqlite3
 import time
@@ -11,10 +11,11 @@ import time
 
 class Stem:
     def __init__(self, save_cache=None):
-        self.bal_file = open('balandin_vakhr_5.txt', encoding='utf-8-sig').read().splitlines()
+        self.bal_file = open('mansi_stemmer/dictionary.txt', encoding='utf-8-sig').read().splitlines()
         self.token_index = {}
         self.r_checker = is_russian.Checker(import_op=False)
         self.save_cache = save_cache
+        self.cache_db = None
         if self.save_cache:
             self.cache_db = sqlite3.connect(self.save_cache)
             self.cache_db_cursor = self.cache_db.cursor()
@@ -24,7 +25,7 @@ class Stem:
                 pass
         else:
             self.cache_db_cursor = None
-        self.lozv = sqlite3.connect('lozv.sqlite3')
+        self.lozv = sqlite3.connect('mansi_stemmer/lozv.sqlite3')
         self.lozv_cursor = self.lozv.cursor()
         for e, line in enumerate(self.bal_file):
             for token in line.split():
@@ -42,8 +43,9 @@ class Stem:
         self.cache_db_cursor.execute(wq, (title, result, title,))
 
     def write_cache(self):
-        self.cache_db.commit()
-        self.cache_db.close()
+        if self.cache_db:
+            self.cache_db.commit()
+            self.cache_db.close()
         self.lozv.close()
 
     def cache_request(self, title):
@@ -53,6 +55,37 @@ class Stem:
         if res:
             return [json.loads(x[0]) for x in res]
         return None
+
+    def lozv_check(self, title):
+        title_combs = [title]
+        title_combs = '(' + ', '.join(['"' + x.replace('"', r'\"') + '"' for x in title_combs]) + ')'
+        tc = self.lozv_cursor.execute('SELECT pos, meanings FROM dictionary WHERE title IN ' + title_combs).fetchall()
+        pos_conversion = {
+            'сущ': 'noun',
+            'гл': 'verb',
+            'прил': 'adj',
+            'нар': 'adv',
+            'мест': 'pronoun',
+            'личн': 'pronoun',
+            'част': 'particle',
+            'числит': 'numeral',
+            'предл': 'preposition'
+        }
+
+        returned_list = []
+        for match in tc:
+            match_pos = None
+            for pc in pos_conversion:
+                if pc in match[0]:
+                    match_pos = pos_conversion[pc]
+                    break
+            returned_list.append({
+                'lemma': title,
+                'pos_tags': [match_pos],
+                'translation': match[1]
+            })
+
+        return returned_list
 
     def find(self, token, start_del=[], end_del=[], start_add=[], end_add=[]):
         del_substrings = [('start_del', x) for x in start_del]
@@ -67,16 +100,23 @@ class Stem:
         stems = {}
         for perm in del_perms:
             token_snapshot = token
+            dead_positions = []
+            inc_left = 0
+            inc_right = 0
             is_valid = True
             if perm:
                 for role, chars in perm:
                     if role == 'start_del' and token_snapshot.startswith(chars):
                         token_snapshot = token_snapshot[len(chars):]
+                        dead_positions += list([x + inc_left for x in range(0, len(chars) - 1)])
+                        inc_left += len(chars)
                     elif role == 'start_del':
                         is_valid = False
                         break
                     elif role == 'end_del' and token_snapshot.endswith(chars):
                         token_snapshot = token_snapshot[:-len(chars)]
+                        dead_positions += list([x for x in range(len(chars) - inc_right, len(chars) - inc_right)])
+                        inc_right -= len(chars)
                     elif role == 'end_del':
                         is_valid = False
                         break
@@ -87,6 +127,7 @@ class Stem:
             if creq:
                 return creq
 
+            prop_set = []
             if token_snapshot in self.token_index:
                 line_arr[token_snapshot] = tuple(self.bal_file[x] for x in self.token_index[token_snapshot])
                 if token_snapshot not in stems:
@@ -112,7 +153,6 @@ class Stem:
                         stems[token_snapshot + ea].append(token_snapshot)
                         break
 
-        prop_set = []
         for ts in line_arr:
             arr = line_arr[ts]
             for line in arr:
@@ -177,6 +217,6 @@ class Stem:
 
 stemmer = Stem(save_cache='cache_table.sqlite3')
 start = time.time()
-print(stemmer.find('потыртас', start_del=[], end_del=['а', 'с'], end_add=['ӈкве', 'аӈкве', 'юӈкве', 'уӈкве']))
+print(stemmer.find('пун', start_del=[], end_del=['а', 'с'], end_add=['ӈкве', 'аӈкве', 'юӈкве', 'уӈкве']))
 print(time.time() - start)
 stemmer.write_cache()
