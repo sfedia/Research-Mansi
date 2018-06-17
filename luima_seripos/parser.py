@@ -51,12 +51,19 @@ class NumberPage:
         mansi_block_path = ".field-name-body div.field-item.even div"
         page_html = lxml.html.fromstring(page_code)
         mns_blocks = page_html.cssselect(mansi_block_path)
-        mns_text = " ".join([block for block in mns_blocks if block.strip(" ")])
-        mns_title = page_html.cssselect(".field-title")[0]
-        mns_title = mns_title.strip(" ")
+        mns_text = " ".join([block.text for block in mns_blocks if block.text.strip(" ")])
+        mns_text = mns_text.replace("\n", "")
+        mns_text = mns_text.replace("\t", "")
+        mns_text = re.sub(r"\.[^\s]", ". ", mns_text)
+
+        try:
+            mns_title = page_html.cssselect(".field-title")[0]
+        except IndexError:
+            return VoidDownload()
+
+        mns_title = mns_title.text.strip(" ")
         mns_title = re.sub(r'\s{2,}|\t', ' ', mns_title)
         return TXTdownload(mns_title, mns_text, document_url)
-
 
     def create_pdf_object(self, link_object):
         page_code = requests.get(self.ls_prefix + link_object.get('href')).text
@@ -65,6 +72,14 @@ class NumberPage:
         pdf_url = pdf_url.replace('%2F', '/')
         pdf_url = pdf_url.replace('%3A', ':')
         return PDFdownload(pdf_url)
+
+
+class VoidDownload:
+    def __init__(self):
+        pass
+
+    def download(self):
+        raise EmptyPage()
 
 
 class TXTdownload:
@@ -86,5 +101,8 @@ class PDFdownload:
         self.url = download_url
 
     def download(self):
-        ...
+        return requests.get(self.url).content
 
+
+class EmptyPage(Exception):
+    pass
