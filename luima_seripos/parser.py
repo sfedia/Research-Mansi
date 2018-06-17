@@ -32,13 +32,22 @@ class NumberPage:
         if self.strip_links:
             return self.find_strip_links()
         else:
-            ...
+            return self.find_section_links()
+
+    def find_section_links(self):
+        sec_link_path = ".section div ul li a"
+        sec_links = self.page_html.cssselect(sec_link_path)
+        return [self.create_txt_object(link) for link in sec_links]
 
     def find_strip_links(self):
         a_link_path = ".view-content table tbody tr td div span span a"
-        page_html = lxml.html.fromstring(self.page_code)
-        a_links = page_html.cssselect(a_link_path)
+        a_links = self.page_html.cssselect(a_link_path)
         return [self.create_pdf_object(link) for link in a_links]
+
+    def create_txt_object(self, link_object):
+        page_code = requests.get(self.ls_prefix + link_object.get('href'))
+        ...
+
 
     def create_pdf_object(self, link_object):
         page_code = requests.get(self.ls_prefix + link_object.get('href')).text
@@ -47,6 +56,11 @@ class NumberPage:
         pdf_url = pdf_url.replace('%2F', '/')
         pdf_url = pdf_url.replace('%3A', ':')
         return PDFdownload(pdf_url)
+
+
+class TXTdownload:
+    def __init__(self):
+        ...
 
 
 class PDFdownload:
