@@ -3,6 +3,7 @@
 import re
 import requests
 import lxml.html
+import json
 
 
 class ArchivePage:
@@ -45,8 +46,16 @@ class NumberPage:
         return [self.create_pdf_object(link) for link in a_links]
 
     def create_txt_object(self, link_object):
-        page_code = requests.get(self.ls_prefix + link_object.get('href'))
-        ...
+        document_url = self.ls_prefix + link_object.get('href')
+        page_code = requests.get(document_url).text
+        mansi_block_path = ".field-name-body div.field-item.even div"
+        page_html = lxml.html.fromstring(page_code)
+        mns_blocks = page_html.cssselect(mansi_block_path)
+        mns_text = " ".join([block for block in mns_blocks if block.strip(" ")])
+        mns_title = page_html.cssselect(".field-title")[0]
+        mns_title = mns_title.strip(" ")
+        mns_title = re.sub(r'\s{2,}|\t', ' ', mns_title)
+        return TXTdownload(mns_title, mns_text, document_url)
 
 
     def create_pdf_object(self, link_object):
@@ -59,8 +68,17 @@ class NumberPage:
 
 
 class TXTdownload:
-    def __init__(self):
-        ...
+    def __init__(self, doc_title, doc_text, doc_url):
+        self.title = doc_title
+        self.text = doc_text
+        self.url = doc_url
+
+    def download(self):
+        return json.dumps({
+            "title": self.title,
+            "text": self.text,
+            "url": self.url
+        })
 
 
 class PDFdownload:
