@@ -51,7 +51,7 @@ class NumberPage:
         mansi_block_path = ".field-name-body div.field-item.even div"
         page_html = lxml.html.fromstring(page_code)
         mns_blocks = page_html.cssselect(mansi_block_path)
-        mns_text = " ".join([block.text for block in mns_blocks if block.text.strip(" ")])
+        mns_text = " ".join([b.text for b in mns_blocks if b.text is not None and b.text.strip(" ")])
         mns_text = mns_text.replace("\n", "")
         mns_text = mns_text.replace("\t", "")
         mns_text = re.sub(r"\.[^\s]", ". ", mns_text)
@@ -89,14 +89,18 @@ class TXTdownload:
         self.text = doc_text
         self.url = doc_url
 
-    def download(self):
-        json_text = json.dumps({
-            "title": self.title,
-            "text": self.text,
-            "url": self.url
-        })
+    def download(self, run_json=True):
+        if run_json:
+            saved_text = json.dumps({
+                "title": self.title,
+                "text": self.text,
+                "url": self.url
+            })
+        else:
+            saved_text = self.text
+        extension = '.json' if run_json else '.txt'
         doc_id = '_'.join(re.findall(r'\d+', self.url))
-        download_client.save('luima_seripos_' + doc_id + '.json', json_text)
+        download_client.save('luima_seripos_' + doc_id + extension, saved_text)
 
 
 class PDFdownload:
@@ -104,7 +108,7 @@ class PDFdownload:
         self.url = download_url
         self.page_url = page_url
 
-    def download(self):
+    def download(self, **kwargs):
         doc_id = '_'.join(re.findall(r'\d+', self.url))
         pdf_content = requests.get(self.page_url).content
         download_client.save('luima_seripos_' + doc_id + '.pdf', pdf_content, binary=True)
