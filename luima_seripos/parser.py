@@ -54,7 +54,7 @@ class NumberPage:
         mns_blocks = page_html.cssselect(mansi_block_path_1)
         mns_blocks += page_html.cssselect(mansi_block_path_2)
 
-        mns_text = " ".join([repr(b.xpath('string(.)')) for b in mns_blocks])
+        mns_text = " ".join([repr(b.xpath('string(.)'))[1:-1] for b in mns_blocks])
         mns_text = mns_text.replace("\n", "")
         mns_text = mns_text.replace("\t", "")
         mns_text = mns_text.replace(" ", "")
