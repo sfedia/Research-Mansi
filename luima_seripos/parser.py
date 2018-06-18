@@ -26,7 +26,7 @@ class NumberPage:
         self.page_code = self.np_request.text
         self.ls_prefix = "http://www.khanty-yasang.ru"
         self.page_html = lxml.html.fromstring(self.page_code)
-        strip_path = ".view-content table tbody tr td div span span a"
+        strip_path = ".view-content table tbody tr td span span a"
         self.strip_links = self.page_html.cssselect(strip_path)
 
     def get_download_objects(self):
@@ -41,7 +41,7 @@ class NumberPage:
         return [self.create_txt_object(link) for link in sec_links]
 
     def find_strip_links(self):
-        a_link_path = ".view-content table tbody tr td div span span a"
+        a_link_path = ".view-content table tbody tr td span span a"
         a_links = self.page_html.cssselect(a_link_path)
         return [self.create_pdf_object(link) for link in a_links]
 
@@ -109,8 +109,8 @@ class PDFdownload:
         self.page_url = page_url
 
     def download(self, **kwargs):
-        doc_id = '_'.join(re.findall(r'\d+', self.url))
-        pdf_content = requests.get(self.page_url).content
+        doc_id = '_'.join(re.findall(r'\d+', self.page_url))
+        pdf_content = requests.get(self.url).content
         download_client.save('luima_seripos_' + doc_id + '.pdf', pdf_content, binary=True)
 
 
