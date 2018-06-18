@@ -106,7 +106,7 @@ class PDFdownload:
 
     def download(self):
         doc_id = '_'.join(re.findall(r'\d+', self.url))
-        pdf_content = requests.get(self.url).content
+        pdf_content = requests.get(self.page_url).content
         download_client.save('luima_seripos_' + doc_id + '.pdf', pdf_content, binary=True)
 
 
