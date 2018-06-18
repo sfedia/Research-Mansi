@@ -87,7 +87,14 @@ class NumberPage:
         page_url = self.ls_prefix + link_object.get('href')
         page_code = requests.get(page_url).text
         pdf_url_regex = r'gdoc-field"\ssrc="[a-z:\/\?\&=\.]+url=([^"]+)'
-        pdf_url = re.search(pdf_url_regex, page_code).group(1)
+        
+        try:
+            pdf_url = re.search(pdf_url_regex, page_code).group(1)
+        except AttributeError:
+            print('PDF download object failed for ' + page_url)
+            failed_urls.write(page_url)
+            return VoidDownload()
+
         pdf_url = pdf_url.replace('%2F', '/')
         pdf_url = pdf_url.replace('%3A', ':')
         return PDFdownload(pdf_url, page_url)
@@ -153,7 +160,18 @@ class Downloader:
                 f2save.close()
 
 
+class Logger:
+    def __init__(self, log_path):
+        self.log_path = log_path
+
+    def write(self, message):
+        with open(self.log_path, 'a') as log_file:
+            log_file.write('\n' + message)
+            log_file.close()
+
+
 download_client = Downloader('./downloaded')
+failed_urls = Logger('./failed_urls.txt')
 
 archive_years = [str(year) for year in range(2012, 2019)]
 
