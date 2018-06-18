@@ -45,17 +45,6 @@ class NumberPage:
         a_links = self.page_html.cssselect(a_link_path)
         return [self.create_pdf_object(link) for link in a_links]
 
-    def recursive_text_extraction(self, element):
-        if element.text is None:
-            text = ""
-        else:
-            text = element.text.strip(" ")
-
-        for child in element:
-            text += self.recursive_text_extraction(child)
-
-        return text
-
     def create_txt_object(self, link_object):
         document_url = self.ls_prefix + link_object.get('href')
         page_code = requests.get(document_url).text
@@ -65,7 +54,7 @@ class NumberPage:
         mns_blocks = page_html.cssselect(mansi_block_path_1)
         mns_blocks += page_html.cssselect(mansi_block_path_2)
 
-        mns_text = " ".join([self.recursive_text_extraction(b) for b in mns_blocks])
+        mns_text = " ".join([repr(b.xpath('string(.)')) for b in mns_blocks])
         mns_text = mns_text.replace("\n", "")
         mns_text = mns_text.replace("\t", "")
         mns_text = mns_text.replace(" ", "")
