@@ -80,7 +80,7 @@ class VoidDownload:
         pass
 
     def download(self):
-        raise EmptyPage()
+        pass
 
 
 class TXTdownload:
@@ -90,11 +90,13 @@ class TXTdownload:
         self.url = doc_url
 
     def download(self):
-        return json.dumps({
+        json_text = json.dumps({
             "title": self.title,
             "text": self.text,
             "url": self.url
         })
+        doc_id = '_'.join(re.findall(r'\d+', self.url))
+        download_client.save('luima_seripos_' + doc_id + '.json', json_text)
 
 
 class PDFdownload:
@@ -103,7 +105,9 @@ class PDFdownload:
         self.page_url = page_url
 
     def download(self):
-        return requests.get(self.url).content
+        doc_id = '_'.join(re.findall(r'\d+', self.url))
+        pdf_content = requests.get(self.url).content
+        download_client.save('luima_seripos_' + doc_id + '.pdf', pdf_content, binary=True)
 
 
 class Downloader:
