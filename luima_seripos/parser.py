@@ -68,9 +68,9 @@ class NumberPage:
         except IndexError:
             return VoidDownload()
 
-        mns_title = mns_title.text.strip(" ")
         mns_title = mns_title.replace("\t", " ")
         mns_title = re.sub(r'\s{2,}', ' ', mns_title)
+        mns_title = mns_title.strip(" ")
         return TXTdownload(mns_title, mns_text, document_url)
 
     def create_pdf_object(self, link_object):
