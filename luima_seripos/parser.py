@@ -122,5 +122,8 @@ class Downloader:
             f2save.close()
 
 
+download_client = Downloader('./downloaded')
+
+
 class EmptyPage(Exception):
     pass
