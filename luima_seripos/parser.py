@@ -128,6 +128,16 @@ class Downloader:
 
 download_client = Downloader('./downloaded')
 
+archive_years = [str(year) for year in range(2012, 2019)]
+
+for y in archive_years:
+    archive_page = ArchivePage('http://www.khanty-yasang.ru/luima-seripos/archive/' + y)
+    for number_link in archive_page.links:
+        d_objects = NumberPage(number_link).get_download_objects()
+        for d_obj in d_objects:
+            d_obj.download()
+
+
 
 class EmptyPage(Exception):
     pass
