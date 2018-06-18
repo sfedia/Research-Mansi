@@ -54,6 +54,8 @@ class NumberPage:
         mns_text = " ".join([b.text for b in mns_blocks if b.text is not None and b.text.strip(" ")])
         mns_text = mns_text.replace("\n", "")
         mns_text = mns_text.replace("\t", "")
+        mns_text = mns_text.replace(" ", "")
+        mns_text = re.sub(r'\s{2,}', ' ', mns_text)
         mns_text = re.sub(r"\.[^\s]", ". ", mns_text)
 
         try:
@@ -62,7 +64,8 @@ class NumberPage:
             return VoidDownload()
 
         mns_title = mns_title.text.strip(" ")
-        mns_title = re.sub(r'\s{2,}|\t', ' ', mns_title)
+        mns_title = mns_title.replace("\t", " ")
+        mns_title = re.sub(r'\s{2,}', ' ', mns_title)
         return TXTdownload(mns_title, mns_text, document_url)
 
     def create_pdf_object(self, link_object):
