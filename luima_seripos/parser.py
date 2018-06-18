@@ -48,13 +48,14 @@ class NumberPage:
     def create_txt_object(self, link_object):
         document_url = self.ls_prefix + link_object.get('href')
         page_code = requests.get(document_url).text
-        mansi_block_path_1 = ".field-name-body div.field-item.even div"
-        mansi_block_path_2 = ".field-name-body div.field-item.even p"
+        mansi_block_path = ",".join([
+            ".field-name-body div.field-item.even div",
+            ".field-name-body div.field-item.even p"
+        ])
         page_html = lxml.html.fromstring(page_code)
-        mns_blocks = page_html.cssselect(mansi_block_path_1)
-        mns_blocks += page_html.cssselect(mansi_block_path_2)
+        mns_blocks = page_html.cssselect(mansi_block_path)
 
-        mns_text = " ".join([repr(b.xpath('string(.)'))[1:-1] for b in mns_blocks])
+        mns_text = " ".join([b.xpath('string(.)') for b in mns_blocks])
         mns_text = mns_text.replace("\n", "")
         mns_text = mns_text.replace("\t", "")
         mns_text = mns_text.replace(" ", "")
