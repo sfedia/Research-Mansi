@@ -87,7 +87,7 @@ class NumberPage:
         page_url = self.ls_prefix + link_object.get('href')
         page_code = requests.get(page_url).text
         pdf_url_regex = r'gdoc-field"\ssrc="[a-z:\/\?\&=\.]+url=([^"]+)'
-        
+
         try:
             pdf_url = re.search(pdf_url_regex, page_code).group(1)
         except AttributeError:
