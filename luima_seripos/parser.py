@@ -57,6 +57,7 @@ class NumberPage:
         mns_text = mns_text.replace(" ", "")
         mns_text = re.sub(r'\s{2,}', ' ', mns_text)
         mns_text = re.sub(r"\.[^\s]", ". ", mns_text)
+        mns_text = mns_text.replace(". .", ".")
 
         try:
             mns_title = page_html.cssselect(".field-title")[0]
