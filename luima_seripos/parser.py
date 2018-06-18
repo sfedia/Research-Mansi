@@ -66,12 +66,13 @@ class NumberPage:
         return TXTdownload(mns_title, mns_text, document_url)
 
     def create_pdf_object(self, link_object):
-        page_code = requests.get(self.ls_prefix + link_object.get('href')).text
+        page_url = self.ls_prefix + link_object.get('href')
+        page_code = requests.get(page_url).text
         pdf_url_regex = r'gdoc-field"\ssrc="[a-z:\/\?\&=\.]+url=([^"]+)'
         pdf_url = re.search(pdf_url_regex, page_code).group(1)
         pdf_url = pdf_url.replace('%2F', '/')
         pdf_url = pdf_url.replace('%3A', ':')
-        return PDFdownload(pdf_url)
+        return PDFdownload(pdf_url, page_url)
 
 
 class VoidDownload:
@@ -97,11 +98,28 @@ class TXTdownload:
 
 
 class PDFdownload:
-    def __init__(self, download_url):
+    def __init__(self, download_url, page_url):
         self.url = download_url
+        self.page_url = page_url
 
     def download(self):
         return requests.get(self.url).content
+
+
+class Downloader:
+    def __init__(self, path_folder):
+        self.path_folder = path_folder
+        if self.path_folder.endswith('/'):
+            self.path_folder = self.path_folder[:-1]
+
+    def save(self, file_name, content, binary=False):
+        if file_name.startswith('/'):
+            file_name = file_name[1:]
+        path_to_save = self.path_folder + '/' + file_name
+
+        with open(path_to_save, 'wb' if binary else 'w') as f2save:
+            f2save.write(content)
+            f2save.close()
 
 
 class EmptyPage(Exception):
