@@ -125,9 +125,14 @@ class Downloader:
             file_name = file_name[1:]
         path_to_save = self.path_folder + '/' + file_name
 
-        with open(path_to_save, 'wb' if binary else 'w') as f2save:
-            f2save.write(content)
-            f2save.close()
+        if binary:
+            with open(path_to_save, 'wb') as f2save:
+                f2save.write(content)
+                f2save.close()
+        else:
+            with open(path_to_save, 'w', encoding='utf-8') as f2save:
+                f2save.write(content)
+                f2save.close()
 
 
 download_client = Downloader('./downloaded')
