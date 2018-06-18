@@ -147,6 +147,7 @@ for y in archive_years:
     archive_page = ArchivePage('http://www.khanty-yasang.ru/luima-seripos/archive/' + y)
     for number_link in archive_page.links:
         d_objects = NumberPage(number_link).get_download_objects()
+        print('Download objects for %s: ' % (y,), d_objects)
         for d_obj in d_objects:
             d_obj.download()
 
