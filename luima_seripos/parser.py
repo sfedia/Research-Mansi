@@ -52,8 +52,7 @@ class NumberPage:
         mansi_block_path_2 = ".field-name-body div.field-item.even p"
         page_html = lxml.html.fromstring(page_code)
         mns_blocks = page_html.cssselect(mansi_block_path_1)
-        if not mns_blocks:
-            mns_blocks = page_html.cssselect(mansi_block_path_2)
+        mns_blocks += page_html.cssselect(mansi_block_path_2)
 
         mns_text = " ".join([b.text for b in mns_blocks if b.text is not None and b.text.strip(" ")])
         mns_text = mns_text.replace("\n", "")
