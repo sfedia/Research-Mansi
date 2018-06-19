@@ -15,9 +15,32 @@ class FormatTxt:
         self.text_clusters = []
         self.extract_clusters()
         self.text_clusters = [cluster for cluster in self.text_clusters if self.relevant_cluster(cluster)]
+        self.text_clusters = [self.format_cluster(cluster) for cluster in self.text_clusters]
 
     def pre_format_content(self):
         self.caps_to_titles()
+
+    def format_cluster(self, cluster):
+        cluster = re.sub(r'\n\d+$', '', cluster)
+        cluster = re.sub(r'\n\d+(?=\n)', '', cluster)
+
+        cluster = re.sub(r'(.+)\n([A-ZА-Я]̄?)\n', '\g<2>\g<1>\n', cluster)
+
+        """ла̄тӈыл Л. Тасманова хансыстэ
+        хансыстэ.."""
+        cluster = re.sub(r'\n[^\s]+\.\.$', '', cluster)
+
+        cluster = self.create_sentences(cluster)
+
+        return cluster
+
+    @staticmethod
+    def create_sentences(cluster):
+        cluster = " ".join(cluster.splitlines())
+        cluster = re.sub(r'\s{2,}', ' ', cluster)
+        cluster = re.sub(r'[^\s\t\n-]-\s', '', cluster)
+
+        return cluster
 
     @staticmethod
     def relevant_cluster(cluster):
@@ -35,6 +58,12 @@ class FormatTxt:
             return False
 
         if re.search(r'^[\s\n\t]*\d+[\s\n\t]*$', cluster):
+            return False
+
+        if re.search(r'\d{2}\.\d{2}.\d{2}', cluster):
+            return False
+
+        if re.search(r'лс[\s\n\t]*№[\s\n\t]*\d+', cluster, re.IGNORECASE):
             return False
 
         return True
@@ -64,6 +93,6 @@ class FormatTxt:
             print(cluster)
 
 
-ft = FormatTxt('luima_seripos_1_1043_7.txt')
+ft = FormatTxt('luima_seripos_1_1043_11.txt')
 print(ft.text_clusters)
 ft.print_clusters()
