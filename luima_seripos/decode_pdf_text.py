@@ -8,11 +8,12 @@ import time
 
 
 class FileDecode:
-    def __init__(self, file_path, file_name, saving_folder):
+    def __init__(self, file_path, file_name, saving_folder, debug_mode=False):
         self.file_path = file_path
         self.file_name = file_name
         self.saving_folder = saving_folder
         self.capsules = []
+        self.debug_mode = debug_mode
         self.text = open(self.file_path + '/' + self.file_name, encoding='utf-8').read()
 
     def format_text(self):
