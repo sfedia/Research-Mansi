@@ -51,7 +51,6 @@ class FileDecode:
         for occurrence in found:
             self.text = self.text.replace(occurrence, key)
 
-
     def change_encoding(self):
         time.sleep(0.1)
         json_txt = requests.post('https://www.artlebedev.ru/tools/decoder/ajax.html', data={
@@ -75,7 +74,6 @@ class FileDecode:
             "e": "ё̄",
             "c": "с",
             "u": "ю̄",
-
         }
         for symbol in corr:
             self.text = self.text.replace(symbol, corr[symbol])
