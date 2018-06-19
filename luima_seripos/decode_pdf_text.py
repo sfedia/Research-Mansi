@@ -97,8 +97,11 @@ class FileDecode:
 
 
 pdf_texts = [fn for fn in os.listdir('./pdf_text') if fn.endswith('.txt')]
-for pdf_file in pdf_texts:
-    print('Converting file %s...' % pdf_file)
-    fd = FileDecode('./pdf_text', pdf_file, './decoded_pdf')
+skip_up_to = None
+for j, pdf_file in enumerate(pdf_texts):
+    if skip_up_to is not None and j < skip_up_to:
+        continue
+    print('Converting file no. %d, %s...' % (j, pdf_file,))
+    fd = FileDecode('./pdf_text', pdf_file, './decoded_pdf', debug_mode=False)
     fd.format_text()
     fd.save_text()
