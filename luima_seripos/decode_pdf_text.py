@@ -31,9 +31,12 @@ class FileDecode:
 
     def make_capsules(self):
         regex_list = [
-            r'http:\/*([a-z\/]+.?)+',
-            r'[a-z]{5,}\.([a-z]{2,}\.?)+',
-            r'[Ee]-?mail'
+            r'«[IV]{2,}',
+            r'WBI',
+            r'[a-zа-яA-Z0-9_.+-]+@[a-zа-яA-Z0-9-]+\.[a-zа-яA-Z0-9-.]+',
+            r'http:\/*([a-z\/]+.?\n?)+',
+            r'[a-z]{4,}\n?\.([a-z]{2,}\.?\n?)+',
+            r'[Ee]-?mail',
         ]
         for regex in regex_list:
             found = [x.group(0) for x in re.finditer(regex, self.text)]
