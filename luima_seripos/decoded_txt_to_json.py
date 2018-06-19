@@ -29,7 +29,9 @@ class FormatTxt:
         self.caps_to_titles()
 
     def clear_cluster(self, cluster, cluster_num):
-        sentences = re.split(r'(?<=[^А-ЯЁ])\s*\.\s*', cluster)
+        split_sym = r'(?<=[^А-ЯЁ])\s*[\.\?!]\s*'
+        sentences = re.split(split_sym, cluster)
+        split_symbols = re.findall(split_sym, cluster)
 
         if len(sentences) == 1:
             return cluster
@@ -37,6 +39,8 @@ class FormatTxt:
         if sentences[-1] != "":
             self.defective_clusters.append([cluster_num, sentences[-1]])
             sentences[-1] = None
+        else:
+            sentences = sentences[:-1]
 
         for j, sentence in enumerate(sentences):
             if sentence is None:
@@ -44,19 +48,24 @@ class FormatTxt:
             sentence = sentence.strip(" ")
             punct = list(string.punctuation + '«»')
             i = 0
-            while sentence[i] in punct and i < len(sentence):
+            while i + 1 < len(sentence) and sentence[i] in punct:
                 i += 1
 
             if not sentence[i].istitle():
                 self.defective_clusters.append([cluster_num, sentence])
                 sentences[j] = None
 
-        sent_groups = [list(g) for k, g in groupby(sentences, lambda x: x is None) if not k]
+        sentences = [[split_symbols[q], s] for q, s in enumerate(sentences) if q < len(split_symbols)]
+        sent_groups = [list(g) for k, g in groupby(sentences, lambda x: x[1] is None) if not k]
         for sg in sent_groups[:-1]:
             for sent in sg:
-                self.added_clusters.append(sent)
+                self.added_clusters.append((sent[1] + sent[0]).strip(" "))
 
-        return '. '.join(sent_groups[-1])
+        string_cluster = ''
+        for sent in sent_groups[-1]:
+            string_cluster += (sent[1] + sent[0])
+
+        return string_cluster.strip(" ")
 
     def format_cluster(self, cluster):
         cluster = re.sub(r'\n\d+$', '', cluster)
@@ -101,7 +110,7 @@ class FormatTxt:
         if re.search(r'\d{2}\.\d{2}.\d{2}', cluster):
             return False
 
-        if re.search(r'лс[\s\n\t]*№[\s\n\t]*\d+', cluster, re.IGNORECASE):
+        if re.search(r'лс[\s\n\t]*№[\s\n\t]*\d+|№[\s\n\t]*\d+[\s\n\t]*лс', cluster, re.IGNORECASE):
             return False
 
         return True
@@ -152,6 +161,6 @@ class FormatTxt:
             sj.close()
 
 
-ft = FormatTxt('luima_seripos_1_1043_11.txt')
+ft = FormatTxt('luima_seripos_1_1043_5.txt')
 ft.print_clusters()
 ft.print_defective_clusters()
