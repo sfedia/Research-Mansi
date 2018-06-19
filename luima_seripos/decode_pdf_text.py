@@ -77,6 +77,7 @@ class FileDecode:
             "e": "ё̄",
             "c": "с",
             "u": "ю̄",
+            "o": "о"
         }
         for symbol in corr:
             self.text = self.text.replace(symbol, corr[symbol])
