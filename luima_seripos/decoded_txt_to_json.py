@@ -13,24 +13,34 @@ txt_files = [fn for fn in os.listdir('./decoded_pdf') if fn.endswith('.txt')]
 class FormatTxt:
     def __init__(self, file_name):
         self.content = open('./decoded_pdf/' + file_name, encoding='utf-8').read()
+        self.url_digits = tuple(re.findall(r'\d+', file_name))
         self.pre_format_content()
         self.text_clusters = []
         self.extract_clusters()
         self.text_clusters = [cluster for cluster in self.text_clusters if self.relevant_cluster(cluster)]
         self.text_clusters = [self.format_cluster(cluster) for cluster in self.text_clusters]
         self.defective_clusters = []
+        self.added_clusters = []
         self.text_clusters = [self.clear_cluster(cluster, j) for j, cluster in enumerate(self.text_clusters)]
+        self.text_clusters += self.added_clusters
+        self.json_object = self.create_json_object()
 
     def pre_format_content(self):
         self.caps_to_titles()
 
     def clear_cluster(self, cluster, cluster_num):
         sentences = re.split(r'(?<=[^А-ЯЁ])\s*\.\s*', cluster)
+
+        if len(sentences) == 1:
+            return cluster
+
         if sentences[-1] != "":
             self.defective_clusters.append([cluster_num, sentences[-1]])
             sentences[-1] = None
 
         for j, sentence in enumerate(sentences):
+            if sentence is None:
+                continue
             sentence = sentence.strip(" ")
             punct = list(string.punctuation + '«»')
             i = 0
@@ -42,15 +52,11 @@ class FormatTxt:
                 sentences[j] = None
 
         sent_groups = [list(g) for k, g in groupby(sentences, lambda x: x is None) if not k]
-        self.defective_clusters += [[cluster, sg] for sg in sent_groups[:-1]]
+        for sg in sent_groups[:-1]:
+            for sent in sg:
+                self.added_clusters.append(sent)
 
         return '. '.join(sent_groups[-1])
-
-
-
-
-
-
 
     def format_cluster(self, cluster):
         cluster = re.sub(r'\n\d+$', '', cluster)
@@ -124,7 +130,28 @@ class FormatTxt:
             print('Cluster %d:' % num)
             print(cluster)
 
+    def print_defective_clusters(self):
+        for num, cluster in enumerate(self.defective_clusters):
+            print('***')
+            print('Defective cluster %d:' % num)
+            print(cluster)
+
+    def create_json_object(self):
+        return json.dumps({
+            "url": "http://www.khanty-yasang.ru/luima-seripos/no-%s-%s/%s" % self.url_digits,
+            "title": None,
+            "content": {
+                "good": self.text_clusters,
+                "uncertain": self.defective_clusters
+            }
+        })
+
+    def save_json(self):
+        with open("luima_seripos_%s_%s_%s.json" % self.url_digits, 'w') as sj:
+            sj.write(self.json_object)
+            sj.close()
+
 
 ft = FormatTxt('luima_seripos_1_1043_11.txt')
-print(ft.text_clusters)
 ft.print_clusters()
+ft.print_defective_clusters()
