@@ -1,17 +1,29 @@
 #!/usr/bin/python3
 
 import json
+import os
 import re
 import requests
+import time
 
 
 class FileDecode:
-    def __init__(self, file_path, saving_folder):
+    def __init__(self, file_path, file_name, saving_folder):
         self.file_path = file_path
+        self.file_name = file_name
         self.saving_folder = saving_folder
-        self.text = open(self.file_path).read()
+        self.text = open(self.file_path + '/' + self.file_name, encoding='utf-8').read()
+
+    def format_text(self):
+        self.remove_i()
+        self.change_encoding()
+        self.regular_correction()
+
+    def remove_i(self):
+        self.text = re.sub(r'\nI+\n', '\n', self.text)
 
     def change_encoding(self):
+        time.sleep(0.1)
         json_txt = requests.post('https://www.artlebedev.ru/tools/decoder/ajax.html', data={
             'msg': self.text
         }).text
@@ -21,6 +33,7 @@ class FileDecode:
     def regular_correction(self):
         corr = {
             "f": "а̄",
+            "a": "а̄",
             "p": "э̄",
             "y": "ӯ",
             "j": "о̄",
@@ -31,18 +44,28 @@ class FileDecode:
             "b": "ӣ",
             "e": "ё̄",
             "c": "с",
-            "u": "ю̄"
+            "u": "ю̄",
+
         }
         for symbol in corr:
             self.text = self.text.replace(symbol, corr[symbol])
+            self.text = self.text.replace(symbol.upper(), corr[symbol].upper())
 
-        latin_symbols = re.findall(r'[a-z]', self.text)
+        latin_symbols = re.findall(r'[A-Za-z]', self.text)
         latin_symbols = list(set(latin_symbols))
 
         if latin_symbols:
             raise ValueError(", ".join(latin_symbols) + ": " + self.file_path)
 
     def save_text(self):
-        with open(self.saving_folder + '/' + self.file_path, 'w') as saved_file:
+        with open(self.saving_folder + '/' + self.file_name, 'w', encoding='utf-8') as saved_file:
             saved_file.write(self.text)
             saved_file.close()
+
+
+pdf_texts = [fn for fn in os.listdir('./pdf_text') if fn.endswith('.txt')]
+for pdf_file in pdf_texts:
+    print('Converting file %s...' % pdf_file)
+    fd = FileDecode('./pdf_text', pdf_file, './decoded_pdf')
+    fd.format_text()
+    fd.save_text()
