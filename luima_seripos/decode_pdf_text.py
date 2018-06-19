@@ -55,7 +55,7 @@ class FileDecode:
         latin_symbols = list(set(latin_symbols))
 
         if latin_symbols:
-            raise ValueError(", ".join(latin_symbols) + ": " + self.file_path)
+            raise ValueError(", ".join(latin_symbols) + ": " + self.file_name)
 
     def save_text(self):
         with open(self.saving_folder + '/' + self.file_name, 'w', encoding='utf-8') as saved_file:
