@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 
+from itertools import groupby
 import json
 import os
 import re
+import string
 
 
 txt_files = [fn for fn in os.listdir('./decoded_pdf') if fn.endswith('.txt')]
@@ -16,9 +18,39 @@ class FormatTxt:
         self.extract_clusters()
         self.text_clusters = [cluster for cluster in self.text_clusters if self.relevant_cluster(cluster)]
         self.text_clusters = [self.format_cluster(cluster) for cluster in self.text_clusters]
+        self.defective_clusters = []
+        self.text_clusters = [self.clear_cluster(cluster, j) for j, cluster in enumerate(self.text_clusters)]
 
     def pre_format_content(self):
         self.caps_to_titles()
+
+    def clear_cluster(self, cluster, cluster_num):
+        sentences = re.split(r'(?<=[^А-ЯЁ])\s*\.\s*', cluster)
+        if sentences[-1] != "":
+            self.defective_clusters.append([cluster_num, sentences[-1]])
+            sentences[-1] = None
+
+        for j, sentence in enumerate(sentences):
+            sentence = sentence.strip(" ")
+            punct = list(string.punctuation + '«»')
+            i = 0
+            while sentence[i] in punct and i < len(sentence):
+                i += 1
+
+            if not sentence[i].istitle():
+                self.defective_clusters.append([cluster_num, sentence])
+                sentences[j] = None
+
+        sent_groups = [list(g) for k, g in groupby(sentences, lambda x: x is None) if not k]
+        self.defective_clusters += [[cluster, sg] for sg in sent_groups[:-1]]
+
+        return '. '.join(sent_groups[-1])
+
+
+
+
+
+
 
     def format_cluster(self, cluster):
         cluster = re.sub(r'\n\d+$', '', cluster)
