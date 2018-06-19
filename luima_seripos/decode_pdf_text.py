@@ -30,7 +30,11 @@ class FileDecode:
         return "%~$" + str(len(self.capsules) if number is None else number) + "$~%"
 
     def make_capsules(self):
-        regex_list = []
+        regex_list = [
+            r'http:\/*([a-z\/]+.?)+',
+            r'[a-z]{5,}\.([a-z]{2,}\.?)+',
+            r'[Ee]-?mail'
+        ]
         for regex in regex_list:
             found = [x.group(0) for x in re.finditer(regex, self.text)]
             for occurrence in found:
@@ -81,6 +85,8 @@ class FileDecode:
         latin_symbols = list(set(latin_symbols))
 
         if latin_symbols:
+            if self.debug_mode:
+                print(self.text)
             raise ValueError(", ".join(latin_symbols) + ": " + self.file_name)
 
     def save_text(self):
