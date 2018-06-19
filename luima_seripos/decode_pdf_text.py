@@ -89,6 +89,8 @@ class FileDecode:
         if latin_symbols:
             if self.debug_mode:
                 print(self.text)
+                ls_context = re.findall(r'.{1,4}[A-Za-z].{1,4}', self.text)
+                print("ls_context: ", ", ".join(ls_context))
             raise ValueError(", ".join(latin_symbols) + ": " + self.file_name)
 
     def save_text(self):
