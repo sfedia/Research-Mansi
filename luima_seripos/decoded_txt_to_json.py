@@ -11,13 +11,14 @@ txt_files = [fn for fn in os.listdir('./decoded_pdf') if fn.endswith('.txt')]
 
 
 class FormatTxt:
-    def __init__(self, file_name):
+    def __init__(self, file_name, debug_mode=False):
         self.content = open('./decoded_pdf/' + file_name, encoding='utf-8').read()
         self.url_digits = tuple(re.findall(r'\d+', file_name))
         self.pre_format_content()
         self.text_clusters = []
+        self.debug_mode = debug_mode
         self.extract_clusters()
-        self.text_clusters = [cluster for cluster in self.text_clusters if self.relevant_cluster(cluster)]
+        self.text_clusters = [cl for j, cl in enumerate(self.text_clusters) if self.relevant_cluster(cl, j)]
         self.text_clusters = [self.format_cluster(cluster) for cluster in self.text_clusters]
         self.defective_clusters = []
         self.added_clusters = []
@@ -84,6 +85,7 @@ class FormatTxt:
 
         if not re.search(r'[\.\?!]', cluster):
             cluster = re.sub(r'\s*(\d+-?)+$', '', cluster)
+            cluster = re.sub(r'\s*[А-Я]$', '', cluster)
 
         cluster = self.create_sentences(cluster)
 
@@ -97,8 +99,10 @@ class FormatTxt:
 
         return cluster
 
-    @staticmethod
-    def relevant_cluster(cluster):
+    def relevant_cluster(self, cluster, index):
+        if self.debug_mode:
+            print('Checking cluster %d...' % index)
+
         if re.search(r'л?\s*уима|сэ.?рипос|общественно-политическая', cluster, re.IGNORECASE):
             return False
 
@@ -109,13 +113,13 @@ class FormatTxt:
         if re.search(r'e-?mail|@', cluster, re.IGNORECASE):
             return False
 
-        if re.search(r'№(.|[\s\n\t])*\(\d{4}\)', cluster):
+        if re.search(r'№[\s\S]*\(\d{4}\)', cluster):
             return False
 
         if re.search(r'^[\s\n\t]*\d+[\s\n\t]*$', cluster):
             return False
 
-        if re.search(r'\d{2}\.\d{2}.\d{2}', cluster):
+        if re.search(r'\d+\.\d+.', cluster):
             return False
 
         if re.search(r'\d+\s+[^\s]+\s+20\d{2}\s+год', cluster):
