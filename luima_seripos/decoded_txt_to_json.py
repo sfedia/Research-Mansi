@@ -27,6 +27,11 @@ class FormatTxt:
 
     def pre_format_content(self):
         self.caps_to_titles()
+        self.remove_defective_symbols()
+
+    def remove_defective_symbols(self):
+        self.content = self.content.replace('¨', '')
+        self.content = re.sub(r'\s*¸\s*', '', self.content)
 
     def clear_cluster(self, cluster, cluster_num):
         split_sym = r'(?<=[^А-ЯЁ])\s*[\.\?!]\s*'
@@ -113,6 +118,11 @@ class FormatTxt:
         if re.search(r'лс[\s\n\t]*№[\s\n\t]*\d+|№[\s\n\t]*\d+[\s\n\t]*лс', cluster, re.IGNORECASE):
             return False
 
+        # one-character clusters
+
+        if re.search(r'^\s*.\s*$', cluster):
+            return False
+
         return True
 
     def caps_to_titles(self):
@@ -161,6 +171,6 @@ class FormatTxt:
             sj.close()
 
 
-ft = FormatTxt('luima_seripos_1_1043_5.txt')
+ft = FormatTxt('luima_seripos_1_1043_9.txt')
 ft.print_clusters()
 ft.print_defective_clusters()
