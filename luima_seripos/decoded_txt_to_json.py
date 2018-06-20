@@ -51,12 +51,12 @@ class FormatTxt:
             if sentence is None:
                 continue
             sentence = sentence.strip(" ")
-            punct = list(string.punctuation + '«»')
+            spec_chars = list(string.punctuation + '«»')
             i = 0
-            while i + 1 < len(sentence) and sentence[i] in punct:
+            while i + 1 < len(sentence) and sentence[i] in spec_chars:
                 i += 1
 
-            if sentence and not sentence[i].istitle():
+            if sentence and not sentence[i].istitle() and sentence[i] not in [str(x) for x in range(0, 10)]:
                 self.defective_clusters.append([cluster_num, sentence])
                 sentences[j] = None
 
@@ -81,6 +81,9 @@ class FormatTxt:
         """ла̄тӈыл Л. Тасманова хансыстэ
         хансыстэ.."""
         cluster = re.sub(r'\n[^\s]+\.\.$', '', cluster)
+
+        if not re.search(r'[\.\?!]', cluster):
+            cluster = re.sub(r'\s*(\d+-?)+$', '', cluster)
 
         cluster = self.create_sentences(cluster)
 
@@ -113,6 +116,9 @@ class FormatTxt:
             return False
 
         if re.search(r'\d{2}\.\d{2}.\d{2}', cluster):
+            return False
+
+        if re.search(r'\d+\s+[^\s]+\s+20\d{2}\s+год', cluster):
             return False
 
         if re.search(r'лс[\s\n\t]*№[\s\n\t]*\d+|№[\s\n\t]*\d+[\s\n\t]*лс', cluster, re.IGNORECASE):
@@ -166,11 +172,12 @@ class FormatTxt:
         })
 
     def save_json(self):
-        with open("luima_seripos_%s_%s_%s.json" % self.url_digits, 'w') as sj:
+        with open("./db_json/luima_seripos_%s_%s_%s.json" % self.url_digits, 'w') as sj:
             sj.write(self.json_object)
             sj.close()
 
 
-ft = FormatTxt('luima_seripos_1_1043_9.txt')
+ft = FormatTxt('luima_seripos_4_1046_123.txt')
 ft.print_clusters()
 ft.print_defective_clusters()
+ft.save_json()
