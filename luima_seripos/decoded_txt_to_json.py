@@ -56,7 +56,7 @@ class FormatTxt:
             while i + 1 < len(sentence) and sentence[i] in punct:
                 i += 1
 
-            if not sentence[i].istitle():
+            if sentence and not sentence[i].istitle():
                 self.defective_clusters.append([cluster_num, sentence])
                 sentences[j] = None
 
