@@ -68,6 +68,9 @@ class FormatTxt:
                 self.added_clusters.append((sent[1] + sent[0]).strip(" "))
 
         string_cluster = ''
+        if not sent_groups:
+            return None
+        
         for sent in sent_groups[-1]:
             string_cluster += (sent[1] + sent[0])
 
