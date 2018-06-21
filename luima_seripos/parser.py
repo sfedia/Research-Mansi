@@ -95,7 +95,7 @@ class VoidDownload:
     def __init__(self):
         pass
 
-    def download(self):
+    def download(self, **kwargs):
         pass
 
 
