@@ -104,7 +104,7 @@ class TXTdownload:
         self.text = doc_text
         self.url = doc_url
 
-    def download(self, run_json=True):
+    def download(self, run_json=True, **kwargs):
         if run_json:
             saved_text = json.dumps({
                 "title": self.title,
@@ -123,7 +123,9 @@ class PDFdownload:
         self.url = download_url
         self.page_url = page_url
 
-    def download(self, **kwargs):
+    def download(self, ignore_pdf=False, **kwargs):
+        if ignore_pdf:
+            pass
         doc_id = '_'.join(re.findall(r'\d+', self.page_url))
         pdf_content = requests.get(self.url).content
         download_client.save('luima_seripos_' + doc_id + '.pdf', pdf_content, binary=True)
