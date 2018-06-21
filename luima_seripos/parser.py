@@ -65,13 +65,13 @@ class NumberPage:
 
         try:
             mns_title = page_html.cssselect(".field-title")[0].text
+            mns_title = mns_title.replace("\t", " ")
+            mns_title = re.sub(r'\s{2,}', ' ', mns_title)
+            mns_title = mns_title.strip(" ")
         except IndexError:
             mns_title = None
             print('Title not found in %s, title -> None' % document_url)
 
-        mns_title = mns_title.replace("\t", " ")
-        mns_title = re.sub(r'\s{2,}', ' ', mns_title)
-        mns_title = mns_title.strip(" ")
         return TXTdownload(mns_title, mns_text, document_url)
 
     def create_pdf_object(self, link_object):
