@@ -59,8 +59,8 @@ class NumberPage:
         mns_text = mns_text.replace("\n", "")
         mns_text = mns_text.replace("\t", "")
         mns_text = mns_text.replace(" ", "")
+        mns_text = re.sub(r"\.([^\s])", '. \g<1>', mns_text)
         mns_text = re.sub(r'\s{2,}', ' ', mns_text)
-        mns_text = re.sub(r"\.[^\s]", ". ", mns_text)
         mns_text = mns_text.replace(". .", ".")
 
         try:
