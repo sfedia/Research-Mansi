@@ -6,7 +6,7 @@ import re
 
 
 downloaded = [fn for fn in os.listdir('./downloaded') if fn.endswith('.json')]
-write_txt = True
+write_txt = False
 
 for j, d_file in enumerate(downloaded):
     dwl_json = json.loads(open('./downloaded/' + d_file).read())

@@ -70,7 +70,7 @@ class FormatTxt:
         string_cluster = ''
         if not sent_groups:
             return None
-        
+
         for sent in sent_groups[-1]:
             string_cluster += (sent[1] + sent[0])
 
@@ -184,7 +184,8 @@ class FormatTxt:
             sj.close()
 
 
-ft = FormatTxt('luima_seripos_4_1046_123.txt')
-ft.print_clusters()
-ft.print_defective_clusters()
-ft.save_json()
+dec_pdf = [fn for fn in os.listdir('./decoded_pdf') if fn.endswith('.txt')]
+for file_name in dec_pdf:
+    print('Parsing file %s...' % file_name)
+    ft = FormatTxt(file_name)
+    ft.save_json()
