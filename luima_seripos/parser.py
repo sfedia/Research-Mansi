@@ -64,7 +64,7 @@ class NumberPage:
         mns_text = mns_text.replace(". .", ".")
 
         try:
-            mns_title = page_html.cssselect(".field-title")[0]
+            mns_title = page_html.cssselect(".field-title")[0].text
         except IndexError:
             return VoidDownload()
 
@@ -124,11 +124,10 @@ class PDFdownload:
         self.page_url = page_url
 
     def download(self, ignore_pdf=False, **kwargs):
-        if ignore_pdf:
-            pass
-        doc_id = '_'.join(re.findall(r'\d+', self.page_url))
-        pdf_content = requests.get(self.url).content
-        download_client.save('luima_seripos_' + doc_id + '.pdf', pdf_content, binary=True)
+        if not ignore_pdf:
+            doc_id = '_'.join(re.findall(r'\d+', self.page_url))
+            pdf_content = requests.get(self.url).content
+            download_client.save('luima_seripos_' + doc_id + '.pdf', pdf_content, binary=True)
 
 
 class Downloader:
