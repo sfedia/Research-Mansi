@@ -25,8 +25,9 @@ class Dictionary:
 
 
 class ParsingObject:
-    def __init__(self, content, object_type):
+    def __init__(self, content, object_type, using_methods):
         self.connected_objects = []
+        self.using_methods = using_methods
         self.content = content
         self.properties = {}
         self.object_type = object_type
@@ -38,6 +39,33 @@ class ParsingObject:
         self.content += content2insert
         if update_function is not None:
             self.content = update_function(self.content)
+
+
+class UsingMethods:
+    def __init__(self):
+        self.__methods = {}
+
+    def connect_method(self, object_types):
+        self.__methods['connect'] = object_types
+
+    def append_method(self):
+        self.__methods['append'] = True
+
+    def insert_back_method(self):
+        self.__methods['insert_back'] = True
+
+    def insert_forward_method(self):
+        self.__methods['insert_forward'] = True
+
+    def able_to(self, method, obj):
+        if method not in self.__methods:
+            return False
+        elif type(self.__methods[method]) == bool:
+            return True
+        elif obj.object_type in self.__methods[method]:
+            return True
+        else:
+            return False
 
 
 class ObjectGrouping:
