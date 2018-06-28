@@ -105,3 +105,21 @@ class ObjectGroup:
         return self.subobjects[-1]
 
 
+class LineProcessing:
+    def __init__(self, line_text):
+        self.line_units = line_text.split()
+        self.current_index = 0
+
+    def current(self):
+        return self.line_units[self.current_index]
+
+    def next(self, add=0):
+        return self.line_units[self.current_index + 1 + add]
+
+
+class ParsingUnit:
+    def __init__(self, line_units, unit_index):
+        self.content = line_units[unit_index]
+
+    def what(self):
+        ...
