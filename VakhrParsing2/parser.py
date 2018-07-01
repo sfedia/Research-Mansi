@@ -12,13 +12,20 @@ class Dictionary:
             else:
                 return obj
 
-    def get_last_by_type(self, obj_type):
+    def get_by_type(self, obj_type, in_list=0):
+        counter = 0
         for obj in reversed(self.independent_objects):
             for conn_obj in reversed(obj.connected_objects):
                 if conn_obj.object_type == obj_type:
-                    return conn_obj
+                    if counter == in_list:
+                        return conn_obj
+                    else:
+                        counter += 1
             if obj.object_type == obj_type:
-                return obj
+                if counter == in_list:
+                    return obj
+                else:
+                    counter += 1
 
     def append(self, obj):
         self.independent_objects.append(obj)
