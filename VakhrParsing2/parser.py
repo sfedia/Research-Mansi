@@ -5,12 +5,19 @@ class Dictionary:
     def __init__(self):
         self.independent_objects = []
 
-    def get_last(self):
+    def get(self, index=0):
+        counter = 0
         for obj in reversed(self.independent_objects):
             if obj.connected_objects:
-                return obj.connected_objects[-1]
+                if counter == index:
+                    return obj.connected_objects[-1]
+                else:
+                    counter += 1
             else:
-                return obj
+                if counter == index:
+                    return obj
+                else:
+                    counter += 1
 
     def get_by_type(self, obj_type, in_list=0):
         counter = 0
