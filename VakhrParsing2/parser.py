@@ -122,6 +122,9 @@ class ObjectGroup:
     def get_last(self):
         return self.subobjects[-1]
 
+    def append_object(self, obj2append):
+        self.subobjects.append(obj2append)
+
 
 class LineProcessing:
     def __init__(self, line_text):
