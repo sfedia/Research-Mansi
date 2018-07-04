@@ -87,9 +87,14 @@ class UsingMethods:
 
 
 class ObjectGrouping:
-    def __init__(self, object_type):
+    def __init__(self, object_type=None):
         self.object_type = object_type
         self.groups = []
+
+    def set_object_type(self, object_type):
+        if object_type is not None:
+            raise ValueError()
+        self.object_type = object_type
 
     def add_group(self, group_key, update_function=None):
         if update_function:
