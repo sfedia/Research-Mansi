@@ -54,6 +54,10 @@ class ParsingObject:
         if update_function is not None:
             self.content = update_function(self.content)
 
+    def add_properties(self, **kwargs):
+        for (prop, value) in kwargs.items():
+            self.properties[prop] = value
+
 
 class UsingMethods:
     def __init__(self):
