@@ -27,13 +27,6 @@ class ParsingObject:
     def connect(self, object2connect):
         self.connected_objects.append(object2connect)
 
-    def get_finite(self):
-        if not self.connected_objects:
-            return self
-        if not self.connected_objects[-1].get_last_child():
-            return self.connected_objects[-1]
-        else:
-            return self.connected_objects[-1].get_last_child()
 
     def insert_content(self, content2insert, update_function=None):
         self.content += content2insert
