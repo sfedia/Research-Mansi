@@ -5,20 +5,12 @@ class Parser:
     def __init__(self):
         self.independent_objects = []
 
-    def get(self, index=0):
-        counter = 0
+    def get(self, behind=1, condition=lambda x: True):
         for obj in reversed(self.independent_objects):
-            if obj.connected_objects:
-                if counter == index:
-                    return obj.connected_objects[-1]
-                else:
-                    counter += 1
-            else:
-                if counter == index:
-                    return obj
-                else:
-                    counter += 1
-
+            fc, behind = obj.dive(behind, condition)
+            if fc is not None:
+                return fc
+        return None
 
     def append(self, obj):
         self.independent_objects.append(obj)
