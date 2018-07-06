@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-class Dictionary:
+class Parser:
     def __init__(self):
         self.independent_objects = []
 
