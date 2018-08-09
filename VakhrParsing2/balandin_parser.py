@@ -115,7 +115,9 @@ class IndexMarker(Pattern):
             self,
             "IndexMarker",
             Accept().add_default(connect=True, insert=False),
-            Attach().add_default(connect=True, insert=False)
+            Attach().add_option(
+                muskrat.filters.by_type("EntryTitle"), connect=True, insert=False
+            ).add_default(connect=False, insert=False)
         )
 
 
@@ -130,6 +132,30 @@ class IndexMarkerTr(Tracker):
             return self.parser.get(1).pattern.object_type in ("EntryTitle", "CasualDot")
         except AttributeError:
             return False
+
+
+class LexMarker(Pattern):
+    def __init__(self):
+        Pattern.__init__(
+            self,
+            "LexMarker",
+            Accept().add_default(connect=False, insert=False),
+            Attach().add_default(connect=True, insert=False)
+        )
+
+
+class LexMarkerTr(Tracker):
+    def __init__(self, *args):
+        Tracker.__init__(self, *args)
+        self.pattern = LexMarker()
+        self.extractor = RegexString(
+            r'(анатом|арифм|арх|глаг|грам|кого-л|кого-н|межд|политич|посл|прист|част|что-л|что-н)\.?'
+        )
+        self.takes_all = True
+
+    def track(self):
+        return True
+
 
 try:
     allocator.start()
