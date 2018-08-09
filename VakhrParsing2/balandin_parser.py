@@ -64,6 +64,28 @@ class CharHeaderTr(Tracker):
         return True
 
 
+class EntryTitle(Pattern):
+    def __init__(self):
+        Pattern.__init__(
+            self,
+            "EntryTitle",
+            Accept().add_default(connect=True, insert=True),
+            Attach().add_default(connect=False, insert=False)
+        )
+
+
+class EntryTitleTr(Tracker):
+    def __init__(self, *args):
+        Tracker.__init__(self, *args)
+        self.pattern = EntryTitle()
+        self.extractor = CharString("-ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ")
+
+    def track(self):
+        prev_title = self.parser.get(1, lambda o: o.pattern.object_type == "EntryTitle")
+        if not prev_title:
+            return True
+
+
 class CasualDot(Pattern):
     def __init__(self):
         Pattern.__init__(
@@ -86,6 +108,28 @@ class CasualDotTr(Tracker):
         except AttributeError:
             return False
 
+
+class IndexMarker(Pattern):
+    def __init__(self):
+        Pattern.__init__(
+            self,
+            "IndexMarker",
+            Accept().add_default(connect=True, insert=False),
+            Attach().add_default(connect=True, insert=False)
+        )
+
+
+class IndexMarkerTr(Tracker):
+    def __init__(self, *args):
+        Tracker.__init__(self, *args)
+        self.pattern = IndexMarker()
+        self.extractor = RegexString(r'[IV]+')
+
+    def track(self):
+        try:
+            return self.parser.get(1).pattern.object_type in ("EntryTitle", "CasualDot")
+        except AttributeError:
+            return False
 
 try:
     allocator.start()
