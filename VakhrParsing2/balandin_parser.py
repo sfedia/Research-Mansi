@@ -134,6 +134,9 @@ class IndexMarkerTr(Tracker):
             return False
 
 
+et_im = ["EntryTitle", "IndexMarker"]
+
+
 class LexMarker(Pattern):
     def __init__(self):
         Pattern.__init__(
@@ -142,6 +145,7 @@ class LexMarker(Pattern):
             Accept().add_default(connect=False, insert=False),
             Attach().add_default(connect=True, insert=False)
         )
+        self.focus_on = lambda p, c: p.get(1, lambda o: o.pattern.object_type in et_im)
 
 
 class LexMarkerTr(Tracker):
@@ -155,6 +159,26 @@ class LexMarkerTr(Tracker):
 
     def track(self):
         return True
+
+
+class MeaningIndex(Pattern):
+    def __init__(self):
+        Pattern.__init__(
+            self,
+            "MeaningIndex",
+            Accept().add_default(connect=True, insert=False),
+            Attach().add_default(connect=True, insert=False)
+        )
+
+
+class MeaningIndexTr(Tracker):
+    def __init__(self, *args):
+        Tracker.__init__(self, *args)
+        self.pattern = MeaningIndex()
+        self.extractor = RegexString(r'\d\.?')
+
+    def track(self):
+        self.parser.get(1).pattern.object_type in [""]
 
 
 try:
