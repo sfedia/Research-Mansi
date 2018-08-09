@@ -15,6 +15,34 @@ allocator = Allocator(text, WhitespaceVoid(), parser)
 allocator.end_position = 20
 
 
+mistakes = {
+    'ӓ': ['а'],
+    'ӱ': ['у'],
+    'й': ['и', 'й'],
+    'ӧ': ['о'],
+    'ё': ['е', 'ё'],
+    'б': ['б', 'о'],
+    'к': ['к', 'а']
+}
+
+
+def get_alternatives(s):
+    stack = [s]
+    length = len(s)
+    i = 0
+
+    while i < length:
+        new_stack = []
+        for st in stack:
+            if st[i] in mistakes:
+                for replacement in mistakes[st[i]]:
+                    new_stack.append(''.join([x if j != i else replacement for j, x in enumerate(list(st))]))
+        if new_stack:
+            stack = new_stack
+        i += 1
+    return stack
+
+
 class CharHeader(Pattern):
     def __init__(self):
         Pattern.__init__(
