@@ -64,6 +64,29 @@ class CharHeaderTr(Tracker):
         return True
 
 
+class CasualDot(Pattern):
+    def __init__(self):
+        Pattern.__init__(
+            self,
+            "CasualDot",
+            Accept().add_default(connect=False, insert=False),
+            Attach().add_default(connect=True, insert=False)
+        )
+
+
+class CasualDotTr(Tracker):
+    def __init__(self, *args):
+        Tracker.__init__(self, *args)
+        self.pattern = CasualDot()
+        self.extractor = CharSequenceString('.')
+
+    def track(self):
+        try:
+            return self.parser.get(1).pattern.object_type == "EntryTitle"
+        except AttributeError:
+            return False
+
+
 try:
     allocator.start()
 except muskrat.allocator.CannotMoveRight:
