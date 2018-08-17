@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import is_russian
 import muskrat
 from muskrat.parser import *
 from muskrat.allocator import *
@@ -13,34 +14,6 @@ text = text.replace("\ufeff", "")
 
 allocator = Allocator(text, WhitespaceVoid(), parser)
 allocator.end_position = 20
-
-
-mistakes = {
-    'ӓ': ['а'],
-    'ӱ': ['у'],
-    'й': ['и', 'й'],
-    'ӧ': ['о'],
-    'ё': ['е', 'ё'],
-    'б': ['б', 'о'],
-    'к': ['к', 'а']
-}
-
-
-def get_alternatives(s):
-    stack = [s]
-    length = len(s)
-    i = 0
-
-    while i < length:
-        new_stack = []
-        for st in stack:
-            if st[i] in mistakes:
-                for replacement in mistakes[st[i]]:
-                    new_stack.append(''.join([x if j != i else replacement for j, x in enumerate(list(st))]))
-        if new_stack:
-            stack = new_stack
-        i += 1
-    return stack
 
 
 class CharHeader(Pattern):
@@ -169,6 +142,7 @@ class MeaningIndex(Pattern):
             Accept().add_default(connect=True, insert=False),
             Attach().add_default(connect=True, insert=False)
         )
+        self.focus_on = lambda p, c: p.get(condition=lambda o: o.pattern.object_type in ["IndexMarker", "EntryTitle"])
 
 
 class MeaningIndexTr(Tracker):
@@ -178,8 +152,57 @@ class MeaningIndexTr(Tracker):
         self.extractor = RegexString(r'\d\.?')
 
     def track(self):
-        self.parser.get(1).pattern.object_type in [""]
+        try:
+            return not self.parser.get(1).pattern.properties.property_exists("option-related")
+        except AttributeError:
+            return True
 
+
+class MeaningEntity(Pattern):
+    def __init__(self):
+        Pattern.__init__(
+            self,
+            "MeaningEntity",
+            Accept().add_default(connect=False, insert=True),
+            Attach().add_default(connect=True, insert=True)  # insert=True?
+        )
+
+
+class MeaningEntityTr(Tracker):
+    def __init__(self, *args):
+        Tracker.__init__(self, *args)
+        self.pattern = MeaningEntity()
+        self.extractor = CharString("-ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ")
+
+    def track(self):
+        try:
+            return self.parser.get(1).pattern.object_type in ("LexMarker", "IndexMarker", "EntryTitle", "MeaningIndex")
+        except AttributeError:
+            return False
+
+
+class MeaningSemicolon(Pattern):
+    def __init__(self):
+        Pattern.__init__(
+            self,
+            "MeaningSemicolon",
+            Accept().add_default(connect=False, insert=False),
+            Attach().add_default(connect=True, insert=False)
+        )
+        self.focus_on = lambda p, c: p.get(condition=lambda o: o.pattern.object_type in ["MeaningIndex", "IndexMarker"])
+
+
+class MeaningSemicolonTr(Tracker):
+    def __init__(self, *args):
+        Tracker.__init__(self, *args)
+        self.pattern = MeaningSemicolon()
+        self.extractor = CharSequenceString(";")
+
+    def track(self):
+        try:
+            return self.parser.get(1).pattern.object_type == "MeaningEntity"
+        except AttributeError:
+            return False
 
 try:
     allocator.start()
