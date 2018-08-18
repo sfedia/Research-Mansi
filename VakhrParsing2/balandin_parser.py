@@ -13,7 +13,7 @@ text = open('balandin_vakhr.txt', 'r', encoding='utf-8').read()
 text = text.replace("\ufeff", "")
 
 allocator = Allocator(text, WhitespaceVoid(), parser)
-allocator.end_position = 20
+allocator.end_position = 40
 
 
 class CharHeader(Pattern):
@@ -163,7 +163,13 @@ class MeaningEntity(Pattern):
         Pattern.__init__(
             self,
             "MeaningEntity",
-            Accept().add_default(connect=False, insert=True),
+            Accept().add_default(
+                connect=False, insert=False
+            ).add_option(
+                by_type("MeaningEntity"), connect=False, insert=True
+            ).add_option(
+                by_type("UsageExample"), connect=True, insert=False
+            ),
             Attach().add_default(connect=True, insert=True)  # insert=True?
         )
 
@@ -181,28 +187,56 @@ class MeaningEntityTr(Tracker):
             return False
 
 
-class MeaningSemicolon(Pattern):
+class MeaningPunct(Pattern):
     def __init__(self):
         Pattern.__init__(
             self,
-            "MeaningSemicolon",
+            "MeaningPunct",
             Accept().add_default(connect=False, insert=False),
             Attach().add_default(connect=True, insert=False)
         )
         self.focus_on = lambda p, c: p.get(condition=lambda o: o.pattern.object_type in ["MeaningIndex", "IndexMarker"])
 
 
-class MeaningSemicolonTr(Tracker):
+class MeaningPunctTr(Tracker):
     def __init__(self, *args):
         Tracker.__init__(self, *args)
-        self.pattern = MeaningSemicolon()
-        self.extractor = CharSequenceString(";")
+        self.pattern = MeaningPunct()
+        self.extractor = CharString(";,")
 
     def track(self):
         try:
             return self.parser.get(1).pattern.object_type == "MeaningEntity"
         except AttributeError:
             return False
+
+
+class UsageExample(Pattern):
+    def __init__(self):
+        Pattern.__init__(
+            self,
+            "UsageExample",
+            Accept().add_default(connect=False, insert=True),
+            Attach().add_default(connect=True, insert=True)
+        )
+        self.focus_on = lambda p, c: p.get(
+            condition=lambda o: o.pattern.object_type in ["MeaningEntity", "UsageExample"]
+        )
+        self.insertion_prepend_value = True
+
+
+class UsageExampleTr(Tracker):
+    def __init__(self, *args):
+        Tracker.__init__(self, *args)
+        self.pattern = UsageExample()
+        self.extractor = CharString("?!.-ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ")
+
+    def track(self):
+        try:
+            return self.parser.get(1).pattern.object_type in ["MeaningPunct", "UsageExample"]
+        except AttributeError:
+            return False
+
 
 try:
     allocator.start()
@@ -211,5 +245,3 @@ except muskrat.allocator.CannotMoveRight:
 
 tree = muskrat.txt_tree_generator.TXTTree(parser.objects)
 tree.build()
-
-
