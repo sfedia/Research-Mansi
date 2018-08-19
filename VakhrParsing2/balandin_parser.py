@@ -300,7 +300,9 @@ class OptionEntity(Pattern):
         Pattern.__init__(
             self,
             "OptionEntity",
-            Accept().add_default(connect=False, insert=True),
+            Accept().add_default(connect=False, insert=False).add_option(
+                muskrat.filters.by_type("OptionEntity"), connect=False, insert=True
+            ),
             Attach().add_default(connect=True, insert=False).add_option(
                 muskrat.filters.by_type("OptionEntity"), connect=False, insert=True
             ),
@@ -354,6 +356,43 @@ class OptionPunctTr(Tracker):
     def track(self):
         try:
             return option_related(self.parser)
+        except AttributeError:
+            return False
+
+
+class OptionUsageExample(Pattern):
+    def __init__(self):
+        Pattern.__init__(
+            self,
+            "OptionUsageExample",
+            Accept().add_default(connect=False, insert=True),
+            Attach().add_default(connect=True, insert=True),
+            focus_on=lambda p, c: p.get(
+                condition=lambda o: o.pattern.object_type in ["OptionSlash", "OptionIndex", "OptionUsageExample"]
+            )
+        )
+        self.insertion_prepend_value = True
+
+
+class OptionUsageExampleTr(Tracker):
+    def __init__(self, *args):
+        Tracker.__init__(self, *args)
+        self.pattern = OptionUsageExample()
+        self.extractor = CharString(
+            "'-.°ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ’"
+        )
+
+    def track(self):
+        try:
+            if self.parser.get(1).pattern.object_type == "OptionPunct" \
+                    and self.parser.get(2).pattern.object_type == "OptionEntity" \
+                    and self.current()[0].istitle() and not self.parser.get(2).content[0].istitle():
+                return True
+            elif self.parser.get(1).pattern.object_type == "OptionUsageExample":
+                # should be sophisticated condition group
+                return True
+            else:
+                return False
         except AttributeError:
             return False
 
