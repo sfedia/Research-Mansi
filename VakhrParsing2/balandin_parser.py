@@ -13,7 +13,7 @@ text = open('balandin_vakhr.txt', 'r', encoding='utf-8').read()
 text = text.replace("\ufeff", "")
 
 allocator = Allocator(text, WhitespaceVoid(), parser)
-allocator.end_position = 40
+allocator.end_position = 60
 
 
 class CharHeader(Pattern):
@@ -34,7 +34,10 @@ class CharHeaderTr(Tracker):
         self.takes_all = True
 
     def track(self):
-        return True
+        try:
+            return self.parser.get(1).pattern.object_type != "UsageExample"
+        except AttributeError:
+            return True
 
 
 class EntryTitle(Pattern):
@@ -166,9 +169,10 @@ class MeaningEntity(Pattern):
             Accept().add_default(
                 connect=False, insert=False
             ).add_option(
-                by_type("MeaningEntity"), connect=False, insert=True
+                muskrat.filters.by_type("MeaningEntity"), connect=False, insert=True
             ).add_option(
-                by_type("UsageExample"), connect=True, insert=False
+                LogicalOR(muskrat.filters.by_type("UsageExample"), muskrat.filters.by_type("MeaningPunct")),
+                connect=True, insert=False
             ),
             Attach().add_default(connect=True, insert=True)  # insert=True?
         )
@@ -195,7 +199,6 @@ class MeaningPunct(Pattern):
             Accept().add_default(connect=False, insert=False),
             Attach().add_default(connect=True, insert=False)
         )
-        self.focus_on = lambda p, c: p.get(condition=lambda o: o.pattern.object_type in ["MeaningIndex", "IndexMarker"])
 
 
 class MeaningPunctTr(Tracker):
@@ -234,6 +237,116 @@ class UsageExampleTr(Tracker):
     def track(self):
         try:
             return self.parser.get(1).pattern.object_type in ["MeaningPunct", "UsageExample"]
+        except AttributeError:
+            return False
+
+
+class OptionSlash(Pattern):
+    def __init__(self):
+        pp = PatternProperties()
+        pp.add_property("option-related")
+        Pattern.__init__(
+            self,
+            "OptionSlash",
+            Accept().add_default(connect=True, insert=False),
+            Attach().add_default(connect=True, insert=False),
+            properties=pp
+        )
+        self.focus_on = lambda p, c: p.get(condition=lambda o: o.pattern.object_type in ["IndexMarker", "EntryTitle"])
+
+
+class OptionSlashTr(Tracker):
+    def __init__(self, *args):
+        Tracker.__init__(self, *args)
+        self.pattern = OptionSlash()
+        self.extractor = CharSequenceString("/")
+
+    def track(self):
+        return True
+
+
+class OptionIndex(Pattern):
+    def __init__(self):
+        Pattern.__init__(
+            self,
+            "OptionIndex",
+            Accept().add_default(connect=False, insert=False),
+            Attach().add_default(connect=True, insert=False)
+        )
+        self.focus_on = lambda p, c: p.get(condition=lambda o: o.pattern.object_type == "OptionSlash")
+        self.properties = PatternProperties()
+        self.properties.add_property("option-related")
+
+
+def option_related(psr):
+    return psr.get(1).pattern.properties.property_exists("option-related")
+
+
+class OptionIndexTr(Tracker):
+    def __init__(self, *args):
+        Tracker.__init__(self, *args)
+        self.pattern = OptionIndex()
+        self.extractor = RegexString(r"\d\.?")
+
+    def track(self):
+        try:
+            return option_related(self.parser)
+        except AttributeError:
+            return False
+
+
+class OptionEntity(Pattern):
+    def __init__(self):
+        Pattern.__init__(
+            self,
+            "OptionEntity",
+            Accept().add_default(connect=False, insert=True),
+            Attach().add_default(connect=True, insert=False).add_option(
+                muskrat.filters.by_type("OptionEntity"), connect=False, insert=True
+            ),
+            focus_on=lambda p, c: p.get(condition=lambda o: o.pattern.object_type in ["OptionIndex", "OptionSlash"])
+        )
+        self.properties = PatternProperties()
+        self.properties.add_property("option-related")
+
+
+class OptionEntityTr(Tracker):
+    def __init__(self, *args):
+        Tracker.__init__(self, *args)
+        self.pattern = OptionEntity()
+        self.extractor = CharString(
+            "'-.°ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ’"
+        )
+
+    def track(self):
+        try:
+            return option_related(self.parser)
+        except AttributeError:
+            return False
+
+
+class OptionPunct(Pattern):
+    def __init__(self):
+        Pattern.__init__(
+            self,
+            "OptionPunct",
+            Accept().add_default(connect=False, insert=False),
+            Attach().add_default(connect=True, insert=False),
+            focus_on=lambda p, c: p.get(condition=lambda o: o.pattern.object_type in ["OptionIndex", "OptionSlash"])
+        )
+        self.properties = PatternProperties()
+        self.properties.add_property("option-related")
+
+
+class OptionPunctTr(Tracker):
+    def __init__(self, *args):
+        Tracker.__init__(self, *args)
+        self.pattern = OptionPunct()
+        self.extractor = CharString(";,")
+
+    def track(self):
+        try:
+            return option_related(self.parser)
         except AttributeError:
             return False
 
