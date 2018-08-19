@@ -320,7 +320,14 @@ class OptionEntityTr(Tracker):
 
     def track(self):
         try:
-            return option_related(self.parser)
+            if not option_related(self.parser):
+                return False
+            if self.parser.get(1).pattern.object_type == "OptionPunct" \
+                    and self.parser.get(2).pattern.object_type == "OptionEntity":
+                if self.current()[0].istitle() and not self.parser.get(2).content[0].istitle():
+                    return False
+                return True
+            return True
         except AttributeError:
             return False
 
