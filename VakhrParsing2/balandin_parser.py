@@ -176,17 +176,20 @@ class MeaningEntity(Pattern):
             ),
             Attach().add_default(connect=True, insert=True)  # insert=True?
         )
+        self.insertion_prepend_value = True
 
 
 class MeaningEntityTr(Tracker):
     def __init__(self, *args):
         Tracker.__init__(self, *args)
         self.pattern = MeaningEntity()
-        self.extractor = CharString("-ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ")
+        self.extractor = CharString("-ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ()")
 
     def track(self):
         try:
-            return self.parser.get(1).pattern.object_type in ("LexMarker", "IndexMarker", "EntryTitle", "MeaningIndex")
+            return self.parser.get(1).pattern.object_type in [
+                "LexMarker", "IndexMarker", "EntryTitle", "MeaningIndex", "MeaningEntity"
+            ]
         except AttributeError:
             return False
 
@@ -329,6 +332,8 @@ class OptionEntityTr(Tracker):
                 if self.current()[0].istitle() and not self.parser.get(2).content[0].istitle():
                     return False
                 return True
+            if self.parser.get(1).pattern.object_type == "OptionUsageExample":
+                return False
             return True
         except AttributeError:
             return False
@@ -371,6 +376,8 @@ class OptionUsageExample(Pattern):
                 condition=lambda o: o.pattern.object_type in ["OptionSlash", "OptionIndex", "OptionUsageExample"]
             )
         )
+        self.properties = PatternProperties()
+        self.properties.add_property("option-related")
         self.insertion_prepend_value = True
 
 
@@ -379,7 +386,7 @@ class OptionUsageExampleTr(Tracker):
         Tracker.__init__(self, *args)
         self.pattern = OptionUsageExample()
         self.extractor = CharString(
-            "'-.°ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ’"
+            "?!'-.°ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ’"
         )
 
     def track(self):
@@ -389,8 +396,11 @@ class OptionUsageExampleTr(Tracker):
                     and self.current()[0].istitle() and not self.parser.get(2).content[0].istitle():
                 return True
             elif self.parser.get(1).pattern.object_type == "OptionUsageExample":
-                # should be sophisticated condition group
-                return True
+                # should be sophisticated condition group (?)
+                if re.search(r'[!\?\.]$', self.parser.get(1).content):
+                    return False
+                else:
+                    return True
             else:
                 return False
         except AttributeError:
