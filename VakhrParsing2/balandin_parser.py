@@ -57,9 +57,24 @@ class EntryTitleTr(Tracker):
         self.extractor = CharString("-ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ")
 
     def track(self):
-        prev_title = self.parser.get(1, lambda o: o.pattern.object_type == "EntryTitle")
-        if not prev_title:
-            return True
+        try:
+            prev = self.parser.get(1)
+            if "Index" in prev.pattern.object_type:
+                return False
+            elif prev.pattern.object_type == "EntryTitle":
+                ...
+                return True
+            elif prev.pattern.object_type == "CharHeader":
+                return True
+            elif prev.pattern.properties.property_exists("option-related"):
+                return True
+            return False
+        except AttributeError:
+            return False
+
+
+class AltTitle(Pattern):
+    ...
 
 
 class CasualDot(Pattern):
