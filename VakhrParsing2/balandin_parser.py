@@ -459,6 +459,27 @@ class OptionUsageExampleTr(Tracker):
             return False
 
 
+class CasualChars(Pattern):
+    def __init__(self):
+        Pattern.__init__(
+            self,
+            "CasualChars",
+            Accept().add_default(connect=False, insert=False),
+            Attach().add_default(connect=False, insert=True)
+        )
+        self.insertion_prepend_value = " "
+
+
+class CasualCharsTr(Tracker):
+    def __init__(self, *args):
+        Tracker.__init__(self, *args)
+        self.pattern = CasualChars()
+        self.extractor = CharList(["—", "!"])
+
+    def track(self):
+        return True
+
+
 try:
     allocator.start()
 except muskrat.allocator.CannotMoveRight:
