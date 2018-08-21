@@ -17,6 +17,30 @@ allocator.end_position = 60
 
 vakhr_alphabet = "АаӓәӛБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнӇӈОоӦӧӨөПпРрСсТтУуӰӱФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя’'°-."
 
+dict_alph = [
+    "Ааӓәӛ", "Бб", "Вв", "Гг", "Дд", "ЕеЁё", "Жж", "Зз", "Ии", "Йй", "Кк", "Лл", "Мм", "Нн", "Ӈӈ",
+    "ОоӦӧӨө", "Пп", "Рр", "Сс", "Тт", "УуӰӱ", "Фф", "Хх", "Цц", "Чч", "Шш", "Щщ", "Ъъ", "Ыы", "Ьь", "Ээ", "Юю", "Яя"
+]
+
+
+def here_or_btw(prev, char):
+    return find_in_da(char) - find_in_da(prev) <= 1
+
+
+def find_in_da(char):
+    for j, da in enumerate(dict_alph):
+        if char in da:
+            return j
+    return -1
+
+
+def a_gt_b(a, b):
+    if len(a) == len(b) == 1 and a.lower() == b.lower():
+        return False
+    return a == sorted(
+        [a, b], key=lambda word: [(vakhr_alphabet.index(c) if c in vakhr_alphabet else -1) for c in word]
+    )[0]
+
 
 class CharHeader(Pattern):
     def __init__(self):
@@ -60,17 +84,15 @@ class EntryTitleTr(Tracker):
 
     def track(self):
         try:
-            prev = self.parser.get(1)
-            if "Index" in prev.pattern.object_type:
+            pe = self.parser.get(1)
+            lb_tests = False  # ?
+            if pe.pattern.object_type in ["MeaningEntity", "OptionEntity", "UsageExample", "OptionUsageExample"]:
+                etp = self.parser.get(1, condition=lambda o: o.pattern.object_type == "EntryTitle")
+                return a_gt_b(self.current(), etp.content) and here_or_btw(etp.content[0], self.current()[0])
+            elif pe.pattern.object_type in ["CharHeader"]:
+                return True
+            else:
                 return False
-            elif prev.pattern.object_type == "EntryTitle":
-                ...
-                return True
-            elif prev.pattern.object_type == "CharHeader":
-                return True
-            elif prev.pattern.properties.property_exists("option-related"):
-                return True
-            return False
         except AttributeError:
             return False
 
@@ -112,6 +134,7 @@ class IndexMarker(Pattern):
                 muskrat.filters.by_type("EntryTitle"), connect=True, insert=False
             ).add_default(connect=False, insert=False)
         )
+        self.focus_on = lambda p, c: p.get(condition=lambda o: o.pattern.object_type == "EntryTitle")
 
 
 class IndexMarkerTr(Tracker):
@@ -122,7 +145,7 @@ class IndexMarkerTr(Tracker):
 
     def track(self):
         try:
-            return self.parser.get(1).pattern.object_type in ("EntryTitle", "CasualDot")
+            return self.parser.get(1).pattern.object_type in ("EntryTitle", "CasualDot", "OptionUsageExample")
         except AttributeError:
             return False
 
