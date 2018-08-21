@@ -176,6 +176,11 @@ class LexMarkerTr(Tracker):
         self.takes_all = True
 
     def track(self):
+        try:
+            if self.parser.get(1).pattern.object_type == "IndexMarker":
+                self.pattern.properties.add_property("after-im")
+        except AttributeError:
+            pass
         return True
 
 
