@@ -285,7 +285,9 @@ class UsageExampleTr(Tracker):
     def __init__(self, *args):
         Tracker.__init__(self, *args)
         self.pattern = UsageExample()
-        self.extractor = CharString("?!.-ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ")
+        self.extractor = CharString(
+            "?!.,-ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ—"
+        )
 
     def track(self):
         try:
@@ -436,7 +438,7 @@ class OptionUsageExampleTr(Tracker):
         Tracker.__init__(self, *args)
         self.pattern = OptionUsageExample()
         self.extractor = CharString(
-            "?!'-.°ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ’"
+            "?!'-,.°ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ’—"
         )
 
     def track(self):
