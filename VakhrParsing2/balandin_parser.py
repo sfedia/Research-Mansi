@@ -39,7 +39,7 @@ def a_gt_b(a, b):
         return False
     return a == sorted(
         [a, b], key=lambda word: [(vakhr_alphabet.index(c) if c in vakhr_alphabet else -1) for c in word]
-    )[0]
+    )[1]
 
 
 class CharHeader(Pattern):
