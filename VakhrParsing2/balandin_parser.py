@@ -158,7 +158,9 @@ class LexMarker(Pattern):
         Pattern.__init__(
             self,
             "LexMarker",
-            Accept().add_default(connect=False, insert=False),
+            Accept().add_default(connect=False, insert=False).add_option(
+                by_type("MeaningEntity"), connect=True, insert=False
+            ),
             Attach().add_default(connect=True, insert=False)
         )
         self.focus_on = lambda p, c: p.get(1, lambda o: o.pattern.object_type in et_im)
