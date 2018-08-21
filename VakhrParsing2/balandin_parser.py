@@ -15,6 +15,8 @@ text = text.replace("\ufeff", "")
 allocator = Allocator(text, WhitespaceVoid(), parser)
 allocator.end_position = 60
 
+vakhr_alphabet = "АаӓәӛБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнӇӈОоӦӧӨөПпРрСсТтУуӰӱФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя’'°-."
+
 
 class CharHeader(Pattern):
     def __init__(self):
@@ -144,7 +146,7 @@ class LexMarkerTr(Tracker):
         Tracker.__init__(self, *args)
         self.pattern = LexMarker()
         self.extractor = RegexString(
-            r'(анатом|арифм|арх|глаг|грам|кого-л|кого-н|межд|политич|посл|прист|част|что-л|что-н)\.?'
+            r'(анатом|арифм|арх|глаг|грам|кого-л|кого-н|межд|политич|посл|прист|союз|част|что-л|что-н)\.?'
         )
         self.takes_all = True
 
