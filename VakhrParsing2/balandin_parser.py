@@ -224,6 +224,9 @@ class MeaningEntity(Pattern):
             Attach().add_default(connect=True, insert=True)  # insert=True?
         )
         self.insertion_prepend_value = True
+        self.focus_on = lambda p, c: p.get(1, condition=lambda o: o.pattern.object_type in [
+            "IndexMarker", "MeaningIndex", "LexMarker"
+        ] and not o.pattern.properties.property_exists("after-im"))
 
 
 class MeaningEntityTr(Tracker):
