@@ -5,6 +5,7 @@ import muskrat
 from muskrat.parser import *
 from muskrat.allocator import *
 from muskrat.connectivity import Accept, Attach
+import string
 
 
 parser = Parser()
@@ -35,6 +36,10 @@ def find_in_da(char):
 
 
 def a_gt_b(a, b):
+    punct = "’'°-." + string.punctuation
+    for pct in punct:
+        a = a.replace(pct, "")
+        b = b.replace(pct, "")
     if len(a) == len(b) == 1 and a.lower() == b.lower():
         return False
     return a == sorted(
