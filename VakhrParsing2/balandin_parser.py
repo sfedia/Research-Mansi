@@ -418,6 +418,51 @@ class OptionEntityTr(Tracker):
                 if self.current()[0].istitle() and not self.parser.get(2).content[0].istitle():
                     return False
                 return True
+            if self.parser.get(1).pattern.object_type == "OptionEntity":
+                n = 2
+                sub_entities = [[]]
+
+                while True:
+                    pe = self.parser.get(n)
+                    if pe.pattern.object_type == "OptionEntity":
+                        sub_entities[0].insert(0, pe.content)
+                    elif pe.pattern.object_type in ["OptionPunct", "OptionIndex"]:
+                        sub_entities.insert(0, [])
+                    else:
+                        break
+                    n += 1
+
+                if [] in sub_entities:
+                    sub_entities.remove([])
+                for j, sub_entity in enumerate(sub_entities):
+                    new_subent = []
+                    touched = -1
+                    for i, tok in enumerate(sub_entity):
+                        if touched == i:
+                            continue
+                        if i == len(sub_entity) - 1:
+                            new_subent.append(tok)
+                            break
+                        summa, boolean = option_entities_connect(tok, sub_entity[i + 1])
+                        if boolean:
+                            new_subent.append(summa)
+                            touched = i + 1
+                    sub_entities[j] = new_subent
+
+                multiple = 0
+                for sub_entity in sub_entities[:-1]:
+                    if len(sub_entity) > 1:
+                        multiple += 1
+
+                try:
+                    multiple = multiple/(len(sub_entities)-1) >= 1/3
+                except ZeroDivisionError:
+                    return True
+
+                if multiple:
+                    return len(sub_entities[-1]) < 2
+                else:
+                    return False
             if self.parser.get(1).pattern.object_type == "OptionUsageExample":
                 return False
             return True
