@@ -90,8 +90,11 @@ class EntryTitle(Pattern):
             Accept().add_default(connect=True, insert=True).add_option(
                 by_type("MeaningEntity"), connect=True, insert=False
             ),
-            Attach().add_default(connect=False, insert=False)
+            Attach().add_default(connect=False, insert=False).add_option(
+                by_type("EntryTitle"), connect=False, insert=True
+            )
         )
+        self.insertion_prepend_value = True
 
 
 class EntryTitleTr(Tracker):
