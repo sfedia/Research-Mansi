@@ -47,6 +47,16 @@ def a_gt_b(a, b):
     )[1]
 
 
+def ngram_a_gt_b(a_ngram, b_ngram, a_next):
+    if a_gt_b(b_ngram, a_ngram):
+        return True
+    for nxt in a_next:
+        a_ngram += " " + nxt
+        if a_gt_b(a_ngram, b_ngram):
+            return True
+    return False
+
+
 def option_entities_compare(a, b):
     return len(b) > 0.13*len(a)*len(a)
 
@@ -109,7 +119,16 @@ class EntryTitleTr(Tracker):
             lb_tests = False  # ?
             if pe.pattern.object_type in ["MeaningEntity", "OptionEntity", "UsageExample", "OptionUsageExample"]:
                 etp = self.parser.get(1, condition=lambda o: o.pattern.object_type == "EntryTitle")
-                return a_gt_b(self.current(), etp.content) and here_or_btw(etp.content[0], self.current()[0])
+                cetp = len(self.current().split()) - len(etp.content.split())
+                if not cetp:
+                    return a_gt_b(self.current(), etp.content) and here_or_btw(etp.content[0], self.current()[0])
+                else:
+                    return ngram_a_gt_b(
+                        self.current(), etp.content, [
+                            self.next(k + 1).content for k in range(cetp)
+                            if re.search(r'[А-ЯЁа-яё]', self.next(k + 1).content)
+                        ]
+                    )
             elif pe.pattern.object_type in ["CharHeader"]:
                 return True
             elif pe.pattern.object_type == "EntryTitle":
