@@ -76,7 +76,9 @@ class EntryTitle(Pattern):
         Pattern.__init__(
             self,
             "EntryTitle",
-            Accept().add_default(connect=True, insert=True),
+            Accept().add_default(connect=True, insert=True).add_option(
+                by_type("MeaningEntity"), connect=True, insert=False
+            ),
             Attach().add_default(connect=False, insert=False)
         )
 
@@ -230,7 +232,7 @@ class MeaningEntity(Pattern):
         )
         self.insertion_prepend_value = True
         self.focus_on = lambda p, c: p.get(1, condition=lambda o: o.pattern.object_type in [
-            "IndexMarker", "MeaningIndex", "LexMarker"
+            "IndexMarker", "MeaningIndex", "LexMarker", "EntryTitle"
         ] and not o.pattern.properties.property_exists("after-im"))
 
 
@@ -472,7 +474,7 @@ class CasualChars(Pattern):
             Accept().add_default(connect=False, insert=False),
             Attach().add_default(connect=False, insert=True)
         )
-        self.insertion_prepend_value = " "
+        self.insertion_prepend_value = True
 
 
 class CasualCharsTr(Tracker):
