@@ -109,6 +109,19 @@ class EntryTitleTr(Tracker):
                 return a_gt_b(self.current(), etp.content) and here_or_btw(etp.content[0], self.current()[0])
             elif pe.pattern.object_type in ["CharHeader"]:
                 return True
+            elif pe.pattern.object_type == "EntryTitle":
+                try:
+                    pt = self.parser.get(2, condition=lambda o: o.pattern.object_type == "EntryTitle")
+                    pel = len(pe.content.split())
+                    ptl = len(pt.content.split())
+                    if pel > ptl:
+                        return False
+                    elif pel == ptl:
+                        return pt.content == pe.content
+                    else:
+                        return a_gt_b(self.current(), pt.content.split()[pel - ptl])
+                except AttributeError:
+                    return False
             else:
                 return False
         except AttributeError:
