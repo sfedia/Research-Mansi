@@ -47,6 +47,17 @@ def a_gt_b(a, b):
     )[1]
 
 
+def option_entities_compare(a, b):
+    return len(b) > 0.13*len(a)*len(a)
+
+
+def option_entities_connect(a, b):
+    if not option_entities_compare(a, b) or not option_entities_compare(b, a):
+        return a + b, True
+    else:
+        return a, False
+
+
 class CharHeader(Pattern):
     def __init__(self):
         Pattern.__init__(
