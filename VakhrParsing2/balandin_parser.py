@@ -102,6 +102,8 @@ class EntryTitle(Pattern):
             ),
             Attach().add_default(connect=False, insert=False).add_option(
                 by_type("EntryTitle"), connect=False, insert=True
+            ).add_option(
+                by_type("EntryTitleComma"), connect=True, insert=False
             )
         )
         self.insertion_prepend_value = True
@@ -131,6 +133,8 @@ class EntryTitleTr(Tracker):
                             if re.search(r'[А-ЯЁа-яё]', self.next(k + 1))
                         ]
                     ) and here_or_btw(etp.content[0], self.current()[0])
+            elif pe.pattern.object_type == "EntryTitleComma":
+                return True
             elif pe.pattern.object_type in ["CharHeader"]:
                 return True
             elif pe.pattern.object_type == "EntryTitle":
@@ -148,6 +152,29 @@ class EntryTitleTr(Tracker):
                     return False
             else:
                 return False
+        except AttributeError:
+            return False
+
+
+class EntryTitleComma(Pattern):
+    def __init__(self):
+        Pattern.__init__(
+            self,
+            "EntryTitleComma",
+            Accept().add_default(connect=True, insert=False),
+            Attach().add_default(connect=True, insert=False)
+        )
+
+
+class EntryTitleCommaTr(Tracker):
+    def __init__(self, *args):
+        Tracker.__init__(self, *args)
+        self.pattern = EntryTitleComma()
+        self.extractor = CharSequenceString(",")
+
+    def track(self):
+        try:
+            return self.parser.get(1).pattern.object_type == "EntryTitle"
         except AttributeError:
             return False
 
