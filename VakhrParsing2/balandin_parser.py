@@ -48,7 +48,7 @@ def a_gt_b(a, b):
 
 
 def ngram_a_gt_b(a_ngram, b_ngram, a_next):
-    if a_gt_b(b_ngram, a_ngram):
+    if a_gt_b(a_ngram, b_ngram):
         return True
     for nxt in a_next:
         a_ngram += " " + nxt
@@ -115,20 +115,22 @@ class EntryTitleTr(Tracker):
 
     def track(self):
         try:
+            if self.next().startswith("/"):
+                return False
             pe = self.parser.get(1)
             lb_tests = False  # ?
             if pe.pattern.object_type in ["MeaningEntity", "OptionEntity", "UsageExample", "OptionUsageExample"]:
                 etp = self.parser.get(1, condition=lambda o: o.pattern.object_type == "EntryTitle")
-                cetp = len(self.current().split()) - len(etp.content.split())
+                cetp = len(etp.content.split()) - len(self.current().split())
                 if not cetp:
                     return a_gt_b(self.current(), etp.content) and here_or_btw(etp.content[0], self.current()[0])
                 else:
                     return ngram_a_gt_b(
                         self.current(), etp.content, [
-                            self.next(k + 1).content for k in range(cetp)
-                            if re.search(r'[А-ЯЁа-яё]', self.next(k + 1).content)
+                            self.next(k + 1) for k in range(cetp)
+                            if re.search(r'[А-ЯЁа-яё]', self.next(k + 1))
                         ]
-                    )
+                    ) and here_or_btw(etp.content[0], self.current()[0])
             elif pe.pattern.object_type in ["CharHeader"]:
                 return True
             elif pe.pattern.object_type == "EntryTitle":
@@ -290,9 +292,19 @@ class MeaningEntityTr(Tracker):
 
     def track(self):
         try:
-            return self.parser.get(1).pattern.object_type in [
+            pe = self.parser.get(1)
+            if pe.pattern.object_type in [
                 "LexMarker", "IndexMarker", "EntryTitle", "MeaningIndex", "MeaningEntity"
-            ]
+            ]:
+                return True
+            elif pe.pattern.object_type == "MeaningPunct":
+                etp = self.parser.get(condition=lambda o: o.pattern.object_type == "EntryTitle")
+                if etp.content[0].istitle():
+                    return self.current()[0].istitle()
+                else:
+                    return not self.current()[0].istitle()
+            else:
+                return False
         except AttributeError:
             return False
 
@@ -344,7 +356,16 @@ class UsageExampleTr(Tracker):
 
     def track(self):
         try:
-            return self.parser.get(1).pattern.object_type in ["MeaningPunct", "UsageExample"]
+            pe = self.parser.get(1)
+            if pe.pattern.object_type == "UsageExample":
+                return True
+            elif pe.pattern.object_type == "MeaningPunct":
+                if pe.content == ",":
+                    return False
+                else:
+                    return True
+            else:
+                return False
         except AttributeError:
             return False
 
@@ -478,6 +499,9 @@ class OptionEntityTr(Tracker):
                 except ZeroDivisionError:
                     return True
 
+                if not len(sub_entities):
+                    return True
+
                 if multiple:
                     return len(sub_entities[-1]) < 2
                 else:
@@ -580,7 +604,8 @@ class CasualCharsTr(Tracker):
 
 try:
     allocator.start()
-except muskrat.allocator.CannotMoveRight:
+except muskrat.allocator.CannotMoveRight as parser_msg:
+    print(parser_msg)
     print(allocator.units[-10:])
 
 tree = muskrat.txt_tree_generator.TXTTree(parser.objects)
