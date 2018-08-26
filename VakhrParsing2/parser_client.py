@@ -55,11 +55,8 @@ class ParserClient:
                 self.print_dev_message()
                 self.force_reload()
             else:
-                curren
-                if not cut_index:
-                    ...
-                else:
-                    ...
+                self.end_position = self.get_char_position(regex_identifier, cut_index)
+                self.update_parser_state()
 
     @staticmethod
     def prompt_cut():
