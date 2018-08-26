@@ -15,7 +15,8 @@ class ParserClient:
         self.regex_identifier_length = 50
 
     def get_text(self):
-        return self.balandin_vakhr[self.start_char:]
+        text = ("А\n" if self.start_char else "") + self.balandin_vakhr[self.start_char:]
+        return text
 
     def get_char_position(self, regex_identifier, tokens_back=0):
         ri_found = re.search(regex_identifier, self.balandin_vakhr).start()
