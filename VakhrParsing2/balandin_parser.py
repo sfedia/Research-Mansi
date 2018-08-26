@@ -8,14 +8,6 @@ from muskrat.connectivity import Accept, Attach
 import string
 
 
-parser = Parser()
-
-text = open('balandin_vakhr.txt', 'r', encoding='utf-8').read()
-text = text.replace("\ufeff", "")
-
-allocator = Allocator(text, WhitespaceVoid(), parser)
-allocator.end_position = 60
-
 vakhr_alphabet = "АаӓәӛБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнӇӈОоӦӧӨөПпРрСсТтУуӰӱФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя’'°-."
 
 dict_alph = [
@@ -629,11 +621,20 @@ class CasualCharsTr(Tracker):
         return True
 
 
+parser = Parser()
+
+text = open('balandin_vakhr.txt', 'r', encoding='utf-8').read()
+text = text.replace("\ufeff", "")
+
+allocator = Allocator(text, WhitespaceVoid(), parser)
+allocator.end_position = 840
+
 try:
     allocator.start()
 except muskrat.allocator.CannotMoveRight as parser_msg:
     print(parser_msg)
     print(allocator.units[-10:])
+    print(len(allocator.units))
 
 tree = muskrat.txt_tree_generator.TXTTree(parser.objects)
 tree.build()
