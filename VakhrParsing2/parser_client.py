@@ -101,4 +101,4 @@ class ParserClient:
             )
         )
         print("-- Press (STOP->)RUN to continue --")
-        raise Exception()
+        #raise Exception()
