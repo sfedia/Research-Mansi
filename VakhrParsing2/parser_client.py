@@ -68,8 +68,16 @@ class ParserClient:
                 self.update_parser_state()
                 self.force_reload()
 
-    def save_objects(self, objs):
-        self.parsed_dictionary.append([
+    def json_parsing_object(self, parsing_object):
+        return {
+            "content": parsing_object.content,
+            "properties": parsing_object.pattern.properties.dict_properties(None),
+            "childs": [self.json_parsing_object(o) for o in parsing_object.connected_objects]
+        }
+
+    def save_objects(self, parsed_objects):
+        objs = [self.json_parsing_object(o) for o in parsed_objects]
+        self.parsed_dictionary["objects"].append([
             self.start_char,
             self.end_position,
             objs
