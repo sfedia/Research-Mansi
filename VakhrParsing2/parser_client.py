@@ -39,7 +39,7 @@ class ParserClient:
                         tkn_checked += 1
                         inside_tkn = True
                 ri_found -= 1
-                
+
         return ri_found
 
     def scan_error(self, parser_msg, allocator_units, parser):
