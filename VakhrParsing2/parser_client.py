@@ -7,6 +7,7 @@ class ParserClient:
     def __init__(self):
         self.balandin_vakhr = open("balandin_vakhr.txt").read()
         self.parser_state = json.loads(open("parser_state.json").read())
+        self.parsed_dictionary = json.loads(open("parsed_dictionary.json").read())
         self.start_char = self.parser_state["start_char"]
         self.end_position = self.parser_state["end_position"]
         self.default_ep_incr = 350
@@ -43,6 +44,7 @@ class ParserClient:
         return ri_found
 
     def scan_error(self, parser_msg, allocator_units, parser):
+        self.save_objects(parser.objects)
         unit_number = int(re.search(r"\d+", parser_msg).group(0))
         failed_sequence = allocator_units[unit_number:]
         regex_identifier = r"[\s\n]+".join([re.escape(unit) for unit in failed_sequence])
@@ -57,6 +59,16 @@ class ParserClient:
             else:
                 self.end_position = self.get_char_position(regex_identifier, cut_index)
                 self.update_parser_state()
+
+    def save_objects(self, objs):
+        self.parsed_dictionary.append([
+            self.start_char,
+            self.end_position,
+            objs
+        ])
+        with open("parsed_dictionary.json", "w") as pd:
+            pd.write(json.dumps(self.parsed_dictionary))
+            pd.close()
 
     @staticmethod
     def prompt_cut():
