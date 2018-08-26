@@ -47,6 +47,8 @@ class ParserClient:
     def scan_error(self, parser_msg, allocator_units, parser):
         self.save_objects(parser.objects)
         unit_number = int(re.search(r"\d+", str(parser_msg)).group(0))
+        print("Next:", " ".join(allocator_units[unit_number:][:10]))
+        print("===")
         failed_sequence = allocator_units[unit_number:]
         regex_identifier = r"[\s\n]+".join([re.escape(unit) for unit in failed_sequence])
         if len(regex_identifier) < self.regex_identifier_length:
@@ -94,5 +96,11 @@ class ParserClient:
 
     @staticmethod
     def force_reload():
+    def force_reload(self):
+        print(
+            "Characters processed: %d/%d (%d%%)" % (
+                self.end_position, self.bv_length, self.end_position / self.bv_length * 100
+            )
+        )
         print("-- Press (STOP->)RUN to continue --")
         raise Exception()
