@@ -94,8 +94,6 @@ class ParserClient:
     def print_dev_message():
         print("- Stopped for development -")
 
-    @staticmethod
-    def force_reload():
     def force_reload(self):
         print(
             "Characters processed: %d/%d (%d%%)" % (
