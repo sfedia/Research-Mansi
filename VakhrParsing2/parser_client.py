@@ -56,6 +56,7 @@ class ParserClient:
         if len(regex_identifier) < self.regex_identifier_length:
             self.end_position += self.default_ep_micro_incr
             self.update_parser_state()
+            self.force_reload()
         else:
             bool_cut_left, cut_index = self.prompt_cut()
             if not bool_cut_left:
@@ -64,6 +65,7 @@ class ParserClient:
             else:
                 self.end_position = self.get_char_position(regex_identifier, cut_index)
                 self.update_parser_state()
+                self.force_reload()
 
     def save_objects(self, objs):
         self.parsed_dictionary.append([
