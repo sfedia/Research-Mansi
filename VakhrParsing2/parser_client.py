@@ -76,7 +76,7 @@ class ParserClient:
     @staticmethod
     def prompt_cut():
         result = input("Can we cut out the left side? [Y(INT=0)/(int<0)/n]:")
-        if not result:
+        if not result or result == "y":
             return True, 0
         elif result == "n":
             return False, None
