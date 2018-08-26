@@ -63,7 +63,8 @@ class ParserClient:
                 self.print_dev_message()
                 self.force_reload()
             else:
-                self.end_position = self.get_char_position(regex_identifier, cut_index)
+                self.start_char = self.get_char_position(regex_identifier, cut_index)
+                self.end_position += self.default_ep_incr
                 self.update_parser_state()
                 self.force_reload()
 
