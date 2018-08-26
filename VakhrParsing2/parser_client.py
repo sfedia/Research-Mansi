@@ -5,7 +5,9 @@ import re
 
 class ParserClient:
     def __init__(self):
-        self.balandin_vakhr = open("balandin_vakhr.txt").read()
+        self.balandin_vakhr = open('balandin_vakhr.txt', 'r', encoding='utf-8').read()
+        self.balandin_vakhr = self.balandin_vakhr.replace("\ufeff", "")
+        self.bv_length = len(self.balandin_vakhr)
         self.parser_state = json.loads(open("parser_state.json").read())
         self.parsed_dictionary = json.loads(open("parsed_dictionary.json").read())
         self.start_char = self.parser_state["start_char"]
