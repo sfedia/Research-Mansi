@@ -5,6 +5,7 @@ import muskrat
 from muskrat.parser import *
 from muskrat.allocator import *
 from muskrat.connectivity import Accept, Attach
+import parser_client
 import string
 
 
@@ -14,6 +15,8 @@ dict_alph = [
     "Ааӓәӛ", "Бб", "Вв", "Гг", "Дд", "ЕеЁё", "Жж", "Зз", "Ии", "Йй", "Кк", "Лл", "Мм", "Нн", "Ӈӈ",
     "ОоӦӧӨө", "Пп", "Рр", "Сс", "Тт", "УуӰӱ", "Фф", "Хх", "Цц", "Чч", "Шш", "Щщ", "Ъъ", "Ыы", "Ьь", "Ээ", "Юю", "Яя"
 ]
+
+checker = is_russian.Checker(import_op=False)
 
 
 def here_or_btw(prev, char):
@@ -58,6 +61,18 @@ def option_entities_connect(a, b):
         return a + b, True
     else:
         return a, False
+
+
+def entry_title_norus_check(entry_title):
+    if len(entry_title) >= 4:
+        chars2check = ["ь"]
+        for ch in chars2check:
+            if ch in entry_title:
+                cr = checker.check(entry_title)
+                if cr:
+                    return False
+                break
+    return True
 
 
 class CharHeader(Pattern):
@@ -111,10 +126,18 @@ class EntryTitleTr(Tracker):
         try:
             if self.next().startswith("/"):
                 return False
+
+            if not entry_title_norus_check(self.current()):
+                return False
+
             pe = self.parser.get(1)
             lb_tests = False  # ?
             if pe.pattern.object_type in ["MeaningEntity", "OptionEntity", "UsageExample", "OptionUsageExample"]:
-                etp = self.parser.get(1, condition=lambda o: o.pattern.object_type == "EntryTitle")
+                etp = self.parser.get(
+                    1,
+                    condition=lambda o: o.pattern.object_type == "EntryTitle" and not
+                    o.pattern.properties.property_exists("after-comma")
+                )
                 cetp = len(etp.content.split()) - len(self.current().split())
                 if not cetp:
                     return a_gt_b(self.current(), etp.content) and here_or_btw(etp.content[0], self.current()[0])
@@ -126,6 +149,8 @@ class EntryTitleTr(Tracker):
                         ]
                     ) and here_or_btw(etp.content[0], self.current()[0])
             elif pe.pattern.object_type == "EntryTitleComma":
+                self.pattern.properties = PatternProperties()
+                self.pattern.properties.add_property('after-comma')
                 return True
             elif pe.pattern.object_type in ["CharHeader"]:
                 return True
@@ -407,10 +432,24 @@ class OptionSlashTr(Tracker):
     def __init__(self, *args):
         Tracker.__init__(self, *args)
         self.pattern = OptionSlash()
-        self.extractor = CharSequenceString("/")
+        char_string = r"'\-\.°ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ’"
+        self.extractor = RegexString(r"/|[" + char_string + r"]+[°\*][" + char_string + r"]*")
 
     def track(self):
-        return True
+        if self.current()[0] != "/":
+            try:
+                pe = self.parser.get(1)
+                if pe.pattern.object_type == "MeaningEntity":
+                    self.pattern.properties = PatternProperties()
+                    self.pattern.properties.add_property("is-entity")
+                    self.pattern.properties.add_property("option-related")
+                    return True
+                else:
+                    return False
+            except AttributeError:
+                return False
+        else:
+            return True
 
 
 class OptionIndex(Pattern):
@@ -418,7 +457,7 @@ class OptionIndex(Pattern):
         Pattern.__init__(
             self,
             "OptionIndex",
-            Accept().add_default(connect=False, insert=False),
+            Accept().add_default(connect=True, insert=False),
             Attach().add_default(connect=True, insert=False)
         )
         self.focus_on = lambda p, c: p.get(condition=lambda o: o.pattern.object_type == "OptionSlash")
@@ -453,6 +492,8 @@ class OptionEntity(Pattern):
             ),
             Attach().add_default(connect=True, insert=False).add_option(
                 muskrat.filters.by_type("OptionEntity"), connect=False, insert=True
+            ).add_option(
+                muskrat.filters.by_type("OptionIndex"), connect=True, insert=False
             ),
             focus_on=lambda p, c: p.get(condition=lambda o: o.pattern.object_type in ["OptionIndex", "OptionSlash"])
         )
@@ -621,20 +662,44 @@ class CasualCharsTr(Tracker):
         return True
 
 
+client = parser_client.ParserClient()
+use_client = False
+
 parser = Parser()
 
-text = open('balandin_vakhr.txt', 'r', encoding='utf-8').read()
-text = text.replace("\ufeff", "")
+if use_client:
+    text = client.get_text()
+    allocator = Allocator(text, WhitespaceVoid(), parser)
+    allocator.end_position = client.end_position
+    try:
+        allocator.start()
+    except muskrat.allocator.CannotMoveRight as parser_msg:
+        tree = muskrat.txt_tree_generator.TXTTree(parser.objects)
+        tree.build()
+        print('===')
+        print(parser_msg)
+        print('===')
+        client.scan_error(parser_msg, allocator.units, parser)
+else:
+    text = open('balandin_vakhr.txt', 'r', encoding='utf-8').read()
+    text = text.replace("\ufeff", "")
+    allocator = Allocator(text, WhitespaceVoid(), parser)
+    allocator.end_position = 1500
+    try:
+        allocator.start()
+    except muskrat.allocator.CannotMoveRight as parser_msg:
+        tree = muskrat.txt_tree_generator.TXTTree(parser.objects)
+        tree.build()
+        print('===')
+        print(parser_msg)
+        print('===')
+        print(allocator.units[-10:])
 
-allocator = Allocator(text, WhitespaceVoid(), parser)
-allocator.end_position = 840
-
-try:
-    allocator.start()
-except muskrat.allocator.CannotMoveRight as parser_msg:
-    print(parser_msg)
-    print(allocator.units[-10:])
-    print(len(allocator.units))
-
-tree = muskrat.txt_tree_generator.TXTTree(parser.objects)
-tree.build()
+#options_superior = TrackerBox(["OptionEntity"], {"OptionEntity": 0})
+#allocator.tracker_boxes.append(options_superior)
+#allocator.end_position = 840
+#print(parser_msg)
+#print(allocator.units[-10:])
+#print(len(allocator.units))
+#tree = muskrat.txt_tree_generator.TXTTree(parser.objects)
+#tree.build()
