@@ -703,3 +703,5 @@ else:
 #print(len(allocator.units))
 #tree = muskrat.txt_tree_generator.TXTTree(parser.objects)
 #tree.build()
+tree = muskrat.txt_tree_generator.TXTTree(parser.objects)
+tree.build()
