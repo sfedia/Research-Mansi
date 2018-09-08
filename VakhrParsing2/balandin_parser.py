@@ -549,6 +549,7 @@ class OptionEntityTr(Tracker):
                     return False
                 return True
             if self.parser.get(1).pattern.object_type == "OptionEntity":
+                return True
             if self.parser.get(1).pattern.object_type == "OptionUsageExample":
                 return False
             return True
@@ -686,7 +687,5 @@ allocator.tracker_boxes.append(et_superior)
 #print(parser_msg)
 #print(allocator.units[-10:])
 #print(len(allocator.units))
-#tree = muskrat.txt_tree_generator.TXTTree(parser.objects)
-#tree.build()
 tree = muskrat.txt_tree_generator.TXTTree(parser.objects)
 tree.build()
