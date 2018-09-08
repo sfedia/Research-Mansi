@@ -527,6 +527,18 @@ class OptionEntityTr(Tracker):
             "'-.°ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ’"
         )
 
+        def option_entity_lookbehind(left, fe, pv, p, a):
+            a_entity, b_entity = fe.content, left
+            concat = OptionEntitiesCompare(a_entity, b_entity)
+            cct, concat_works = concat.connect()
+            print(a_entity, b_entity, '->', concat_works)
+            if concat_works:
+                return left
+            else:
+                return " " + left
+
+        self.insertion_hook = option_entity_lookbehind
+
     def track(self):
         try:
             if not option_related(self.parser):
