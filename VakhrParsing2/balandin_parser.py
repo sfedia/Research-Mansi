@@ -506,6 +506,17 @@ class OptionEntity(Pattern):
         )
         self.properties = PatternProperties()
         self.properties.add_property("option-related")
+        self.insertion_prepend_value = True
+
+        def option_entity_conditions_wrap(props):
+            def option_entity_conditions(p, c):
+                return p.get(
+                    condition=lambda o: props.property_exists("insertable") and o.pattern.object_type == "OptionEntity"
+                    or o.pattern.object_type in ["OptionIndex", "OptionSlash"]
+                )
+            return option_entity_conditions
+
+        self.focus_on = option_entity_conditions_wrap(self.properties)
 
 
 class OptionEntityTr(Tracker):
