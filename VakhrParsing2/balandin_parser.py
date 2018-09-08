@@ -236,7 +236,7 @@ class IndexMarker(Pattern):
             "IndexMarker",
             Accept().add_default(connect=True, insert=False),
             Attach().add_option(
-                muskrat.filters.by_type("EntryTitle"), connect=True, insert=False
+                by_type("EntryTitle"), connect=True, insert=False
             ).add_default(connect=False, insert=False)
         )
         self.focus_on = lambda p, c: p.get(condition=lambda o: o.pattern.object_type == "EntryTitle")
@@ -321,9 +321,9 @@ class MeaningEntity(Pattern):
             Accept().add_default(
                 connect=False, insert=False
             ).add_option(
-                muskrat.filters.by_type("MeaningEntity"), connect=False, insert=True
+                by_type("MeaningEntity"), connect=False, insert=True
             ).add_option(
-                LogicalOR(muskrat.filters.by_type("UsageExample"), muskrat.filters.by_type("MeaningPunct")),
+                LogicalOR(by_type("UsageExample"), by_type("MeaningPunct")),
                 connect=True, insert=False
             ),
             Attach().add_default(connect=True, insert=True)  # insert=True?
@@ -494,14 +494,15 @@ class OptionEntity(Pattern):
             self,
             "OptionEntity",
             Accept().add_default(connect=False, insert=False).add_option(
-                muskrat.filters.by_type("OptionEntity"), connect=False, insert=True
+                by_type("OptionEntity"), connect=False, insert=True
             ),
             Attach().add_default(connect=True, insert=False).add_option(
-                muskrat.filters.by_type("OptionEntity"), connect=False, insert=True
+                LogicalAND(by_type("OptionEntity"), LogicalNOT(by_property("insertable"))), connect=False, insert=False
             ).add_option(
-                muskrat.filters.by_type("OptionIndex"), connect=True, insert=False
-            ),
-            focus_on=lambda p, c: p.get(condition=lambda o: o.pattern.object_type in ["OptionIndex", "OptionSlash"])
+                LogicalAND(by_type("OptionEntity"), by_property("insertable")), connect=False, insert=True
+            ).add_option(
+                by_type("OptionIndex"), connect=True, insert=False
+            )
         )
         self.properties = PatternProperties()
         self.properties.add_property("option-related")
