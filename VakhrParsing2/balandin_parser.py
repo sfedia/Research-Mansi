@@ -53,15 +53,20 @@ def ngram_a_gt_b(a_ngram, b_ngram, a_next):
     return False
 
 
-def option_entities_compare(a, b):
-    return len(b) > 0.13*len(a)*len(a)
+class OptionEntitiesCompare:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
 
+    @staticmethod
+    def compare(a, b):
+        return len(b) > 0.13 * len(a) * len(a)
 
-def option_entities_connect(a, b):
-    if not option_entities_compare(a, b) or not option_entities_compare(b, a):
-        return a + b, True
-    else:
-        return a, False
+    def connect(self):
+        if not self.compare(self.a, self.b) or not self.compare(self.b, self.a):
+            return self.a + self.b, True
+        else:
+            return self.a, False
 
 
 def entry_title_norus_check(entry_title):
