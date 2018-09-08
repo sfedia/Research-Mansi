@@ -4,6 +4,7 @@ import is_russian
 import muskrat
 from muskrat.parser import *
 from muskrat.allocator import *
+from muskrat.filters import *
 from muskrat.connectivity import Accept, Attach
 import parser_client
 import string
