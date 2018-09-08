@@ -695,6 +695,8 @@ else:
         print('===')
         print(allocator.units[-10:])
 
+et_superior = TrackerBox(["EntryTitle", "OptionEntity"], {"EntryTitle": 0, "OptionEntity": 1})
+allocator.tracker_boxes.append(et_superior)
 #options_superior = TrackerBox(["OptionEntity"], {"OptionEntity": 0})
 #allocator.tracker_boxes.append(options_superior)
 #allocator.end_position = 840
