@@ -6,6 +6,7 @@ from muskrat.parser import *
 from muskrat.allocator import *
 from muskrat.filters import *
 from muskrat.connectivity import Accept, Attach
+import json
 import parser_client
 import string
 
@@ -13,11 +14,14 @@ import string
 vakhr_alphabet = "АаӓәӛБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнӇӈОоӦӧӨөПпРрСсТтУуӰӱФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя’'°-."
 
 dict_alph = [
-    "Ааӓәӛ", "Бб", "Вв", "Гг", "Дд", "ЕеЁё", "Жж", "Зз", "Ии", "Йй", "Кк", "Лл", "Мм", "Нн", "Ӈӈ",
-    "ОоӦӧӨө", "Пп", "Рр", "Сс", "Тт", "УуӰӱ", "Фф", "Хх", "Цц", "Чч", "Шш", "Щщ", "Ъъ", "Ыы", "Ьь", "Ээ", "Юю", "Яя"
+    "Ааӓ", "Бб", "Вв", "Гг", "Дд", "ЕеЁё", "Жж", "Зз", "Ии", "Йй", "Кк", "Лл", "Мм", "Нн", "Ӈӈ",
+    "ОоӦӧӨө", "Пп", "Рр", "Сс", "Тт", "УуӰӱ", "Фф", "Хх", "Цц", "Чч", "Шш", "Щщ", "Ъъ", "Ыы", "Ьь", "Ээ", "Юю", "Яя",
+    "әӛ"
 ]
 
 checker = is_russian.Checker(import_op=False)
+
+bigrams = eval(open("bigrams1.txt").read())
 
 
 def here_or_btw(prev, char):
@@ -36,8 +40,17 @@ def a_gt_b(a, b):
     for pct in punct:
         a = a.replace(pct, "")
         b = b.replace(pct, "")
+
+    if len(a) >= 5 and b.startswith(a):
+        return True
+
     if len(a) == len(b) == 1 and a.lower() == b.lower():
         return False
+    try:
+        if len(a) == 1 and len(b) != 1 and get_char_address(a) == get_char_address(b[0]):
+            return False
+    except ValueError:
+        pass
     return a == sorted(
         [a, b], key=lambda word: [(vakhr_alphabet.index(c) if c in vakhr_alphabet else -1) for c in word]
     )[1]
@@ -51,6 +64,79 @@ def ngram_a_gt_b(a_ngram, b_ngram, a_next):
         if a_gt_b(a_ngram, b_ngram):
             return True
     return False
+
+
+def get_char_address(char):
+    for n, group in enumerate(dict_alph):
+        if char in group:
+            return n
+    raise ValueError()
+
+
+def get_bigram_address(ngram):
+    if len(ngram) < 2:
+        raise ValueError()
+    bigram_address = []
+    for x in range(2):
+        bigram_address.append(get_char_address(ngram[x]))
+    return tuple(bigram_address)
+
+
+class BigramIterator:
+    def __iter__(self):
+        return self
+
+    def __init__(self, address):
+        self.address = list(address)
+        self.address[1] += 1
+        self.minus_b = True
+
+    def minimize_a(self):
+        a, b = self.address
+        if not a:
+            raise StopIteration
+        else:
+            self.address[0] -= 1
+
+    def __next__(self):
+        a, b = self.address
+        if b:
+            self.address[1] -= 1
+        else:
+            self.minimize_a()
+            self.address[1] = len(dict_alph) - 1
+        return tuple(self.address)
+
+
+def ngram_in_row(a_ngram, b_ngram):
+    try:
+        a_address = get_bigram_address(a_ngram)
+        b_address = get_bigram_address(b_ngram)
+    except ValueError:
+        return True
+    try:
+        a_index = None
+        b_index = None
+        for a in BigramIterator(a_address):
+            try:
+                a_index = bigrams.index(a)
+                break
+            except ValueError:
+                pass
+        for b in BigramIterator(b_address):
+            try:
+                b_index = bigrams.index(b)
+                break
+            except ValueError:
+                pass
+        if a_index is None or b_index is None:
+            return True
+        if b_index - a_index > 1:
+            return False
+        else:
+            return True
+    except ValueError:
+        return True
 
 
 class OptionEntitiesCompare:
@@ -136,6 +222,9 @@ class EntryTitleTr(Tracker):
             if not entry_title_norus_check(self.current()):
                 return False
 
+            if self.current().startswith("-"):
+                return False
+
             pe = self.parser.get(1)
             lb_tests = False  # ?
             if pe.pattern.object_type in ["MeaningEntity", "OptionEntity", "UsageExample", "OptionUsageExample"]:
@@ -146,14 +235,15 @@ class EntryTitleTr(Tracker):
                 )
                 cetp = len(etp.content.split()) - len(self.current().split())
                 if not cetp:
-                    return a_gt_b(self.current(), etp.content) and here_or_btw(etp.content[0], self.current()[0])
+                    return a_gt_b(self.current(), etp.content) and here_or_btw(etp.content[0], self.current()[0]) and \
+                        ngram_in_row(etp.content, self.current())
                 else:
                     return ngram_a_gt_b(
                         self.current(), etp.content, [
                             self.next(k + 1) for k in range(cetp)
                             if re.search(r'[А-ЯЁа-яё]', self.next(k + 1))
                         ]
-                    ) and here_or_btw(etp.content[0], self.current()[0])
+                    ) and here_or_btw(etp.content[0], self.current()[0]) and ngram_in_row(etp.content, self.current())
             elif pe.pattern.object_type == "EntryTitleComma":
                 self.pattern.properties = PatternProperties()
                 self.pattern.properties.add_property('after-comma')
@@ -170,7 +260,10 @@ class EntryTitleTr(Tracker):
                     elif pel == ptl:
                         return pt.content == pe.content
                     else:
-                        return a_gt_b(self.current(), pt.content.split()[pel - ptl])
+                        if a_gt_b(self.current(), pt.content.split()[pel - ptl]):
+                            check = checker.check(self.current())
+                            return check is None
+                        return False
                 except AttributeError:
                     return False
             else:
@@ -524,7 +617,7 @@ class OptionEntityTr(Tracker):
         Tracker.__init__(self, *args)
         self.pattern = OptionEntity()
         self.extractor = CharString(
-            "'-.°ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ’"
+            "'-.°*ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ’"
         )
 
         def option_entity_lookbehind(left, fe, pv, p, a):
@@ -668,9 +761,11 @@ else:
     text = open('balandin_vakhr.txt', 'r', encoding='utf-8').read()
     text = text.replace("\ufeff", "")
     allocator = Allocator(text, WhitespaceVoid(), parser)
-    allocator.end_position = 1500
+    allocator.end_position = 15000
     try:
         allocator.start()
+        tree = muskrat.txt_tree_generator.TXTTree(parser.objects)
+        tree.build()
     except muskrat.allocator.CannotMoveRight as parser_msg:
         tree = muskrat.txt_tree_generator.TXTTree(parser.objects)
         tree.build()
@@ -687,5 +782,3 @@ allocator.tracker_boxes.append(et_superior)
 #print(parser_msg)
 #print(allocator.units[-10:])
 #print(len(allocator.units))
-tree = muskrat.txt_tree_generator.TXTTree(parser.objects)
-tree.build()
