@@ -4,8 +4,10 @@ import is_russian
 import muskrat
 from muskrat.parser import *
 from muskrat.allocator import *
-from muskrat.filters import *
 from muskrat.connectivity import Accept, Attach
+from muskrat.filters import *
+from muskrat.xml_generator import *
+import os
 import json
 import parser_client
 import string
@@ -233,6 +235,14 @@ class EntryTitleTr(Tracker):
                     condition=lambda o: o.pattern.object_type == "EntryTitle" and not
                     o.pattern.properties.property_exists("after-comma")
                 )
+
+                if pe.pattern.object_type == "UsageExample":
+                    a_part = re.sub(r"[’\'°\-\.]", '', self.current().split()[0].strip(''))
+                    b_part = re.sub(r"[’\'°\-\.]", '', etp.content.strip('’\'°-.')[:4])
+
+                    if len(a_part) >= 4 and a_part.startswith(b_part):
+                        return False
+
                 cetp = len(etp.content.split()) - len(self.current().split())
                 if not cetp:
                     return a_gt_b(self.current(), etp.content) and here_or_btw(etp.content[0], self.current()[0]) and \
@@ -707,11 +717,12 @@ class OptionUsageExampleTr(Tracker):
                     and self.current()[0].istitle() and not self.parser.get(2).content[0].istitle():
                 return True
             elif self.parser.get(1).pattern.object_type == "OptionUsageExample":
-                # should be sophisticated condition group (?)
-                if re.search(r'[!\?\.]$', self.parser.get(1).content):
+                # ???
+                """if re.search(r'[!\?\.]$', self.parser.get(1).content):
                     return False
                 else:
-                    return True
+                    return True"""
+                return True
             else:
                 return False
         except AttributeError:
@@ -741,6 +752,7 @@ class CasualCharsTr(Tracker):
 
 client = parser_client.ParserClient()
 use_client = False
+save_json = False
 
 parser = Parser()
 
@@ -767,6 +779,20 @@ else:
         tree = muskrat.txt_tree_generator.TXTTree(parser.objects)
         tree.build()
     except muskrat.allocator.CannotMoveRight as parser_msg:
+        if save_json:
+            def json_parsing_object(parsing_object):
+                return {
+                    "content": parsing_object.content,
+                    "properties": parsing_object.pattern.properties.dict_properties(None),
+                    "childs": [json_parsing_object(o) for o in parsing_object.connected_objects]
+                }
+
+            psn = len(os.listdir('parsed_segments'))
+            with open("parsed_segments/segment_%d.json" % psn, "w") as new_segment:
+                new_segment.write(
+                    json.dumps([json_parsing_object(o) for o in parser.objects], indent=2)
+                )
+                new_segment.close()
         tree = muskrat.txt_tree_generator.TXTTree(parser.objects)
         tree.build()
         print('===')
