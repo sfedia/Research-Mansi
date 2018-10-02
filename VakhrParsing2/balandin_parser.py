@@ -230,6 +230,14 @@ class EntryTitleTr(Tracker):
             pe = self.parser.get(1)
             lb_tests = False  # ?
             if pe.pattern.object_type in ["MeaningEntity", "OptionEntity", "UsageExample", "OptionUsageExample"]:
+                if pe.pattern.object_type == "OptionUsageExample":
+                    osl = self.parser.get(condition=lambda o: o.pattern.object_type == "OptionSlash")
+                    entities = XMLQuery([osl] + osl.connected_objects).root.xpath(
+                        "//*/object[@type='OptionEntity']|//*/object[@is-entity]"
+                    )
+                    if self.current() in [o.content for o in entities]:
+                        return False
+
                 etp = self.parser.get(
                     1,
                     condition=lambda o: o.pattern.object_type == "EntryTitle" and not
@@ -504,7 +512,7 @@ class UsageExampleTr(Tracker):
         Tracker.__init__(self, *args)
         self.pattern = UsageExample()
         self.extractor = CharString(
-            "?!.,-()ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ—"
+            "?!.,’-()ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ—"
         )
 
     def track(self):
