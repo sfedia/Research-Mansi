@@ -111,6 +111,8 @@ class BigramIterator:
 
 
 def ngram_in_row(a_ngram, b_ngram):
+    if len(a_ngram) == 1 or len(b_ngram) == 1:
+        return False
     try:
         a_address = get_bigram_address(a_ngram)
         b_address = get_bigram_address(b_ngram)
@@ -188,7 +190,7 @@ class CharHeaderTr(Tracker):
 
     def track(self):
         try:
-            return self.parser.get(1).pattern.object_type != "UsageExample"
+            return self.parser.get(1).pattern.object_type not in ["UsageExample", "MeaningPunct", "OptionPunct"]
         except AttributeError:
             return True
 
@@ -214,7 +216,7 @@ class EntryTitleTr(Tracker):
     def __init__(self, *args):
         Tracker.__init__(self, *args)
         self.pattern = EntryTitle()
-        self.extractor = CharString("-ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ")
+        self.extractor = CharString("-ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓӦӧӨөӰӱ")
 
     def track(self):
         try:
@@ -238,6 +240,9 @@ class EntryTitleTr(Tracker):
                     if self.current() in [o.content for o in entities]:
                         return False
 
+                if pe.pattern.properties.property_exists("left-parenthesis"):
+                    return False
+
                 etp = self.parser.get(
                     1,
                     condition=lambda o: o.pattern.object_type == "EntryTitle" and not
@@ -245,6 +250,12 @@ class EntryTitleTr(Tracker):
                 )
 
                 if pe.pattern.object_type == "UsageExample":
+                    entities = XMLQuery([etp] + etp.connected_objects).root.xpath(
+                        "//*/object[@type='EntryTitle']"
+                    )
+                    if self.current() in [o.content for o in entities]:
+                        return False
+
                     a_part = re.sub(r"[’\'°\-\.]", '', self.current().split()[0].strip(''))
                     b_part = re.sub(r"[’\'°\-\.]", '', etp.content.strip('’\'°-.')[:4])
 
@@ -387,14 +398,17 @@ class LexMarkerTr(Tracker):
         Tracker.__init__(self, *args)
         self.pattern = LexMarker()
         self.extractor = RegexString(
-            r'(анатом|арифм|арх|глаг|грам|кого-л|кого-н|межд|политич|посл|прист|союз|част|что-л|что-н)\.?'
+            r'(анатом|арифм|арх|глаг|грам|к.г.-л|кого-н|межд|политич|посл|прист|союз|част|чт.-л|чт.-н)\.?'
         )
         self.takes_all = True
 
     def track(self):
         try:
-            if self.parser.get(1).pattern.object_type == "IndexMarker":
+            pe = self.parser.get(1)
+            if pe.pattern.object_type == "IndexMarker":
                 self.pattern.properties.add_property("after-im")
+            if pe.pattern.object_type == "MeaningEntity":
+                return False
         except AttributeError:
             pass
         return True
@@ -436,6 +450,8 @@ class MeaningEntity(Pattern):
             ).add_option(
                 LogicalOR(by_type("UsageExample"), by_type("MeaningPunct")),
                 connect=True, insert=False
+            ).add_option(
+                by_type("LexMarkerDot"), connect=False, insert=True
             ),
             Attach().add_default(connect=True, insert=True)  # insert=True?
         )
@@ -453,6 +469,17 @@ class MeaningEntityTr(Tracker):
 
     def track(self):
         try:
+            lm_keywords = [
+                'анатом', 'арифм', 'арх', 'глаг', 'грам', 'к.г.-л', 'ког.-н', 'межд',
+                'политич', 'посл', 'прист', 'союз', 'част', 'чего-л', 'чт.-л', 'чт.-н', 'к.му-л'
+            ]
+            if re.search('|'.join(lm_keywords), self.current()):
+                self.pattern.properties = PatternProperties()
+                self.pattern.properties.add_property("lex-marker")
+            if "(" in self.current():
+                self.pattern.properties = PatternProperties()
+                self.pattern.properties.add_property("left-parenthesis")
+
             pe = self.parser.get(1)
             if pe.pattern.object_type in [
                 "LexMarker", "IndexMarker", "EntryTitle", "MeaningIndex", "MeaningEntity"
@@ -466,6 +493,31 @@ class MeaningEntityTr(Tracker):
                     return not self.current()[0].istitle()
             else:
                 return False
+        except AttributeError:
+            return False
+
+
+class LexMarkerDot(Pattern):
+    def __init__(self):
+        Pattern.__init__(
+            self,
+            "LexMarkerDot",
+            Accept().add_default(connect=False, insert=False),
+            Attach().add_default(connect=False, insert=False).add_option(
+                by_property("lex-marker"), connect=False, insert=True
+            )
+        )
+
+
+class LexMarkerDotTr(Tracker):
+    def __init__(self, *args):
+        Tracker.__init__(self, *args)
+        self.pattern = LexMarkerDot()
+        self.extractor = CharSequenceString(".")
+
+    def track(self):
+        try:
+            return self.parser.get(1).pattern.properties.property_exists("lex-marker")
         except AttributeError:
             return False
 
@@ -512,7 +564,7 @@ class UsageExampleTr(Tracker):
         Tracker.__init__(self, *args)
         self.pattern = UsageExample()
         self.extractor = CharString(
-            "?!.,’-()ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ—"
+            "?!.,’-()ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ—_"
         )
 
     def track(self):
@@ -781,11 +833,12 @@ else:
     text = open('balandin_vakhr.txt', 'r', encoding='utf-8').read()
     text = text.replace("\ufeff", "")
     allocator = Allocator(text, WhitespaceVoid(), parser)
-    allocator.end_position = 15000
+    allocator.end_position = 80000
     try:
         allocator.start()
         tree = muskrat.txt_tree_generator.TXTTree(parser.objects)
         tree.build()
+        raise muskrat.allocator.CannotMoveRight()
     except muskrat.allocator.CannotMoveRight as parser_msg:
         if save_json:
             def json_parsing_object(parsing_object):
