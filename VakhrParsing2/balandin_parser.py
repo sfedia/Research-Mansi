@@ -201,10 +201,14 @@ class EntryTitle(Pattern):
             self,
             "EntryTitle",
             Accept().add_default(connect=True, insert=True).add_option(
+                by_type("EntryTitle"), connect=False, insert=True
+            ).add_option(
+                LogicalAND(by_type("EntryTitle"), by_property("additional-title")), connect=True, insert=False
+            ).add_option(
                 by_type("MeaningEntity"), connect=True, insert=False
             ),
             Attach().add_default(connect=False, insert=False).add_option(
-                by_type("EntryTitle"), connect=False, insert=True
+                by_type("EntryTitle"), connect=True, insert=True
             ).add_option(
                 by_type("EntryTitleComma"), connect=True, insert=False
             )
@@ -216,20 +220,30 @@ class EntryTitleTr(Tracker):
     def __init__(self, *args):
         Tracker.__init__(self, *args)
         self.pattern = EntryTitle()
-        self.extractor = CharString("-ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓӦӧӨөӰӱ")
+        self.extractor = CharString("-ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓӦӧӨөӰӱ()")
 
     def track(self):
         try:
             if self.next().startswith("/"):
                 return False
 
-            if not entry_title_norus_check(self.current()):
-                return False
-
             if self.current().startswith("-"):
                 return False
 
             pe = self.parser.get(1)
+
+            if self.current().startswith("("):
+                if pe.pattern.object_type == "EntryTitle":
+                    self.pattern.properties.add_property("additional-title")
+                    return True
+                else:
+                    return False
+            elif "(" in self.current() or ")" in self.current():
+                return False
+
+            if not entry_title_norus_check(self.current()) and pe.pattern.object_type != "CharHeader":
+                return False
+
             lb_tests = False  # ?
             if pe.pattern.object_type in ["MeaningEntity", "OptionEntity", "UsageExample", "OptionUsageExample"]:
                 if pe.pattern.object_type == "OptionUsageExample":
@@ -274,7 +288,6 @@ class EntryTitleTr(Tracker):
                         ]
                     ) and here_or_btw(etp.content[0], self.current()[0]) and ngram_in_row(etp.content, self.current())
             elif pe.pattern.object_type == "EntryTitleComma":
-                self.pattern.properties = PatternProperties()
                 self.pattern.properties.add_property('after-comma')
                 return True
             elif pe.pattern.object_type in ["CharHeader"]:
@@ -470,14 +483,13 @@ class MeaningEntityTr(Tracker):
     def track(self):
         try:
             lm_keywords = [
-                'анатом', 'арифм', 'арх', 'глаг', 'грам', 'к.г.-л', 'ког.-н', 'межд',
-                'политич', 'посл', 'прист', 'союз', 'част', 'чего-л', 'чт.-л', 'чт.-н', 'к.му-л'
+                'анатом', 'арифм', 'арх', 'арифм', 'глаг', 'грам', 'к.г.-л', 'ког.-н', 'межд', 'како.-л',
+                'политич', 'посл', 'прист', 'союз', 'част', 'че.{1,2}-л', 'чт.-л', 'чт.-н', 'к.м.-[лн]',
+                '(от)?к.-?д.-л', 'гд.-л', 'р\.', 'п\.'
             ]
             if re.search('|'.join(lm_keywords), self.current()):
-                self.pattern.properties = PatternProperties()
                 self.pattern.properties.add_property("lex-marker")
             if "(" in self.current():
-                self.pattern.properties = PatternProperties()
                 self.pattern.properties.add_property("left-parenthesis")
 
             pe = self.parser.get(1)
@@ -602,14 +614,13 @@ class OptionSlashTr(Tracker):
         Tracker.__init__(self, *args)
         self.pattern = OptionSlash()
         char_string = r"'\-\.°ЁАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюяёӇӈӓәӛӦӧӨөӰӱ’"
-        self.extractor = RegexString(r"/|[" + char_string + r"]+[°\*][" + char_string + r"]*")
+        self.extractor = RegexString(r"[/']|[" + char_string + r"]+[°\*][" + char_string + r"]*")
 
     def track(self):
-        if self.current()[0] != "/":
+        if self.current()[0] not in ["/", "'"]:
             try:
                 pe = self.parser.get(1)
                 if pe.pattern.object_type == "MeaningEntity":
-                    self.pattern.properties = PatternProperties()
                     self.pattern.properties.add_property("is-entity")
                     self.pattern.properties.add_property("option-related")
                     return True
@@ -630,7 +641,6 @@ class OptionIndex(Pattern):
             Attach().add_default(connect=True, insert=False)
         )
         self.focus_on = lambda p, c: p.get(condition=lambda o: o.pattern.object_type == "OptionSlash")
-        self.properties = PatternProperties()
         self.properties.add_property("option-related")
 
 
@@ -667,7 +677,6 @@ class OptionEntity(Pattern):
                 by_type("OptionIndex"), connect=True, insert=False
             )
         )
-        self.properties = PatternProperties()
         self.properties.add_property("option-related")
         self.insertion_prepend_value = True
 
@@ -729,7 +738,6 @@ class OptionPunct(Pattern):
             Attach().add_default(connect=True, insert=False),
             focus_on=lambda p, c: p.get(condition=lambda o: o.pattern.object_type in ["OptionIndex", "OptionSlash"])
         )
-        self.properties = PatternProperties()
         self.properties.add_property("option-related")
 
 
@@ -757,7 +765,6 @@ class OptionUsageExample(Pattern):
                 condition=lambda o: o.pattern.object_type in ["OptionSlash", "OptionIndex", "OptionUsageExample"]
             )
         )
-        self.properties = PatternProperties()
         self.properties.add_property("option-related")
         self.insertion_prepend_value = True
 
@@ -843,13 +850,14 @@ else:
         if save_json:
             def json_parsing_object(parsing_object):
                 return {
+                    "type": parsing_object.pattern.object_type,
                     "content": parsing_object.content,
                     "properties": parsing_object.pattern.properties.dict_properties(None),
                     "childs": [json_parsing_object(o) for o in parsing_object.connected_objects]
                 }
 
-            psn = len(os.listdir('parsed_segments'))
-            with open("parsed_segments/segment_%d.json" % psn, "w") as new_segment:
+            psn = len(os.listdir('parsed_segments2'))
+            with open("parsed_segments2/segment_%d.json" % psn, "w") as new_segment:
                 new_segment.write(
                     json.dumps([json_parsing_object(o) for o in parser.objects], indent=2)
                 )
