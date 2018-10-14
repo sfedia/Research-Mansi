@@ -18,33 +18,22 @@ class ParserClient:
 
     def get_text(self):
         text = ("А\n" if self.start_char else "") + self.balandin_vakhr[self.start_char:]
+        print("-->", text[:20])
+        print("===")
         return text
 
     def get_char_position(self, regex_identifier, tokens_back=0):
         ri_found = re.search(regex_identifier, self.balandin_vakhr).start()
-        if tokens_back < 0:
-            ri_found -= 1
-            wsn_groups_count = -tokens_back
-            wsn_checked = 0
-            tkn_checked = 0
-            inside_wsn = False
-            inside_tkn = False
-            while wsn_checked < wsn_groups_count and wsn_checked != tkn_checked:
-                if self.balandin_vakhr[ri_found] in [" ", "\n"]:
-                    if inside_tkn:
-                        inside_tkn = False
-                    if not inside_wsn:
-                        wsn_checked += 1
-                        inside_wsn = True
-                else:
-                    if inside_wsn:
-                        inside_wsn = False
-                    if not inside_tkn:
-                        tkn_checked += 1
-                        inside_tkn = True
-                ri_found -= 1
-
-        return ri_found
+        if not tokens_back:
+            return ri_found
+        index_minus = 20
+        rim = ri_found - index_minus
+        while rim > 0 and len(re.split(r'[\n\s]', self.balandin_vakhr[rim:ri_found])) < -tokens_back \
+                and self.balandin_vakhr[rim-1] in [" ", "\n"]:
+            rim -= index_minus
+        field = self.balandin_vakhr[rim:ri_found]
+        tokens = field.split()
+        return re.search(re.escape(tokens[tokens_back]), field).start() + rim
 
     def scan_error(self, parser_msg, allocator_units, parser):
         self.save_objects(parser.objects)
