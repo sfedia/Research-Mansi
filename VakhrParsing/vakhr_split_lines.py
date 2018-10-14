@@ -4,7 +4,7 @@ import re
 import is_russian
 import string
 
-bal_vakhr = open('balandin_vakhr_5x.txt', encoding='utf-8').read().splitlines()
+bal_vakhr = open('balandin_vakhr_4.txt', encoding='utf-8').read().splitlines()
 checker = is_russian.Checker(import_op=False)
 len_bv = len(bal_vakhr)
 new_bv = []
@@ -17,7 +17,7 @@ class SplitString:
         self.src_str2split = self.str2split
         self.str2split = re.sub(r',(?!\s)', ', ', self.str2split)
         self.str2split = re.sub(r'\d+\.\s*', '', self.str2split)
-        self.symbols = [x for x in 'аӓбвгдеёжзийклмнӈоӧөпрстуӱфхцчшщъьыэәӛюя']
+        self.symbols = ''.join([x + x.upper() for x in 'аӓбвгдеёжзийклмнӈоӧөпрстуӱфхцчшщъьыэәӛюя'])
         self.next_lines = next_lines
         self.simplify = {
             #'ӓ': 'а',
@@ -235,7 +235,10 @@ class SplitString:
         if self.debug:
             print('Sorted:', srted)
         split_positions = []
-        null_index = [e for e, pair in enumerate(srted) if not pair[0]][0]
+        try:
+            null_index = [e for e, pair in enumerate(srted) if not pair[0]][0]
+        except IndexError:
+            return []
         try:
             title_sym = srted[null_index][1][0]
         except IndexError:
@@ -306,6 +309,8 @@ class SplitString:
         return new_split_positions
 
 
+FROM_LENGTH = -1
+
 if __name__ == "__main__":
     while True:
         #print(SplitString(input(), debug=True).get_split_positions())
@@ -317,9 +322,11 @@ if __name__ == "__main__":
             print(a.get_split_positions())
 
     print('lol')
-    vakhr_file = open('balandin_vakhr_5x.txt', encoding='utf-8-sig')
-    with open('balandin_vakhr_6a.txt', 'a', encoding='utf-8-sig') as bvs:
+    vakhr_file = open('balandin_vakhr_4.txt', encoding='utf-8-sig')
+    with open('balandin_vakhr_5.txt', 'a', encoding='utf-8-sig') as bvs:
         for e, line in enumerate(vakhr_file):
+            if FROM_LENGTH != -1 and len(line) < FROM_LENGTH:
+                continue
             split_positions = SplitString(line, debug=True).get_split_positions(recurrent=True)
             pos_integers = [(x if type(x) == int else x[0]) for x in split_positions]
             new_lines = []

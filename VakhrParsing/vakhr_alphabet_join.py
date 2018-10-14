@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import re
 import string
+import is_russian
 
 
 def extract_title(whole):
@@ -26,13 +27,13 @@ for e, line in enumerate(bal_vakhr):
         test_set = [extract_title(bal_vakhr[e - 1]), extract_title(line), extract_title(bal_vakhr[e + 1])]
 
     sorted_set = sorted(test_set, key=lambda word: [symbols.index(x) if x in symbols else -1 for x in word])
-    print(test_set, sorted_set)
-    if test_set != sorted_set:
+    print(test_set, '->', sorted_set, '=', test_set != sorted_set)
+    if test_set != sorted_set and True in [is_russian.Checker(False).check(x) for x in sorted_set]:
         new_bv[-1] += ' ' + line
         new_bv[-1] = re.sub(r'\s{2,}', ' ', new_bv[-1])
     else:
         new_bv.append(line)
 
-with open('balandin_vakhr_5x.txt', 'w', encoding='utf-8') as new_bv_file:
+with open('balandin_vakhr_5.txt', 'w', encoding='utf-8') as new_bv_file:
     new_bv_file.write("\n".join(new_bv))
     new_bv_file.close()

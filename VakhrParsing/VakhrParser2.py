@@ -125,8 +125,6 @@ post_buffer = ''
 bal_vakhr_lines = bal_vakhr.splitlines()
 len_vl = len(bal_vakhr_lines)
 
-def skip
-
 for e, line in enumerate(bal_vakhr_lines):
 
 

@@ -3,7 +3,7 @@
 import re
 import is_russian
 
-bal_vakhr = open('balandin_vakhr_3.txt', encoding='utf-8').read().splitlines()
+bal_vakhr = open('balandin_vakhr_6.txt', encoding='utf-8').read().splitlines()
 checker = is_russian.Checker(import_op=False)
 len_bv = len(bal_vakhr)
 new_bv = []
@@ -32,6 +32,6 @@ for e, line in enumerate(bal_vakhr):
     else:
         new_bv.append(line)
 
-with open('balandin_vakhr_4.txt', 'w', encoding='utf-8') as new_bv_file:
+with open('balandin_vakhr_6x.txt', 'w', encoding='utf-8') as new_bv_file:
     new_bv_file.write("\n".join(new_bv))
     new_bv_file.close()

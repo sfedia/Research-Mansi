@@ -3,7 +3,7 @@
 import re
 import string
 import itertools
-import mansi_stemmer.is_russian as is_russian
+import is_russian
 import json
 import sqlite3
 import time
@@ -11,7 +11,7 @@ import time
 
 class Stem:
     def __init__(self, save_cache=None):
-        self.bal_file = open('mansi_stemmer/dictionary.txt', encoding='utf-8-sig').read().splitlines()
+        self.bal_file = open('dictionary.txt', encoding='utf-8-sig').read().splitlines()
         self.token_index = {}
         self.r_checker = is_russian.Checker(import_op=False)
         self.save_cache = save_cache
@@ -25,7 +25,7 @@ class Stem:
                 pass
         else:
             self.cache_db_cursor = None
-        self.lozv = sqlite3.connect('mansi_stemmer/lozv.sqlite3')
+        self.lozv = sqlite3.connect('lozv.sqlite3')
         self.lozv_cursor = self.lozv.cursor()
         for e, line in enumerate(self.bal_file):
             for token in line.split():
@@ -100,23 +100,16 @@ class Stem:
         stems = {}
         for perm in del_perms:
             token_snapshot = token
-            dead_positions = []
-            inc_left = 0
-            inc_right = 0
             is_valid = True
             if perm:
                 for role, chars in perm:
                     if role == 'start_del' and token_snapshot.startswith(chars):
                         token_snapshot = token_snapshot[len(chars):]
-                        dead_positions += list([x + inc_left for x in range(0, len(chars) - 1)])
-                        inc_left += len(chars)
                     elif role == 'start_del':
                         is_valid = False
                         break
                     elif role == 'end_del' and token_snapshot.endswith(chars):
                         token_snapshot = token_snapshot[:-len(chars)]
-                        dead_positions += list([x for x in range(len(chars) - inc_right, len(chars) - inc_right)])
-                        inc_right -= len(chars)
                     elif role == 'end_del':
                         is_valid = False
                         break
