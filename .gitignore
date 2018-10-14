@@ -113,3 +113,4 @@ luima_seripos/dwl_json_txt/
 luima_seripos/test.py
 
 VakhrParsing/
+*.bat
