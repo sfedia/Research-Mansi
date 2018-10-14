@@ -105,3 +105,11 @@ venv.bak/
 russian_dict/
 test_dir/
 luima_seripos/downloaded/
+luima_seripos/pdf*
+luima_seripos/testing/
+luima_seripos/decoded_pdf/
+luima_seripos/db_json/
+luima_seripos/dwl_json_txt/
+luima_seripos/test.py
+
+VakhrParsing/
