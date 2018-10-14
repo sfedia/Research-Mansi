@@ -114,3 +114,6 @@ luima_seripos/test.py
 
 VakhrParsing/
 *.bat
+vakhr/batch.options-LAPTOP-2SHHCSGP.xml
+vakhr/_FRBatch.pac
+vakhr/_FRBatch-LAPTOP-2SHHCSGP.pac
