@@ -13496,7 +13496,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: Кивтэп
+      content: Кивтəп
       properties:
         option-related: null
       childs: []
@@ -13519,7 +13519,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: кивтха-тдх
+      content: кивтха-тəх
       properties:
         option-related: null
       childs: []
@@ -13558,7 +13558,7 @@
         option-related: null
       childs:
       - type: OptionEntity
-        content: кивэр
+        content: кивəр
         properties:
           option-related: null
         childs: []
@@ -13573,7 +13573,7 @@
         option-related: null
       childs:
       - type: OptionEntity
-        content: терэм
+        content: терəм
         properties:
           option-related: null
         childs: []
@@ -13600,7 +13600,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: ки-вэрнә
+      content: ки-вəрнә
       properties:
         option-related: null
       childs: []
@@ -13682,7 +13682,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: ки-вэрт
+      content: ки-вəрт
       properties:
         option-related: null
       childs: []
@@ -13720,7 +13720,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: кэнсдсл’ӓх
+      content: кəнсəсл’ӓх
       properties:
         option-related: null
       childs: []
@@ -13868,7 +13868,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: кәсгәл
+      content: кәсгәл'
       properties:
         option-related: null
       childs: []
@@ -14024,13 +14024,9 @@
     properties: {}
     childs: []
 - type: EntryTitle
-  content: киснэ
+  content: киснэ вармаль
   properties: {}
   childs:
-  - type: MeaningEntity
-    content: вармаль
-    properties: {}
-    childs: []
   - type: MeaningEntity
     content: пӧиск
     properties: {}
@@ -14098,13 +14094,9 @@
         option-related: null
       childs: []
 - type: EntryTitle
-  content: кисувлан
+  content: кисувлан суй
   properties: {}
   childs:
-  - type: MeaningEntity
-    content: суй
-    properties: {}
-    childs: []
   - type: MeaningEntity
     content: свист
     properties: {}
@@ -14153,7 +14145,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: кәюәй-л’ӓх
+      content: кәсәй-л’ӓх
       properties:
         option-related: null
       childs: []
@@ -14176,13 +14168,9 @@
         option-related: null
       childs: []
 - type: EntryTitle
-  content: кисхатнэ
+  content: кисхатнэ вармаль
   properties: {}
   childs:
-  - type: MeaningEntity
-    content: вармаль
-    properties: {}
-    childs: []
   - type: MeaningEntity
     content: ббыск
     properties: {}
@@ -14203,7 +14191,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: кЭнсәйхатнәӓщ
+      content: кəнсәйхатнәӓщ
       properties:
         option-related: null
       childs: []
@@ -14213,7 +14201,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: кәншхатдп
+      content: кәншхатəп
       properties:
         option-related: null
       childs: []
