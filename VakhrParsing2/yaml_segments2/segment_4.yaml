@@ -1,5 +1,5 @@
 - type: CharHeader
-  content: А
+  content: О
   properties: {}
   childs: []
 - type: EntryTitle
@@ -56,7 +56,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: вов-вөв-вов
+      content: вов-вов-вов
       properties:
         option-related: null
       childs: []
@@ -121,7 +121,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өвәм
+      content: овәм
       properties:
         option-related: null
       childs: []
@@ -139,7 +139,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өвс
+      content: овс
       properties:
         option-related: null
       childs: []
@@ -238,7 +238,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өйпәц
+      content: ойпәӈ
       properties:
         option-related: null
       childs: []
@@ -263,7 +263,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өйпәц
+      content: өйпәӈ
       properties:
         option-related: null
       childs: []
@@ -295,7 +295,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: нӓ°цктӓ°л’
+      content: нӓ°ӈктӓ°л’
       properties:
         option-related: null
       childs: []
@@ -315,12 +315,12 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: нӓ
+      content: нӓ°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: цктӓ°л’
+      content: ӈктӓ°л’
       properties:
         option-related: null
       childs: []
@@ -374,7 +374,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өвмитӓх
+      content: овмитӓх
       properties:
         option-related: null
       childs: []
@@ -431,7 +431,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өврә
+      content: оврә
       properties:
         option-related: null
       childs: []
@@ -462,7 +462,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өвтә
+      content: овтә
       properties:
         option-related: null
       childs: []
@@ -505,7 +505,7 @@
         option-related: null
       childs:
       - type: OptionEntity
-        content: пӓнйәп
+        content: па°нйәп
         properties:
           option-related: null
         childs: []
@@ -515,7 +515,7 @@
           option-related: null
         childs: []
       - type: OptionEntity
-        content: өвтән
+        content: овтән
         properties:
           option-related: null
         childs: []
@@ -545,7 +545,7 @@
           option-related: null
         childs: []
       - type: OptionEntity
-        content: овтәц
+        content: овтәӈ
         properties:
           option-related: null
         childs: []
@@ -568,7 +568,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өвтӓх
+      content: овтӓх
       properties:
         option-related: null
       childs: []
@@ -586,7 +586,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өвәмл’ӓх
+      content: овәмл’ӓх
       properties:
         option-related: null
       childs: []
@@ -614,7 +614,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өвәх
+      content: овәх
       properties:
         option-related: null
       childs: []
@@ -652,7 +652,7 @@
         option-related: null
       childs:
       - type: OptionEntity
-        content: өвл’
+        content: овл’
         properties:
           option-related: null
         childs: []
@@ -662,7 +662,7 @@
           option-related: null
         childs: []
       - type: OptionEntity
-        content: өвәл’
+        content: овәл’
         properties:
           option-related: null
         childs: []
@@ -722,7 +722,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өвәл’мӓтәх
+      content: овәл’мӓтәх
       properties:
         option-related: null
       childs: []
@@ -811,7 +811,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өвәл'-та°хтәх
+      content: овәл'-та°хтәх
       properties:
         option-related: null
       childs: []
@@ -833,7 +833,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өвәл'нпӓттәх
+      content: овәл'нпӓттәх
       properties:
         option-related: null
       childs: []
@@ -861,7 +861,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өвәл'нпӓтәх
+      content: овәл'нпӓтәх
       properties:
         option-related: null
       childs: []
@@ -871,7 +871,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: винөватәйх
+      content: виноватәйх
       properties:
         option-related: null
       childs: []
@@ -967,7 +967,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өвәл'тӓ°л'
+      content: овәл'тӓ°л'
       properties:
         option-related: null
       childs: []
@@ -1016,7 +1016,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өвәл'тӓ
+      content: овәл'та°
       properties:
         option-related: null
       childs: []
@@ -1047,7 +1047,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: овәл’-та°хтәйл'ӓл'әх
+      content: овәл’-та°хтәйл'ӓ°л'әх
       properties:
         option-related: null
       childs: []
@@ -1057,7 +1057,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өвәл'тӓх-тил'ӓ°л'әх
+      content: овәл'та°х-тил'ӓ°л'әх
       properties:
         option-related: null
       childs: []
@@ -1113,37 +1113,7 @@
         option-related: null
       childs: []
     - type: OptionUsageExample
-      content: А°м тӓв ма°сӓт л'ӓ°ттӓм. оиглаӈкве убежӓть, освобо-дйться
-      properties:
-        option-related: null
-      childs: []
-  - type: OptionSlash
-    content: /
-    properties:
-      option-related: null
-    childs:
-    - type: OptionEntity
-      content: оййәл’ӓх
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ','
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: ойил’ӓх
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ','
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: өйпәйл’ӓх
+      content: А°м тӓв ма°сӓт л'ӓ°тта°м. 
       properties:
         option-related: null
       childs: []
@@ -1186,13 +1156,9 @@
         option-related: null
       childs: []
 - type: EntryTitle
-  content: оигпан
+  content: оигпан овыл
   properties: {}
   childs:
-  - type: MeaningEntity
-    content: овыл
-    properties: {}
-    childs: []
   - type: MeaningEntity
     content: конёц
     properties: {}
@@ -1299,7 +1265,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: а°иәл’мӓ-тәх
+      content: а°йәл’мӓ-тәх
       properties:
         option-related: null
       childs: []
@@ -1309,7 +1275,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: ӓил’мӓтпәх
+      content: а°ил’мӓтәх
       properties:
         option-related: null
       childs: []
@@ -1319,7 +1285,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: ӓиәймӓ-пгдх
+      content: а°йәймӓ-тəх
       properties:
         option-related: null
       childs: []
@@ -1386,7 +1352,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: оийәл’ӓх
+      content: оййәл’ӓх
       properties:
         option-related: null
       childs: []
@@ -1414,18 +1380,14 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: хөж
+      content: хөм
       properties:
         option-related: null
       childs: []
 - type: EntryTitle
-  content: ойкатал
+  content: ойкатал хультуӈкве
   properties: {}
   childs:
-  - type: MeaningEntity
-    content: хультуӈкве
-    properties: {}
-    childs: []
   - type: MeaningEntity
     content: овдовёть
     properties: {}
@@ -1569,7 +1531,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: тел’өтӓ°л’дх
+      content: тел’əтӓ°л’əх
       properties:
         option-related: null
       childs: []
@@ -1587,7 +1549,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өйттӓх
+      content: ойттӓх
       properties:
         option-related: null
       childs: []
@@ -1597,7 +1559,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: тел'өтӓх
+      content: тел'əтӓх
       properties:
         option-related: null
       childs: []
@@ -1615,7 +1577,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: ойтхатэх
+      content: ойтхатəх
       properties:
         option-related: null
       childs: []
@@ -1625,7 +1587,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: тел’этӓхтэх
+      content: тел’əта°хтəх
       properties:
         option-related: null
       childs: []
@@ -1643,12 +1605,12 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өйтхатэйл'ӓ°
+      content: ойтхатəйл'ӓ°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: л’эх
+      content: л’əх
       properties:
         option-related: null
       childs: []
@@ -1658,7 +1620,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: ойтхатил'ӓ°л'эх
+      content: ойтхатил'ӓ°л'əх
       properties:
         option-related: null
       childs: []
@@ -1668,7 +1630,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: тел’ә-тӓхтәйл’ӓ°л'әх
+      content: тел’ә-та°хтәйл’ӓ°л'әх
       properties:
         option-related: null
       childs: []
@@ -1678,7 +1640,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: тел'ә-тӓхтил'ӓ°л’әх
+      content: тел'ә-та°хтил'ӓ°л’әх
       properties:
         option-related: null
       childs: []
@@ -1711,7 +1673,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өйтил’ӓ°л’әх
+      content: ойтил’ӓ°л’әх
       properties:
         option-related: null
       childs: []
@@ -1741,13 +1703,9 @@
         option-related: null
       childs: []
 - type: EntryTitle
-  content: олантан
+  content: олантан вармаль
   properties: {}
   childs:
-  - type: MeaningEntity
-    content: вармаль
-    properties: {}
-    childs: []
   - type: MeaningEntity
     content: существовӓ-ни
     properties: {}
@@ -1772,7 +1730,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өл’әнтӓп
+      content: ол’әнтӓп
       properties:
         option-related: null
       childs: []
@@ -1828,7 +1786,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өл’әсӓх
+      content: ол’әсӓх
       properties:
         option-related: null
       childs: []
@@ -1864,7 +1822,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өл’л’әйтӓх
+      content: ол’л’әйтӓх
       properties:
         option-related: null
       childs: []
@@ -1890,7 +1848,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өл'
+      content: ол'
       properties:
         option-related: null
       childs: []
@@ -1910,7 +1868,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өл’мәйтӓ°л’ил’ӓх
+      content: ол’мәйтӓ°л’ил’ӓх
       properties:
         option-related: null
       childs: []
@@ -1936,7 +1894,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өл’мәйтӓх
+      content: ол’мәйтӓх
       properties:
         option-related: null
       childs: []
@@ -1946,7 +1904,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өл’митӓх
+      content: ол’митӓх
       properties:
         option-related: null
       childs: []
@@ -1964,7 +1922,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өл'
+      content: ол'
       properties:
         option-related: null
       childs: []
@@ -1979,7 +1937,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өл’митӓп-тӓх
+      content: ол’митӓп-тӓх
       properties:
         option-related: null
       childs: []
@@ -2022,7 +1980,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өл’митӓптил’ӓ°л’әх
+      content: ол’митӓптил’ӓ°л’әх
       properties:
         option-related: null
       childs: []
@@ -2058,7 +2016,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өхщәкӓс
+      content: охщәкӓс
       properties:
         option-related: null
       childs: []
@@ -2068,7 +2026,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өхщә
+      content: охщә
       properties:
         option-related: null
       childs: []
@@ -2099,48 +2057,19 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: ке-рохщә
+      content: керохщә
       properties:
         option-related: null
       childs: []
     - type: OptionPunct
       content: ','
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionUsageExample
-      content: Ләгәнөхщә олныӈ дёнежный
-      properties:
-        option-related: null
-      childs: []
-  - type: OptionSlash
-    content: /
-    properties:
-      option-related: null
-    childs:
-    - type: OptionEntity
-      content: өхщән
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ','
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: өх-щәӈ
       properties:
         option-related: null
       childs: []
 - type: EntryTitle
-  content: олнэ
+  content: олнэ вармаль
   properties: {}
   childs:
-  - type: MeaningEntity
-    content: вармаль
-    properties: {}
-    childs: []
   - type: MeaningEntity
     content: жизнь
     properties: {}
@@ -2193,7 +2122,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: ол’кә-нӓк
+      content: ол’нә-нӓк
       properties:
         option-related: null
       childs: []
@@ -2203,7 +2132,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өл’нәнӓх
+      content: ол’нәнӓх
       properties:
         option-related: null
       childs: []
@@ -2239,7 +2168,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өл-тәйл’ӓх
+      content: ол-тәйл’ӓх
       properties:
         option-related: null
       childs: []
@@ -2293,7 +2222,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өлтӓх
+      content: олтӓх
       properties:
         option-related: null
       childs: []
@@ -2338,7 +2267,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өлти
+      content: олти
       properties:
         option-related: null
       childs: []
@@ -2485,7 +2414,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: кӓх
+      content: нӓх
       properties:
         option-related: null
       childs: []
@@ -2593,7 +2522,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: ол'пдн
+      content: ол'пəн
       properties:
         option-related: null
       childs: []
@@ -2602,18 +2531,8 @@
       properties:
         option-related: null
       childs: []
-    - type: OptionUsageExample
-      content: ОЛ'пдц
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ;
-      properties:
-        option-related: null
-      childs: []
     - type: OptionEntity
-      content: ОЛ'МдН
+      content: ОЛ'МəН
       properties:
         option-related: null
       childs: []
@@ -2641,7 +2560,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: '''ол''и'
+      content: ол'п
       properties:
         option-related: null
       childs: []
@@ -2651,7 +2570,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өл’м
+      content: ол’м
       properties:
         option-related: null
       childs: []
@@ -2664,12 +2583,12 @@
     properties: {}
     childs: []
   - type: OptionSlash
-    content: ''''
+    content: /
     properties:
       option-related: null
     childs:
     - type: OptionEntity
-      content: ол'птӓл’әйл’ӓх
+      content: ол'птä°л’әйл’ӓх
       properties:
         option-related: null
       childs: []
@@ -2679,7 +2598,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өл’п-тӓ°л’ил’ӓх
+      content: ол’п-тӓ°л’ил’ӓх
       properties:
         option-related: null
       childs: []
@@ -2689,7 +2608,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өл'
+      content: ол'
       properties:
         option-related: null
       childs: []
@@ -2704,7 +2623,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өл'мтӓ°л’ил’ӓх
+      content: ол'мтӓ°л’ил’ӓх
       properties:
         option-related: null
       childs: []
@@ -2722,7 +2641,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өл'птӓх
+      content: ол'птӓх
       properties:
         option-related: null
       childs: []
@@ -2868,7 +2787,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өнтәнтӓх
+      content: онтәнтӓх
       properties:
         option-related: null
       childs: []
@@ -2878,7 +2797,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: онтпәстӓх
+      content: онтәстӓх
       properties:
         option-related: null
       childs: []
@@ -2904,7 +2823,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өнтәп
+      content: онтәп
       properties:
         option-related: null
       childs: []
@@ -2990,7 +2909,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: онтәсталтәх
+      content: онтәста°хтәх
       properties:
         option-related: null
       childs: []
@@ -3111,7 +3030,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: октЭлов-пәщ
+      content: онтəлов-пәщ
       properties:
         option-related: null
       childs: []
@@ -3200,41 +3119,6 @@
           properties:
             option-related: null
           childs: []
-        - type: OptionEntity
-          content: ОНТОЛОВХОЙПЛОВИТ
-          properties:
-            option-related: null
-          childs: []
-        - type: OptionPunct
-          content: ','
-          properties:
-            option-related: null
-          childs: []
-        - type: OptionEntity
-          content: онтолов-хуйпловит
-          properties:
-            option-related: null
-          childs: []
-        - type: OptionEntity
-          content: девятнӓдцатый
-          properties:
-            option-related: null
-          childs: []
-      - type: OptionSlash
-        content: /
-        properties:
-          option-related: null
-        childs:
-        - type: OptionEntity
-          content: мотловнонтә
-          properties:
-            option-related: null
-          childs: []
-        - type: OptionEntity
-          content: ловәт
-          properties:
-            option-related: null
-          childs: []
 - type: EntryTitle
   content: онтсыл
   properties: {}
@@ -3301,51 +3185,6 @@
       childs: []
     - type: OptionPunct
       content: ;
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: кӓл’
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: онтсәл’
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: бколо
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: дӧма
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ','
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: йа
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: мӓнтәл’
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: возле
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: рекй
       properties:
         option-related: null
       childs: []
@@ -3506,7 +3345,7 @@
     properties: {}
     childs: []
   - type: OptionSlash
-    content: ''''
+    content: /
     properties:
       option-related: null
     childs:
@@ -3546,7 +3385,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өӈтәл’
+      content: оӈтәл’
       properties:
         option-related: null
       childs: []
@@ -3573,12 +3412,12 @@
         properties: {}
         childs: []
       - type: OptionSlash
-        content: ''''
+        content:  /
         properties:
           option-related: null
         childs:
         - type: OptionEntity
-          content: оӈ-хәк
+          content: оӈ-хән
           properties:
             option-related: null
           childs: []
@@ -3588,7 +3427,7 @@
             option-related: null
           childs: []
         - type: OptionEntity
-          content: оухәӈ
+          content: оӈхәӈ
           properties:
             option-related: null
           childs: []
@@ -3598,7 +3437,7 @@
             option-related: null
           childs: []
         - type: OptionEntity
-          content: охэн
+          content: охəн
           properties:
             option-related: null
           childs: []
@@ -3665,7 +3504,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: ӓпӓ
+      content: ӓпӓ°
       properties:
         option-related: null
       childs: []
@@ -3682,17 +3521,13 @@
     content: фамйлия
     properties: {}
     childs: []
-  - type: MeaningEntity
-    content: пӓмпл
-    properties: {}
-    childs: []
   - type: OptionSlash
-    content: ''''
+    content: /
     properties:
       option-related: null
     childs:
     - type: OptionEntity
-      content: -ийә
+      content: пӓмил'ийә
       properties:
         option-related: null
       childs: []
@@ -3724,12 +3559,12 @@
         properties: {}
         childs: []
       - type: OptionSlash
-        content: ''''
+        content: /
         properties:
           option-related: null
         childs:
         - type: OptionEntity
-          content: орщиие
+          content: орщйив
           properties:
             option-related: null
           childs: []
@@ -3762,12 +3597,12 @@
       left-parenthesis: null
     childs: []
   - type: OptionSlash
-    content: ''''
+    content: /
     properties:
       option-related: null
     childs:
     - type: OptionEntity
-      content: а
+      content: а°
       properties:
         option-related: null
       childs: []
@@ -3805,21 +3640,13 @@
     properties:
       left-parenthesis: null
     childs: []
-  - type: MeaningEntity
-    content: а
-    properties: {}
-    childs: []
-  - type: MeaningEntity
-    content: рвән
-    properties: {}
-    childs: []
   - type: OptionSlash
-    content: ''''
+    content: /
     properties:
       option-related: null
     childs:
     - type: OptionEntity
-      content: тӓн
+      content: а°рвəн'тӓн
       properties:
         option-related: null
       childs: []
@@ -3834,7 +3661,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: а
+      content: а°
       properties:
         option-related: null
       childs: []
@@ -3866,7 +3693,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: ареән'тӓх
+      content: а°рвән'тӓх
       properties:
         option-related: null
       childs: []
@@ -3879,12 +3706,12 @@
     properties: {}
     childs: []
   - type: OptionSlash
-    content: ''''
+    content: /
     properties:
       option-related: null
     childs:
     - type: OptionEntity
-      content: а
+      content: а°
       properties:
         option-related: null
       childs: []
@@ -3911,7 +3738,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: ӓрәйхатәх
+      content: а°рәйхатәх
       properties:
         option-related: null
       childs: []
@@ -3929,7 +3756,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: ӓрәйхатәйл’а
+      content: а°рәйхатәйл’а°
       properties:
         option-related: null
       childs: []
@@ -3944,7 +3771,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: ӓрәйхатил'ӓләх
+      content: а°рәйхатил'ӓ°л'әх
       properties:
         option-related: null
       childs: []
@@ -3973,7 +3800,7 @@
       properties: {}
       childs: []
   - type: OptionSlash
-    content: ''''
+    content: /
     properties:
       option-related: null
     childs:
@@ -3988,7 +3815,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: а
+      content: а°
       properties:
         option-related: null
       childs: []
@@ -4049,69 +3876,7 @@
           option-related: null
         childs: []
       - type: OptionUsageExample
-        content: Шкөлат пӱвәт ӓ с ӓ гәт ха°ӓ щтӓ° хта° т. ос (ӧс)
-        properties:
-          option-related: null
-        childs: []
-  - type: IndexMarker
-    content: II
-    properties: {}
-    childs:
-    - type: LexMarker
-      content: част.
-      properties:
-        after-im: null
-      childs: []
-    - type: MeaningEntity
-      content: тоже
-      properties: {}
-      childs:
-      - type: MeaningPunct
-        content: ','
-        properties: {}
-        childs: []
-    - type: MeaningEntity
-      content: тӓкже
-      properties: {}
-      childs:
-      - type: MeaningPunct
-        content: ','
-        properties: {}
-        childs: []
-    - type: MeaningEntity
-      content: опять
-      properties: {}
-      childs:
-      - type: MeaningPunct
-        content: ;
-        properties: {}
-        childs: []
-      - type: UsageExample
-        content: Ам ос рупитаӈкве таӈхегум. Я тоже хочӱ ра-бӧтать.
-        properties: {}
-        childs: []
-    - type: OptionSlash
-      content: /
-      properties:
-        option-related: null
-      childs:
-      - type: OptionEntity
-        content: ӓ
-        properties:
-          option-related: null
-        childs: []
-      - type: OptionEntity
-        content: с
-        properties:
-          option-related: null
-        childs: []
-      - type: OptionPunct
-        content: ;
-        properties:
-          option-related: null
-        childs: []
-      - type: OptionUsageExample
-        content: А' м ӓ с рөпт'-л’ӓх тӓ°ӈха°м (тӓӈха°м).
+        content: Шкөлат пӱвәт ӓ°с ӓ°гәт ха°н'щта°хта°
         properties:
           option-related: null
         childs: []
@@ -4155,7 +3920,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: он'щэл’тӓх
+      content: он'щəл’тӓх
       properties:
         option-related: null
       childs: []
@@ -4165,7 +3930,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: ощсәл-шӓх
+      content: ощсәлтӓх
       properties:
         option-related: null
       childs: []
@@ -4228,7 +3993,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өщсэл’тӓп-тӓх
+      content: ощсəл’тӓп-тӓх
       properties:
         option-related: null
       childs: []
@@ -4246,7 +4011,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: асәт
+      content: а°сәт
       properties:
         option-related: null
       childs: []
@@ -4256,7 +4021,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: ашәт
+      content: а°шәт
       properties:
         option-related: null
       childs: []
@@ -4301,13 +4066,9 @@
   properties: {}
   childs: []
 - type: EntryTitle
-  content: осма
+  content: осма хурыг
   properties: {}
   childs:
-  - type: MeaningEntity
-    content: хурыг
-    properties: {}
-    childs: []
   - type: MeaningEntity
     content: подушка
     properties: {}
@@ -4318,7 +4079,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: а
+      content: а°
       properties:
         option-related: null
       childs: []
@@ -4349,7 +4110,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: а
+      content: а°
       properties:
         option-related: null
       childs: []
@@ -4359,7 +4120,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: ӓ
+      content: ӓ°
       properties:
         option-related: null
       childs: []
@@ -4374,7 +4135,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
@@ -4405,12 +4166,12 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: а
+      content: а°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: снпӓт-тәйл'ӓ
+      content: снпӓт-тәйл'ӓ°
       properties:
         option-related: null
       childs: []
@@ -4425,12 +4186,12 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: ӓ
+      content: ӓ°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: снпӓттил'а
+      content: снпӓттил'а°
       properties:
         option-related: null
       childs: []
@@ -4445,7 +4206,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
@@ -4455,12 +4216,12 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: пӓттил'ӓ
+      content: пӓттил'ӓ°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: ләх
+      content: л'әх
       properties:
         option-related: null
       childs: []
@@ -4482,7 +4243,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: а
+      content: а°
       properties:
         option-related: null
       childs: []
@@ -4507,7 +4268,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: а
+      content: а°
       properties:
         option-related: null
       childs: []
@@ -4540,12 +4301,12 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: сӓ
+      content: сӓ°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: йттӓ
+      content: йттӓ°
       properties:
         option-related: null
       childs: []
@@ -4576,17 +4337,17 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: сӓ
+      content: сӓ°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: йттӓ
+      content: йттӓ°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: Лха
+      content: л'ха°
       properties:
         option-related: null
       childs: []
@@ -4613,7 +4374,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: а
+      content: а°
       properties:
         option-related: null
       childs: []
@@ -4628,7 +4389,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: а
+      content: а°
       properties:
         option-related: null
       childs: []
@@ -4669,7 +4430,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: хул'птӓ°л’әйЛӓ°-л’әх
+      content: хул'птӓ°л’әйл'ӓ°-л’әх
       properties:
         option-related: null
       childs: []
@@ -4679,7 +4440,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: хул'птӓ°ЛиЛӓ°ләх
+      content: хул'птӓ°л'ил'ӓ°л'әх
       properties:
         option-related: null
       childs: []
@@ -4810,7 +4571,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: ӓ°етәгәл’
+      content: ӓ°стәгәл’
       properties:
         option-related: null
       childs: []
@@ -4830,12 +4591,12 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: ӓ
+      content: ӓ°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: стө-вәл’
+      content: сто-вәл’
       properties:
         option-related: null
       childs: []
@@ -4845,7 +4606,7 @@
         option-related: null
       childs: []
     - type: OptionUsageExample
-      content: Щукәм, т'ӓ°т'әмтәл’ турт хул’пәйас?—ӓ сто-вәл’, мән ӓкӓт хул’пәйас-мән.
+      content: Щукәм, т'ӓ°т'әмтәл’ турт хул’пәйас?—ӓ°сто-вәл’, мән ӓкӓт хул’пәйас-мән.
       properties:
         option-related: null
       childs: []
@@ -4900,7 +4661,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: ӓ'схөм
+      content: ӓ°схөм
       properties:
         option-related: null
       childs: []
@@ -4910,7 +4671,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: ӓ
+      content: ӓ°
       properties:
         option-related: null
       childs: []
@@ -4925,85 +4686,8 @@
         option-related: null
       childs: []
     - type: OptionUsageExample
-      content: Тә л'өӈх ха щэй ӓ тэ-лгэт йалэсӓ т? — Асхөм, та°н ыгра тэ л'оӈхха щэй
-        н'а°рәйл’ӓ т. осхумле
-      properties:
-        option-related: null
-      childs: []
-  - type: LexMarker
-    content: межд.
-    properties: {}
-    childs:
-    - type: MeaningEntity
-      content: да
-      properties: {}
-      childs:
-      - type: MeaningPunct
-        content: ','
-        properties: {}
-        childs: []
-    - type: MeaningEntity
-      content: кокёчно
-      properties: {}
-      childs:
-      - type: MeaningPunct
-        content: ','
-        properties: {}
-        childs: []
-    - type: MeaningEntity
-      content: чегб
-      properties: {}
-      childs: []
-    - type: MeaningEntity
-      content: ж
-      properties: {}
-      childs: []
-    - type: MeaningEntity
-      content: ещё
-      properties: {}
-      childs:
-      - type: MeaningPunct
-        content: ;
-        properties: {}
-        childs: []
-      - type: UsageExample
-        content: Нина, исмит тох вараве? — Осхумле, ти-сирыл атыӈ исмит емти. Нйна,
-          ухӱ так вӓрят? — Ко-нёчно, так получӓется вкӱс-ная ухӓ.
-        properties: {}
-        childs: []
-  - type: OptionSlash
-    content: /
-    properties:
-      option-related: null
-    childs:
-    - type: OptionEntity
-      content: ӓ
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: схөлгл'әй
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ;
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionUsageExample
-      content: Нана, әсмәт' тох вӓ рӓвә? — А°с-хөмл'әй, төхал' ӓтән әс-мәт' йемтәй.
-        осъёмасулум до свидӓния
-      properties:
-        option-related: null
-      childs: []
-  - type: OptionSlash
-    content: /
-    properties:
-      option-related: null
-    childs:
-    - type: OptionEntity
-      content: йа°мсул’әм
+      content: Тә л'оӈх ха°щэй ӓ тəмəт йалəсӓ°т? — ӓ°схөм, та°н ыгра°тə л'оӈх ха°щəй
+        н'а°рәйл’ӓт. 
       properties:
         option-related: null
       childs: []
@@ -5012,11 +4696,7 @@
   properties: {}
   childs:
   - type: MeaningEntity
-    content: варуӈкве
-    properties: {}
-    childs: []
-  - type: MeaningEntity
-    content: попро-щӓться
+    content: до свидания
     properties: {}
     childs: []
   - type: OptionSlash
@@ -5025,26 +4705,16 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: йӓ°мсуЛәм
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: вӓ
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: рх
+      content: йа°мсул'әм
       properties:
         option-related: null
       childs: []
 - type: EntryTitle
-  content: осъёмасулум варыглалуӈкве
+  content: осъёмасулум варункве
   properties: {}
   childs:
   - type: MeaningEntity
-    content: прощӓться
+    content: попрощӓться
     properties: {}
     childs: []
   - type: MeaningEntity
@@ -5063,37 +4733,12 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: вӓ
+      content: вӓ°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: рәйл’ӓ
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: л’әх
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ','
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: йа°мсул’әм
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: вӓ°рилӓ
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: л’әх
+      content: рх
       properties:
         option-related: null
       childs: []
@@ -5204,7 +4849,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: а
+      content: а°
       properties:
         option-related: null
       childs: []
@@ -5235,7 +4880,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: а
+      content: а°
       properties:
         option-related: null
       childs: []
@@ -5250,7 +4895,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: а
+      content: а°
       properties:
         option-related: null
       childs: []
@@ -5273,7 +4918,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: а°сеН-сӓ°йтән
+      content: а°сен-сӓ°йтән
       properties:
         option-related: null
       childs: []
@@ -5283,7 +4928,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: ӓ
+      content: а°
       properties:
         option-related: null
       childs: []
@@ -5298,7 +4943,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: а°сәӈ-сӓ
+      content: а°сәӈ-сӓ°
       properties:
         option-related: null
       childs: []
@@ -5313,7 +4958,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: а
+      content: а°
       properties:
         option-related: null
       childs: []
@@ -5322,124 +4967,10 @@
       properties:
         option-related: null
       childs: []
-    - type: OptionEntity
-      content: осыӈ
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: тур
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: хрйплый
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ','
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: грӱбый
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: гбл'ос
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ;
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: бас
-      properties:
-        option-related: null
-      childs: []
-  - type: OptionSlash
-    content: /
-    properties:
-      option-related: null
-    childs:
-    - type: OptionEntity
-      content: а°сән
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: төр
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ','
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: а
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: шэп
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: төр
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ;
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: ӓ°сэӈ
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: төр
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ','
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: ӓ
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: шэӈ
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: төр
-      properties:
-        option-related: null
-      childs: []
 - type: EntryTitle
-  content: осыӈыг
+  content: осыӈыг хоюӈкве
   properties: {}
   childs:
-  - type: MeaningEntity
-    content: хоюӈкве
-    properties: {}
-    childs: []
   - type: MeaningEntity
     content: тяжело
     properties: {}
@@ -5454,7 +4985,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: а°сәкәй
+      content: а°сәнәй
       properties:
         option-related: null
       childs: []
@@ -5469,17 +5000,17 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: ӓ
+      content: а°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: шәпэй
+      content: шәнəй
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: хөйх
+      content: хойх
       properties:
         option-related: null
       childs: []
@@ -5494,7 +5025,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: хөйх
+      content: хойх
       properties:
         option-related: null
       childs: []
@@ -5557,7 +5088,7 @@
         option-related: null
       childs:
       - type: OptionEntity
-        content: стөйлэ
+        content: стойлə
         properties:
           option-related: null
         childs: []
@@ -5613,12 +5144,12 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: вӓ
+      content: ва°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: хэн'
+      content: хəн'
       properties:
         option-related: null
       childs: []
@@ -5644,7 +5175,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: ощмэрл’ӓх
+      content: ощмəрл’ӓх
       properties:
         option-related: null
       childs: []
@@ -5654,7 +5185,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: ха
+      content: ха°
       properties:
         option-related: null
       childs: []
@@ -5669,7 +5200,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: вахән'л’ӓх
+      content: ва°хән'л’ӓх
       properties:
         option-related: null
       childs: []
@@ -5695,7 +5226,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өщмәртӓ°л’
+      content: ощмәртӓ°л’
       properties:
         option-related: null
       childs: []
@@ -5705,7 +5236,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: ха°й-әртӓ°Л
+      content: ха°й-әртӓ°л'
       properties:
         option-related: null
       childs: []
@@ -5715,7 +5246,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: вӓхән'тӓ°л’
+      content: ва°хән'тӓ°л’
       properties:
         option-related: null
       childs: []
@@ -5771,7 +5302,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өщмәрәӈ
+      content: ощмәрәӈ
       properties:
         option-related: null
       childs: []
@@ -5817,7 +5348,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өщмәрәнхӓр
+      content: ощмәрәнхӓр
       properties:
         option-related: null
       childs: []
@@ -5877,7 +5408,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өщмәрхӓр
+      content: ощмәрха°р
       properties:
         option-related: null
       childs: []
@@ -6044,7 +5575,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: щэркә
+      content: щəркә
       properties:
         option-related: null
       childs: []
@@ -6054,12 +5585,12 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: рӓ
+      content: рӓ°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: с-кәх
+      content: с-нәх
       properties:
         option-related: null
       childs: []
@@ -6069,7 +5600,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: рӓ
+      content: рӓ°
       properties:
         option-related: null
       childs: []
@@ -6092,7 +5623,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: а
+      content: а°
       properties:
         option-related: null
       childs: []
@@ -6115,7 +5646,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: а
+      content: а°
       properties:
         option-related: null
       childs: []
@@ -6164,7 +5695,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: ва°хк'ән
+      content: ва°хн'ән
       properties:
         option-related: null
       childs: []
@@ -6184,7 +5715,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: вӓхн'әӈ
+      content: ва°хн'әӈ
       properties:
         option-related: null
       childs: []
@@ -6194,7 +5725,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өщху-л'әӈ
+      content: ощху-л'әӈ
       properties:
         option-related: null
       childs: []
@@ -6248,7 +5779,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: ва°-хән'Лӓх
+      content: ва°-хән'л'ӓх
       properties:
         option-related: null
       childs: []
@@ -6258,7 +5789,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өщхул'л’ӓх
+      content: ощхул'л’ӓх
       properties:
         option-related: null
       childs: []
@@ -6276,12 +5807,12 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: ва
+      content: ва°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: хән'тӓхтәх
+      content: хән'та°хтәх
       properties:
         option-related: null
       childs: []
@@ -6291,7 +5822,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: ощхул'-тӓхтәх
+      content: ощхул'-та°хтәх
       properties:
         option-related: null
       childs: []
@@ -6336,7 +5867,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: туЛп
+      content: тул'п
       properties:
         option-related: null
       childs: []
@@ -6393,17 +5924,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓ
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: кщәма
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: хтәх
+      content: пӓ°кщəма°хтəх
       properties:
         option-related: null
       childs: []
@@ -6413,7 +5934,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: удивл'айт-Лӓ°хтәх
+      content: удивл'айт-л'ӓ°хтәх
       properties:
         option-related: null
       childs: []
@@ -6431,12 +5952,12 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓ°к-щәтӓ°Ләх
+      content: пӓ°к-щәтӓ°л'әх
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: удивл'айтӓ°Ләх
+      content: удивл'айтӓ°л'әх
       properties:
         option-related: null
       childs: []
@@ -6518,7 +6039,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓ°к-щәтӓ
+      content: пӓ°к-щәта°
       properties:
         option-related: null
       childs: []
@@ -6533,7 +6054,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: удивл'айтӓ°х-тәх
+      content: удивл'айта°х-тәх
       properties:
         option-related: null
       childs: []
@@ -6587,7 +6108,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: ва°хәк'
+      content: ва°хән'
       properties:
         option-related: null
       childs: []
@@ -6644,7 +6165,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: вөтәйа°хтәх
+      content: вотәйа°хтәх
       properties:
         option-related: null
       childs: []
@@ -6654,12 +6175,12 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: вөт-й
+      content: вот-й
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: әлӓ°хтәх
+      content: әл'ӓ°хтәх
       properties:
         option-related: null
       childs: []
@@ -6677,7 +6198,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өтәр
+      content: отәр
       properties:
         option-related: null
       childs: []
@@ -6687,7 +6208,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өлп
+      content: олп
       properties:
         option-related: null
       childs: []
@@ -6725,7 +6246,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өлп
+      content: олп
       properties:
         option-related: null
       childs: []
@@ -6753,7 +6274,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өтәр
+      content: отәр
       properties:
         option-related: null
       childs: []
@@ -6768,7 +6289,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өлп
+      content: олп
       properties:
         option-related: null
       childs: []
@@ -6808,7 +6329,7 @@
           option-related: null
         childs:
         - type: OptionEntity
-          content: оух
+          content: оӈх
           properties:
             option-related: null
           childs: []
@@ -6833,7 +6354,7 @@
             option-related: null
           childs: []
         - type: OptionEntity
-          content: смөлә
+          content: смолә
           properties:
             option-related: null
           childs: []
@@ -6869,7 +6390,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: өхсәр
+      content: охсәр
       properties:
         option-related: null
       childs: []
@@ -6933,7 +6454,7 @@
           option-related: null
         childs:
         - type: OptionEntity
-          content: өӈхтӓх
+          content: оӈхтӓх
           properties:
             option-related: null
           childs: []
@@ -6959,32 +6480,12 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: тәт-тӓт
+      content: тәт-та°т
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: хөйлӓ°-л'әх
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: порядке
-      properties:
-        option-related: null
-      childs: []
-  - type: OptionSlash
-    content: /
-    properties:
-      option-related: null
-    childs:
-    - type: OptionEntity
-      content: тэг-тов-ра
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: сйәл'ӓ°-л’әх
+      content: хөйл'ӓ°-л'әх
       properties:
         option-related: null
       childs: []
@@ -7007,7 +6508,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: охэнтовәл'
+      content: охəнтовәл'
       properties:
         option-related: null
       childs: []
@@ -7093,6 +6594,10 @@
       properties:
         option-related: null
       childs: []
+  Type: CharHeader
+  content: П
+  properties: {}
+  childs: []
 - type: EntryTitle
   content: павлыӈ
   properties: {}
@@ -7253,13 +6758,13 @@
     properties: {}
     childs: []
   - type: OptionSlash
-    content: па-кӓ°л’х
+    content: /
     properties:
       option-related: null
       is-entity: null
     childs:
     - type: OptionEntity
-      content: кӓ°л’х
+      content: па-кӓ°л’х
       properties:
         option-related: null
       childs: []
@@ -7422,7 +6927,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: па-хоих
+      content: па-хойх
       properties:
         option-related: null
       childs: []
@@ -7461,7 +6966,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пагжә
+      content: пагл'ә
       properties:
         option-related: null
       childs: []
@@ -7471,7 +6976,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: паглӓл'
+      content: пагл'ӓл'
       properties:
         option-related: null
       childs: []
@@ -7630,7 +7135,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: л
+      content: п
       properties:
         option-related: null
       childs: []
@@ -7873,7 +7378,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓ°л'
+      content: пӓ°л'кӓн
       properties:
         option-related: null
       childs: []
@@ -7891,7 +7396,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓ°л’кӓк
+      content: пӓ°л’кӓн
       properties:
         option-related: null
       childs: []
@@ -7909,7 +7414,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: вӓ°кппа°тәл’
+      content: вӓ°нппа°тәл’
       properties:
         option-related: null
       childs: []
@@ -7919,7 +7424,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: поплавөх
+      content: поплавох
       properties:
         option-related: null
       childs: []
@@ -7981,7 +7486,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓл'әк
+      content: пӓл'ән
       properties:
         option-related: null
       childs: []
@@ -8006,13 +7511,9 @@
         option-related: null
       childs: []
 - type: EntryTitle
-  content: палиӈ
+  content: палиӈ пут
   properties: {}
   childs:
-  - type: MeaningEntity
-    content: пут
-    properties: {}
-    childs: []
   - type: MeaningIndex
     content: '1.'
     properties: {}
@@ -8039,7 +7540,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓл'әк
+      content: пӓл'ән
       properties:
         option-related: null
       childs: []
@@ -8167,7 +7668,7 @@
             option-related: null
           childs:
           - type: OptionEntity
-            content: пйл'т
+            content: пӓл'т
             properties:
               option-related: null
             childs: []
@@ -8177,7 +7678,7 @@
               option-related: null
             childs: []
           - type: OptionEntity
-            content: пӓлтәл'
+            content: пӓл'тәл'
             properties:
               option-related: null
             childs: []
@@ -8187,28 +7688,7 @@
               option-related: null
             childs: []
           - type: OptionUsageExample
-            content: Оләм нөтә пӓлт ӓ°н'щәх сурн'ән хуЛкул' а°т ус, ха°т-рохтәс. палкалтаӈкве
-              теребйть (шерсть)
-            properties:
-              option-related: null
-            childs: []
-        - type: OptionSlash
-          content: /
-          properties:
-            option-related: null
-          childs:
-          - type: OptionEntity
-            content: пөлкәл’тӓх
-            properties:
-              option-related: null
-            childs: []
-          - type: OptionPunct
-            content: ;
-            properties:
-              option-related: null
-            childs: []
-          - type: OptionEntity
-            content: н'авх
+            content: Ол'әм нотә пӓл'т ӓ°н'щәх сурн'ән хул'кул' а°т ус, ха°т-рохтәс. 
             properties:
               option-related: null
             childs: []
@@ -8234,7 +7714,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: ха°ләйлӓх
+      content: ха°ләйл'ӓх
       properties:
         option-related: null
       childs: []
@@ -8283,7 +7763,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: похк
+      content: похн
       properties:
         option-related: null
       childs: []
@@ -8294,51 +7774,6 @@
       childs: []
     - type: OptionEntity
       content: пӓ°л'т.
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: А°м
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: йапәм
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: пөхн
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: мәнсәм
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ','
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: йапәм
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: пӓ°лт
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: рөпт'лӓх
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: пӓтсәм.
       properties:
         option-related: null
       childs: []
@@ -8373,7 +7808,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓл'тәх
+      content: пӓ°л'тәх
       properties:
         option-related: null
       childs: []
@@ -8399,13 +7834,13 @@
     properties: {}
     childs: []
   - type: OptionSlash
-    content: пӓ°л’тәй-
+    content: /
     properties:
       option-related: null
       is-entity: null
     childs:
     - type: OptionEntity
-      content: л’тәй-
+      content: пӓ°л’тәй-
       properties:
         option-related: null
       childs: []
@@ -8438,12 +7873,12 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: л’тәйл’ӓттӓл’
+      content: л’тәйл’ӓттӓ°л’
       properties:
         option-related: null
       childs: []
@@ -8453,7 +7888,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
@@ -8463,12 +7898,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: л’йттӓ
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: '''л’'
+      content: л’ӓттӓ°л’
       properties:
         option-related: null
       childs: []
@@ -8514,7 +7944,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
@@ -8529,7 +7959,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: пй
+      content: пӓ°
       properties:
         option-related: null
       childs: []
@@ -8594,7 +8024,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
@@ -8609,7 +8039,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
@@ -8693,7 +8123,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓл'щәлщәх
+      content: пӓл'щәмщәх
       properties:
         option-related: null
       childs: []
@@ -8716,7 +8146,7 @@
     properties: {}
     childs: []
   - type: OptionSlash
-    content: ''''
+    content: /
     properties:
       option-related: null
     childs:
@@ -8766,7 +8196,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓл'тӓ
+      content: пӓл'тӓ°л'
       properties:
         option-related: null
       childs: []
@@ -8789,7 +8219,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓл'тӓ
+      content: пӓл'тӓ°
       properties:
         option-related: null
       childs: []
@@ -8870,7 +8300,7 @@
     properties: {}
     childs: []
   - type: OptionSlash
-    content: пӓ°л'әй-вөӈнӓх
+    content: пӓ°л'әй-воӈнӓх
     properties:
       option-related: null
       is-entity: null
@@ -8886,7 +8316,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: '''пӓ°л’әй-хәвәрл’ӓх'
+      content: пӓ°л’әй-хәвәрл’ӓх
       properties:
         option-related: null
       childs: []
@@ -8942,7 +8372,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: лӓ°л’әй-мӓнәмтӓх
+      content: пӓ°л’әй-мӓнәмтӓх
       properties:
         option-related: null
       childs: []
@@ -9090,7 +8520,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: -л’дй-пөрщәтӓх
+      content: -л’əй-пөрщәтӓх
       properties:
         option-related: null
       childs: []
@@ -9100,12 +8530,12 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: па
+      content: пӓ°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: л’әй-пӓ
+      content: л’әй-пӓ°
       properties:
         option-related: null
       childs: []
@@ -9128,7 +8558,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
@@ -9156,7 +8586,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
@@ -9179,7 +8609,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
@@ -9211,7 +8641,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
@@ -9234,12 +8664,12 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: л’әй-сӓ
+      content: л’әй-сӓ°
       properties:
         option-related: null
       childs: []
@@ -9262,7 +8692,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
@@ -9301,7 +8731,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
@@ -9316,7 +8746,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
@@ -9352,17 +8782,17 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: л’әй-тӓ
+      content: л’әй-тӓ°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: рта
+      content: рта°
       properties:
         option-related: null
       childs: []
@@ -9377,7 +8807,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: пӓ°Ләй-тӓ
+      content: пӓ°л'әй-тӓ°
       properties:
         option-related: null
       childs: []
@@ -9419,12 +8849,12 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: л’әй-тӓ
+      content: л’әй-тӓ°
       properties:
         option-related: null
       childs: []
@@ -9442,7 +8872,7 @@
     properties: {}
     childs: []
   - type: OptionSlash
-    content: ''''
+    content: /
     properties:
       option-related: null
     childs:
@@ -9473,7 +8903,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓл’әй-хӓ
+      content: пӓл’әй-ха°
       properties:
         option-related: null
       childs: []
@@ -9511,7 +8941,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
@@ -9619,7 +9049,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
@@ -9765,13 +9195,13 @@
       left-parenthesis: null
     childs: []
   - type: OptionSlash
-    content: па°уй-әл’тпӓх
+    content: /
     properties:
       option-related: null
       is-entity: null
     childs:
     - type: OptionEntity
-      content: °уй-әл’тпӓх
+      content: па°ӈй-әл’тӓх
       properties:
         option-related: null
       childs: []
@@ -9799,7 +9229,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
@@ -9842,7 +9272,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: кертупәж
+      content: кертупәл'
       properties:
         option-related: null
       childs: []
@@ -9864,7 +9294,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓ°ртӓсп
+      content: пӓ°рта°сп
       properties:
         option-related: null
       childs: []
@@ -9960,7 +9390,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓктәпӓх
+      content: пӓнтәпӓх
       properties:
         option-related: null
       childs: []
@@ -9995,12 +9425,12 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: йа°л-тӓ
+      content: йа°л-тӓ°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: ртӓ°хтэх
+      content: рта°хтəх
       properties:
         option-related: null
       childs: []
@@ -10026,7 +9456,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: сөхттӓх
+      content: сохттӓх
       properties:
         option-related: null
       childs: []
@@ -10071,7 +9501,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: сөхтәмтӓх
+      content: сохтәмтӓх
       properties:
         option-related: null
       childs: []
@@ -10094,7 +9524,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: өшкә
+      content: ошкә
       properties:
         option-related: null
       childs: []
@@ -10104,7 +9534,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: пурсӓ°х
+      content: пурса°х
       properties:
         option-related: null
       childs: []
@@ -10114,7 +9544,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: пувәрсӓх
+      content: пувәрса°х
       properties:
         option-related: null
       childs: []
@@ -10132,7 +9562,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: тәг-тов-пувтсӓ°хтәх
+      content: тәг-тов-пувтса°хтәх
       properties:
         option-related: null
       childs: []
@@ -10166,7 +9596,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓптәх
+      content: пӓнтәх
       properties:
         option-related: null
       childs: []
@@ -10184,7 +9614,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓ°л’әйхӓ°ртхатәх
+      content: пӓ°л’әйха°ртхатәх
       properties:
         option-related: null
       childs: []
@@ -10250,144 +9680,6 @@
       properties:
         option-related: null
       childs: []
-    - type: OptionEntity
-      content: панттыг
-      properties:
-        option-related: null
-      childs: []
-  - type: LexMarker
-    content: глаг.
-    properties: {}
-    childs:
-    - type: MeaningEntity
-      content: прист.
-      properties:
-        lex-marker: null
-      childs:
-      - type: MeaningPunct
-        content: ','
-        properties: {}
-        childs: []
-    - type: MeaningEntity
-      content: обозна-чӓющая
-      properties: {}
-      childs: []
-    - type: MeaningEntity
-      content: сдӓвливающее
-      properties: {}
-      childs:
-      - type: MeaningPunct
-        content: ','
-        properties: {}
-        childs: []
-    - type: MeaningEntity
-      content: сплющивающее
-      properties: {}
-      childs: []
-    - type: MeaningEntity
-      content: дёйствие
-      properties: {}
-      childs: []
-  - type: OptionSlash
-    content: /
-    properties:
-      option-related: null
-    childs:
-    - type: OptionEntity
-      content: пӓ°л’әй
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ','
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: пӓнтәй
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: панттыг-ёмасаӈкве
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: растоп-тӓть
-      properties:
-        option-related: null
-      childs: []
-  - type: OptionSlash
-    content: /
-    properties:
-      option-related: null
-    childs:
-    - type: OptionEntity
-      content: пӓ°
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: л’әй-йомәсӓх
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ','
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: пӓ°л’әй-к'ӓ°кәсӓх
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ;
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: пӓнтәй-йө-мәйсӓх
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: панттыг-таӈыртаӈкве
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: раздавйть
-      properties:
-        option-related: null
-      childs: []
-  - type: OptionSlash
-    content: /
-    properties:
-      option-related: null
-    childs:
-    - type: OptionEntity
-      content: пӓ°ләй-тӓӈәртӓх
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ;
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: пӓнтәй-тӓӈ
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: әртӓх
-      properties:
-        option-related: null
-      childs: []
 - type: EntryTitle
   content: пантыглалуӈкве
   properties: {}
@@ -10410,7 +9702,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: л
+      content: п
       properties:
         option-related: null
       childs: []
@@ -10484,7 +9776,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: ләйжӓх
+      content: л'әйл'ӓх
       properties:
         option-related: null
       childs: []
@@ -10529,7 +9821,7 @@
           option-related: null
         childs:
         - type: OptionEntity
-          content: пӓ°ук-тӓх
+          content: пӓ°ӈк-тӓх
           properties:
             option-related: null
           childs: []
@@ -10555,7 +9847,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓ°ӈктӓхтәх
+      content: пӓ°ӈкта°хтәх
       properties:
         option-related: null
       childs: []
@@ -10573,7 +9865,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: паух
+      content: паӈх
       properties:
         option-related: null
       childs: []
@@ -10606,7 +9898,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: паух
+      content: паӈх
       properties:
         option-related: null
       childs: []
@@ -10634,7 +9926,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пө-рәтӓл'әх
+      content: пө-рәтӓ°л'әх
       properties:
         option-related: null
       childs: []
@@ -10652,7 +9944,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пөрӧәх
+      content: пөрйәх
       properties:
         option-related: null
       childs: []
@@ -10847,7 +10139,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: пергәх
+      content: пөргәх
       properties:
         option-related: null
       childs: []
@@ -10931,7 +10223,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: рехтеа°х-тәх
+      content: рехтcа°х-тәх
       properties:
         option-related: null
       childs: []
@@ -10961,7 +10253,7 @@
         option-related: null
       childs:
       - type: OptionEntity
-        content: пӓ’рс
+        content: пӓ°рс
         properties:
           option-related: null
         childs: []
@@ -10994,7 +10286,7 @@
     properties: {}
     childs:
     - type: MeaningEntity
-      content: пӓрус
+      content: парус
       properties: {}
       childs: []
     - type: OptionSlash
@@ -11048,7 +10340,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: парөхөд
+      content: пароход
       properties:
         option-related: null
       childs: []
@@ -11063,7 +10355,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: парөхөд
+      content: пароход
       properties:
         option-related: null
       childs: []
@@ -11102,13 +10394,13 @@
     properties: {}
     childs: []
   - type: OptionSlash
-    content: пөрщәтӓ°л'әйжӓх
+    content: /
     properties:
       option-related: null
       is-entity: null
     childs:
     - type: OptionEntity
-      content: йжӓх
+      content: пөрщәтӓ°л'әйл'ӓх
       properties:
         option-related: null
       childs: []
@@ -11188,7 +10480,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓрстӓ
+      content: пӓрстӓ°л'
       properties:
         option-related: null
       childs: []
@@ -11481,7 +10773,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓсәнтөр
+      content: пӓсәнтор
       properties:
         option-related: null
       childs: []
@@ -11526,13 +10818,13 @@
         left-parenthesis: null
       childs: []
   - type: OptionSlash
-    content: пӓ°сәпӓх
+    content: /
     properties:
       option-related: null
       is-entity: null
     childs:
     - type: OptionEntity
-      content: пӓх
+      content: пӓ°сәпӓх
       properties:
         option-related: null
       childs: []
@@ -11636,7 +10928,7 @@
       left-parenthesis: null
     childs: []
   - type: OptionSlash
-    content: иӓсгәл’тӓ°х-тәх
+    content: нӓсгәл’тӓ°х-тәх
     properties:
       option-related: null
       is-entity: null
@@ -11788,7 +11080,7 @@
           option-related: null
         childs: []
       - type: OptionEntity
-        content: пӓщэрмӓтәх
+        content: пӓщəрмӓтәх
         properties:
           option-related: null
         childs: []
@@ -11803,7 +11095,7 @@
         option-related: null
       childs:
       - type: OptionEntity
-        content: щә-мәрмӓтэх
+        content: щә-мәрмӓтəх
         properties:
           option-related: null
         childs: []
@@ -11861,7 +11153,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: щәмәртӓ
+      content: щәмәртӓ°
       properties:
         option-related: null
       childs: []
@@ -11876,7 +11168,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: ма°-йрәйтӓл’әйл'ӓх
+      content: ма°-йрәйта°л’әйл'ӓх
       properties:
         option-related: null
       childs: []
@@ -11891,13 +11183,9 @@
         option-related: null
       childs: []
 - type: EntryTitle
-  content: пасиртан
+  content: пасиртан вармаль
   properties: {}
   childs:
-  - type: MeaningEntity
-    content: вармаль
-    properties: {}
-    childs: []
   - type: MeaningEntity
     content: давлёние
     properties: {}
@@ -11938,7 +11226,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: ма°йртйнӓщ
+      content: ма°йртӓнӓщ
       properties:
         option-related: null
       childs: []
@@ -12032,7 +11320,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: мӓ°н'әртӓ°хтәх
+      content: ма°н'әрта°хтәх
       properties:
         option-related: null
       childs: []
@@ -12050,12 +11338,12 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓщәртӓ°
+      content: пӓщәрта°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: хтәйлӓ°
+      content: хтәйл'ӓ°
       properties:
         option-related: null
       childs: []
@@ -12080,7 +11368,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: щәмәртӓлтәйл’ӓ°л’әх
+      content: щәмәрта°хтәйл’ӓ°л’әх
       properties:
         option-related: null
       childs: []
@@ -12090,7 +11378,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: щә-мәрта°хтил’ӓ
+      content: щә-мәрта°хтил’ӓ°
       properties:
         option-related: null
       childs: []
@@ -12290,27 +11578,7 @@
             option-related: null
           childs: []
         - type: OptionUsageExample
-          content: Молт'итӓ°л’ пӓснәл’ т'ӓ°-т'әм а т хөил’ӓ°л’сл’әм. пасса рукавйца
-          properties:
-            option-related: null
-          childs: []
-      - type: OptionSlash
-        content: /
-        properties:
-          option-related: null
-        childs:
-        - type: OptionEntity
-          content: пасәй
-          properties:
-            option-related: null
-          childs: []
-        - type: OptionPunct
-          content: ','
-          properties:
-            option-related: null
-          childs: []
-        - type: OptionEntity
-          content: пасйә
+          content: Молт'итӓ°л’ пӓснәл’ т'ӓ°-т'әм а°т хоил’ӓ°л’сл’әм. 
           properties:
             option-related: null
           childs: []
@@ -12333,7 +11601,7 @@
         option-related: null
       childs: []
 - type: EntryTitle
-  content: пассамлаптуӈквр
+  content: пассамлаптуӈкве
   properties: {}
   childs:
   - type: MeaningEntity
@@ -12409,7 +11677,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: лӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
@@ -12465,7 +11733,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
@@ -12528,57 +11796,7 @@
         option-related: null
       childs: []
     - type: OptionUsageExample
-      content: Ел’ол’ пӓтәт щар ма пӓ-сәл’ йал’әса т. ние, кабал к
-      properties:
-        option-related: null
-      childs: []
-  - type: OptionSlash
-    content: /
-    properties:
-      option-related: null
-    childs:
-    - type: OptionEntity
-      content: пӓщэрлӓнӓщ
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ','
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: пӓщэрл'ӓп
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ','
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: пӓщәрл'ӓх
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ;
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: ма°й-әртӓ°л’әйл’ӓпӓщ
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ','
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: ма°йәртӓ°-л'тл’ӓп
+      content: Ел’ол’ па°тәт щар ма пӓ-сәл’ йал’әсӓ°т. 
       properties:
         option-related: null
       childs: []
@@ -12596,7 +11814,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓщәрл’ӓнхӓр
+      content: пӓщәрл’ӓнха°р
       properties:
         option-related: null
       childs: []
@@ -12606,7 +11824,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: пӓщәрл’ӓп-хӓр
+      content: пӓщәрл’ӓп-ха°р
       properties:
         option-related: null
       childs: []
@@ -12616,7 +11834,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: майритӓпхар
+      content: ма°йритӓпха°р
       properties:
         option-related: null
       childs: []
@@ -12765,7 +11983,7 @@
             option-related: null
           childs: []
         - type: OptionEntity
-          content: өл’ән
+          content: ол’ән
           properties:
             option-related: null
           childs: []
@@ -12802,7 +12020,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: пйщә
+      content: пӓщә
       properties:
         option-related: null
       childs: []
@@ -12825,7 +12043,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓщәл’й°хтәх
+      content: пӓщәл’ӓ°хтәх
       properties:
         option-related: null
       childs: []
@@ -12980,7 +12198,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: төлмәтӓх
+      content: толмәтӓх
       properties:
         option-related: null
       childs: []
@@ -13071,7 +12289,7 @@
           option-related: null
         childs:
         - type: OptionEntity
-          content: пӓт
+          content: па°т
           properties:
             option-related: null
           childs: []
@@ -13086,7 +12304,7 @@
             option-related: null
           childs: []
         - type: OptionEntity
-          content: услг
+          content: усм
           properties:
             option-related: null
           childs: []
@@ -13139,13 +12357,9 @@
         option-related: null
       childs: []
 - type: EntryTitle
-  content: патлуптан
+  content: патлуптан вармаль
   properties: {}
   childs:
-  - type: MeaningEntity
-    content: вармаль
-    properties: {}
-    childs: []
   - type: MeaningEntity
     content: стрельбк
     properties: {}
@@ -13246,13 +12460,9 @@
         option-related: null
       childs: []
 - type: EntryTitle
-  content: патлуптахтын
+  content: патлуптахтын вармаль
   properties: {}
   childs:
-  - type: MeaningEntity
-    content: вармаль
-    properties: {}
-    childs: []
   - type: MeaningEntity
     content: пере-стрёлка
     properties: {}
@@ -13263,7 +12473,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пй°
+      content: пӓ°
       properties:
         option-related: null
       childs: []
@@ -13283,7 +12493,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: пӓ°тта
+      content: пӓ°тта°
       properties:
         option-related: null
       childs: []
@@ -13298,7 +12508,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
@@ -13308,13 +12518,9 @@
         option-related: null
       childs: []
 - type: EntryTitle
-  content: патрон
+  content: патрон хусап
   properties: {}
   childs:
-  - type: MeaningEntity
-    content: хусап
-    properties: {}
-    childs: []
   - type: MeaningEntity
     content: гйльза
     properties: {}
@@ -13325,7 +12531,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: патрөн-хөсп
+      content: патрон-хөсп
       properties:
         option-related: null
       childs: []
@@ -13478,17 +12684,7 @@
         option-related: null
       childs: []
     - type: OptionUsageExample
-      content: Төчкә пӓт'тәй кӓ°рхәп буквә хӓ к-сән. паттил сбивӓние
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ;
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: пакв
+      content: Төчкә пӓт'тәй кӓ°рхәп буквә ха°н-сән. 
       properties:
         option-related: null
       childs: []
@@ -13500,14 +12696,7 @@
     content: сбивӓние
     properties: {}
     childs: []
-  - type: MeaningEntity
-    content: кёдровых
-    properties: {}
-    childs: []
-  - type: MeaningEntity
-    content: шй-шек
-    properties: {}
-    childs: []
+
   - type: OptionSlash
     content: /
     properties:
@@ -13520,16 +12709,6 @@
       childs: []
     - type: OptionPunct
       content: ;
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: пӓк
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: пӓттәп
       properties:
         option-related: null
       childs: []
@@ -13801,7 +12980,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: '''пӓ-тәйл’ӓх'
+      content: пӓ-тәйл’ӓх
       properties:
         option-related: null
       childs: []
@@ -13925,13 +13104,13 @@
     properties: {}
     childs: []
   - type: OptionSlash
-    content: па°тәр-мӓх
+    content: /
     properties:
       option-related: null
       is-entity: null
     childs:
     - type: OptionEntity
-      content: ӓх
+      content: па°тәр-мӓх
       properties:
         option-related: null
       childs: []
@@ -13941,12 +13120,12 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: пӓ
+      content: пӓ°
       properties:
         option-related: null
       childs: []
     - type: OptionEntity
-      content: тәрмӧх
+      content: тәрмӓх
       properties:
         option-related: null
       childs: []
@@ -13958,46 +13137,6 @@
     content: скрыться
     properties: {}
     childs:
-    - type: MeaningPunct
-      content: ','
-      properties: {}
-      childs: []
-  - type: MeaningEntity
-    content: патыртаӈкве
-    properties: {}
-    childs: []
-  - type: MeaningEntity
-    content: перамань
-    properties: {}
-    childs: []
-  - type: MeaningEntity
-    content: сирыл
-    properties: {}
-    childs: []
-  - type: MeaningEntity
-    content: исчёзнуть
-    properties: {}
-    childs: []
-  - type: OptionSlash
-    content: /
-    properties:
-      option-related: null
-    childs:
-    - type: OptionEntity
-      content: пӓтэрмӓтӓх
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ','
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: пӓ°тәрмӓмӓх
-      properties:
-        option-related: null
-      childs: []
 - type: EntryTitle
   content: патыртаӈкве
   properties: {}
@@ -14012,7 +13151,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: па
+      content: па°
       properties:
         option-related: null
       childs: []
@@ -14136,7 +13275,7 @@
           option-related: null
         childs:
         - type: OptionEntity
-          content: пау-хән
+          content: паӈ-хән
           properties:
             option-related: null
           childs: []
@@ -14184,7 +13323,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: паухәкәй
+      content: паӈхәнәй
       properties:
         option-related: null
       childs: []
@@ -14214,7 +13353,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: пахвэ-нәй
+      content: пахвə-нәй
       properties:
         option-related: null
       childs: []
@@ -14232,7 +13371,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: паухәнәй
+      content: паӈхәнәй
       properties:
         option-related: null
       childs: []
@@ -14257,44 +13396,6 @@
         option-related: null
       childs: []
 - type: EntryTitle
-  content: пахвыӈыг варыглалуӈкве
-  properties: {}
-  childs:
-  - type: MeaningEntity
-    content: расширять
-    properties: {}
-    childs: []
-  - type: OptionSlash
-    content: /
-    properties:
-      option-related: null
-    childs:
-    - type: OptionEntity
-      content: пахәуәй
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: вӓ°рәй-л'ӓ°л'әх
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionPunct
-      content: ','
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: паӈхвәӈәй
-      properties:
-        option-related: null
-      childs: []
-    - type: OptionEntity
-      content: вӓ°ри-л'ӓл'әх
-      properties:
-        option-related: null
-      childs: []
-- type: EntryTitle
   content: паялталыглаӈкве
   properties: {}
   childs:
@@ -14313,7 +13414,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: л'әил'ӓх
+      content: л'әйл'ӓх
       properties:
         option-related: null
       childs: []
@@ -14346,7 +13447,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: '''пӓ''йәл’-тӓх'
+      content: пӓ°йәл’-тӓх
       properties:
         option-related: null
       childs: []
@@ -14364,7 +13465,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: пӓ°иәл'тӓптӓх
+      content: пӓ°йәл'тӓптӓх
       properties:
         option-related: null
       childs: []
@@ -14373,7 +13474,7 @@
   properties: {}
   childs: []
 - type: EntryTitle
-  content: пая-тулёвыл
+  content: пая тулёвыл
   properties: {}
   childs:
   - type: MeaningEntity
@@ -14399,7 +13500,7 @@
       option-related: null
     childs:
     - type: OptionEntity
-      content: йанәй-төл'өвәл’
+      content: йанәй-төл'овәл’
       properties:
         option-related: null
       childs: []
@@ -14409,7 +13510,7 @@
         option-related: null
       childs: []
     - type: OptionEntity
-      content: йанәй-төл'э
+      content: йанәй-төл'ə
       properties:
         option-related: null
       childs: []
