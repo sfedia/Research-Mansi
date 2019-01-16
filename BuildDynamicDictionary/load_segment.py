@@ -10,6 +10,10 @@ from muskrat.connectivity import Accept, Attach
 from muskrat.xml_generator import *
 
 
+class ObjectGenFailed(Exception):
+    pass
+
+
 class LoadedSegment:
     def __init__(self, index):
         self.json_segment = open("../VakhrParsing2/json_segments2/segment_%d.json" % index).read()
@@ -19,9 +23,12 @@ class LoadedSegment:
         ]
 
     def generate_object(self, json_dict):
+        if "content" not in json_dict:
+            raise ObjectGenFailed()
         props = PatternProperties()
-        for (p, v) in json_dict["properties"].items():
-            props.add_property(p, v)
+        if "properties" in json_dict:
+            for (p, v) in json_dict["properties"].items():
+                props.add_property(p, v)
         obj = ParsingObject(
             json_dict["content"],
             Pattern(
@@ -33,7 +40,10 @@ class LoadedSegment:
         )
         if "childs" in json_dict and json_dict["childs"] is not None:
             for child in json_dict["childs"]:
-                obj.connected_objects.append(self.generate_object(child))
+                try:
+                    obj.connected_objects.append(self.generate_object(child))
+                except ObjectGenFailed:
+                    pass
         else:
             obj.connected_objects = []
         return obj
@@ -81,39 +91,39 @@ def load_dict_entries(file_path):
     return entries_list
 
 
-
-segment1 = LoadedSegment(0)
-for entry in segment1.parser_objects:
-    try:
-        this_parser = XMLQuery(entry.connected_objects)
-    except TypeError:
-        continue
-    mobs = this_parser.root.xpath("//object[@type='MeaningEntity' or @type='MeaningPunct']")
-    ws_result = " ".join([o.get("content") for o in mobs])
-    prs = lexic_parser.LexicParser(ws_result)
-    try:
-        prs.lexic_allocator.start()
-    except CannotMoveRight:
-        pass
-    this_entry = WordEntry(entry.content)
-    meanings = [[]]
-    for e, obj in enumerate(prs.parser.objects):
-        if obj.pattern.object_type == "MeaningLinear":
-            formatted = lexic_parser.lexic_parser_functions.format_token(obj.content)
-            ind_check = lexic_parser.lexic_parser_functions.is_independent(formatted)
-            if ind_check:
-                if e == 0:
-                    if type(ind_check) == tuple:
-                        this_entry.pos_options.extend(ind_check[2])
-                    elif len(formatted) < 3:
-                        this_entry.pos_options.append(None)
-                meanings[-1].append(formatted)
-        elif obj.pattern.object_type in ["CommaSeparator", "SemicolonSeparator"]:
-            meanings.append([])
-    if [] in meanings:
-        meanings.remove([])
-    this_entry.rus_meanings = meanings
-    dict_entries.append(this_entry)
-    print(meanings)
+for n in range(9):
+    segment1 = LoadedSegment(n)
+    for entry in segment1.parser_objects:
+        try:
+            this_parser = XMLQuery(entry.connected_objects)
+        except TypeError:
+            continue
+        mobs = this_parser.root.xpath("//object[@type='MeaningEntity' or @type='MeaningPunct']")
+        ws_result = " ".join([o.get("content") for o in mobs])
+        prs = lexic_parser.LexicParser(ws_result)
+        try:
+            prs.lexic_allocator.start()
+        except CannotMoveRight:
+            pass
+        this_entry = WordEntry(entry.content)
+        meanings = [[]]
+        for e, obj in enumerate(prs.parser.objects):
+            if obj.pattern.object_type == "MeaningLinear":
+                formatted = lexic_parser.lexic_parser_functions.format_token(obj.content)
+                ind_check = lexic_parser.lexic_parser_functions.is_independent(formatted)
+                if ind_check:
+                    if e == 0:
+                        if type(ind_check) == tuple:
+                            this_entry.pos_options.extend(ind_check[2])
+                        elif len(formatted) < 3:
+                            this_entry.pos_options.append(None)
+                    meanings[-1].append(formatted)
+            elif obj.pattern.object_type in ["CommaSeparator", "SemicolonSeparator"]:
+                meanings.append([])
+        if [] in meanings:
+            meanings.remove([])
+        this_entry.rus_meanings = meanings
+        dict_entries.append(this_entry)
+        print(meanings)
 
 print()
