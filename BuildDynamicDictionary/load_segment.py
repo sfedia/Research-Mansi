@@ -57,6 +57,31 @@ class WordEntry:
 dict_entries = []
 
 
+def dump_dict_entries(file_path):
+    all_json = []
+    for entry in dict_entries:
+        entry_json = {
+            "lemma": entry.lemma,
+            "rus_meanings": entry.rus_meanings,
+            "pos_options": entry.pos_options
+        }
+        all_json.append(entry_json)
+    with open(file_path, "w") as fp:
+        fp.write(json.dumps(all_json))
+        fp.close()
+
+
+def load_dict_entries(file_path):
+    entries_list = []
+    loaded_entries = json.loads(open(file_path).read())
+    for entry_ in loaded_entries:
+        entries_list.append(WordEntry(entry_["lemma"]))
+        entries_list[-1].rus_meanings = entry_["rus_meanings"]
+        entries_list[-1].pos_options = entry_["pos_options"]
+    return entries_list
+
+
+
 segment1 = LoadedSegment(0)
 for entry in segment1.parser_objects:
     try:
@@ -72,13 +97,16 @@ for entry in segment1.parser_objects:
         pass
     this_entry = WordEntry(entry.content)
     meanings = [[]]
-    for obj in prs.parser.objects:
+    for e, obj in enumerate(prs.parser.objects):
         if obj.pattern.object_type == "MeaningLinear":
             formatted = lexic_parser.lexic_parser_functions.format_token(obj.content)
             ind_check = lexic_parser.lexic_parser_functions.is_independent(formatted)
             if ind_check:
-                if type(ind_check) == tuple:
-                    this_entry.pos_options.extend(ind_check[2])
+                if e == 0:
+                    if type(ind_check) == tuple:
+                        this_entry.pos_options.extend(ind_check[2])
+                    elif len(formatted) < 3:
+                        this_entry.pos_options.append(None)
                 meanings[-1].append(formatted)
         elif obj.pattern.object_type in ["CommaSeparator", "SemicolonSeparator"]:
             meanings.append([])
