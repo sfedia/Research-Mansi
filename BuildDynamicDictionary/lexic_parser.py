@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import BuildDynamicDictionary.is_russian as is_rus
 import muskrat
 from muskrat.parser import *
 from muskrat.allocator import *
@@ -9,19 +10,41 @@ from muskrat.xml_generator import *
 
 class LexicParserFunctions:
     def __init__(self):
-        pass
+        self.checker = is_rus.Checker(import_op=False)
+        self.stopwords_ru = open("stopwords-ru.txt", encoding="utf-8").read().splitlines()
+        self.formatted = dict()
 
-    @staticmethod
-    def format_token(token):
-        return token
+    def format_token(self, token):
+        if token in self.formatted:
+            return self.formatted[token]
+        else:
+            check = self.checker.check(token)
+            if check is None:
+                return token
+            else:
+                index, lemma, pos_options = check
+                if len(token) >= 3:
+                    self.formatted[token] = lemma
+                    return lemma
+                else:
+                    return token
 
-    @staticmethod
-    def is_independent(token):
-        return True
+    def is_independent(self, token):
+        if token in self.formatted:
+            return True
+        if len(token) < 3:
+            return token in self.stopwords_ru
+        else:
+            check = self.checker.check(token)
+            if check is None:
+                return False
+            else:
+                index, lemma, pos_options = check
+                self.formatted[token] = lemma
+                return index, lemma, pos_options
 
-    @staticmethod
-    def belongs_to_lang(token):
-        return True
+    def get_data(self, token):
+        return self.checker.check(token)
 
 
 lexic_parser_functions = LexicParserFunctions()
@@ -65,7 +88,6 @@ class MeaningLinearTr(LexicTracker, LexicCommTracker):
         try:
             this = re.search(r'^[^,;\(\)]+', self.current()).group(0)
             indep = lexic_parser_functions.is_independent(this)
-            print(this, indep)
             if not indep:
                 self.pattern.properties.add_property("non-independent")
         except AttributeError:
