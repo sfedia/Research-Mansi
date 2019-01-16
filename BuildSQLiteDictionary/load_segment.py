@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import json
+import BuildSQLiteDictionary.lexic_parser as lexic_parser
 import muskrat
 from muskrat.parser import *
 from muskrat.allocator import *
@@ -39,11 +40,26 @@ class LoadedSegment:
 
 segment1 = LoadedSegment(0)
 for entry in segment1.parser_objects:
-    print(entry.content)
     try:
         this_parser = XMLQuery(entry.connected_objects)
     except TypeError:
         print("failed")
         continue
     mobs = this_parser.root.xpath("//object[@type='MeaningEntity' or @type='MeaningPunct']")
-    print([o.get("content") for o in mobs])
+    ws_result = " ".join([o.get("content") for o in mobs])
+    prs = lexic_parser.LexicParser(ws_result)
+    try:
+        prs.lexic_allocator.start()
+    except CannotMoveRight:
+        pass
+    meanings = [[]]
+    for obj in prs.parser.objects:
+        if obj.pattern.object_type == "MeaningLinear":
+            formatted = lexic_parser.lexic_parser_functions.format_token(obj.content)
+            if lexic_parser.lexic_parser_functions.belongs_to_lang(formatted):
+                meanings[-1].append(formatted)
+        elif obj.pattern.object_type in ["CommaSeparator", "SemicolonSeparator"]:
+            meanings.append([])
+    if [] in meanings:
+        meanings.remove([])
+    print(meanings)
