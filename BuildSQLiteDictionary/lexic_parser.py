@@ -20,6 +20,11 @@ class LexicTracker(Tracker):
         super().__init__(*args)
 
 
+class LexicCommTracker(Tracker):
+    def __init__(self, *args):
+        super().__init__(*args)
+
+
 class MeaningLinear(Pattern):
     def __init__(self):
         Pattern.__init__(
@@ -36,17 +41,20 @@ class MeaningLinear(Pattern):
         )
 
 
-class MeaningLinearTr(LexicTracker):
+class MeaningLinearTr(LexicTracker, LexicCommTracker):
     def __init__(self, *args):
         super().__init__(*args)
         self.pattern = MeaningLinear()
         self.extractor = RegexString(r'[^,;\(\)]+')
 
     def track(self):
-        this = re.search(r'^[^,;\(\)]+', self.current()).group(0)
-        indep = is_independent(this)
-        if not indep:
-            self.pattern.properties.add_property("non-independent")
+        try:
+            this = re.search(r'^[^,;\(\)]+', self.current()).group(0)
+            indep = is_independent(this)
+            if not indep:
+                self.pattern.properties.add_property("non-independent")
+        except AttributeError:
+            return False
 
         try:
             pe = self.parser.get(1)
@@ -77,9 +85,10 @@ class LexicalCommentaryTr(LexicTracker):
         super().__init__(*args)
         self.pattern = LexicalCommentary()
         self.extractor = CharSequenceString("(")
+        self.pattern.properties.add_property("unclosed")
 
     def track(self):
-        return re.search(r'^\([^\)]+\)', self.current()) is not None
+        return True
 
 
 class LexicalCommentaryStop(Pattern):
@@ -92,14 +101,18 @@ class LexicalCommentaryStop(Pattern):
         )
 
 
-class LexicalCommentaryStopTr(LexicTracker):
+class LexicalCommentaryStopTr(LexicCommTracker):
     def __init__(self, *args):
         super().__init__(*args)
         self.pattern = LexicalCommentaryStop()
         self.extractor = CharSequenceString(")")
 
     def track(self):
-        return True
+        lc = self.parser.get(condition=lambda o: o.pattern.object_type == "LexicalCommentary")
+        if lc is not None:
+            lc.pattern.properties.remove_property("unclosed")
+            return True
+        return False
 
 
 class CommaSeparator(Pattern):
@@ -112,7 +125,7 @@ class CommaSeparator(Pattern):
         )
 
 
-class CommaSeparatorTr(LexicTracker):
+class CommaSeparatorTr(LexicTracker, LexicCommTracker):
     def __init__(self, *args):
         super().__init__(*args)
         self.pattern = CommaSeparator()
@@ -132,11 +145,11 @@ class SemicolonSeparator(Pattern):
         )
 
 
-class SemicolonSeparatorTr(LexicTracker):
+class SemicolonSeparatorTr(LexicTracker, LexicCommTracker):
     def __init__(self, *args):
         super().__init__(*args)
         self.pattern = SemicolonSeparator()
-        self.extractor = CharSequenceString(",")
+        self.extractor = CharSequenceString(";")
 
     def track(self):
         return True
@@ -145,11 +158,14 @@ class SemicolonSeparatorTr(LexicTracker):
 class LexicParser:
     def __init__(self, parse_string):
         self.parser = Parser()
-        self.lexic_allocator = Allocator(parse_string, NullVoid(), self.parser)
-        self.lexic_allocator.cursor.tracker_family = [LexicTracker]
+        self.lexic_allocator = Allocator(parse_string, WhitespaceVoid(), self.parser)
+        self.lexic_allocator.cursor = AllocatorCursor(0, {
+            "tracker_family": [LexicTracker]
+        })
         self.lexic_allocator.cursor.add_dynamic_mapper(
             start_if=lambda p, c: p.get(1).pattern.object_type == "LexicalCommentary",
             finalize_if=lambda p, c: p.get(1).pattern.object_type == "LexicalCommentaryStop",
+            tracker_family=[LexicCommTracker],
             depend_on=lambda p, c: p.get(1),
             left_depth_limit=1
         )
