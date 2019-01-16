@@ -70,12 +70,11 @@ dict_entries = []
 def dump_dict_entries(file_path):
     all_json = []
     for entry in dict_entries:
-        entry_json = {
+        all_json.append({
             "lemma": entry.lemma,
             "rus_meanings": entry.rus_meanings,
             "pos_options": entry.pos_options
-        }
-        all_json.append(entry_json)
+        })
     with open(file_path, "w") as fp:
         fp.write(json.dumps(all_json))
         fp.close()
