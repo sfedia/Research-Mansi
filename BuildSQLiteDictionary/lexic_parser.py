@@ -7,12 +7,24 @@ from muskrat.connectivity import Accept, Attach
 from muskrat.xml_generator import *
 
 
-def format_token(token):
-    return token
+class LexicParserFunctions:
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def format_token(token):
+        return token
+
+    @staticmethod
+    def is_independent(token):
+        return True
+
+    @staticmethod
+    def belongs_to_lang(token):
+        return True
 
 
-def is_independent(token):
-    return True
+lexic_parser_functions = LexicParserFunctions()
 
 
 class LexicTracker(Tracker):
@@ -36,7 +48,9 @@ class MeaningLinear(Pattern):
                 by_type("LexicalCommentary"), connect=True, insert=False
             ),
             Attach().add_default(connect=False, insert=False).add_option(
-                by_type("MeaningLinear"), connect=False, insert=True
+                LogicalAND(
+                    by_type("MeaningLinear"), by_property("non-independent")
+                ), connect=False, insert=True
             )
         )
 
@@ -50,7 +64,8 @@ class MeaningLinearTr(LexicTracker, LexicCommTracker):
     def track(self):
         try:
             this = re.search(r'^[^,;\(\)]+', self.current()).group(0)
-            indep = is_independent(this)
+            indep = lexic_parser_functions.is_independent(this)
+            print(this, indep)
             if not indep:
                 self.pattern.properties.add_property("non-independent")
         except AttributeError:
@@ -62,6 +77,8 @@ class MeaningLinearTr(LexicTracker, LexicCommTracker):
                 if not pe.pattern.properties.property_exists("non-independent"):
                     self.pattern.insertion_prepend_value = True
                     self.pattern.prepended_value = " "
+                else:
+                    self.pattern.insertion_prepend_value = False
         except AttributeError:
             pass
 
