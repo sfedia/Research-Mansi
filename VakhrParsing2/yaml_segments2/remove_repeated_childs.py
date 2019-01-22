@@ -5,6 +5,7 @@ import re
 
 class GetSegment:
     def __init__(self, n_yaml):
+        self.n_yaml = n_yaml
         self.yaml_file = open("./segment_%d.yaml" % n_yaml, encoding="utf-8").read()
         self.yaml_new = []
         self.childs_init = list()
@@ -25,4 +26,12 @@ class GetSegment:
             self.childs_init.remove(ws_left + 2)
         return True
 
+    def write_to_file(self):
+        with open("./segment_%d.yaml" % self.n_yaml, "w", encoding="utf-8") as seg_n:
+            seg_n.write("\n".join(self.yaml_new))
+            seg_n.close()
 
+
+for n in range(8 + 1):
+    segment_n = GetSegment(n)
+    segment_n.write_to_file()
