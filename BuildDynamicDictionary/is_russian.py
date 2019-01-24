@@ -74,6 +74,11 @@ class Checker:
             i += 1
         return stack
 
+    def abbr_check(self, possible_abbr):
+        if re.search(r'^[а-яё]+-[лн]$', possible_abbr):
+            return True, 'pronoun'
+        return False, 'pronoun'
+
     def check(self, token):
         token = re.sub(r'\/.*', '', token).strip('«»').strip(' ')
         token = token.strip('!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~')
@@ -83,8 +88,12 @@ class Checker:
                 str_parse = str(self.morph.parse(xx))
                 if 'DictionaryAnalyzer' in str_parse and not re.search('Unknown|HyphenatedWordsAnalyzer', str_parse):
                     returned.append((e + 1, xx, self.extract_basic_pos(str_parse)))
-                elif xx in self.op_dict:
-                    returned.append((e + 1, xx))
+                else:
+                    abbr_check = self.abbr_check(xx)
+                    if abbr_check[0]:
+                        returned.append((e + 1, xx, abbr_check[1]))
+                    elif xx in self.op_dict:
+                        returned.append((e + 1, xx))
             for ret in returned:
                 if ret[0] in [3, 4]:
                     return ret

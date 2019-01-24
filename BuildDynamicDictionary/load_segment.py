@@ -99,6 +99,7 @@ for n in range(9):
         first = True
         for e, obj in enumerate(prs.parser.objects):
             if obj.pattern.object_type == "MeaningLinear":
+                print('ft:', obj.content)
                 formatted = lexic_parser.lexic_parser_functions.format_token(obj.content)
                 ind_check = lexic_parser.lexic_parser_functions.is_independent(formatted)
                 if ind_check:
@@ -112,8 +113,7 @@ for n in range(9):
             elif obj.pattern.object_type in ["CommaSeparator", "SemicolonSeparator"]:
                 meanings.append([])
                 first = True
-        if [] in meanings:
-            meanings.remove([])
+        meanings = [m for m in meanings if m != []]
         this_entry.rus_meanings = meanings
         dict_entries[this_entry.lemma] = this_entry
         print(meanings)
