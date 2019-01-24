@@ -22,12 +22,14 @@ class GetSegment:
                 return True
             else:
                 return False
-        elif (ws_left + 2) in self.childs_init and line[ws_left + 2:].startswith("- type"):
-            self.childs_init.remove(ws_left + 2)
+        elif self.childs_init:
+            right_wsed = min(self.childs_init, key=lambda v: abs(v - ws_left - 2))
+            if right_wsed >= ws_left + 2 and line[ws_left:].startswith("- type"):
+                self.childs_init.remove(right_wsed)
         return True
 
     def write_to_file(self):
-        with open("./segment_%d.yaml" % self.n_yaml, "w", encoding="utf-8") as seg_n:
+        with open("./segment_%d_o.yaml" % self.n_yaml, "w", encoding="utf-8") as seg_n:
             seg_n.write("\n".join(self.yaml_new))
             seg_n.close()
 
