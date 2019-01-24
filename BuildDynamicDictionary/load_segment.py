@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 from collections import Counter
+import datrie
 import json
 import BuildDynamicDictionary.lexic_parser as lexic_parser
 import muskrat
@@ -52,9 +53,19 @@ class LoadedSegment:
 class WordEntry:
     def __init__(self, lemma):
         self.lemma = lemma
+        self.full_lemma = lemma
+        self.reduce_lemma()
         self.pos_options = []
         self.rus_meanings = []
         self.common_pos = None
+
+    def reduce_lemma(self):
+        self.lemma = re.sub(r'[ёуеыаоэяию]ӈкве$', '', self.lemma)
+
+    def dynamic_lemma(self, wf):
+        if wf.endswith("ь"):
+            return self.full_lemma
+        return self.lemma
 
     def get_pos(self, update=False):
         if self.common_pos is not None and not update:
@@ -64,30 +75,7 @@ class WordEntry:
             return self.common_pos
 
 
-dict_entries = []
-
-
-def dump_dict_entries(file_path):
-    all_json = []
-    for entry in dict_entries:
-        all_json.append({
-            "lemma": entry.lemma,
-            "rus_meanings": entry.rus_meanings,
-            "pos_options": entry.pos_options
-        })
-    with open(file_path, "w") as fp:
-        fp.write(json.dumps(all_json))
-        fp.close()
-
-
-def load_dict_entries(file_path):
-    entries_list = []
-    loaded_entries = json.loads(open(file_path).read())
-    for entry_ in loaded_entries:
-        entries_list.append(WordEntry(entry_["lemma"]))
-        entries_list[-1].rus_meanings = entry_["rus_meanings"]
-        entries_list[-1].pos_options = entry_["pos_options"]
-    return entries_list
+dict_entries = datrie.Trie(ranges=[(u'\u0410', u'\u044f'), (u'\u0020', u'\u002f')])
 
 
 for n in range(9):
@@ -104,25 +92,31 @@ for n in range(9):
             prs.lexic_allocator.start()
         except CannotMoveRight:
             pass
+        except TypeError:
+            pass
         this_entry = WordEntry(entry.content)
         meanings = [[]]
+        first = True
         for e, obj in enumerate(prs.parser.objects):
             if obj.pattern.object_type == "MeaningLinear":
                 formatted = lexic_parser.lexic_parser_functions.format_token(obj.content)
                 ind_check = lexic_parser.lexic_parser_functions.is_independent(formatted)
                 if ind_check:
-                    if e == 0:
+                    if first:
                         if type(ind_check) == tuple:
                             this_entry.pos_options.extend(ind_check[2])
                         elif len(formatted) < 3:
                             this_entry.pos_options.append(None)
+                        first = False
                     meanings[-1].append(formatted)
             elif obj.pattern.object_type in ["CommaSeparator", "SemicolonSeparator"]:
                 meanings.append([])
+                first = True
         if [] in meanings:
             meanings.remove([])
         this_entry.rus_meanings = meanings
-        dict_entries.append(this_entry)
+        dict_entries[this_entry.lemma] = this_entry
         print(meanings)
 
+dict_entries.save('dict_entries.trie')
 print()
